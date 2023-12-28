@@ -113,12 +113,19 @@ div.navlinks {
 }
 
 div.mobilenavlinks {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background-color: $theme-colour;
+
   @media (min-width: 768px) {
     display: none;
   }
+  a {
+    background-color: pink;
+    padding: 1rem 0.5rem;
+  }
 }
+// Hamburger
 button.hamburger {
   display: block;
   height: 51px;
