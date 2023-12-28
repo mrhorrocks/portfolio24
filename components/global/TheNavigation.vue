@@ -38,17 +38,17 @@
       <!-- Hide below 1024px -->
       <div class="navlinks">
         <NuxtLink to="/" title="Home">Home</NuxtLink>
-        <NuxtLink to="/blog" title="Components">Blog</NuxtLink>
-        <NuxtLink to="/about" title="Git Api">About</NuxtLink>
+        <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
+        <NuxtLink to="/about" title="About">About</NuxtLink>
       </div>
     </div>
 
     <!-- MOBILE MENU -->
     <!-- Show below 1024px -->
     <div v-if="mobileMenuOpen" class="mobilenavlinks">
-      <NuxtLink to="/" title="Home">Home x</NuxtLink>
-      <NuxtLink to="/blog" title="Components">Blog x</NuxtLink>
-      <NuxtLink to="/about" title="Git Api">About x</NuxtLink>
+      <NuxtLink to="/" title="Home">Home</NuxtLink>
+      <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
+      <NuxtLink to="/about" title="About">About</NuxtLink>
     </div>
   </nav>
 </template>
