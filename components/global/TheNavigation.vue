@@ -34,7 +34,7 @@
         </span>
       </button>
 
-      <!-- MAIN MENU -->
+      <!-- DESKTOP MENU -->
       <!-- Hide below 1024px -->
       <div class="navlinks">
         <NuxtLink to="/" title="Home">Home</NuxtLink>
@@ -72,6 +72,7 @@ export default {
 
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
+
 nav#nav {
   div.nav-content {
     display: flex;
@@ -82,15 +83,35 @@ nav#nav {
 }
 div.navlinks {
   display: none;
-  a {
-    background-color: red;
-    display: inline-block;
-    padding: 1rem;
-  }
   @media (min-width: 768px) {
     display: block;
   }
+  a {
+    position: relative;
+    background-color: white;
+    display: block;
+    float: left;
+    padding: 1rem;
+    overflow: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.3em;
+      background-color: hotpink;
+      transition: opacity 300ms, transform 300ms;
+      opacity: 1;
+      transform: translate3d(-100%, 0, 0);
+    }
+    &:hover::after,
+    &:focus::after {
+      transform: translate3d(0, 0, 0);
+    }
+  }
 }
+
 div.mobilenavlinks {
   display: block;
   background-color: $theme-colour;
