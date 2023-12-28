@@ -1,0 +1,14 @@
+@import "partials/reset";
+@import "partials/grid";
+@import "partials/flex";
+@import "partials/typography";
+@import "partials/colours";
+@import "partials/buttons";
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  background-color: darken($body-bg, 10%);
+}
+main {
+  /* background-color: lighten($first-colour, 0%); */
+}
