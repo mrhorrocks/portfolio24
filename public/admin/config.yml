@@ -14,7 +14,7 @@ display_url: https://your-site-xxx.com
 # logo_url: https://your-site.com/images/logo.svg
 
 media_folder: public/images/uploads
-# public_folder: /img
+public_folder: /images/uploads
 
 # Adds a search bar for collections
 search: true

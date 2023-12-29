@@ -57,6 +57,11 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 
           <div class="grid cols-3 gap-1">
             <div class="content">
+              q
+              <div class="thumbnail">
+                <img :src="doc.thumbnail" alt="" />
+              </div>
+              q
               <!-- MAIN ARTICLE -->
               <ContentRenderer :value="doc" tag="article" />
 
