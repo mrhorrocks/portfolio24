@@ -14,7 +14,7 @@ display_url: https://your-site-xxx.com
 # logo_url: https://your-site.com/images/logo.svg
 
 media_folder: public/images/uploads
-# public_folder: /img
+public_folder: /images/uploads
 
 # Adds a search bar for collections
 search: true
@@ -37,9 +37,23 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
+      - { label: "Headline", name: "headline", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - {
+          label: "Author Url",
+          name: "authorurl",
+          widget: "string",
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Featured Image",
+          name: "thumbnail",
+          widget: "image",
+          required: false,
+        }
   #
   # ARTICLE
   #
@@ -67,18 +81,22 @@ collections:
   # ABOUT PAGE
   #
   - label: "Pages"
-    name: "pages"
+    name: "Pages"
     files:
       - label: "About Page"
         name: "about"
-        file: "/content/files/about.yml"
+        file: "/content/about.md"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
-          - label: Team
-            name: team
-            widget: list
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Position, name: position, widget: string }
-              - { label: Photo, name: photo, widget: image }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Author", name: "author", widget: "string" }
+          - { label: "Author Url", name: "authorurl", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+        # - label: Team
+        #   name: team
+        #   widget: list
+        #   fields:
+        #     - { label: Name, name: name, widget: string }
+        #     - { label: Position, name: position, widget: string }
+        #     - { label: Photo, name: photo, widget: image }
