@@ -1,7 +1,7 @@
 <script setup lang="js">
-const siteName = useRuntimeConfig().public.siteName; useHead({
-  titleTemplate: "%s - Blog - " + siteName,
-});
+// const siteName = useRuntimeConfig().public.siteName; useHead({
+//   titleTemplate: "%s - Blog - " + siteName,
+// });
 
 const { path } = useRoute();
 const cleanPath = path.replace(/\/+$/, "");
