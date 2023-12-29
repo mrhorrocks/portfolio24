@@ -69,19 +69,19 @@ collections:
   #
   # ABOUT PAGE
   #
-  - label: "Pages"
-    name: "pages"
+  - label: "pages"
+    name: "Pages"
     files:
       - label: "About Page"
         name: "about"
-        file: "/content/files/about.yml"
+        file: "/content/about.md"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
-          - label: Team
-            name: team
-            widget: list
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Position, name: position, widget: string }
-              - { label: Photo, name: photo, widget: image }
+          # - label: Team
+          #   name: team
+          #   widget: list
+          #   fields:
+          #     - { label: Name, name: name, widget: string }
+          #     - { label: Position, name: position, widget: string }
+          #     - { label: Photo, name: photo, widget: image }
