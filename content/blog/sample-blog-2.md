@@ -2,7 +2,7 @@
 excerpt: Sample excerpt, appears in blog cards
 authorUrl: https://example.com/
 author: Sample Author
-thumbnail: /images/uploads/1692751163109.jpg
+thumbnail: /images/uploads/placeholder.jpg
 dateUpdated: ""
 socialImage:
   src: /img/blog/sample.webp
