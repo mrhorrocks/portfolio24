@@ -5,7 +5,7 @@ description: Live blog desc
 headline: "Headline #1"
 author: Mark Horrocks
 authorUrl: http://www.mark.com
-thumbnail: /public/images/uploads/1692751163109.jpg
+thumbnail: ""
 ---
 
 ## H2 Article Heading
