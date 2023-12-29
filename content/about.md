@@ -1,7 +1,8 @@
 ---
-title: "About Title"
-headline: "About Headline"
-description: "The about page description"
+title: About Title
+headline: About Headline
+description: The about page description
+intro: qwerty
 ---
 
 # ABOUT
