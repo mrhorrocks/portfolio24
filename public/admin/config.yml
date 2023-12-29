@@ -41,8 +41,19 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Headline", name: "headline", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Author Url", name: "authorurl", widget: "string" }
+      - {
+          label: "Author Url",
+          name: "authorurl",
+          widget: "string",
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Featured Image",
+          name: "thumbnail",
+          widget: "image",
+          required: false,
+        }
   #
   # ARTICLE
   #
@@ -69,7 +80,7 @@ collections:
   #
   # ABOUT PAGE
   #
-  - label: "pages"
+  - label: "Pages"
     name: "Pages"
     files:
       - label: "About Page"
