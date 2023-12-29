@@ -50,9 +50,14 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - {
           label: "Featured Image",
-          name: "thumbnail",
+          name: "featuredImage",
           widget: "image",
           required: false,
+        }
+      - {
+          label: "Featured Image Alt text",
+          name: "featuredImageAltText",
+          widget: "string",
         }
   #
   # ARTICLE
