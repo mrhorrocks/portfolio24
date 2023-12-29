@@ -1,11 +1,25 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  ssr: true,
+  ssr: false,
   router: {
     options: {
       strict: false,
     },
+  },
+  sourcemap: false,
+
+  experimental: {
+    payloadExtraction: true
+  },
+  nitro: {
+    prerender: {
+      routes: [
+        // '/blog'
+      ],
+      ignore: [
+        '/blog'
+      ]
+    }
   },
   modules: ['@nuxt/content'],
 
