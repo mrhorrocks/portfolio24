@@ -23,59 +23,74 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 </script>
 
 <template>
-  <ContentDoc>
-    <template v-slot="{ doc }">
-      <header class="article-header">
-        <!-- Breadcrumb and date -->
-        <div class="page-details">
-          <ol class="breadcrumb">
-            <li><nuxt-link href="/">Home/</nuxt-link></li>
-            <li><nuxt-link href="/blog/">Blog/</nuxt-link></li>
-            <li>
-              <span>{{ doc.headline }}</span>
-            </li>
-          </ol>
+  <section>
+    <div class="container">
+      <ContentDoc>
+        <template v-slot="{ doc }">
+          <header class="article-header">
+            <!-- Breadcrumb and date -->
+            <div class="page-details">
+              <ol class="breadcrumb">
+                <li><nuxt-link href="/">Home/</nuxt-link></li>
+                <li><nuxt-link href="/blog/">Blog/</nuxt-link></li>
+                <li>
+                  <span>{{ doc.headline }}</span>
+                </li>
+              </ol>
 
-          <!-- Publish date -->
-          <div class="publish-date">
-            <client-only>{{ $formatDate(doc.date) }}</client-only>
-          </div>
-        </div>
-        <h2>{{ doc.headline }}</h2>
-        <!-- Author -->
-        <div class="author">
-          <a :href="doc.authorUrl" target="_blank" rel="noopener noreferrer">{{
-            doc.author
-          }}</a>
-        </div>
-      </header>
+              <!-- Publish date -->
+              <div class="publish-date">
+                <client-only>{{ $formatDate(doc.date) }}</client-only>
+              </div>
+            </div>
+            <h2>{{ doc.headline }}</h2>
+            <!-- Author -->
+            <div class="author">
+              <a
+                :href="doc.authorUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                >{{ doc.author }}</a
+              >
+            </div>
+          </header>
 
-      <div class="grid cols-3 gap-1">
-        <div class="content">
-          <!-- MAIN ARTICLE -->
-          <ContentRenderer :value="doc" tag="article" />
-          <div class="social">
-            <div class="share">Share icons here</div>
-          </div>
-        </div>
-        <!-- ASIDE -->
-        <aside class="aside">
-          <div>
-            <BlogTableOfContents :links="doc.body?.toc?.links" class="toc" />
-            <BlogMoreArticles
-              v-if="data?.surround?.filter(elem => elem !== null)?.length > 0"
-              :surround="data?.surround"
-              class="more-articles"
-            />
-          </div>
-        </aside>
-      </div>
-    </template>
+          <div class="grid cols-3 gap-1">
+            <div class="content">
+              <!-- MAIN ARTICLE -->
+              <ContentRenderer :value="doc" tag="article" />
 
-    <template #not-found>
-      <h2>Blog slug ({{ $route.params.slug }}) not found</h2>
-    </template>
-  </ContentDoc>
+              <!-- SOCIAL -->
+              <div class="social">
+                <div class="share">Share icons here</div>
+              </div>
+            </div>
+
+            <!-- ASIDE -->
+            <aside class="aside">
+              <div>
+                <BlogTableOfContents
+                  :links="doc.body?.toc?.links"
+                  class="toc"
+                />
+                <BlogMoreArticles
+                  v-if="
+                    data?.surround?.filter(elem => elem !== null)?.length > 0
+                  "
+                  :surround="data?.surround"
+                  class="more-articles"
+                />
+              </div>
+            </aside>
+          </div>
+        </template>
+
+        <template #not-found>
+          <h2>Blog slug ({{ $route.params.slug }}) not found</h2>
+        </template>
+      </ContentDoc>
+    </div>
+  </section>
 </template>
 
 <style lang="scss">

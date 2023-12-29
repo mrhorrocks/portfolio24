@@ -1,0 +1,79 @@
+# CMS SETTINGS
+backend:
+  name: git-gateway
+  branch: dev # Branch to update (optional; defaults to master)
+
+# Add the workflow tab
+# publish_mode: editorial_workflow
+
+# Display a link to the live site
+site_url: https://your-site.com
+display_url: https://your-site-xxx.com
+
+# Replace the logo on the login page
+# logo_url: https://your-site.com/images/logo.svg
+
+media_folder: public/images/uploads
+# public_folder: /img
+
+# Adds a search bar for collections
+search: true
+
+##############
+# COLLECTIONS
+##############
+collections:
+# https://decapcms.org/docs/collection-types/
+#
+# BLOG
+#
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
+    format: 'frontmatter'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+#
+# ARTICLE
+#
+  - name: 'article'
+    label: 'Article'
+    folder: 'content/article'
+    extension: "json"
+    format: "json"
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+#
+# ABOUT PAGE
+#
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "/content/files/about.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: Photo, name: photo, widget: image}

@@ -34,21 +34,21 @@
         </span>
       </button>
 
-      <!-- MAIN MENU -->
+      <!-- DESKTOP MENU -->
       <!-- Hide below 1024px -->
       <div class="navlinks">
         <NuxtLink to="/" title="Home">Home</NuxtLink>
-        <NuxtLink to="/blog" title="Components">Blog</NuxtLink>
-        <NuxtLink to="/about" title="Git Api">About</NuxtLink>
+        <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
+        <NuxtLink to="/about" title="About">About</NuxtLink>
       </div>
     </div>
 
     <!-- MOBILE MENU -->
     <!-- Show below 1024px -->
     <div v-if="mobileMenuOpen" class="mobilenavlinks">
-      <NuxtLink to="/" title="Home">Home x</NuxtLink>
-      <NuxtLink to="/blog" title="Components">Blog x</NuxtLink>
-      <NuxtLink to="/about" title="Git Api">About x</NuxtLink>
+      <NuxtLink to="/" title="Home">Home</NuxtLink>
+      <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
+      <NuxtLink to="/about" title="About">About</NuxtLink>
     </div>
   </nav>
 </template>
@@ -72,6 +72,7 @@ export default {
 
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
+
 nav#nav {
   div.nav-content {
     display: flex;
@@ -82,22 +83,49 @@ nav#nav {
 }
 div.navlinks {
   display: none;
-  a {
-    background-color: red;
-    display: inline-block;
-    padding: 1rem;
-  }
   @media (min-width: 768px) {
     display: block;
   }
+  a {
+    position: relative;
+    background-color: white;
+    display: block;
+    float: left;
+    padding: 1rem;
+    overflow: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.3em;
+      background-color: hotpink;
+      transition: opacity 300ms, transform 300ms;
+      opacity: 1;
+      transform: translate3d(-100%, 0, 0);
+    }
+    &:hover::after,
+    &:focus::after {
+      transform: translate3d(0, 0, 0);
+    }
+  }
 }
+
 div.mobilenavlinks {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background-color: $theme-colour;
+
   @media (min-width: 768px) {
     display: none;
   }
+  a {
+    background-color: pink;
+    padding: 1rem 0.5rem;
+  }
 }
+// Hamburger
 button.hamburger {
   display: block;
   height: 51px;

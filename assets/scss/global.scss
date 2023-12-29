@@ -8,7 +8,9 @@
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   background-color: darken($body-bg, 10%);
-}
-main {
-  /* background-color: lighten($first-colour, 0%); */
+  .container {
+    background-color: lighten(hotpink, 10%);
+    margin: 0 auto;
+    max-width: 1440px;
+  }
 }
