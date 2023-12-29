@@ -23,44 +23,49 @@ search: true
 # COLLECTIONS
 ##############
 collections:
-# https://decapcms.org/docs/collection-types/
-#
-# BLOG
-#
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
-    format: 'frontmatter'
+  # https://decapcms.org/docs/collection-types/
+  #
+  # BLOG
+  #
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    format: "frontmatter"
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-#
-# ARTICLE
-#
-  - name: 'article'
-    label: 'Article'
-    folder: 'content/article'
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  #
+  # ARTICLE
+  #
+  - name: "article"
+    label: "Article"
+    folder: "content/articles"
     extension: "json"
     format: "json"
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: "Featured Image", name: "thumbnail", widget: "image", required: false}
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-#
-# ABOUT PAGE
-#
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - {
+          label: "Featured Image",
+          name: "thumbnail",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+  #
+  # ABOUT PAGE
+  #
   - label: "Pages"
     name: "pages"
     files:
@@ -68,12 +73,12 @@ collections:
         name: "about"
         file: "/content/files/about.yml"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
           - label: Team
             name: team
             widget: list
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
+              - { label: Name, name: name, widget: string }
+              - { label: Position, name: position, widget: string }
+              - { label: Photo, name: photo, widget: image }
