@@ -11,16 +11,16 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: true
   },
-  nitro: {
-    prerender: {
-      routes: [
-        // '/blog'
-      ],
-      ignore: [
-        '/blog'
-      ]
-    }
-  },
+  // nitro: {
+  //   prerender: {
+  //     routes: [
+  //       // '/blog'
+  //     ],
+  //     ignore: [
+  //       // '/blog'
+  //     ]
+  //   }
+  // },
   modules: ['@nuxt/content'],
 
   app: {
