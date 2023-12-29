@@ -1,12 +1,26 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false, // Disable Server Side rendering
-  devtools: {
-    enabled: false,
-    timeline: {
-      enabled: true
-    }
+  devtools: { enabled: false },
+  ssr: false,
+  router: {
+    options: {
+      strict: false,
+    },
   },
+  sourcemap: false,
+
+  experimental: {
+    payloadExtraction: true
+  },
+  // nitro: {
+  //   prerender: {
+  //     routes: [
+  //       // '/blog'
+  //     ],
+  //     ignore: [
+  //       // '/blog'
+  //     ]
+  //   }
+  // },
   modules: ['@nuxt/content'],
 
   app: {
@@ -21,7 +35,7 @@ export default defineNuxtConfig({
   },
   css: [
     "@/assets/scss/global.scss",
-  ],
+  ]
   // runtimeConfig: {
   //   public: {
   //     // Shows in the client
