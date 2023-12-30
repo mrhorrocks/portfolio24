@@ -13,8 +13,8 @@ display_url: https://your-site-xxx.com
 # Replace the logo on the login page
 # logo_url: https://your-site.com/images/logo.svg
 
-media_folder: public/images/uploads
-public_folder: /images/uploads
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
 
 # Adds a search bar for collections
 search: true
@@ -47,12 +47,24 @@ collections:
           widget: "string",
           required: false,
         }
+      - {
+          label: "Featured Article",
+          name: "featuredArticle",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
       - {
           label: "Featured Image",
-          name: "thumbnail",
+          name: "featuredImage",
           widget: "image",
           required: false,
+        }
+      - {
+          label: "Featured Image Alt text",
+          name: "featuredImageAltText",
+          widget: "string",
         }
   #
   # ARTICLE

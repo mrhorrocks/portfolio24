@@ -1,18 +1,19 @@
 ---
-title: 'Sample Meta Title 1'
-description: "Sample meta description, it gets added on share cards"
-headline: 'Sample Blog Title 1'
-excerpt: 'Sample appears in blog cards'
-date: '3001-02-28T12:00:00'
-dateUpdated: ''
-author: 'Sample Author'
-authorUrl: 'https://example.com/'
+excerpt: Sample appears in blog cards
+authorUrl: https://example.com/
+author: Sample Author
+thumbnail: /images/uploads/1692751163109.jpg
+dateUpdated: ""
 socialImage:
-    src: '/img/blog/sample.webp'
-    mime: 'webp'
-    alt: 'Mountain'
-    width: 1200
-    height: 630
+  src: /img/blog/sample.webp
+  mime: webp
+  alt: Mountain
+  width: 1200
+  height: 630
+title: Sample Meta Title 1
+date: 3001-02-28T12:00:00
+description: Sample meta description, it gets added on share cards
+headline: Sample Blog Title 1
 ---
 
 ## H2 Article Heading 

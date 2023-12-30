@@ -2,7 +2,7 @@
 useHead({
   titleTemplate: "Articles - %s",
 });
-const articleCountLimit = 5;
+const articleCountLimit = 4;
 const { data } = await useAsyncData(`content/blog`, async () => {
   const _posts = await queryContent("/blog").only("headline").find();
   return Math.ceil(_posts.length / articleCountLimit);
