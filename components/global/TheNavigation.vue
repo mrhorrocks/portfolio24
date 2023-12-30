@@ -38,8 +38,10 @@
       <!-- Hide below 1024px -->
       <div class="navlinks">
         <NuxtLink to="/" title="Home">Home</NuxtLink>
+        <NuxtLink to="/experience" title="Experience">Experience</NuxtLink>
         <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
         <NuxtLink to="/about" title="About">About</NuxtLink>
+        <NuxtLink to="/contact" title="Contact">Contact</NuxtLink>
       </div>
     </div>
 
@@ -47,8 +49,10 @@
     <!-- Show below 1024px -->
     <div v-if="mobileMenuOpen" class="mobilenavlinks">
       <NuxtLink to="/" title="Home">Home</NuxtLink>
+      <NuxtLink to="/experience" title="Experience">Experience</NuxtLink>
       <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
       <NuxtLink to="/about" title="About">About</NuxtLink>
+      <NuxtLink to="/contact" title="Contact">Contact</NuxtLink>
     </div>
   </nav>
 </template>
