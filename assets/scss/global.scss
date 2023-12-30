@@ -8,9 +8,13 @@
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   background-color: darken($body-bg, 10%);
+  section {
+    background-color: lighten(hotpink, 5%);
+  }
   .container {
     background-color: lighten(hotpink, 10%);
-    margin: 0 auto;
     max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
 }
