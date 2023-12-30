@@ -5,6 +5,7 @@ date: 2023-12-29T20:34:41.130Z
 description: Live blog desc
 headline: "Headline #1"
 author: Mark Horrocks
+featuredArticle: true
 featuredImage: /images/uploads/1692751163109.jpg
 featuredImageAltText: This is Wilson
 ---
