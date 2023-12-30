@@ -3,7 +3,7 @@ useHead({
   titleTemplate: "More Articles - %s",
 });
 // Fetching data
-const articleCountLimit = 5;
+const articleCountLimit = 4;
 const { path, params } = useRoute();
 
 const getPageLimit = totalPosts => {
