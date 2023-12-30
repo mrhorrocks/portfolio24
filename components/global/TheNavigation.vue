@@ -1,8 +1,34 @@
+<script>
+export default {
+  data () {
+    return {
+      // Mobile menu is hidden by default
+      mobileMenuOpen: false,
+      isNavShrink: false,
+    };
+  },
+  methods: {
+    // Toggle the mobile menu
+    toggleMobileMenu () {
+      this.mobileMenuOpen = !this.mobileMenuOpen;
+    },
+    handleScroll () {
+      // Adjust the scroll position threshold as needed
+      this.isNavShrink = window.scrollY > 60;
+    },
+  },
+  mounted () {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy () {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+};
+</script>
 <template>
   <nav id="nav">
     <div class="nav-content">
       <SiteLogo />
-
       <button @click="toggleMobileMenu" class="hamburger">
         <span v-if="mobileMenuOpen">
           <!-- Close -->
@@ -36,7 +62,13 @@
 
       <!-- DESKTOP MENU -->
       <!-- Hide below 1024px -->
-      <div class="navlinks">
+      <div
+        class="navlinks"
+        :class="[
+          $route.fullPath === '/' ? 'red' : 'blue',
+          { shrink: isNavShrink },
+        ]"
+      >
         <NuxtLink to="/" title="Home">Home</NuxtLink>
         <NuxtLink to="/experience" title="Experience">Experience</NuxtLink>
         <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
@@ -56,23 +88,6 @@
     </div>
   </nav>
 </template>
-
-<script>
-export default {
-  data () {
-    return {
-      // Mobile menu is hidden by default
-      mobileMenuOpen: false,
-    };
-  },
-  methods: {
-    // Toggle the mobile menu
-    toggleMobileMenu () {
-      this.mobileMenuOpen = !this.mobileMenuOpen;
-    },
-  },
-};
-</script>
 
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
@@ -95,8 +110,9 @@ div.navlinks {
     background-color: white;
     display: block;
     float: left;
-    padding: 1rem;
+    padding: 2rem 1rem;
     overflow: hidden;
+    transition: padding 0.3s ease;
     &::after {
       content: "";
       position: absolute;
@@ -114,27 +130,29 @@ div.navlinks {
       transform: translate3d(0, 0, 0);
     }
   }
-}
-
-div.mobilenavlinks {
-  display: flex;
-  flex-direction: column;
-  background-color: $theme-colour;
-
-  @media (min-width: 768px) {
-    display: none;
-  }
-  a {
-    background-color: pink;
-    padding: 1rem 0.5rem;
+  &.shrink a {
+    padding: 0.5rem 1rem;
   }
 }
+// MOBILE
 // Hamburger
 button.hamburger {
   display: block;
   height: 51px;
   @media (min-width: 768px) {
     display: none;
+  }
+}
+div.mobilenavlinks {
+  display: flex;
+  flex-direction: column;
+  background-color: $theme-colour;
+  @media (min-width: 768px) {
+    display: none;
+  }
+  a {
+    background-color: pink;
+    padding: 1rem 0.5rem;
   }
 }
 </style>

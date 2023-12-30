@@ -73,19 +73,12 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 
             <!-- ASIDE -->
             <aside class="aside">
-              <div>
-                <BlogTableOfContents
-                  :links="doc.body?.toc?.links"
-                  class="toc"
-                />
-                <BlogMoreArticles
-                  v-if="
-                    data?.surround?.filter(elem => elem !== null)?.length > 0
-                  "
-                  :surround="data?.surround"
-                  class="more-articles"
-                />
-              </div>
+              <BlogTableOfContents :links="doc.body?.toc?.links" class="toc" />
+              <BlogMoreArticles
+                v-if="data?.surround?.filter(elem => elem !== null)?.length > 0"
+                :surround="data?.surround"
+                class="more-articles"
+              />
             </aside>
           </div>
         </template>
@@ -107,17 +100,14 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
   aside.aside {
     grid-column: span 1 / span 1; // 1 col
     position: sticky;
-    top: 0rem;
-    div {
-      position: sticky;
-      top: 0rem;
-    }
+    top: 35px;
+    height: fit-content;
   }
 }
 
 .page-details {
   background-color: darken($theme-colour-two, 7.5%);
-  @media only screen and (min-width: 768px) {
+  @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
   }
