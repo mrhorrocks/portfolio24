@@ -15,8 +15,16 @@ if (location.href.indexOf("#invite_token") !== -1) {
 
 <template>
   <section>
-    <div class="container">
-      <div class="slide-wrapper">
+    <div class="container md:grid md:cols-3">
+      <!-- Headline -->
+
+      <div class="col-span-1">
+        <h1 class="site-headline">
+          Lorem ipsum dolor, sit amet consectetur adipisicing.
+        </h1>
+      </div>
+      <!-- Slide -->
+      <div class="slide-wrapper col-span-2">
         <input type="radio" name="slide" id="c1" checked />
         <label for="c1" class="card">
           <div class="row">
@@ -63,40 +71,56 @@ if (location.href.indexOf("#invite_token") !== -1) {
 </template>
 
 <style>
+h1.site-headline {
+  font-size: 3rem;
+  line-height: 1.3;
+  padding: 0 1rem 1rem 0;
+}
+
 .slide-wrapper {
-  height: 400px;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: flex-end;
+  flex-direction: column;
+  height: 400px;
+  @media (min-width: 900px) {
+    justify-content: flex-end;
+    flex-direction: row;
+  }
 }
 
 .card {
+  display: flex;
+  align-items: flex-end;
+  min-width: 80px;
   width: 80px;
+  padding-right: 0.5rem;
+  /* padding-bottom: 0.5rem; */
+  margin: 0rem 0rem 1rem 0;
   background-size: cover;
   background-color: white;
   cursor: pointer;
   overflow: hidden;
   border-radius: 1rem;
-  margin: 0 10px;
-  display: flex;
-  align-items: flex-end;
   transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
-  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.8);
+  @media (min-width: 900px) {
+    margin: 0rem 0rem 0rem 1rem;
+  }
 }
 
 .card > .row {
-  color: white;
   display: flex;
   flex-wrap: nowrap;
+  color: white;
 }
 
 .card > .row > .icon {
+  display: flex;
+  justify-content: center;
   background: #223;
   color: white;
   border-radius: 50%;
-  width: 50px;
-  display: flex;
-  justify-content: center;
+  min-width: 50px;
   align-items: center;
   margin: 15px;
 }
@@ -105,9 +129,8 @@ if (location.href.indexOf("#invite_token") !== -1) {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  overflow: hidden;
   height: 80px;
-  width: 520px;
+  width: auto;
   opacity: 0;
   transform: translateY(30px);
   transition-delay: 0.3s;
@@ -115,12 +138,15 @@ if (location.href.indexOf("#invite_token") !== -1) {
 }
 
 .description p {
+  /* display: none; */
   color: #b0b0ba;
-  padding-top: 5px;
+  line-height: 1.4;
 }
 
 .description h4 {
   text-transform: uppercase;
+  color: black;
+  padding: 0rem 0 0.2rem;
 }
 
 input {
@@ -128,7 +154,8 @@ input {
 }
 
 input:checked + label {
-  width: 600px;
+  /* max-width: 600px; */
+  width: 100%;
 }
 
 input:checked + label .description {

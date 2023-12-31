@@ -55,7 +55,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
             </div>
           </header>
 
-          <div class="grid cols-3 gap-1">
+          <div class="md:grid md:cols-3 md:gap-1">
             <div class="content">
               <!-- Picture -->
               <div class="thumbnail">

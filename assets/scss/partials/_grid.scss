@@ -1,17 +1,40 @@
-.grid {
+.md\:grid {
   @media (min-width: 768px) {
     display: grid;
-    &.cols-2 {
+    &.md\:cols-2 {
       grid-template-columns: repeat(2, 1fr);
     }
-    &.cols-3 {
+    &.md\:cols-3 {
       grid-template-columns: repeat(3, 1fr);
     }
-    &.cols-4 {
+    &.md\:cols-4 {
       grid-template-columns: repeat(4, 1fr);
     }
-    &.gap-1 {
+    &.md\:gap-1 {
       gap: 1rem;
     }
   }
+}
+.lg\:grid {
+  @media (min-width: 1028px) {
+    display: grid;
+    &.lg\:cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &.lg\:cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &.lg\:cols-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    &.lg\:gap-1 {
+      gap: 1rem;
+    }
+  }
+}
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+.col-span-2 {
+  grid-column: span 2 / span 2;
 }
