@@ -73,7 +73,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
 <style>
 h1.site-headline {
   font-size: 3rem;
-  line-height: 1.3;
+  line-height: 1.25;
   padding: 0 1rem 1rem 0;
 }
 

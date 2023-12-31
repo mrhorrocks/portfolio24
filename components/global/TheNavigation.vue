@@ -97,7 +97,7 @@ nav#nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: lighten($theme-colour, 20%);
+    // background-color: lighten($theme-colour, 20%);
   }
 }
 div.navlinks {
@@ -107,11 +107,13 @@ div.navlinks {
   }
   a {
     position: relative;
-    background-color: white;
     display: block;
     float: left;
     padding: 2rem 1rem;
     overflow: hidden;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
     transition: padding 0.3s ease;
     &::after {
       content: "";
@@ -120,7 +122,8 @@ div.navlinks {
       left: 0;
       width: 100%;
       height: 0.3em;
-      background-color: hotpink;
+      //
+      background-color: black;
       transition: opacity 300ms, transform 300ms;
       opacity: 1;
       transform: translate3d(-100%, 0, 0);
