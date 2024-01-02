@@ -1,9 +1,9 @@
 <script setup lang="ts">
 useHead({
   titleTemplate: "Home - %s",
-  script: [
-    { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
-  ],
+  // script: [
+  //   { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
+  // ],
 });
 
 // REDIRECT
@@ -23,7 +23,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
           Lorem ipsum dolor, sit amet consectetur adipisicing.
         </h1>
       </div>
-      <!-- Slide -->
+      <!-- Slides -->
       <div class="slide-wrapper col-span-2">
         <input type="radio" name="slide" id="c1" checked />
         <label for="c1" class="card">
@@ -31,7 +31,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
             <div class="icon">1</div>
             <div class="description">
               <h4>Winter</h4>
-              <p>Winter has so much to offer - creative activities</p>
+              <p>Winter has so much to offer</p>
             </div>
           </div>
         </label>
@@ -94,16 +94,15 @@ h1.site-headline {
   min-width: 80px;
   width: 80px;
   padding-right: 0.5rem;
-  /* padding-bottom: 0.5rem; */
+  overflow: hidden;
   margin: 0rem 0rem 1rem 0;
   background-size: cover;
   background-color: white;
   cursor: pointer;
-  overflow: hidden;
-  border-radius: 1rem;
-  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+  transition: 0.3s cubic-bezier(0.28, -0.03, 0, 0.99);
   box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.8);
-  @media (min-width: 900px) {
+  border-radius: 0.75rem;
+  @media only screen and (min-width: 900px) {
     margin: 0rem 0rem 0rem 1rem;
   }
 }
@@ -132,9 +131,10 @@ h1.site-headline {
   height: 80px;
   width: auto;
   opacity: 0;
-  transform: translateY(30px);
-  transition-delay: 0.3s;
+  overflow: hidden;
+  transform: translateY(0px);
   transition: all 0.3s ease;
+  transition-delay: 0.3s;
 }
 
 .description p {
@@ -163,7 +163,7 @@ input:checked + label .description {
   transform: translateY(0) !important;
 }
 
-.card[for="c1"] {
+/* .card[for="c1"] {
   background-image: url("./img1.jpeg");
 }
 .card[for="c2"] {
@@ -174,5 +174,5 @@ input:checked + label .description {
 }
 .card[for="c4"] {
   background-image: url("./img4.jpeg");
-}
+} */
 </style>
