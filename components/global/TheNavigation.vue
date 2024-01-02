@@ -123,7 +123,7 @@ div.navlinks {
       width: 100%;
       height: 0.3em;
       //
-      background-color: black;
+      background-color: darken($theme-colour, 30%);
       transition: opacity 300ms, transform 300ms;
       opacity: 1;
       transform: translate3d(-100%, 0, 0);

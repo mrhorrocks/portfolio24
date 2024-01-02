@@ -2,7 +2,7 @@
 useHead({
   titleTemplate: "Articles - %s",
 });
-const articleCountLimit = 6;
+const articleCountLimit = 4;
 const { data } = await useAsyncData(`content/blog`, async () => {
   const _posts = await queryContent("/blog").only("headline").find();
   return Math.ceil(_posts.length / articleCountLimit);
@@ -30,7 +30,10 @@ const { data } = await useAsyncData(`content/blog`, async () => {
         :limit="articleCountLimit"
       >
         <div class="md:grid md:cols-3 md:gap-1">
-          <BlogList :data="data" />
+          <div class="col-span-3 md:grid md:cols-2 md:gap-2">
+            <BlogList :data="data" />
+          </div>
+          <!-- <div class="col-span-1">c</div> -->
         </div>
 
         <p v-if="data.length == 0">

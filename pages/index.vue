@@ -70,11 +70,14 @@ if (location.href.indexOf("#invite_token") !== -1) {
   </section>
 </template>
 
-<style>
+<style lang="scss">
+@import "@/assets/scss/partials/colours";
 h1.site-headline {
   font-size: 3rem;
   line-height: 1.25;
   padding: 0 1rem 1rem 0;
+  //
+  // color: darken($theme-colour, 30%);
 }
 
 .slide-wrapper {

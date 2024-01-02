@@ -151,7 +151,7 @@ header.article-header {
   h4,
   h5 {
     background-color: pink;
-    scroll-margin-top: 35px;
+    scroll-margin-top: 40px;
   }
 }
 

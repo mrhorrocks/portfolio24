@@ -97,11 +97,7 @@ const prevLink = computed(() => {
   width: 100%;
   align-items: center;
   justify-content: center;
-}
-
-.pagination-item.active {
-  background-color: $theme-colour;
-  border: 0.25rem solid #b64e4e;
+  margin: 2rem 0 0 0;
 }
 
 .pagination-item {
@@ -109,23 +105,30 @@ const prevLink = computed(() => {
   min-width: 3rem;
   line-height: 3rem;
   text-align: center;
-  border-radius: 0rem;
+  box-sizing: content-box;
+  border-radius: 50%;
+  color: white;
   background-color: lighten($theme-colour, 10%);
+  text-decoration: 0;
+  border: 0.25rem solid transparent;
+}
+
+.pagination-item.active {
+  background-color: $theme-colour;
+  border: 0.25rem solid darken($theme-colour, 20%);
+  cursor: default;
 }
 
 .pagination-item:not(.active):hover {
   background-color: darken($theme-colour, 5%);
+  border: 0.25rem solid lighten($theme-colour, 10%);
 }
 
 .pagination-extra {
-  width: 2rem;
   line-height: 1.45rem;
   text-align: center;
 }
 
-.pagination-icon {
-  width: 2rem;
-  text-align: center;
-  padding-left: 0.3rem;
-}
+// .pagination-icon {
+// }
 </style>
