@@ -5,11 +5,13 @@
 @import "partials/colours";
 @import "partials/buttons";
 
+html {
+  scroll-behavior: smooth;
+}
 ::selection {
   color: #ffffff;
   background: #ff6a67;
 }
-
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   background-color: darken($body-bg, 10%);
