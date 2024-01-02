@@ -51,7 +51,7 @@ try {
       >
         <!-- In case it is found -->
         <template v-slot="{ data }">
-          <div class="md:grid md:cols-2">
+          <div class="md:grid md:cols-2 md:gap-1">
             <BlogList :data="data" />
           </div>
 

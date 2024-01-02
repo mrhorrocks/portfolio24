@@ -12,7 +12,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <article v-for="article in data" :key="article._path">
+  <article v-for="article in data" :key="article._path" class="blog-index-card">
     <h2>{{ article.headline }}</h2>
     <p>{{ article.description }}</p>
     <p class="date">
@@ -25,3 +25,14 @@ const props = defineProps({
   <p v-if="data.length == 0">There are no posts right now.</p>
   <p v-if="data.length == 0" class="no-articles-available">{{ message }}</p>
 </template>
+
+<style>
+.blog-index-card {
+  background-color: white;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 0.75rem;
+  border: transparent;
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.1254901961);
+}
+</style>

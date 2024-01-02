@@ -58,7 +58,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
           <div class="md:grid md:cols-3 md:gap-1">
             <div class="content">
               <!-- Picture -->
-              <div class="thumbnail">
+              <div v-if="doc.featuredImage" class="thumbnail">
                 <img :src="doc.featuredImage" :alt="doc.featuredImageAltText" />
               </div>
 
@@ -105,6 +105,12 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
   }
 }
 
+header.article-header {
+  background-color: lighten($theme-colour, 15%);
+  margin: 0px 0 20px 0;
+  padding: 0 0px 3rem;
+}
+
 .page-details {
   background-color: darken($theme-colour-two, 7.5%);
   @media (min-width: 768px) {
@@ -135,6 +141,17 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
   .publish-date {
     background-color: darken($theme-colour, 5%);
     line-height: 2rem;
+  }
+}
+
+.content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    background-color: pink;
+    scroll-margin-top: 35px;
   }
 }
 
