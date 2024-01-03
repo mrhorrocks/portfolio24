@@ -9,8 +9,7 @@
   color: white;
   background-color: darken($theme-colour, 15%);
   &:hover {
-    background-color: #ccc;
-    color: black;
+    background-color: $theme-colour-three;
   }
   &.blog-index-button {
     &::after {
