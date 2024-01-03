@@ -15,7 +15,7 @@ socialImage:
   height: 630
 ---
 
-## H2 Article Heading
+### H3 Article Heading
 
 Headings up to H1, H2 and H3 are added to the Table of Contents
 
