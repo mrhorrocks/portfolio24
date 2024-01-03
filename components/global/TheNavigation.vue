@@ -112,7 +112,7 @@ div.navlinks {
     padding: 2rem 1rem;
     overflow: hidden;
     text-decoration: none;
-    color: black;
+    color: #666666;
     font-weight: bold;
     transition: padding 0.3s ease;
     &::after {
@@ -123,20 +123,32 @@ div.navlinks {
       width: 100%;
       height: 0.3em;
       //
-      background-color: darken($theme-colour, 30%);
+      background-color: #ff6a67;
       transition: opacity 300ms, transform 300ms;
+      transform: translate3d(-100%, 0, 0);
+      opacity: 1;
+    }
+    &:hover::after {
+      transform: translate3d(0, 0, 0);
+    }
+    &.router-link-active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 100%;
+      width: 100%;
+      height: 0.3em;
+      //
+      background-color: black;
       opacity: 1;
       transform: translate3d(-100%, 0, 0);
-    }
-    &:hover::after,
-    &:focus::after {
-      transform: translate3d(0, 0, 0);
     }
   }
   &.shrink a {
     padding: 0.5rem 1rem;
   }
 }
+
 // MOBILE
 // Hamburger
 button.hamburger {
