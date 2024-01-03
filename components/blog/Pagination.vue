@@ -107,21 +107,22 @@ const prevLink = computed(() => {
   text-align: center;
   box-sizing: content-box;
   border-radius: 50%;
-  color: white;
-  background-color: lighten($theme-colour, 10%);
-  text-decoration: 0;
-  border: 0.25rem solid transparent;
+  color: darken($theme-colour, 20%);
+  font-weight: bold;
+  background-color: white;
+  border: 0.25rem solid lighten($theme-colour, 10%);
+  text-decoration: none;
 }
 
 .pagination-item.active {
   background-color: $theme-colour;
+  color: whitesmoke;
   border: 0.25rem solid darken($theme-colour, 20%);
   cursor: default;
 }
 
 .pagination-item:not(.active):hover {
-  background-color: darken($theme-colour, 5%);
-  border: 0.25rem solid lighten($theme-colour, 10%);
+  border: 0.25rem solid darken($theme-colour, 20%);
 }
 
 .pagination-extra {
