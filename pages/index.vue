@@ -131,7 +131,7 @@ h1.site-headline {
 
 .card > .row > .description {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: column;
   height: 80px;
   width: auto;
