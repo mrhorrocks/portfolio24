@@ -20,6 +20,9 @@
   &.md\:gap-3 {
     gap: 3rem;
   }
+  &.md\:gap-4 {
+    gap: 4rem;
+  }
 }
 .lg\:grid {
   display: grid;
@@ -42,6 +45,9 @@
   }
   &.lg\:gap-3 {
     gap: 3rem;
+  }
+  &.lg\:gap-4 {
+    gap: 4rem;
   }
 }
 .col-span-1 {

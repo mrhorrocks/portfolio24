@@ -31,7 +31,7 @@ const props = defineProps({
 <style>
 .blog-index-card {
   background-color: white;
-  padding: 1rem;
+  padding: 1.5rem;
   box-sizing: border-box;
   border-radius: 0.75rem;
   border: transparent;

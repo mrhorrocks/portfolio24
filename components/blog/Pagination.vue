@@ -102,8 +102,8 @@ const prevLink = computed(() => {
 
 .pagination-item {
   margin: 0.25rem 0.25rem;
-  min-width: 3rem;
-  line-height: 3rem;
+  min-width: 2rem;
+  line-height: 2rem;
   text-align: center;
   box-sizing: content-box;
   border-radius: 50%;
@@ -117,6 +117,8 @@ const prevLink = computed(() => {
 .pagination-item.active {
   background-color: $theme-colour;
   color: whitesmoke;
+  min-width: 3rem;
+  line-height: 3rem;
   border: 0.25rem solid darken($theme-colour, 20%);
   cursor: default;
 }

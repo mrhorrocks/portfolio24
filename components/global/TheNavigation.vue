@@ -123,7 +123,7 @@ div.navlinks {
       width: 100%;
       height: 0.3em;
       //
-      background-color: #ff6a67;
+      background-color: black;
       transition: opacity 300ms, transform 300ms;
       transform: translate3d(-100%, 0, 0);
       opacity: 1;
@@ -139,7 +139,7 @@ div.navlinks {
       width: 100%;
       height: 0.3em;
       //
-      background-color: black;
+      background-color: $theme-colour-three;
       opacity: 1;
       transform: translate3d(-100%, 0, 0);
     }

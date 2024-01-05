@@ -31,8 +31,8 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
             <!-- Breadcrumb and date -->
             <div class="page-details">
               <ol class="breadcrumb">
-                <li><nuxt-link href="/">Home/</nuxt-link></li>
-                <li><nuxt-link href="/blog/">Blog/</nuxt-link></li>
+                <li><nuxt-link href="/">Home</nuxt-link> /&nbsp;</li>
+                <li><nuxt-link href="/blog/">Blog</nuxt-link> /&nbsp;</li>
                 <li>
                   <span>{{ doc.headline }}</span>
                 </li>
@@ -43,8 +43,9 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
                 <client-only>{{ $formatDate(doc.date) }}</client-only>
               </div>
             </div>
-            <h2>{{ doc.headline }}</h2>
-            <!-- Author -->
+
+            <h1>{{ doc.headline }}</h1>
+
             <div class="author">
               <a
                 :href="doc.authorUrl"
@@ -55,7 +56,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
             </div>
           </header>
 
-          <div class="md:grid md:cols-3 md:gap-1">
+          <div class="md:grid md:cols-3 md:gap-4">
             <div class="content">
               <!-- Picture -->
               <div v-if="doc.featuredImage" class="thumbnail">
@@ -92,7 +93,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 </template>
 
 <style lang="scss">
-@import "@/assets/scss/partials/colours";
+@import "../../assets/scss/partials/_colours";
 @media (min-width: 768px) {
   div.content {
     grid-column: span 2 / span 2; // 2 cols
@@ -100,19 +101,24 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
   aside.aside {
     grid-column: span 1 / span 1; // 1 col
     position: sticky;
-    top: 35px;
+    top: 4rem;
     height: fit-content;
+    h3 {
+      text-align: center;
+    }
   }
 }
 
 header.article-header {
-  background-color: lighten($theme-colour, 15%);
-  margin: 0px 0 20px 0;
-  padding: 0 0px 3rem;
+  margin: 0 0 3rem 0;
+  h1 {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+  }
 }
 
 .page-details {
-  background-color: darken($theme-colour-two, 7.5%);
+  font-size: 0.8rem;
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
@@ -123,24 +129,35 @@ header.article-header {
     list-style: none;
     margin: 0;
     padding: 0;
-    background-color: darken($theme-colour, 2.5%);
 
     li {
       a {
-        display: block;
-        line-height: 2rem;
+        display: inline-block;
+        text-decoration: none;
+        background-color: black;
+        color: white;
+        padding: 0.25rem;
+        border-radius: 0.25rem;
         &:hover {
-          background-color: lighten($theme-colour, 10%);
+          background-color: $theme-colour-three;
+          color: white;
         }
       }
       span {
-        line-height: 2rem;
+        padding: 0.25rem;
+        display: inline-block;
       }
     }
   }
   .publish-date {
-    background-color: darken($theme-colour, 5%);
-    line-height: 2rem;
+    padding: 0.25rem;
+  }
+}
+
+.author {
+  font-size: 0.8rem;
+  a {
+    color: black;
   }
 }
 
@@ -150,13 +167,21 @@ header.article-header {
   h3,
   h4,
   h5 {
-    background-color: pink;
     scroll-margin-top: 40px;
+    &:hover::after {
+      content: " #";
+      color: $theme-colour-three;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
   }
 }
 
 .toc {
   background-color: lighten($theme-colour, 10%);
+  margin-bottom: 2rem;
 }
 
 .social {

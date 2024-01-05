@@ -53,11 +53,11 @@ const toggleHeader = () => {
 </template>
 
 <style lang="scss" scoped>
-.heading_3 {
-  padding-left: 0.1rem;
+.link_3 {
+  padding-left: 0.5rem;
 }
 
-.heading_3::before {
+.link_3::before {
   content: "·";
 }
 
