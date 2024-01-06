@@ -66,7 +66,7 @@ const toggleHeader = () => {
   a {
     font-size: 1.1rem;
     &::before {
-      content: "";
+      content: "• ";
     }
   }
 }
@@ -75,7 +75,7 @@ const toggleHeader = () => {
     // text-indent: 1rem;
     font-size: 0.9rem;
     &::before {
-      content: "••• ";
+      content: "•• ";
     }
   }
 }

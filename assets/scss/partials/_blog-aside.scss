@@ -22,15 +22,15 @@
     a {
       position: relative;
       display: block;
-      line-height: 1.2rem;
-      padding: 1rem 0rem;
+      line-height: 1rem;
+      padding: 0.5rem 0rem;
       color: black;
       text-decoration-line: none;
       &:hover {
         background-color: #ccc;
       }
       &:active {
-        background-color: lighten($selection-color, 20%);
+        background-color: lighten(#ccc, 10%);
       }
     }
   }
