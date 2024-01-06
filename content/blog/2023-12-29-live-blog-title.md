@@ -1,12 +1,12 @@
 ---
 authorurl: Mark
 authorUrl: http://www.mark.com
-title: Live blog title...
-date: 2023-12-29T20:34:41.130Z
+title: A Tail of Two Portfolios
+date: 2024-01-06T18:07:50.800Z
 description: Live blog desc
 headline: A Tail of Two Portfolios
 author: Mark Horrocks
-featuredArticle: false
+featuredArticle: true
 featuredImage: /images/uploads/img1.jpg
 featuredImageAltText: A screenshot from 2008
 ---
