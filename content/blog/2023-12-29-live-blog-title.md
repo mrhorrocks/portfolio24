@@ -10,6 +10,7 @@ featuredArticle: true
 featuredImage: /images/uploads/img1.jpg
 featuredImageAltText: A screenshot from 2008
 ---
+
 ## 2008
 
 Blender, Flash, ActionScript..
