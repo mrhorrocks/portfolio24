@@ -1,15 +1,19 @@
 ---
+authorurl: Mark
 authorUrl: http://www.mark.com
 title: Live blog title...
 date: 2023-12-29T20:34:41.130Z
 description: Live blog desc
-headline: "Headline #1"
+headline: A Tail of Two Portfolios
 author: Mark Horrocks
 featuredArticle: false
-featuredImage: /images/uploads/1692751163109.jpg
-featuredImageAltText: This is Wilson
+featuredImage: /images/uploads/img1.jpg
+featuredImageAltText: A screenshot from 2008
 ---
+## 2008
 
-## H2 Article Heading
+Blender, Flash, ActionScript
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus asperiores provident illum quaerat cupiditate molestiae tenetur a quidem distinctio pariatur.
+## 2023/24
+
+Vue3, Nuxt3
