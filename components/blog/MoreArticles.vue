@@ -64,7 +64,7 @@ ul.prev-next > li {
       content: "<< prev ";
       position: absolute;
       right: 0.5rem;
-      background-color: darken(mediumblue, 10%);
+      background-color: darken(skyblue, 20%);
       color: white;
       padding: 0.1rem 0.25rem;
       border-radius: 0.25rem;

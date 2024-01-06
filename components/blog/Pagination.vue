@@ -112,6 +112,7 @@ const prevLink = computed(() => {
   background-color: white;
   border: 0.25rem solid lighten($theme-colour, 10%);
   text-decoration: none;
+  // transition: all 0.2s ease;
 }
 
 .pagination-item.active {
@@ -125,6 +126,8 @@ const prevLink = computed(() => {
 
 .pagination-item:not(.active):hover {
   border: 0.25rem solid darken($theme-colour, 20%);
+  // min-width: 2.5rem;
+  // line-height: 2.5rem;
 }
 
 .pagination-extra {

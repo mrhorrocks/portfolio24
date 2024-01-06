@@ -30,7 +30,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
           <div class="row">
             <div class="icon">1</div>
             <div class="description">
-              <h4>Winter</h4>
+              <h4>A Tail of Two Portfolios</h4>
               <p>Winter has so much to offer</p>
             </div>
           </div>
@@ -94,8 +94,6 @@ h1.site-headline {
 }
 
 .card {
-  display: flex;
-  align-items: flex-end;
   min-width: 80px;
   width: 80px;
   padding-right: 0.5rem;
@@ -108,6 +106,8 @@ h1.site-headline {
   box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.8);
   border-radius: 0.75rem;
   @media only screen and (min-width: 900px) {
+    display: flex;
+    align-items: flex-end;
     margin: 0rem 0rem 0rem 1rem;
   }
 }
@@ -115,6 +115,7 @@ h1.site-headline {
 .card > .row {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: space-between;
   color: white;
 }
 
@@ -137,6 +138,7 @@ h1.site-headline {
   width: auto;
   opacity: 0;
   overflow: hidden;
+  margin-right: 1rem;
   transform: translateY(0px);
   transition: all 0.3s ease;
   transition-delay: 0.3s;
@@ -144,13 +146,14 @@ h1.site-headline {
 
 .description p {
   /* display: none; */
-  color: #b0b0ba;
+  font-size: 0.9rem;
   line-height: 1.4;
+  color: #b0b0ba;
 }
 
 .description h4 {
   text-transform: uppercase;
-  color: black;
+  color: red;
   padding: 0rem 0 0.2rem;
 }
 
@@ -168,16 +171,16 @@ input:checked + label .description {
   transform: translateY(0) !important;
 }
 
-/* .card[for="c1"] {
-  background-image: url("./img1.jpeg");
+.card[for="c1"] {
+  background-image: url("/img/homepage/img1.jpg");
 }
-.card[for="c2"] {
-  background-image: url("./img2.jpeg");
-}
-.card[for="c3"] {
-  background-image: url("./img3.jpeg");
-}
-.card[for="c4"] {
-  background-image: url("./img4.jpeg");
-} */
+// .card[for="c2"] {
+//   background-image: url("./img2.jpeg");
+// }
+// .card[for="c3"] {
+//   background-image: url("./img3.jpeg");
+// }
+// .card[for="c4"] {
+//   background-image: url("./img4.jpeg");
+// }
 </style>

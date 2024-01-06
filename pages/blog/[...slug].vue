@@ -65,15 +65,14 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 
               <!-- MAIN ARTICLE -->
               <ContentRenderer :value="doc" tag="article" />
-
-              <!-- SOCIAL -->
-              <div class="social">
-                <div class="share">Share icons here</div>
-              </div>
             </div>
 
             <!-- ASIDE -->
             <aside id="blog-aside">
+              <!-- SOCIAL -->
+              <div class="social">
+                <div class="share">Share icons here</div>
+              </div>
               <BlogTableOfContents :links="doc.body?.toc?.links" class="toc" />
               <BlogMoreArticles
                 v-if="data?.surround?.filter(elem => elem !== null)?.length > 0"
