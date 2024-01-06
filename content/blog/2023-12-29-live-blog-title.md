@@ -10,7 +10,6 @@ featuredArticle: true
 featuredImage: /images/uploads/img1.jpg
 featuredImageAltText: A screenshot from 2008
 ---
-
 ## 2008
 
 Blender, Flash, ActionScript..
@@ -20,3 +19,5 @@ Blender, Flash, ActionScript..
 ## 2023/24
 
 Vue3, Nuxt3, CSS, JS
+
+![A screenshot of the Flash driven portfolio from 2008](/images/uploads/porttfolio-2024.png "A screenshot of the Flash driven portfolio from 2008")
