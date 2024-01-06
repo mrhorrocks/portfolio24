@@ -10,26 +10,27 @@
     border-left: 2px solid black;
   }
   h3 {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid black;
     border-bottom: 2px solid black;
     cursor: pointer;
+    padding-top: 1rem;
   }
   li {
     a {
+      position: relative;
       display: block;
-      line-height: 3.5rem;
-      border-bottom: 3px dashed $theme-colour;
-      text-decoration-line: none;
+      line-height: 1.2rem;
+      padding: 1rem 0rem;
       color: black;
-      font-size: 0.9rem;
+      text-decoration-line: none;
       &:hover {
-        background-color: lighten($theme-colour, 25%);
+        background-color: #ccc;
       }
       &:active {
         background-color: lighten($selection-color, 20%);
-      }
-      &::before {
-        content: "- ";
       }
     }
   }

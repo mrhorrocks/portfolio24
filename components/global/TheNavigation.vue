@@ -112,7 +112,7 @@ div.navlinks {
     padding: 2rem 1rem;
     overflow: hidden;
     text-decoration: none;
-    color: #666666;
+    color: black;
     font-weight: bold;
     transition: padding 0.3s ease;
     &::after {

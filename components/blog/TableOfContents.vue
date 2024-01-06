@@ -37,6 +37,11 @@ const toggleHeader = () => {
     <!-- Toc header -->
     <h3 @click="toggleHeader" aria-label="Expand the table of contents.">
       Table of Contents
+      <IconsChevron
+        :class="['', isVisible ? '' : 'rotate-180']"
+        width="24"
+        height="24"
+      />
     </h3>
 
     <!-- Toc list -->
@@ -56,16 +61,31 @@ const toggleHeader = () => {
 @import "../../assets/scss/partials/_colours";
 
 .link_2 {
-  text-indent: 1rem;
+  // text-indent: 1rem;
   font-weight: bold;
+  a {
+    font-size: 1.1rem;
+    &::before {
+      content: "";
+    }
+  }
 }
 .link_3 {
-  text-indent: 1.5rem;
+  a {
+    // text-indent: 1rem;
+    font-size: 0.9rem;
+    &::before {
+      content: "••• ";
+    }
+  }
 }
 .closed {
   display: none;
 }
 .open {
   display: block;
+}
+.rotate-180 {
+  transform: rotate(180deg);
 }
 </style>

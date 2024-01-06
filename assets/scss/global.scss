@@ -3,11 +3,12 @@
 @import "partials/flex";
 @import "partials/typography";
 @import "partials/colours";
-@import "partials/aside";
+@import "partials/blog-aside";
 @import "partials/buttons";
 
 html {
   scroll-behavior: smooth;
+  font-size: 1em;
 }
 ::selection {
   color: #ffffff;
@@ -16,11 +17,13 @@ html {
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   background-color: darken($body-bg, 10%);
-  section {
-    /* background-color: lighten(hotpink, 5%); */
+  main {
+    position: relative;
+    top: 9rem;
   }
+  /* section {
+  } */
   .container {
-    /* background-color: lighten(hotpink, 10%); */
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 1rem;

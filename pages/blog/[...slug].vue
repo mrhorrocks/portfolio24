@@ -181,7 +181,7 @@ header.article-header {
   background-color: $theme-colour;
 }
 
-// .more-articles {
-//   background-color: lighten($theme-colour, 20%);
-// }
+.more-articles {
+  font-size: 0.9rem;
+}
 </style>
