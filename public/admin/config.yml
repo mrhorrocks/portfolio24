@@ -54,7 +54,6 @@ collections:
           default: false,
           required: false,
         }
-      - { label: "Body", name: "body", widget: "markdown" }
       - {
           label: "Featured Image",
           name: "featuredImage",
@@ -66,6 +65,7 @@ collections:
           name: "featuredImageAltText",
           widget: "string",
         }
+      - { label: "Body", name: "body", widget: "markdown" }
   #
   # ARTICLE
   #
