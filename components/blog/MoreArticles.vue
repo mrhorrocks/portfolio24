@@ -17,10 +17,15 @@ const toggleHeader = () => {
 
 <template>
   <div :class="class">
-    <h3 @click="toggleHeader" aria-label="Expand the table of contents.">
+    <h3 @click="toggleHeader" aria-label="Expand more articles.">
       More Articles
+      <IconsChevron
+        :class="['', isVisible ? '' : 'rotate-180']"
+        width="24"
+        height="24"
+      />
     </h3>
-    <ul :class="['', isVisible ? 'open' : 'closed']">
+    <ul :class="['prev-next', isVisible ? 'open' : 'closed']">
       <template v-for="(other, index) in surround" :key="index">
         <li v-if="other">
           <NuxtLink :to="other._path + '/'" :aria-label="other.headline">
@@ -33,11 +38,48 @@ const toggleHeader = () => {
 </template>
 
 <style lang="scss">
+@import "../../assets/scss/partials/_colours";
+ul.prev-next > li {
+  border-bottom: 2px dashed black;
+  &:nth-of-type(1) a {
+    &:hover::after {
+      background-color: limegreen;
+    }
+    &::after {
+      content: ">> next ";
+      position: absolute;
+      right: 0.5rem;
+      background-color: darken(limegreen, 20%);
+      color: white;
+      padding: 0.1rem 0.25rem;
+      border-radius: 0.25rem;
+      font-size: 0.8rem;
+    }
+  }
+  &:nth-of-type(2) a {
+    &:hover::after {
+      background-color: mediumblue;
+    }
+    &::after {
+      content: "<< prev ";
+      position: absolute;
+      right: 0.5rem;
+      background-color: darken(skyblue, 20%);
+      color: white;
+      padding: 0.1rem 0.25rem;
+      border-radius: 0.25rem;
+      font-size: 0.8rem;
+    }
+  }
+}
+
 .closed {
   display: none;
 }
-
 .open {
   display: block;
+}
+.rotate-180 {
+  transform: rotate(180deg);
 }
 </style>

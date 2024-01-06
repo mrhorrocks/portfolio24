@@ -31,8 +31,8 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
             <!-- Breadcrumb and date -->
             <div class="page-details">
               <ol class="breadcrumb">
-                <li><nuxt-link href="/">Home/</nuxt-link></li>
-                <li><nuxt-link href="/blog/">Blog/</nuxt-link></li>
+                <li><nuxt-link href="/">Home</nuxt-link> /&nbsp;</li>
+                <li><nuxt-link href="/blog/">Blog</nuxt-link> /&nbsp;</li>
                 <li>
                   <span>{{ doc.headline }}</span>
                 </li>
@@ -43,8 +43,9 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
                 <client-only>{{ $formatDate(doc.date) }}</client-only>
               </div>
             </div>
-            <h2>{{ doc.headline }}</h2>
-            <!-- Author -->
+
+            <h1>{{ doc.headline }}</h1>
+
             <div class="author">
               <a
                 :href="doc.authorUrl"
@@ -55,37 +56,29 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
             </div>
           </header>
 
-          <div class="grid cols-3 gap-1">
+          <div class="md:grid md:cols-3 md:gap-4">
             <div class="content">
               <!-- Picture -->
-              <div class="thumbnail">
+              <div v-if="doc.featuredImage" class="thumbnail">
                 <img :src="doc.featuredImage" :alt="doc.featuredImageAltText" />
               </div>
 
               <!-- MAIN ARTICLE -->
               <ContentRenderer :value="doc" tag="article" />
+            </div>
 
+            <!-- ASIDE -->
+            <aside id="blog-aside">
               <!-- SOCIAL -->
               <div class="social">
                 <div class="share">Share icons here</div>
               </div>
-            </div>
-
-            <!-- ASIDE -->
-            <aside class="aside">
-              <div>
-                <BlogTableOfContents
-                  :links="doc.body?.toc?.links"
-                  class="toc"
-                />
-                <BlogMoreArticles
-                  v-if="
-                    data?.surround?.filter(elem => elem !== null)?.length > 0
-                  "
-                  :surround="data?.surround"
-                  class="more-articles"
-                />
-              </div>
+              <BlogTableOfContents :links="doc.body?.toc?.links" class="toc" />
+              <BlogMoreArticles
+                v-if="data?.surround?.filter(elem => elem !== null)?.length > 0"
+                :surround="data?.surround"
+                class="more-articles"
+              />
             </aside>
           </div>
         </template>
@@ -99,25 +92,25 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 </template>
 
 <style lang="scss">
-@import "@/assets/scss/partials/colours";
+@import "../../assets/scss/partials/_colours";
+
 @media (min-width: 768px) {
   div.content {
     grid-column: span 2 / span 2; // 2 cols
   }
-  aside.aside {
-    grid-column: span 1 / span 1; // 1 col
-    position: sticky;
-    top: 0rem;
-    div {
-      position: sticky;
-      top: 0rem;
-    }
+}
+
+header.article-header {
+  margin: 0 0 3rem 0;
+  h1 {
+    margin-top: 1rem;
+    font-size: 2.5rem;
   }
 }
 
 .page-details {
-  background-color: darken($theme-colour-two, 7.5%);
-  @media only screen and (min-width: 768px) {
+  font-size: 0.8rem;
+  @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
   }
@@ -127,29 +120,58 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
     list-style: none;
     margin: 0;
     padding: 0;
-    background-color: darken($theme-colour, 2.5%);
 
     li {
       a {
-        display: block;
-        line-height: 2rem;
+        display: inline-block;
+        text-decoration: none;
+        background-color: black;
+        color: white;
+        padding: 0.25rem;
+        border-radius: 0.25rem;
         &:hover {
-          background-color: lighten($theme-colour, 10%);
+          background-color: $theme-colour-three;
+          color: white;
         }
       }
       span {
-        line-height: 2rem;
+        padding: 0.25rem;
+        display: inline-block;
       }
     }
   }
   .publish-date {
-    background-color: darken($theme-colour, 5%);
-    line-height: 2rem;
+    padding: 0.25rem 0;
+  }
+}
+
+.author {
+  font-size: 0.8rem;
+  a {
+    color: black;
+  }
+}
+
+.content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    scroll-margin-top: 40px;
+    &:hover::after {
+      content: " #";
+      color: $theme-colour-three;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
   }
 }
 
 .toc {
-  background-color: lighten($theme-colour, 10%);
+  margin-bottom: 1rem;
 }
 
 .social {
@@ -159,6 +181,6 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 }
 
 .more-articles {
-  background-color: lighten($theme-colour, 20%);
+  font-size: 0.9rem;
 }
 </style>

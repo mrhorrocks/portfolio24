@@ -1,8 +1,34 @@
+<script>
+export default {
+  data () {
+    return {
+      // Mobile menu is hidden by default
+      mobileMenuOpen: false,
+      isNavShrink: false,
+    };
+  },
+  methods: {
+    // Toggle the mobile menu
+    toggleMobileMenu () {
+      this.mobileMenuOpen = !this.mobileMenuOpen;
+    },
+    handleScroll () {
+      // Adjust the scroll position threshold as needed
+      this.isNavShrink = window.scrollY > 60;
+    },
+  },
+  mounted () {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy () {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+};
+</script>
 <template>
   <nav id="nav">
     <div class="nav-content">
       <SiteLogo />
-
       <button @click="toggleMobileMenu" class="hamburger">
         <span v-if="mobileMenuOpen">
           <!-- Close -->
@@ -36,7 +62,13 @@
 
       <!-- DESKTOP MENU -->
       <!-- Hide below 1024px -->
-      <div class="navlinks">
+      <div
+        class="navlinks"
+        :class="[
+          $route.fullPath === '/' ? 'red' : 'blue',
+          { shrink: isNavShrink },
+        ]"
+      >
         <NuxtLink to="/" title="Home">Home</NuxtLink>
         <NuxtLink to="/experience" title="Experience">Experience</NuxtLink>
         <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
@@ -57,23 +89,6 @@
   </nav>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      // Mobile menu is hidden by default
-      mobileMenuOpen: false,
-    };
-  },
-  methods: {
-    // Toggle the mobile menu
-    toggleMobileMenu () {
-      this.mobileMenuOpen = !this.mobileMenuOpen;
-    },
-  },
-};
-</script>
-
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
 
@@ -82,7 +97,7 @@ nav#nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: lighten($theme-colour, 20%);
+    // background-color: lighten($theme-colour, 20%);
   }
 }
 div.navlinks {
@@ -92,11 +107,14 @@ div.navlinks {
   }
   a {
     position: relative;
-    background-color: white;
     display: block;
     float: left;
-    padding: 1rem;
+    padding: 2rem 1rem;
     overflow: hidden;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: padding 0.3s ease;
     &::after {
       content: "";
       position: absolute;
@@ -104,37 +122,54 @@ div.navlinks {
       left: 0;
       width: 100%;
       height: 0.3em;
-      background-color: hotpink;
+      //
+      background-color: black;
       transition: opacity 300ms, transform 300ms;
+      transform: translate3d(-100%, 0, 0);
+      opacity: 1;
+    }
+    &:hover::after {
+      transform: translate3d(0, 0, 0);
+    }
+    &.router-link-active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 100%;
+      width: 100%;
+      height: 0.3em;
+      //
+      background-color: $theme-colour-three;
       opacity: 1;
       transform: translate3d(-100%, 0, 0);
     }
-    &:hover::after,
-    &:focus::after {
-      transform: translate3d(0, 0, 0);
-    }
+  }
+  &.shrink a {
+    padding: 0.5rem 1rem;
   }
 }
 
+// MOBILE
+// Hamburger
+button.hamburger {
+  display: block;
+  height: 48px;
+  background-color: transparent;
+  border: 2px solid black;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
 div.mobilenavlinks {
   display: flex;
   flex-direction: column;
   background-color: $theme-colour;
-
   @media (min-width: 768px) {
     display: none;
   }
   a {
     background-color: pink;
     padding: 1rem 0.5rem;
-  }
-}
-// Hamburger
-button.hamburger {
-  display: block;
-  height: 51px;
-  @media (min-width: 768px) {
-    display: none;
   }
 }
 </style>

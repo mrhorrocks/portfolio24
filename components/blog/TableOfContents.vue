@@ -37,6 +37,11 @@ const toggleHeader = () => {
     <!-- Toc header -->
     <h3 @click="toggleHeader" aria-label="Expand the table of contents.">
       Table of Contents
+      <IconsChevron
+        :class="['', isVisible ? '' : 'rotate-180']"
+        width="24"
+        height="24"
+      />
     </h3>
 
     <!-- Toc list -->
@@ -46,26 +51,41 @@ const toggleHeader = () => {
         :key="link.id"
         :class="`link_${link.depth}`"
       >
-        <a :href="`#${link.id}`">{{ link.text }}</a>
+        <NuxtLink :href="`#${link.id}`">{{ link.text }}</NuxtLink>
       </li>
     </ul>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.heading_3 {
-  padding-left: 0.1rem;
-}
+@import "../../assets/scss/partials/_colours";
 
-.heading_3::before {
-  content: "·";
+.link_2 {
+  // text-indent: 1rem;
+  font-weight: bold;
+  a {
+    font-size: 1.1rem;
+    &::before {
+      content: "";
+    }
+  }
 }
-
+.link_3 {
+  a {
+    // text-indent: 1rem;
+    font-size: 0.9rem;
+    &::before {
+      content: "••• ";
+    }
+  }
+}
 .closed {
   display: none;
 }
-
 .open {
   display: block;
+}
+.rotate-180 {
+  transform: rotate(180deg);
 }
 </style>
