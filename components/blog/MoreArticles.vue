@@ -17,7 +17,7 @@ const toggleHeader = () => {
 
 <template>
   <div :class="class">
-    <h3 @click="toggleHeader" aria-label="Expand the table of contents.">
+    <h3 @click="toggleHeader" aria-label="Expand more articles.">
       More Articles
     </h3>
     <ul :class="['', isVisible ? 'open' : 'closed']">

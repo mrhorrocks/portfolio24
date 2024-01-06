@@ -73,7 +73,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
             </div>
 
             <!-- ASIDE -->
-            <aside class="aside">
+            <aside id="blog-aside">
               <BlogTableOfContents :links="doc.body?.toc?.links" class="toc" />
               <BlogMoreArticles
                 v-if="data?.surround?.filter(elem => elem !== null)?.length > 0"
@@ -94,18 +94,10 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 
 <style lang="scss">
 @import "../../assets/scss/partials/_colours";
+
 @media (min-width: 768px) {
   div.content {
     grid-column: span 2 / span 2; // 2 cols
-  }
-  aside.aside {
-    grid-column: span 1 / span 1; // 1 col
-    position: sticky;
-    top: 4rem;
-    height: fit-content;
-    h3 {
-      text-align: center;
-    }
   }
 }
 
@@ -150,7 +142,7 @@ header.article-header {
     }
   }
   .publish-date {
-    padding: 0.25rem;
+    padding: 0.25rem 0;
   }
 }
 
@@ -180,8 +172,7 @@ header.article-header {
 }
 
 .toc {
-  background-color: lighten($theme-colour, 10%);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .social {
@@ -190,7 +181,7 @@ header.article-header {
   background-color: $theme-colour;
 }
 
-.more-articles {
-  background-color: lighten($theme-colour, 20%);
-}
+// .more-articles {
+//   background-color: lighten($theme-colour, 20%);
+// }
 </style>

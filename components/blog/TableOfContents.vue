@@ -46,25 +46,25 @@ const toggleHeader = () => {
         :key="link.id"
         :class="`link_${link.depth}`"
       >
-        <a :href="`#${link.id}`">{{ link.text }}</a>
+        <NuxtLink :href="`#${link.id}`">{{ link.text }}</NuxtLink>
       </li>
     </ul>
   </div>
 </template>
 
 <style lang="scss" scoped>
+@import "../../assets/scss/partials/_colours";
+
+.link_2 {
+  text-indent: 1rem;
+  font-weight: bold;
+}
 .link_3 {
-  padding-left: 0.5rem;
+  text-indent: 1.5rem;
 }
-
-.link_3::before {
-  content: "·";
-}
-
 .closed {
   display: none;
 }
-
 .open {
   display: block;
 }

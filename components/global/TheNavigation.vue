@@ -153,7 +153,9 @@ div.navlinks {
 // Hamburger
 button.hamburger {
   display: block;
-  height: 51px;
+  height: 48px;
+  background-color: transparent;
+  border: 2px solid black;
   @media (min-width: 768px) {
     display: none;
   }
