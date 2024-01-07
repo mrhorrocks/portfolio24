@@ -187,6 +187,11 @@ header.article-header {
       color: black;
     }
   }
+  article {
+    img {
+      box-shadow: 5px 10px 15px #aaa;
+    }
+  }
 }
 
 .toc {

@@ -1,6 +1,5 @@
 ---
 authorurl: https://mrhorrocks-2024.netlify.app/
-authorUrl: http://www.mark.com
 headline: A Tail of Two Portfolios
 title: A Tail of Two Portfolios
 description: Things have changed! 2008 vs 2024.
@@ -10,6 +9,7 @@ featuredImage: /images/uploads/img1.jpg
 featuredArticle: true
 featuredImageAltText: A screenshot from 2008
 ---
+
 ## 2008
 
 ### Blender, Flash, ActionScript.
