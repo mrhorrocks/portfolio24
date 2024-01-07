@@ -31,7 +31,10 @@ if (location.href.indexOf("#invite_token") !== -1) {
             <div class="icon">1</div>
             <div class="description">
               <h4>A Tail of Two Portfolios</h4>
-              <p>Winter has so much to offer</p>
+              <p>2008 & 2024</p>
+              <NuxtLink to="/blog/2023-12-29-live-blog-title/"
+                >KEEP READING >></NuxtLink
+              >
             </div>
           </div>
         </label>
@@ -104,7 +107,7 @@ h1.site-headline {
   cursor: pointer;
   transition: 0.3s cubic-bezier(0.28, -0.03, 0, 0.99);
   box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.8);
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
   @media only screen and (min-width: 900px) {
     display: flex;
     align-items: flex-end;
@@ -117,6 +120,7 @@ h1.site-headline {
   flex-wrap: nowrap;
   justify-content: space-between;
   color: white;
+  width: 100%;
 }
 
 .card > .row > .icon {
@@ -135,7 +139,7 @@ h1.site-headline {
   justify-content: flex-end;
   flex-direction: column;
   height: 80px;
-  width: auto;
+  width: 100%;
   opacity: 0;
   overflow: hidden;
   margin-right: 1rem;
@@ -145,10 +149,15 @@ h1.site-headline {
 }
 
 .description p {
-  /* display: none; */
   font-size: 0.9rem;
   line-height: 1.4;
   color: #b0b0ba;
+}
+
+.description a {
+  position: absolute;
+  right: 0;
+  top: 50%;
 }
 
 .description h4 {
