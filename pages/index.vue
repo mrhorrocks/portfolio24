@@ -20,7 +20,8 @@ if (location.href.indexOf("#invite_token") !== -1) {
 
       <div class="col-span-1">
         <h1 class="site-headline">
-          This is my Blog. There are many like it, but this one is mine.
+          This is my Blog. There are many like it,
+          <span>but this one is mine.</span>
         </h1>
       </div>
       <!-- Slides -->
@@ -76,13 +77,14 @@ if (location.href.indexOf("#invite_token") !== -1) {
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
 h1.site-headline {
-  // font-size: 4.1rem;
   font-size: clamp(2rem, 3.8vw + 1rem, 4.1rem);
   line-height: 1.25;
   padding: 0 1rem 1rem 0;
   min-width: 315px;
-  //
-  // color: darken($theme-colour, 30%);
+  font-weight: 500;
+  span {
+    font-weight: 900;
+  }
 }
 
 .slide-wrapper {
