@@ -144,7 +144,6 @@ header.article-header {
         background-color: black;
         color: white;
         padding: 0.25rem;
-        border-radius: 0.25rem;
         &:hover {
           background-color: $theme-colour-three;
           color: white;
