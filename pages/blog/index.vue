@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  titleTemplate: "Articles - %s",
+  titleTemplate: "Blog - %s",
 });
 const articleCountLimit = 4;
 const { data } = await useAsyncData(`content/blog`, async () => {
@@ -12,7 +12,7 @@ const { data } = await useAsyncData(`content/blog`, async () => {
 <template>
   <section>
     <div class="container">
-      <h1>BLOG INDEX</h1>
+      <h1>Blog</h1>
 
       <ContentQuery
         v-slot="{ data }"

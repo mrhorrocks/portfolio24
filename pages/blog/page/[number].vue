@@ -31,8 +31,7 @@ try {
 <template>
   <section>
     <div class="container">
-      <h1>MORE ARTICLES</h1>
-
+      <h1>More blogs</h1>
       <!-- Query for the given blog page number -->
       <ContentQuery
         path="/blog"

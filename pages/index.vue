@@ -45,7 +45,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
             <div class="icon">2</div>
             <div class="description">
               <h4>Digital Technology</h4>
-              <p>Gets better every day - stay tuned</p>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
           </div>
         </label>
@@ -55,7 +55,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
             <div class="icon">3</div>
             <div class="description">
               <h4>Globalization</h4>
-              <p>Help people all over the world</p>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
           </div>
         </label>
@@ -65,7 +65,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
             <div class="icon">4</div>
             <div class="description">
               <h4>New technologies</h4>
-              <p>Space engineering becomes more and more advanced</p>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
           </div>
         </label>
@@ -81,10 +81,10 @@ h1.site-headline {
   line-height: 1.25;
   padding: 0 1rem 1rem 0;
   min-width: 315px;
-  font-weight: 500;
-  span {
-    font-weight: 900;
-  }
+  // font-weight: 500;
+  // span {
+  //   font-weight: 900;
+  // }
 }
 
 .slide-wrapper {
@@ -109,7 +109,7 @@ h1.site-headline {
   cursor: pointer;
   transition: 0.3s cubic-bezier(0.28, -0.03, 0, 0.99);
   box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.8);
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   @media only screen and (min-width: 900px) {
     display: flex;
     align-items: flex-end;
@@ -121,7 +121,6 @@ h1.site-headline {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  color: white;
   width: 100%;
 }
 
@@ -153,18 +152,18 @@ h1.site-headline {
 .description p {
   font-size: 0.9rem;
   line-height: 1.4;
-  color: #b0b0ba;
 }
 
 .description a {
   position: absolute;
-  right: 0;
-  top: 50%;
+  right: 0%;
+  top: 58%;
+  font-size: 0.8rem;
+  color: black;
 }
 
 .description h4 {
   text-transform: uppercase;
-  color: red;
   padding: 0rem 0 0.2rem;
 }
 
