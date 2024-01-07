@@ -24,6 +24,7 @@ const { data } = await useAsyncData(`content/blog`, async () => {
           'date',
           'tags',
           '_path',
+          'featuredImage',
           'image',
         ]"
         :sort="{ date: 1 }"

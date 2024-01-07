@@ -13,6 +13,7 @@ const props = defineProps({
 
 <template>
   <article v-for="article in data" :key="article._path" class="blog-index-card">
+    <img :src="article.featuredImage" alt="" />
     <div class="blog-index-card-heading">
       <h2>{{ article.headline }}</h2>
       <span class="date">
@@ -39,6 +40,9 @@ const props = defineProps({
   .blog-index-card-heading {
     display: flex;
     justify-content: space-between;
+    h2 {
+      padding-top: 0;
+    }
   }
   .date {
     font-size: 0.8rem;

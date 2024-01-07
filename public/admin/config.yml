@@ -36,15 +36,27 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
       - { label: "Headline", name: "headline", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Author", name: "author", widget: "string" }
       - {
           label: "Author Url",
           name: "authorurl",
           widget: "string",
+          required: false,
+        }
+      - {
+          label: "Index Page Thumbnail Image",
+          name: "thumbnail",
+          widget: "image",
+          required: false,
+        }
+      - {
+          label: "Featured Image",
+          name: "featuredImage",
+          widget: "image",
           required: false,
         }
       - {
@@ -55,13 +67,7 @@ collections:
           required: false,
         }
       - {
-          label: "Featured Image",
-          name: "featuredImage",
-          widget: "image",
-          required: false,
-        }
-      - {
-          label: "Featured Image Alt text",
+          label: "Featured Image Alt Text",
           name: "featuredImageAltText",
           widget: "string",
         }
@@ -99,11 +105,9 @@ collections:
         name: "about"
         file: "/content/about.md"
         fields:
+          - { label: "Headline", name: "headline", widget: "string" }
           - { label: Title, name: title, widget: string }
           - { label: "Publish Date", name: "date", widget: "datetime" }
-          - { label: "Headline", name: "headline", widget: "string" }
-          - { label: "Author", name: "author", widget: "string" }
-          - { label: "Author Url", name: "authorurl", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
         # - label: Team
         #   name: team

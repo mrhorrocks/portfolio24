@@ -7,8 +7,7 @@ date: 2023-12-29T21:05:30.191Z
 author: Me
 authorurl: http://me.com
 ---
+
 # ABOUT
 
-I am a Front-end Web Developer.
-
-Continuously experimenting with Nuxt, Responsive design and Continuous deployment.
+Continuously experimenting with Nuxt, responsive design & continuous deployment.
