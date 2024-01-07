@@ -48,12 +48,6 @@ collections:
           required: false,
         }
       - {
-          label: "Index Page Thumbnail Image",
-          name: "thumbnail",
-          widget: "image",
-          required: false,
-        }
-      - {
           label: "Featured Image",
           name: "featuredImage",
           widget: "image",
