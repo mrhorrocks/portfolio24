@@ -1,21 +1,14 @@
 ---
-title: MHOX
 headline: About Headline
+title: MHOX
 description: The about page description
 intro: qwerty
 date: 2023-12-29T21:05:30.191Z
 author: Me
 authorurl: http://me.com
 ---
-
 # ABOUT
 
-## ABOUT
+I am a Front-end Web Developer.
 
-### ABOUT
-
-#### ABOUT
-
-##### ABOUT
-
-/content/about.md...
+Continuously experimenting with Nuxt, Responsive design and Continuous deployment.
