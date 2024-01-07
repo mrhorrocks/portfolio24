@@ -7,7 +7,7 @@ description: Things have changed! 2008 vs 2024.
 headline: A Tail of Two Portfolios
 author: MH
 featuredArticle: true
-featuredImage: ""
+featuredImage: /images/uploads/img1.jpg
 featuredImageAltText: A screenshot from 2008
 ---
 
