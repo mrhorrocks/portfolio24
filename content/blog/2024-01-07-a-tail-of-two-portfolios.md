@@ -9,4 +9,15 @@ featuredImage: /images/uploads/ed209-short-feature.png
 featuredArticle: false
 featuredImageAltText: Things have changed! 2008 vs 2024.
 ---
-TBC
+
+## 2008
+
+### Blender, Flash, ActionScript.
+
+I found a few screenshots of an old portfolio I built way back in 2008.
+
+![A screenshot of the Flash driven portfolio from 2008.](/images/uploads/portfolio-2008.jpg "A screenshot of the Flash driven portfolio from 2008.")
+
+## 2024
+
+### Vue3, Nuxt3, CSS, JS
