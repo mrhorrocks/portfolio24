@@ -167,7 +167,7 @@ h1.site-headline {
   padding: 0rem 0 0.2rem;
 }
 
-input {
+input[name="slide"] {
   display: none;
 }
 
