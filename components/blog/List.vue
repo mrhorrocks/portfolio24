@@ -13,13 +13,17 @@ const props = defineProps({
 
 <template>
   <article v-for="article in data" :key="article._path" class="blog-index-card">
+    <!-- Featured image -->
     <img v-if="article.featuredImage" :src="article.featuredImage" alt="" />
+
     <div class="blog-index-card-heading">
       <h2>{{ article.headline }}</h2>
+
       <span class="date">
         <client-only>{{ $formatDate(article.date) }} </client-only>
       </span>
     </div>
+
     <p>{{ article.description }}</p>
     <NuxtLink :to="article._path + '/'" class="button blog-index-button"
       >Keep Reading</NuxtLink
@@ -37,6 +41,9 @@ const props = defineProps({
   border-radius: 0.75rem;
   border: transparent;
   box-shadow: 1px 3px 4px #00000020;
+  > img {
+    margin-bottom: 1rem;
+  }
   .blog-index-card-heading {
     /* margin-top: 1rem; */
     display: flex;

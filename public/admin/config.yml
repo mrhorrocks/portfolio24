@@ -26,9 +26,14 @@ collections:
   # https://decapcms.org/docs/collection-types/
   #
   # BLOG
+  # ______________ ________________
+  # ___  __ )__  / __  __ \_  ____/
+  # __  __  |_  /  _  / / /  / __
+  # _  /_/ /_  /___/ /_/ // /_/ /
+  # /_____/ /_____/\____/ \____/
   #
-  - name: "blog"
-    label: "Blog"
+  - label: "Blog"
+    name: "blog"
     folder: "content/blog"
     format: "frontmatter"
     create: true
@@ -40,17 +45,11 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", required: false }
       - {
           label: "Author Url",
           name: "authorurl",
           widget: "string",
-          required: false,
-        }
-      - {
-          label: "Featured Image",
-          name: "featuredImage",
-          widget: "image",
           required: false,
         }
       - {
@@ -61,40 +60,30 @@ collections:
           required: false,
         }
       - {
+          label: "Featured Image",
+          name: "featuredImage",
+          widget: "image",
+          required: false,
+        }
+      - {
           label: "Featured Image Alt Text",
           name: "featuredImageAltText",
           widget: "string",
-        }
-      - { label: "Body", name: "body", widget: "markdown" }
-  #
-  # ARTICLE
-  #
-  - name: "article"
-    label: "Article"
-    folder: "content/articles"
-    extension: "json"
-    format: "json"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: true
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - {
-          label: "Featured Image",
-          name: "thumbnail",
-          widget: "image",
           required: false,
         }
       - { label: "Body", name: "body", widget: "markdown" }
   #
-  # ABOUT PAGE
+  #  PAGES
+  # ______________ _______ _____________
+  # ___  __ \  __ `/_  __ `/  _ \_  ___/
+  # __  /_/ / /_/ /_  /_/ //  __/(__  )
+  # _  .___/\__,_/ _\__, / \___//____/
+  # /_/            /____/
   #
   - label: "Pages"
     name: "Pages"
     files:
+      # ABOUT PAGE
       - label: "About Page"
         name: "about"
         file: "/content/about.md"
@@ -103,10 +92,12 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Body", name: "body", widget: "markdown" }
-        # - label: Team
-        #   name: team
-        #   widget: list
-        #   fields:
-        #     - { label: Name, name: name, widget: string }
-        #     - { label: Position, name: position, widget: string }
-        #     - { label: Photo, name: photo, widget: image }
+      # EXPERIENCE PAGE
+      - label: "Experience"
+        name: "experience"
+        file: "/content/experience.md"
+        fields:
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: Title, name: title, widget: string }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - { label: "Body", name: "body", widget: "markdown" }

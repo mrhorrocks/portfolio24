@@ -33,7 +33,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
             <div class="description">
               <h4>A Tail of Two Portfolios</h4>
               <p>2008 & 2024</p>
-              <NuxtLink to="/blog/2023-12-29-live-blog-title/"
+              <NuxtLink to="/blog/2024-01-07-a-tail-of-two-portfolios/"
                 >KEEP READING >></NuxtLink
               >
             </div>
