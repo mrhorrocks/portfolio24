@@ -13,7 +13,7 @@ const props = defineProps({
 
 <template>
   <article v-for="article in data" :key="article._path" class="blog-index-card">
-    <img :src="article.featuredImage" alt="" />
+    <img v-if="article.featuredImage" :src="article.featuredImage" alt="" />
     <div class="blog-index-card-heading">
       <h2>{{ article.headline }}</h2>
       <span class="date">
@@ -36,8 +36,9 @@ const props = defineProps({
   box-sizing: border-box;
   border-radius: 0.75rem;
   border: transparent;
-  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.1254901961);
+  box-shadow: 1px 3px 4px #00000020;
   .blog-index-card-heading {
+    /* margin-top: 1rem; */
     display: flex;
     justify-content: space-between;
     h2 {
