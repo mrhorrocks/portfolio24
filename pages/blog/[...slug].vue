@@ -47,6 +47,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
             <h1>{{ doc.headline }}</h1>
 
             <div class="author">
+              by:
               <a
                 :href="doc.authorUrl"
                 target="_blank"
@@ -56,10 +57,10 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
             </div>
           </header>
 
-          <div class="md:grid md:cols-3 md:gap-4">
+          <div class="md:grid md:cols-3 md:gap-3">
             <div class="content">
-              <!-- Picture -->
-              <div v-if="doc.featuredImage" class="thumbnail">
+              <!-- featuredImage -->
+              <div v-if="doc.featuredImage" class="featured-image">
                 <img :src="doc.featuredImage" :alt="doc.featuredImageAltText" />
               </div>
 
@@ -69,10 +70,15 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 
             <!-- ASIDE -->
             <aside id="blog-aside">
-              <!-- SOCIAL -->
               <div class="social">
-                <div class="share">Share icons here</div>
+                <NuxtLink href="https://www.linkedin.com/"
+                  ><IconsLinkedin
+                /></NuxtLink>
+                <NuxtLink href="https://github.com/mrhorrocks"
+                  ><IconsGithub
+                /></NuxtLink>
               </div>
+
               <BlogTableOfContents :links="doc.body?.toc?.links" class="toc" />
               <BlogMoreArticles
                 v-if="data?.surround?.filter(elem => elem !== null)?.length > 0"
@@ -101,10 +107,17 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 }
 
 header.article-header {
-  margin: 0 0 3rem 0;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  @media (min-width: 768px) {
+    text-align: left;
+  }
   h1 {
-    margin-top: 1rem;
+    margin: 0;
     font-size: 2.5rem;
+    @media (min-width: 768px) {
+      margin: 1rem 0;
+    }
   }
 }
 
@@ -116,7 +129,10 @@ header.article-header {
   }
 
   ol.breadcrumb {
-    display: flex;
+    display: inline-flex;
+    @media (min-width: 768px) {
+      display: flex;
+    }
     list-style: none;
     margin: 0;
     padding: 0;
@@ -128,7 +144,6 @@ header.article-header {
         background-color: black;
         color: white;
         padding: 0.25rem;
-        border-radius: 0.25rem;
         &:hover {
           background-color: $theme-colour-three;
           color: white;
@@ -147,6 +162,10 @@ header.article-header {
 
 .author {
   font-size: 0.8rem;
+  text-align: center;
+  @media (min-width: 768px) {
+    text-align: right;
+  }
   a {
     color: black;
   }
@@ -168,6 +187,11 @@ header.article-header {
       color: black;
     }
   }
+  article {
+    img {
+      box-shadow: 5px 10px 15px #aaa;
+    }
+  }
 }
 
 .toc {
@@ -176,8 +200,16 @@ header.article-header {
 
 .social {
   display: flex;
-  justify-content: space-between;
-  background-color: $theme-colour;
+  justify-content: flex-end;
+  a {
+    display: inline-block;
+    width: 2rem;
+    margin: 0.4rem;
+    color: black;
+    &:hover {
+      color: $selection-color;
+    }
+  }
 }
 
 .more-articles {

@@ -119,10 +119,10 @@ div.navlinks {
       content: "";
       position: absolute;
       bottom: 0;
-      left: 0;
+      left: -1px;
       width: 100%;
       height: 0.3em;
-      //
+      // Underline effect
       background-color: black;
       transition: opacity 300ms, transform 300ms;
       transform: translate3d(-100%, 0, 0);
@@ -155,7 +155,7 @@ button.hamburger {
   display: block;
   height: 48px;
   background-color: transparent;
-  border: 2px solid black;
+  border: 0;
   @media (min-width: 768px) {
     display: none;
   }

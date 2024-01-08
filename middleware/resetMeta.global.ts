@@ -2,6 +2,6 @@
 export default defineNuxtRouteMiddleware(() => {
   // const siteName = useRuntimeConfig().public.siteName;
   useSeoMeta({
-    title: 'qwerty'
+    title: 'MHOX'
   })
 })

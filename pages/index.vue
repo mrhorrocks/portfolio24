@@ -20,7 +20,8 @@ if (location.href.indexOf("#invite_token") !== -1) {
 
       <div class="col-span-1">
         <h1 class="site-headline">
-          This is my Blog. There are many like it, but this one is mine.
+          This is my Blog. There are many like it,
+          <span>but this one is mine.</span>
         </h1>
       </div>
       <!-- Slides -->
@@ -31,7 +32,10 @@ if (location.href.indexOf("#invite_token") !== -1) {
             <div class="icon">1</div>
             <div class="description">
               <h4>A Tail of Two Portfolios</h4>
-              <p>Winter has so much to offer</p>
+              <p>2008 & 2024</p>
+              <NuxtLink to="/blog/2023-12-29-live-blog-title/"
+                >KEEP READING >></NuxtLink
+              >
             </div>
           </div>
         </label>
@@ -41,7 +45,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
             <div class="icon">2</div>
             <div class="description">
               <h4>Digital Technology</h4>
-              <p>Gets better every day - stay tuned</p>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
           </div>
         </label>
@@ -51,7 +55,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
             <div class="icon">3</div>
             <div class="description">
               <h4>Globalization</h4>
-              <p>Help people all over the world</p>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
           </div>
         </label>
@@ -61,7 +65,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
             <div class="icon">4</div>
             <div class="description">
               <h4>New technologies</h4>
-              <p>Space engineering becomes more and more advanced</p>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
           </div>
         </label>
@@ -73,13 +77,14 @@ if (location.href.indexOf("#invite_token") !== -1) {
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
 h1.site-headline {
-  // font-size: 4.1rem;
   font-size: clamp(2rem, 3.8vw + 1rem, 4.1rem);
   line-height: 1.25;
   padding: 0 1rem 1rem 0;
   min-width: 315px;
-  //
-  // color: darken($theme-colour, 30%);
+  // font-weight: 500;
+  // span {
+  //   font-weight: 900;
+  // }
 }
 
 .slide-wrapper {
@@ -116,7 +121,7 @@ h1.site-headline {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  color: white;
+  width: 100%;
 }
 
 .card > .row > .icon {
@@ -135,7 +140,7 @@ h1.site-headline {
   justify-content: flex-end;
   flex-direction: column;
   height: 80px;
-  width: auto;
+  width: 100%;
   opacity: 0;
   overflow: hidden;
   margin-right: 1rem;
@@ -145,19 +150,24 @@ h1.site-headline {
 }
 
 .description p {
-  /* display: none; */
   font-size: 0.9rem;
   line-height: 1.4;
-  color: #b0b0ba;
+}
+
+.description a {
+  position: absolute;
+  right: 0%;
+  top: 58%;
+  font-size: 0.8rem;
+  color: black;
 }
 
 .description h4 {
   text-transform: uppercase;
-  color: red;
   padding: 0rem 0 0.2rem;
 }
 
-input {
+input[name="slide"] {
   display: none;
 }
 

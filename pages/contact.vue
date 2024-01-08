@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="container">
-      <form name="contact" method="POST" netlify>
+      <form name="contact" netlify>
         <p>
           <label>Your Name: <input type="text" name="name" /></label>
         </p>
@@ -27,7 +27,3 @@
     </div>
   </section>
 </template>
-
-<script lang="ts" setup></script>
-
-<style></style>

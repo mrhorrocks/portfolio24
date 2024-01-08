@@ -43,22 +43,21 @@ ul.prev-next > li {
   border-bottom: 2px dashed black;
   &:nth-of-type(1) a {
     &:hover::after {
-      background-color: limegreen;
+      background-color: $selection-color;
     }
     &::after {
       content: ">> next ";
       position: absolute;
       right: 0.5rem;
-      background-color: darken(limegreen, 20%);
+      background-color: darken(limegreen, 10%);
       color: white;
-      padding: 0.1rem 0.25rem;
-      border-radius: 0.25rem;
+      padding: 0.1rem 0.8rem 0.1rem 0.5rem;
       font-size: 0.8rem;
     }
   }
   &:nth-of-type(2) a {
     &:hover::after {
-      background-color: mediumblue;
+      background-color: $selection-color;
     }
     &::after {
       content: "<< prev ";
@@ -66,8 +65,7 @@ ul.prev-next > li {
       right: 0.5rem;
       background-color: darken(skyblue, 20%);
       color: white;
-      padding: 0.1rem 0.25rem;
-      border-radius: 0.25rem;
+      padding: 0.1rem 0.8rem 0.1rem 0.5rem;
       font-size: 0.8rem;
     }
   }
