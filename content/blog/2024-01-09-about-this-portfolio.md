@@ -5,7 +5,7 @@ description: A Summary of the Tech used to build this Portfolio.
 date: 2024-01-09T15:34:17.109Z
 author: MH
 featuredArticle: true
-featuredImage: /images/uploads/porttfolio-short-feature-tall.png
+featuredImage: /images/uploads/portfolio-short-feature.png
 featuredImageAltText: Nuxt, Decap CMS, Github, Netlify
 ---
 ## [Nuxt3](https://nuxt.com/)
