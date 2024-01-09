@@ -71,7 +71,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
             <!-- ASIDE -->
             <aside id="blog-aside">
               <div class="social">
-                <NuxtLink href="https://www.linkedin.com/"
+                <NuxtLink href="https://www.linkedin.com/in/mrmarkhorrocks/"
                   ><IconsLinkedin
                 /></NuxtLink>
                 <NuxtLink href="https://github.com/mrhorrocks"
