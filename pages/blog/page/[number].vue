@@ -42,9 +42,10 @@ try {
           'date',
           'tags',
           '_path',
+          'featuredImage',
           'image',
         ]"
-        :sort="{ date: -1 }"
+        :sort="{ date: 1 }"
         :skip="articleCountLimit * (getPageNumber() - 1)"
         :limit="articleCountLimit"
       >
