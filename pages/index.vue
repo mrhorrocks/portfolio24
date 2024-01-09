@@ -184,9 +184,9 @@ input:checked + label .description {
 .card[for="c1"] {
   background-image: url("/img/homepage/img1.jpg");
 }
-// .card[for="c2"] {
-//   background-image: url("./img2.jpeg");
-// }
+.card[for="c2"] {
+  background-image: url("/images/uploads/porttfolio-short-feature-tall.png");
+}
 // .card[for="c3"] {
 //   background-image: url("./img3.jpeg");
 // }
