@@ -70,10 +70,12 @@ export default {
         ]"
       >
         <NuxtLink to="/" title="Home">Home</NuxtLink>
-        <NuxtLink to="/experience" title="Experience">Experience</NuxtLink>
         <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
+        <NuxtLink to="/experience" title="Experience">Experience</NuxtLink>
         <NuxtLink to="/about" title="About">About</NuxtLink>
-        <NuxtLink to="/contact" title="Contact">Contact</NuxtLink>
+        <DevOnly
+          ><NuxtLink to="/contact" title="Contact">Contact</NuxtLink></DevOnly
+        >
       </div>
     </div>
 
@@ -81,10 +83,12 @@ export default {
     <!-- Show below 1024px -->
     <div v-if="mobileMenuOpen" class="mobilenavlinks">
       <NuxtLink to="/" title="Home">Home</NuxtLink>
-      <NuxtLink to="/experience" title="Experience">Experience</NuxtLink>
       <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
+      <NuxtLink to="/experience" title="Experience">Experience</NuxtLink>
       <NuxtLink to="/about" title="About">About</NuxtLink>
-      <NuxtLink to="/contact" title="Contact">Contact</NuxtLink>
+      <DevOnly
+        ><NuxtLink to="/contact" title="Contact">Contact</NuxtLink></DevOnly
+      >
     </div>
   </nav>
 </template>
@@ -163,13 +167,21 @@ button.hamburger {
 div.mobilenavlinks {
   display: flex;
   flex-direction: column;
-  background-color: $theme-colour;
+  // background-color: $theme-colour;
   @media (min-width: 768px) {
     display: none;
   }
   a {
-    background-color: pink;
     padding: 1rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border-top: 1px solid white;
+    border-bottom: 1px solid black;
+    &:hover {
+      background-color: #e6e6e6;
+      // background-color: $selection-color;
+    }
   }
 }
 </style>

@@ -1,5 +1,6 @@
 ---
 excerpt: Sample appears in blog cards
+authorurl: MH
 authorUrl: https://example.com/
 author: Sample Author
 thumbnail: /images/uploads/1692751163109.jpg
@@ -10,10 +11,10 @@ socialImage:
   alt: Mountain
   width: 1200
   height: 630
-title: Sample Meta Title 1
-date: 3001-02-28T12:00:00
-description: Sample meta description, it gets added on share cards
 headline: Sample Blog Title 1
+title: Sample Meta Title 1x
+description: Sample meta description, it gets added on share cards
+date: 2024-01-08T23:58:12.382Z
 ---
 
 ### H3 Article Heading 
