@@ -14,7 +14,7 @@ socialImage:
 headline: Sample Blog Title 1
 title: Sample Meta Title 1x
 description: Sample meta description, it gets added on share cards
-date: 2024-01-08T23:58:12.382Z
+date: 2024-01-01T15:47:00.000Z
 ---
 
 ### H3 Article Heading 
