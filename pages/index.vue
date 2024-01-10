@@ -109,7 +109,7 @@ h1.site-headline {
   margin: 0rem 0rem 1rem 0;
   background-size: cover;
   background-color: white;
-  cursor: pointer;
+  cursor: ew-resize;
   transition: 0.3s cubic-bezier(0.28, -0.03, 0, 0.99);
   box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.8);
   border-radius: 0.75rem;
