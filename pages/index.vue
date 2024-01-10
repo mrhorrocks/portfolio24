@@ -44,8 +44,11 @@ if (location.href.indexOf("#invite_token") !== -1) {
           <div class="row">
             <div class="icon">2</div>
             <div class="description">
-              <h4>Digital Technology</h4>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <h4>About this Portfolio</h4>
+              <p>And the tech I used to build it.</p>
+              <NuxtLink to="blog/2024-01-09-about-this-portfolio/"
+                >KEEP READING >></NuxtLink
+              >
             </div>
           </div>
         </label>
@@ -184,9 +187,9 @@ input:checked + label .description {
 .card[for="c1"] {
   background-image: url("/img/homepage/img1.jpg");
 }
-// .card[for="c2"] {
-//   background-image: url("./img2.jpeg");
-// }
+.card[for="c2"] {
+  background-image: url("/images/uploads/porttfolio-short-feature-tall.png");
+}
 // .card[for="c3"] {
 //   background-image: url("./img3.jpeg");
 // }
