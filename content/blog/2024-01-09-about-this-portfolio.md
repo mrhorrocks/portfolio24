@@ -22,4 +22,4 @@ After researching my options which included Strapi, Contentful and Prismic I dec
 
 ## [Netlify](https://www.netlify.com/)
 
-Authentication to use the CMS is build in.
+Build in authentication to use the CMS.
