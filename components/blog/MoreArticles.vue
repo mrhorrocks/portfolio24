@@ -19,11 +19,10 @@ const toggleHeader = () => {
   <div :class="class">
     <h3 @click="toggleHeader" aria-label="Expand more articles.">
       More Articles
-      <IconsChevron
-        :class="['', isVisible ? '' : 'rotate-180']"
-        width="24"
-        height="24"
-      />
+
+      <div class="toggle-icon">
+        <IconsChevron :class="['', isVisible ? '' : 'rotate-180']" />
+      </div>
     </h3>
     <ul :class="['prev-next', isVisible ? 'open' : 'closed']">
       <template v-for="(other, index) in surround" :key="index">

@@ -1,7 +1,8 @@
 <script setup lang="js">
-// const siteName = useRuntimeConfig().public.siteName; useHead({
-//   titleTemplate: "%s - Blog - " + siteName,
-// });
+// const siteName = useRuntimeConfig().public.siteName;
+useHead({
+  titleTemplate: "%s - Blog - MHOX "
+});
 
 const { path } = useRoute();
 const cleanPath = path.replace(/\/+$/, "");
@@ -71,12 +72,12 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
             <!-- ASIDE -->
             <aside id="blog-aside">
               <div class="social">
-                <NuxtLink href="https://www.linkedin.com/in/mrmarkhorrocks/"
-                  ><IconsLinkedin
-                /></NuxtLink>
-                <NuxtLink href="https://github.com/mrhorrocks"
-                  ><IconsGithub
-                /></NuxtLink>
+                <NuxtLink href="https://www.linkedin.com/in/mrmarkhorrocks/">
+                  <IconsLinkedin />
+                </NuxtLink>
+                <NuxtLink href="https://github.com/mrhorrocks">
+                  <IconsGithub />
+                </NuxtLink>
               </div>
 
               <BlogTableOfContents :links="doc.body?.toc?.links" class="toc" />
@@ -100,17 +101,15 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 <style lang="scss">
 @import "../../assets/scss/partials/_colours";
 
-@media (min-width: 768px) {
-  div.content {
-    grid-column: span 2 / span 2; // 2 cols
-  }
-}
-
 header.article-header {
   margin: 0 0 1.5rem 0;
   text-align: center;
+  background: white;
+  padding: 0.5rem;
+  box-shadow: 1px 3px 4px #00000020;
   @media (min-width: 768px) {
     text-align: left;
+    padding: 1rem;
   }
   h1 {
     margin: 0;
@@ -171,7 +170,15 @@ header.article-header {
   }
 }
 
-.content {
+div.content {
+  background: white;
+  padding: 0.5rem;
+  box-shadow: 1px 3px 4px #00000020;
+  @media (min-width: 768px) {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    grid-column: span 2 / span 2; // 2 cols
+  }
   h1,
   h2,
   h3,

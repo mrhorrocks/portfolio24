@@ -37,11 +37,10 @@ const toggleHeader = () => {
     <!-- Toc header -->
     <h3 @click="toggleHeader" aria-label="Expand the table of contents.">
       Table of Contents
-      <IconsChevron
-        :class="['', isVisible ? '' : 'rotate-180']"
-        width="24"
-        height="24"
-      />
+
+      <div class="toggle-icon">
+        <IconsChevron :class="['', isVisible ? '' : 'rotate-180']" />
+      </div>
     </h3>
 
     <!-- Toc list -->
