@@ -5,21 +5,17 @@ description: A Summary of the Tech used to build this Portfolio.
 date: 2024-01-09T15:34:17.109Z
 author: MH
 featuredArticle: true
-featuredImage: /images/uploads/portfolio-short-feature.png
-featuredImageAltText: Nuxt, Decap CMS, Github, Netlify
+featuredImage: /images/uploads/tech-logos.png
+featuredImageAltText: Vue, Nuxt, Git, CMS, Netlify
 ---
-## [Nuxt3](https://nuxt.com/)
+## Vue, [Nuxt](https://nuxt.com/), Headless CMS, Continuous deployment
 
-I chose Nuxt because I had previous exposure to the Vue ecosystem. There's practically zero config when starting a new project and I found it it very straight forward when starting new projects.
+Easy to create bespoke websites, intelligent defaults, easy to configure, easy to deploy.
 
-## [Nuxt Content](https://content.nuxt.com/)
+### [Decap CMS](https://decapcms.org/)
 
-This is a custom module built especially for Nuxt. It enables me to add content in a dedicated content folder in the Markdown or JSON formats. These files are written to this folder by the CMS.
+A simple easy to configure CMS solution, writes the content to GitHub, then published by continuous deployment to Netlify.
 
-## [Decap Headless CMS](https://decapcms.org/)
+### [Netlify](https://www.netlify.com/)
 
-After researching my options which included Strapi, Contentful and Prismic I decided to go with Decap CMS. Decap used to be Netlify CMS up until the start of 2023. The main difference between Decap and the previously listed CMSs is that Decap writes and deploys its content to the same git repository as the website. From there I can trigger continuous deployment on Netlify.
-
-## [Netlify](https://www.netlify.com/)
-
-Build in authentication to use the CMS.
+Easy to configure server solutions.
