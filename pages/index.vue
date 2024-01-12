@@ -20,7 +20,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
 
       <div class="col-span-1">
         <h1 class="site-headline">
-          This is my Blog. There are many like it,
+          This is my Portfolio. There are many like it,
           <span>but this one is mine.</span>
         </h1>
       </div>
@@ -80,14 +80,9 @@ if (location.href.indexOf("#invite_token") !== -1) {
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
 h1.site-headline {
-  font-size: clamp(2rem, 3.8vw + 1rem, 4.1rem);
+  font-size: clamp(2rem, 3.25vw + 0.96rem, 4rem);
   line-height: 1.25;
   padding: 0 1rem 1rem 0;
-  min-width: 315px;
-  // font-weight: 500;
-  // span {
-  //   font-weight: 900;
-  // }
 }
 
 .slide-wrapper {
@@ -95,79 +90,86 @@ h1.site-headline {
   flex-wrap: nowrap;
   flex-direction: column;
   height: 400px;
-  @media (min-width: 900px) {
+  @media (min-width: 970px) {
     justify-content: flex-end;
     flex-direction: row;
   }
 }
 
 .card {
+  display: flex;
+  align-items: center;
   min-width: 80px;
+  min-height: 100px;
   width: 80px;
   padding-right: 0.5rem;
   overflow: hidden;
   margin: 0rem 0rem 1rem 0;
   background-size: cover;
-  background-color: white;
+  // background-color: white;
+  background-color: pink;
   cursor: ew-resize;
   transition: 0.3s cubic-bezier(0.28, -0.03, 0, 0.99);
   box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.8);
-  border-radius: 0.75rem;
-  @media only screen and (min-width: 900px) {
-    display: flex;
+  border-radius: 0.25rem;
+  @media only screen and (min-width: 970px) {
     align-items: flex-end;
     margin: 0rem 0rem 0rem 1rem;
   }
 }
 
-.card > .row {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.card > .row > .icon {
-  display: flex;
-  justify-content: center;
-  background: #223;
-  color: white;
-  border-radius: 50%;
-  min-width: 50px;
-  align-items: center;
-  margin: 15px;
-}
-
-.card > .row > .description {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  height: 80px;
-  width: 100%;
-  opacity: 0;
-  overflow: hidden;
-  margin-right: 1rem;
-  transform: translateY(0px);
-  transition: all 0.3s ease;
-  transition-delay: 0.3s;
-}
-
-.description p {
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-.description a {
-  position: absolute;
-  right: 0%;
-  top: 58%;
-  font-size: 0.8rem;
-  color: black;
-}
-
-.description h4 {
-  text-transform: uppercase;
-  padding: 0rem 0 0.2rem;
+.card > {
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    .icon {
+      display: flex;
+      justify-content: center;
+      background: #223;
+      color: white;
+      border-radius: 50%;
+      min-width: 50px;
+      align-items: center;
+      margin: 15px;
+    }
+    .description {
+      height: 80px;
+      width: 100%;
+      opacity: 0;
+      margin-right: 1rem;
+      transform: translateY(0px);
+      transition: all 0.3s ease;
+      transition-delay: 0.3s;
+      h4 {
+        font-size: clamp(1rem, 1vw, 1.17rem);
+        text-transform: uppercase;
+        padding: 0rem 0 0.2rem;
+        background-color: #ffffffbc;
+        padding: 0.25rem;
+        margin-bottom: 0.25rem;
+      }
+      p {
+        font-size: 0.8rem;
+        padding-left: 0.25rem;
+        margin-bottom: 0.25rem;
+        background-color: #ffffffbc;
+      }
+      a {
+        // float: right;
+        font-size: 0.8rem;
+        color: black;
+        background-color: #ffffffbc;
+        padding: 0.25rem;
+        margin-bottom: 0.25rem;
+        transition: 0.25s;
+        &:hover {
+          background-color: #000;
+          color: white;
+        }
+      }
+    }
+  }
 }
 
 input[name="slide"] {
