@@ -8,19 +8,19 @@ featuredArticle: true
 featuredImage: /images/uploads/tech-logos.png
 featuredImageAltText: Vue, Nuxt, Git, CMS, Netlify
 ---
-## Vue, [Nuxt,](https://nuxt.com/) Headless CMS, Continuous deployment
+## Vue, Nuxt, Headless CMS, Continuous deployment
 
 Easy to maintain (Vue), Intelligent defaults (Nuxt), easy to configure (Headless CMS), easy to deploy (GitHub & Netlify).
 
 - - -
 
-### [Decap CMS](https://decapcms.org/)
+### Decap CMS
 
 Decap is an easy to configure, simple, CMS solution, that writes content to a Git repository.
 
 - - -
 
-### [Netlify](https://www.netlify.com/)
+### Netlify
 
 Netlify is an easy to configure, serverless cloud hosting solution.
 
@@ -28,4 +28,4 @@ Netlify is an easy to configure, serverless cloud hosting solution.
 
 ### Continuous deployment
 
-By merging the dev branch into the deploy target branch (specified on Netlify), continuous deployment is triggered from either Git/Hub/Lab or Bucket.
+By merging the dev branch into the target branch (specified on Netlify), continuous deployment is triggered from GitHub/Lab or Bucket.
