@@ -28,4 +28,4 @@ Netlify is an easy to configure, serverless cloud hosting solution.
 
 ### Continuous deployment
 
-By merging the dev branch into the deployment target branch (specified on Netlify), continuous deployment is triggered from either Git/Hub/Lab or Bucket.
+By merging the dev branch into the deploy target branch (specified on Netlify), continuous deployment is triggered from either Git/Hub/Lab or Bucket.
