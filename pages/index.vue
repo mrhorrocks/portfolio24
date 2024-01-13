@@ -39,6 +39,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
             </div>
           </div>
         </label>
+
         <input type="radio" name="slide" id="c2" />
         <label for="c2" class="card">
           <div class="row">
@@ -52,6 +53,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
             </div>
           </div>
         </label>
+        <!-- 
         <input type="radio" name="slide" id="c3" />
         <label for="c3" class="card">
           <div class="row">
@@ -62,6 +64,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
             </div>
           </div>
         </label>
+
         <input type="radio" name="slide" id="c4" />
         <label for="c4" class="card">
           <div class="row">
@@ -72,6 +75,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
             </div>
           </div>
         </label>
+         -->
       </div>
     </div>
   </section>
