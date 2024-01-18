@@ -46,6 +46,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
             </div>
 
             <h1>{{ doc.headline }}</h1>
+            <p>{{ doc.description }}</p>
 
             <div class="author">
               by:

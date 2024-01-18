@@ -38,7 +38,7 @@ const props = defineProps({
   background-color: white;
   padding: 1.5rem;
   box-sizing: border-box;
-  border-radius: 0.75rem;
+  /* border-radius: 0.75rem; */
   border: transparent;
   box-shadow: 1px 3px 4px #00000020;
   > img {
