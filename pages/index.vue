@@ -20,8 +20,8 @@ if (location.href.indexOf("#invite_token") !== -1) {
 
       <div class="col-span-1">
         <h1 class="site-headline">
-          This is my Portfolio. There are many like it,
-          <span>but this one is mine.</span>
+          This is my Portfolio. There are many like it but this one is mine.
+          <span> Nuxt, SCSS, CMS, Git, CD</span>
         </h1>
       </div>
       <!-- Slides -->
@@ -31,9 +31,9 @@ if (location.href.indexOf("#invite_token") !== -1) {
           <div class="row">
             <div class="icon">1</div>
             <div class="description">
-              <h4>A Tail of Two Portfolios</h4>
-              <p>2008 & 2024</p>
-              <NuxtLink to="/blog/2024-01-07-a-tail-of-two-portfolios/"
+              <h4>Big Robot</h4>
+              <p>Blender, Flash, HTML, CSS</p>
+              <NuxtLink to="/blog/2024-01-18-graphics-2008/"
                 >KEEP READING >></NuxtLink
               >
             </div>
@@ -45,8 +45,8 @@ if (location.href.indexOf("#invite_token") !== -1) {
           <div class="row">
             <div class="icon">2</div>
             <div class="description">
-              <h4>About this Portfolio</h4>
-              <p>And the tech I used to build it.</p>
+              <h4>PORTFOLIO 2024</h4>
+              <p>Vue, Nuxt, SCSS, CMS, GIT, CD</p>
               <NuxtLink to="blog/2024-01-09-about-this-portfolio/"
                 >KEEP READING >></NuxtLink
               >
@@ -84,9 +84,13 @@ if (location.href.indexOf("#invite_token") !== -1) {
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
 h1.site-headline {
-  font-size: clamp(2rem, 3.25vw + 0.96rem, 4rem);
+  font-size: clamp(2rem, 4vw, 3.3rem);
   line-height: 1.25;
   padding: 0 1rem 1rem 0;
+  span {
+    color: #7c8497;
+    // color: darken($theme-colour-three, $amount: 12.5%);
+  }
 }
 
 .slide-wrapper {
@@ -108,14 +112,11 @@ h1.site-headline {
   width: 80px;
   padding-right: 0.5rem;
   overflow: hidden;
+  cursor: pointer;
   margin: 0rem 0rem 1rem 0;
   background-size: cover;
-  // background-color: white;
-  background-color: pink;
-  cursor: ew-resize;
   transition: 0.3s cubic-bezier(0.28, -0.03, 0, 0.99);
-  box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.8);
-  border-radius: 0.25rem;
+  box-shadow: 1px 3px 4px #00000020;
   @media only screen and (min-width: 970px) {
     align-items: flex-end;
     margin: 0rem 0rem 0rem 1rem;
@@ -141,7 +142,7 @@ h1.site-headline {
       height: 80px;
       width: 100%;
       opacity: 0;
-      margin-right: 1rem;
+      text-decoration: none;
       transform: translateY(0px);
       transition: all 0.3s ease;
       transition-delay: 0.3s;
@@ -149,22 +150,25 @@ h1.site-headline {
         font-size: clamp(1rem, 1vw, 1.17rem);
         text-transform: uppercase;
         padding: 0rem 0 0.2rem;
-        background-color: #ffffffbc;
+        background-color: #0000005c;
+        color: white;
         padding: 0.25rem;
         margin-bottom: 0.25rem;
       }
       p {
         font-size: 0.8rem;
-        padding-left: 0.25rem;
+        padding: 0 0.25rem;
         margin-bottom: 0.25rem;
-        background-color: #ffffffbc;
+        background-color: #0000005c;
+        color: white;
       }
       a {
-        // float: right;
         font-size: 0.8rem;
-        color: black;
-        background-color: #ffffffbc;
         padding: 0.25rem;
+        margin-right: 1rem;
+        background-color: #0000005c;
+        color: white;
+        text-decoration: none;
         margin-bottom: 0.25rem;
         transition: 0.25s;
         &:hover {

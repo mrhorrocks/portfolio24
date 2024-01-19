@@ -200,6 +200,12 @@ div.content {
     img {
       box-shadow: 5px 10px 15px #aaa;
     }
+    ul {
+      font-size: 1.2rem;
+      line-height: 1.75;
+      margin: 0 0 1rem 0;
+      list-style: inside;
+    }
   }
 }
 

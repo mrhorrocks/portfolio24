@@ -1,7 +1,7 @@
 ---
 headline: Portfolio 2024
 title: Portfolio 2024
-description: Vue, Nuxt, SCSS, CMS, GIT, CD.
+description: Vue, Nuxt, SCSS, CMS, GIT, CD
 date: 2024-01-09T15:34:17.109Z
 author: MH
 featuredArticle: true
@@ -13,7 +13,10 @@ featuredImageAltText: Vue, Nuxt, SCSS, CMS, GIT, CD
 
 ## Vue, Nuxt, SCSS, CMS, GIT, CD
 
-Easy to maintain (Vue), Intelligent defaults (Nuxt), easy to configure (Headless CMS), easy to deploy (GitHub & Netlify).
+- Easy to maintain (Vue)
+- Intelligent defaults (Nuxt)
+- Easy to configure (Headless CMS)
+- Easy to deploy (GitHub & Netlify)
 
 ---
 
@@ -29,6 +32,6 @@ Easy to configure, serverless cloud hosting.
 
 ---
 
-### Continuous deployment(CD)
+### Continuous deployment (CD)
 
-Fast and easy deployment workflow.
+Fast and easy deployment.
