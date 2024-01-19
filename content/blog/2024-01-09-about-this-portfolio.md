@@ -2,10 +2,10 @@
 headline: Portfolio 2024
 title: Portfolio 2024
 description: Vue, Nuxt, SCSS, CMS, GIT, CD.
-date: 2024-01-18T18:33:50.469Z
+date: 2024-01-09T15:34:17.109Z
 author: MH
 featuredArticle: true
-featuredImage: /images/uploads/blank.png
+featuredImage: /images/uploads/blank-short-feature.png
 featuredImageAltText: Vue, Nuxt, SCSS, CMS, GIT, CD
 ---
 
