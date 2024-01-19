@@ -5,7 +5,7 @@ description: Vue, Nuxt, SCSS, CMS, GIT, CD.
 date: 2024-01-09T15:34:17.109Z
 author: MH
 featuredArticle: true
-featuredImage: /images/uploads/tech-logos.png
+featuredImage: /images/uploads/blank.png
 featuredImageAltText: Vue, Nuxt, SCSS, CMS, GIT, CD
 ---
 
