@@ -115,6 +115,7 @@ header.article-header {
   h1 {
     margin: 0;
     font-size: 2.5rem;
+    text-transform: uppercase;
     @media (min-width: 768px) {
       margin: 1rem 0;
     }
