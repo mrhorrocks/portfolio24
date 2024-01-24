@@ -1,37 +1,45 @@
 ---
 headline: Portfolio 2024
 title: Portfolio 2024
-description: Vue, Nuxt, SCSS, CMS, GIT, CD
+description: Nuxt, Git, Netlify & Decap CMS
 date: 2024-01-09T15:34:17.109Z
 author: MH
 featuredArticle: true
-featuredImage: /images/uploads/article-heading.png
-featuredImageAltText: Vue, Nuxt, SCSS, CMS, GIT, CD
+featuredImage: /images/uploads/tech-logos.png
+featuredImageAltText: Nuxt, Git, Netlify & Decap CMS
 ---
 
-## 2024
+## 2024, Why I use...
 
-## Vue, Nuxt, SCSS, CMS, GIT, CD
+### Nuxt
 
-- Easy to maintain (Vue)
-- Intelligent defaults (Nuxt)
-- Easy to configure (Headless CMS)
-- Easy to deploy (GitHub & Netlify)
+- Static Site Generation (SSG)
+- Single-page application (SPA)
+- Project structure
+- Intelligent defaults
+- Scalability
+- Nuxt Content v3
 
 ---
 
-### Decap CMS
+### Git, Netlify & Continuous Deployment
 
-Git based, simple, CMS.
+- Easy to build, store and publish
 
 ---
 
 ### Netlify
 
-Easy to configure, serverless cloud hosting.
+- Free
+- Easy to configure
+- Serverless
+- Cloud hosted
+- Continuous deployment
+- CMS authentication
 
 ---
 
-### Continuous deployment (CD)
+### Decap CMS
 
-Fast and easy deployment.
+- Content is saved the Git repo
+- Easy to configure with Netlify

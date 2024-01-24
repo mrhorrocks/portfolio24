@@ -16,18 +16,20 @@ const props = defineProps({
     <!-- Featured image -->
     <img v-if="article.featuredImage" :src="article.featuredImage" alt="" />
 
-    <div class="blog-index-card-heading">
-      <h2>{{ article.headline }}</h2>
+    <div>
+      <div class="blog-index-card-heading">
+        <h2>{{ article.headline }}</h2>
 
-      <span class="date">
-        <client-only>{{ $formatDate(article.date) }} </client-only>
-      </span>
+        <span class="date">
+          <client-only>{{ $formatDate(article.date) }} </client-only>
+        </span>
+      </div>
+
+      <p>{{ article.description }}</p>
+      <NuxtLink :to="article._path + '/'" class="button blog-index-button"
+        >Keep Reading</NuxtLink
+      >
     </div>
-
-    <p>{{ article.description }}</p>
-    <NuxtLink :to="article._path + '/'" class="button blog-index-button"
-      >Keep Reading</NuxtLink
-    >
   </article>
   <p v-if="data.length == 0">There are no posts right now.</p>
   <p v-if="data.length == 0" class="no-articles-available">{{ message }}</p>
@@ -35,6 +37,10 @@ const props = defineProps({
 
 <style>
 .blog-index-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   background-color: white;
   padding: 1.5rem;
   box-sizing: border-box;

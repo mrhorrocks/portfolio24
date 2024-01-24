@@ -20,8 +20,10 @@ if (location.href.indexOf("#invite_token") !== -1) {
 
       <div class="col-span-1">
         <h1 class="site-headline">
-          This is my Portfolio. There are many like it but this one is mine.
-          <span> Nuxt, SCSS, CMS, Git, CD</span>
+          This is my Portfolio.
+          <br />
+          <span>Built with </span><span>Nuxt, Git</span> &
+          <span>Netlify</span>
         </h1>
       </div>
       <!-- Slides -->
@@ -45,8 +47,8 @@ if (location.href.indexOf("#invite_token") !== -1) {
           <div class="row">
             <div class="icon">2</div>
             <div class="description">
-              <h4>PORTFOLIO 2024</h4>
-              <p>Vue, Nuxt, SCSS, CMS, GIT, CD</p>
+              <h4>2024</h4>
+              <p>Nuxt, Git, Netlify & Decap CMS</p>
               <NuxtLink to="blog/2024-01-09-about-this-portfolio/"
                 >KEEP READING >></NuxtLink
               >
@@ -84,12 +86,16 @@ if (location.href.indexOf("#invite_token") !== -1) {
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
 h1.site-headline {
-  font-size: clamp(2rem, 4vw, 3.3rem);
-  line-height: 1.25;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  line-height: 1;
   padding: 0 1rem 1rem 0;
   span {
     color: #7c8497;
-    // color: darken($theme-colour-three, $amount: 12.5%);
+    font-size: clamp(3rem, 4.7vw, 4.2rem);
+    text-shadow: 1px 1px 0px #000;
+    &:nth-of-type(1) {
+      color: black;
+    }
   }
 }
 
@@ -97,7 +103,7 @@ h1.site-headline {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  height: 400px;
+  height: 200px;
   @media (min-width: 970px) {
     justify-content: flex-end;
     flex-direction: row;
@@ -105,21 +111,23 @@ h1.site-headline {
 }
 
 .card {
+  border-radius: 0.25rem;
   display: flex;
   align-items: center;
-  min-width: 80px;
-  min-height: 100px;
-  width: 80px;
+  min-width: 91px;
+  width: 91px;
   padding-right: 0.5rem;
   overflow: hidden;
   cursor: pointer;
   margin: 0rem 0rem 1rem 0;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff;
   transition: 0.3s cubic-bezier(0.28, -0.03, 0, 0.99);
   box-shadow: 1px 3px 4px #00000020;
   @media only screen and (min-width: 970px) {
     align-items: flex-end;
-    margin: 0rem 0rem 0rem 1rem;
+    margin: 0rem 1rem 0rem 0rem;
   }
 }
 
@@ -129,14 +137,20 @@ h1.site-headline {
     flex-wrap: nowrap;
     justify-content: space-between;
     .icon {
-      display: flex;
-      justify-content: center;
-      background: #223;
+      display: block;
+      background: #000000;
       color: white;
       border-radius: 50%;
-      min-width: 50px;
-      align-items: center;
-      margin: 15px;
+      min-width: 4.5rem;
+      line-height: 4.5rem;
+      margin: 0.6rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      transition: 0.25s;
+      &:hover {
+        background: #555;
+      }
     }
     .description {
       height: 80px;
@@ -150,10 +164,14 @@ h1.site-headline {
         font-size: clamp(1rem, 1vw, 1.17rem);
         text-transform: uppercase;
         padding: 0rem 0 0.2rem;
-        background-color: #0000005c;
-        color: white;
         padding: 0.25rem;
+        margin-top: 0.5rem;
         margin-bottom: 0.25rem;
+        background-color: #0000005c;
+        // color: white;
+        color: #fff767;
+
+        backdrop-filter: blur(5px);
       }
       p {
         font-size: 0.8rem;
@@ -161,8 +179,10 @@ h1.site-headline {
         margin-bottom: 0.25rem;
         background-color: #0000005c;
         color: white;
+        backdrop-filter: blur(5px);
       }
       a {
+        display: inline-block;
         font-size: 0.8rem;
         padding: 0.25rem;
         margin-right: 1rem;
@@ -171,6 +191,7 @@ h1.site-headline {
         text-decoration: none;
         margin-bottom: 0.25rem;
         transition: 0.25s;
+        backdrop-filter: blur(5px);
         &:hover {
           background-color: #000;
           color: white;
@@ -198,7 +219,9 @@ input:checked + label .description {
   background-image: url("/img/homepage/img1.jpg");
 }
 .card[for="c2"] {
-  background-image: url("/images/uploads/porttfolio-short-feature-tall.png");
+  background-image: url("/img/homepage/img2.jpg");
+  @media (min-width: 768px) {
+  }
 }
 // .card[for="c3"] {
 //   background-image: url("./img3.jpeg");

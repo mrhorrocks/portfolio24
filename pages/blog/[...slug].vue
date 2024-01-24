@@ -105,12 +105,12 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 header.article-header {
   margin: 0 0 1.5rem 0;
   text-align: center;
-  background: white;
-  padding: 0.5rem;
-  box-shadow: 1px 3px 4px #00000020;
+  // padding: 0.5rem;
+  // background: white;
+  // box-shadow: 1px 3px 4px #00000020;
   @media (min-width: 768px) {
     text-align: left;
-    padding: 1rem;
+    // padding: 1rem;
   }
   h1 {
     margin: 0;
