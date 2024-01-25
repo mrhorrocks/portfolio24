@@ -46,6 +46,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
             </div>
 
             <h1>{{ doc.headline }}</h1>
+            <p>{{ doc.description }}</p>
 
             <div class="author">
               by:
@@ -104,16 +105,17 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 header.article-header {
   margin: 0 0 1.5rem 0;
   text-align: center;
-  background: white;
-  padding: 0.5rem;
-  box-shadow: 1px 3px 4px #00000020;
+  // padding: 0.5rem;
+  // background: white;
+  // box-shadow: 1px 3px 4px #00000020;
   @media (min-width: 768px) {
     text-align: left;
-    padding: 1rem;
+    // padding: 1rem;
   }
   h1 {
     margin: 0;
     font-size: 2.5rem;
+    text-transform: uppercase;
     @media (min-width: 768px) {
       margin: 1rem 0;
     }
@@ -197,6 +199,12 @@ div.content {
   article {
     img {
       box-shadow: 5px 10px 15px #aaa;
+    }
+    ul {
+      font-size: 1.2rem;
+      line-height: 1.75;
+      margin: 0 0 1rem 0;
+      list-style: inside;
     }
   }
 }

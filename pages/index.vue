@@ -20,8 +20,10 @@ if (location.href.indexOf("#invite_token") !== -1) {
 
       <div class="col-span-1">
         <h1 class="site-headline">
-          This is my Blog. There are many like it,
-          <span>but this one is mine.</span>
+          This is my Portfolio.
+          <br />
+          <span>Built with </span><span>Nuxt, Git</span> &
+          <span>Netlify</span>
         </h1>
       </div>
       <!-- Slides -->
@@ -31,27 +33,29 @@ if (location.href.indexOf("#invite_token") !== -1) {
           <div class="row">
             <div class="icon">1</div>
             <div class="description">
-              <h4>A Tail of Two Portfolios</h4>
-              <p>2008 & 2024</p>
-              <NuxtLink to="/blog/2024-01-07-a-tail-of-two-portfolios/"
+              <h4>Big Robot</h4>
+              <p>Blender, Flash, HTML, CSS</p>
+              <NuxtLink to="/blog/2024-01-18-graphics-2008/"
                 >KEEP READING >></NuxtLink
               >
             </div>
           </div>
         </label>
+
         <input type="radio" name="slide" id="c2" />
         <label for="c2" class="card">
           <div class="row">
             <div class="icon">2</div>
             <div class="description">
-              <h4>About this Portfolio</h4>
-              <p>And the tech I used to build it.</p>
+              <h4>2024</h4>
+              <p>Nuxt, Git, Netlify & Decap CMS</p>
               <NuxtLink to="blog/2024-01-09-about-this-portfolio/"
                 >KEEP READING >></NuxtLink
               >
             </div>
           </div>
         </label>
+        <!-- 
         <input type="radio" name="slide" id="c3" />
         <label for="c3" class="card">
           <div class="row">
@@ -62,6 +66,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
             </div>
           </div>
         </label>
+
         <input type="radio" name="slide" id="c4" />
         <label for="c4" class="card">
           <div class="row">
@@ -72,6 +77,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
             </div>
           </div>
         </label>
+         -->
       </div>
     </div>
   </section>
@@ -80,94 +86,119 @@ if (location.href.indexOf("#invite_token") !== -1) {
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
 h1.site-headline {
-  font-size: clamp(2rem, 3.8vw + 1rem, 4.1rem);
-  line-height: 1.25;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  line-height: 1;
   padding: 0 1rem 1rem 0;
-  min-width: 315px;
-  // font-weight: 500;
-  // span {
-  //   font-weight: 900;
-  // }
+  span {
+    color: #7c8497;
+    font-size: clamp(3rem, 4.7vw, 4.2rem);
+    text-shadow: 1px 1px 0px #000;
+    &:nth-of-type(1) {
+      color: black;
+    }
+  }
 }
 
 .slide-wrapper {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  height: 400px;
-  @media (min-width: 900px) {
+  height: 200px;
+  @media (min-width: 970px) {
     justify-content: flex-end;
     flex-direction: row;
   }
 }
 
 .card {
-  min-width: 80px;
-  width: 80px;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  min-width: 91px;
+  width: 91px;
   padding-right: 0.5rem;
   overflow: hidden;
+  cursor: pointer;
   margin: 0rem 0rem 1rem 0;
   background-size: cover;
-  background-color: white;
-  cursor: ew-resize;
+  background-repeat: no-repeat;
+  background-color: #fff;
   transition: 0.3s cubic-bezier(0.28, -0.03, 0, 0.99);
-  box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.8);
-  border-radius: 0.75rem;
-  @media only screen and (min-width: 900px) {
-    display: flex;
+  box-shadow: 1px 3px 4px #00000020;
+  @media only screen and (min-width: 970px) {
     align-items: flex-end;
-    margin: 0rem 0rem 0rem 1rem;
+    margin: 0rem 1rem 0rem 0rem;
   }
 }
 
-.card > .row {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  width: 100%;
-}
+.card > {
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    .icon {
+      display: block;
+      background: #000000;
+      color: white;
+      border-radius: 50%;
+      min-width: 4.5rem;
+      line-height: 4.5rem;
+      margin: 0.6rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      transition: 0.25s;
+      &:hover {
+        background: #555;
+      }
+    }
+    .description {
+      height: 80px;
+      width: 100%;
+      opacity: 0;
+      text-decoration: none;
+      transform: translateY(0px);
+      transition: all 0.3s ease;
+      transition-delay: 0.3s;
+      h4 {
+        font-size: clamp(1rem, 1vw, 1.17rem);
+        text-transform: uppercase;
+        padding: 0rem 0 0.2rem;
+        padding: 0.25rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+        background-color: #0000005c;
+        // color: white;
+        color: #fff767;
 
-.card > .row > .icon {
-  display: flex;
-  justify-content: center;
-  background: #223;
-  color: white;
-  border-radius: 50%;
-  min-width: 50px;
-  align-items: center;
-  margin: 15px;
-}
-
-.card > .row > .description {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  height: 80px;
-  width: 100%;
-  opacity: 0;
-  overflow: hidden;
-  margin-right: 1rem;
-  transform: translateY(0px);
-  transition: all 0.3s ease;
-  transition-delay: 0.3s;
-}
-
-.description p {
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-.description a {
-  position: absolute;
-  right: 0%;
-  top: 58%;
-  font-size: 0.8rem;
-  color: black;
-}
-
-.description h4 {
-  text-transform: uppercase;
-  padding: 0rem 0 0.2rem;
+        backdrop-filter: blur(5px);
+      }
+      p {
+        font-size: 0.8rem;
+        padding: 0 0.25rem;
+        margin-bottom: 0.25rem;
+        background-color: #0000005c;
+        color: white;
+        backdrop-filter: blur(5px);
+      }
+      a {
+        display: inline-block;
+        font-size: 0.8rem;
+        padding: 0.25rem;
+        margin-right: 1rem;
+        background-color: #0000005c;
+        color: white;
+        text-decoration: none;
+        margin-bottom: 0.25rem;
+        transition: 0.25s;
+        backdrop-filter: blur(5px);
+        &:hover {
+          background-color: #000;
+          color: white;
+        }
+      }
+    }
+  }
 }
 
 input[name="slide"] {
@@ -188,7 +219,9 @@ input:checked + label .description {
   background-image: url("/img/homepage/img1.jpg");
 }
 .card[for="c2"] {
-  background-image: url("/images/uploads/porttfolio-short-feature-tall.png");
+  background-image: url("/img/homepage/img2.jpg");
+  @media (min-width: 768px) {
+  }
 }
 // .card[for="c3"] {
 //   background-image: url("./img3.jpeg");

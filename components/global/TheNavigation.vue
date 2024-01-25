@@ -126,8 +126,7 @@ div.navlinks {
       left: -1px;
       width: 100%;
       height: 0.3em;
-      // Underline effect
-      background-color: black;
+      background-color: $theme-colour-three;
       transition: opacity 300ms, transform 300ms;
       transform: translate3d(-100%, 0, 0);
       opacity: 1;
