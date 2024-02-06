@@ -9,7 +9,7 @@ featuredImage: /images/uploads/tech-logos.png
 featuredImageAltText: Nuxt, Git, Netlify & Decap CMS
 ---
 
-## 2024, Why I use...
+## 2024, I use...
 
 ### Nuxt
 
@@ -24,7 +24,7 @@ featuredImageAltText: Nuxt, Git, Netlify & Decap CMS
 
 ### Git, Netlify & Continuous Deployment
 
-- Easy to build, store and publish
+- Structured development, easy to publish
 
 ---
 
