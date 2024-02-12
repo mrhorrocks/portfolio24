@@ -73,7 +73,16 @@ if (location.href.indexOf("#invite_token") !== -1) {
 @import "@/assets/scss/partials/colours";
 
 html > body {
-  background-color: #333333;
+  background-color: #363636;
+  main {
+    top: 4.5rem;
+    @media (min-width: 400px) {
+      top: 3.5rem;
+    }
+    @media (min-width: 768px) {
+      top: 5.75rem;
+    }
+  }
 }
 
 .social-badges {
@@ -84,6 +93,9 @@ html > body {
     a {
       margin-right: 0.5rem;
     }
+  }
+  @media (min-width: 1024px) {
+    margin: 2rem 0;
   }
 }
 
@@ -123,13 +135,22 @@ h2.sub-text {
   line-height: 1.5;
   span {
     display: flex;
+    justify-content: center;
     margin: 0 0 0.25rem 0;
+    @media (min-width: 768px) {
+      justify-content: left;
+    }
 
     &.bullet {
-      font-size: clamp(2.2rem, 6vw, 4.4rem);
-      line-height: 0.65;
-      -webkit-text-stroke: 2px white;
-      -webkit-text-fill-color: #323232;
+      display: none;
+
+      @media (min-width: 768px) {
+        display: block;
+        font-size: clamp(2.2rem, 6vw, 4.4rem);
+        line-height: 0.65;
+        -webkit-text-stroke: 2px white;
+        -webkit-text-fill-color: #323232;
+      }
     }
   }
 }
@@ -154,9 +175,9 @@ h2.sub-text {
     width: 445px;
   }
   @media (min-width: 1440px) {
-    top: 60px;
+    top: 100px;
     right: 45px;
-    width: 585px;
+    width: 640px;
   }
 }
 

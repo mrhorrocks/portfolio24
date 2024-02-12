@@ -116,6 +116,7 @@ div.navlinks {
     padding: 2rem 1rem;
     overflow: hidden;
     text-decoration: none;
+    text-transform: uppercase;
     color: black;
     font-weight: bold;
     transition: padding 0.3s ease;
@@ -140,7 +141,7 @@ div.navlinks {
       bottom: 0;
       left: 100%;
       width: 100%;
-      height: 0.3em;
+      height: 0.5em;
       //
       background-color: $theme-colour-three;
       opacity: 1;
