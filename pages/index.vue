@@ -118,7 +118,7 @@ h2.sub-text {
   font-weight: normal;
   color: #ffffff;
   text-shadow: 0px 4px 4px #00000025;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0 0;
   padding: 0;
   line-height: 1.5;
   span {
@@ -166,7 +166,7 @@ h2.sub-text {
   margin: 0 0 0 0;
   @media (min-width: 768px) {
     text-align: left;
-    margin-top: 0;
+    margin: 0 0 0 1rem;
   }
   img {
     margin: 0.25rem;
