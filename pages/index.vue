@@ -90,9 +90,13 @@ html > body {
   @media (min-width: 400px) {
     display: block;
     margin: 1rem 0;
+    text-align: center;
     a {
       margin-right: 0.5rem;
     }
+  }
+  @media (min-width: 768px) {
+    text-align: left;
   }
   @media (min-width: 1024px) {
     margin: 2rem 0;
@@ -104,10 +108,15 @@ h1.site-headline {
   font-size: clamp(2.58rem, 11vw, 10rem);
   margin-bottom: 1rem;
   font-weight: normal;
+  text-align: center;
   text-transform: uppercase;
   padding: 0 0;
   color: #ffffff;
   text-shadow: 0px 4px 4px #00000025;
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+
   span {
     &:nth-of-type(1) {
       @media (min-width: 1440px) {
@@ -126,7 +135,8 @@ h1.site-headline {
 
 h2.sub-text {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: clamp(1.089rem, 2.8vw, 2.1rem);
+  // font-size: clamp(1.089rem, 2.8vw, 2.1rem);
+  font-size: clamp(0.95rem, 2.8vw, 2.1rem);
   font-weight: normal;
   color: #ffffff;
   text-shadow: 0px 4px 4px #00000025;
@@ -170,9 +180,15 @@ h2.sub-text {
     right: 0px;
     width: 500px;
   }
+  @media (min-width: 992px) {
+    width: 600px;
+  }
   @media (min-width: 1024px) {
-    top: 190px;
+    top: 260px;
     width: 445px;
+  }
+  @media (min-width: 1200px) {
+    width: 600px;
   }
   @media (min-width: 1440px) {
     top: 100px;
@@ -191,6 +207,7 @@ h2.sub-text {
   }
   img {
     margin: 0.25rem;
+    width: 40px;
   }
 }
 
@@ -198,12 +215,11 @@ h2.sub-text {
   display: block;
   float: left;
   width: 100%;
+  margin: 0 auto;
   transition: 0.5s;
   @media (min-width: 375px) {
     display: block;
     float: left;
-    width: 100%;
-    margin: 0 auto;
   }
   @media (min-width: 768px) {
     display: block;

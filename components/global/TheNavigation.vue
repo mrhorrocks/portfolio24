@@ -39,23 +39,43 @@ export default {
             viewBox="0 -960 960 960"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              fill="currentColor"
-              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224z"
+            <rect
+              transform="matrix(.70711 .70711 .70711 -.70711 0 0)"
+              x="-436.76"
+              y="629.28"
+              width="882"
+              height="150"
+              stroke-width="0"
+            />
+            <rect
+              transform="matrix(.70711 -.70711 -.70711 -.70711 0 0)"
+              x="263.28"
+              y="-79.243"
+              width="882"
+              height="150"
+              stroke-width="0"
             />
           </svg>
         </span>
         <span v-if="!mobileMenuOpen">
           <svg
-            xmlns="http://www.w3.org/2000/svg"
             width="32"
             height="32"
+            version="1.1"
             viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              fill="currentColor"
-              d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-            />
+            <g stroke-width="0">
+              <rect x=".975" y="3" width="22.05" height="3.75" />
+              <rect x=".975" y="16.5" width="22.05" height="3.75" />
+              <rect
+                x=".975"
+                y="9.75"
+                width="22.05"
+                height="3.75"
+                fill="#7f7f7f"
+              />
+            </g>
           </svg>
         </span>
       </button>
@@ -176,7 +196,7 @@ div.mobilenavlinks {
     text-decoration: none;
     color: black;
     border-top: 1px solid white;
-    border-bottom: 1px solid black;
+    border-top: 1px solid black;
     &:hover {
       background-color: #e6e6e6;
     }

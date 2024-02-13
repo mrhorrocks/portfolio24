@@ -52,7 +52,7 @@
 }
 
 .xl\:grid {
-  @media (min-width: 1025px) {
+  @media (min-width: 1024px) {
     display: grid;
     &.xl\:cols-2 {
       grid-template-columns: repeat(2, 1fr);
