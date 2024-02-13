@@ -168,7 +168,7 @@ h2.sub-text {
 .hero-image {
   position: relative;
   z-index: -1;
-  width: 325px;
+  width: 300px;
   aspect-ratio: 738 / 743;
   background-image: url("/img/homepage/raw_rotate_CROPED.gif");
   background-size: cover;
