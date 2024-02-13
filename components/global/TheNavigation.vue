@@ -101,7 +101,6 @@ nav#nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // background-color: lighten($theme-colour, 20%);
   }
 }
 div.navlinks {
@@ -126,7 +125,7 @@ div.navlinks {
       bottom: 0;
       left: -1px;
       width: 100%;
-      height: 0.3em;
+      height: 0.5em;
       background-color: $theme-colour-three;
       transition: opacity 300ms, transform 300ms;
       transform: translate3d(-100%, 0, 0);
@@ -134,6 +133,7 @@ div.navlinks {
     }
     &:hover::after {
       transform: translate3d(0, 0, 0);
+      background-color: lighten($theme-colour-three, 10%);
     }
     &.router-link-active::after {
       content: "";
@@ -149,7 +149,7 @@ div.navlinks {
     }
   }
   &.shrink a {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
   }
 }
 
@@ -167,7 +167,6 @@ button.hamburger {
 div.mobilenavlinks {
   display: flex;
   flex-direction: column;
-  // background-color: $theme-colour;
   @media (min-width: 768px) {
     display: none;
   }
@@ -180,7 +179,6 @@ div.mobilenavlinks {
     border-bottom: 1px solid black;
     &:hover {
       background-color: #e6e6e6;
-      // background-color: $selection-color;
     }
   }
 }
