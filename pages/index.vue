@@ -24,10 +24,12 @@ if (location.href.indexOf("#invite_token") !== -1) {
           /></a>
           <a href="#"> <img src="/img/homepage/github.png" alt="Github" /></a>
         </div>
+
         <!-- Headline -->
         <h1 class="site-headline">
           <span>Front-End</span> <span>Developer</span>
         </h1>
+
         <!-- Subtext -->
         <h2 class="sub-text">
           <span>
@@ -39,9 +41,12 @@ if (location.href.indexOf("#invite_token") !== -1) {
             England</span
           >
         </h2>
+
+        <!-- Hero image-->
         <div class="hero-image">
-          <!-- Hero image-->
+          <!-- Image bg-->
         </div>
+
         <!-- Tech logos -->
         <div class="tech-logos">
           <img src="/img/homepage/tech_logos/Html5.png" alt="Html5" />
@@ -53,6 +58,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
         </div>
       </div>
 
+      <!-- Thumbnails -->
       <div class="col-span-3">
         <div class="thumbnail-container">
           <div class="thumb">1</div>
@@ -73,8 +79,14 @@ if (location.href.indexOf("#invite_token") !== -1) {
 @import "@/assets/scss/partials/colours";
 
 html > body {
+  // display: flex;
+  // flex-direction: column;
+  height: calc(100vh + 0px);
   background-color: #363636;
+  padding-bottom: 100px;
   main {
+    position: relative;
+    // height: calc(100vh + 10vh);
     top: 4.5rem;
     @media (min-width: 400px) {
       top: 3.5rem;
@@ -99,8 +111,11 @@ html > body {
     text-align: left;
   }
   @media (min-width: 1024px) {
-    margin: 2rem 0;
+    margin: 0.5rem 0;
   }
+  // @media (min-width: 1024px) {
+  //   margin: 2rem 0;
+  // }
 }
 
 h1.site-headline {
@@ -176,18 +191,20 @@ h2.sub-text {
   transition: 1s;
   @media (min-width: 768px) {
     position: absolute;
-    top: 240px;
+    top: 220px;
     right: 0px;
-    width: 500px;
+    width: 490px;
   }
   @media (min-width: 992px) {
     width: 600px;
+    right: 0;
   }
   @media (min-width: 1024px) {
-    top: 260px;
-    width: 445px;
+    top: 180px;
+    width: 505px;
   }
   @media (min-width: 1200px) {
+    top: 200px;
     width: 600px;
   }
   @media (min-width: 1440px) {

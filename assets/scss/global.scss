@@ -15,29 +15,7 @@ html {
   background: #ff6a67;
 }
 body {
-  height: calc(100vh + 100px);
-
-  /* background-image: linear-gradient(
-    24deg,
-    #000000 0%,
-    #000000 25%,
-    #323232 25%,
-    #323232 100.002%
-  );
-  background-repeat: no-repeat;
-  background-position-y: 100%; */
-
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  background-color: darken($body-bg, 10%);
-  main {
-    position: relative;
-    top: 4.5rem;
-    @media (min-width: 768px) {
-      top: 6rem;
-    }
-  }
-  /* section {
-  } */
   .container {
     position: relative;
     max-width: 1440px;
