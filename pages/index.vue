@@ -52,12 +52,42 @@ if (location.href.indexOf("#invite_token") !== -1) {
 
         <!-- Tech logos -->
         <div class="tech-logos">
-          <img src="/img/homepage/tech_logos/Html5.png" alt="Html5" />
-          <img src="/img/homepage/tech_logos/CSS3.png" alt="CSS3" />
-          <img src="/img/homepage/tech_logos/Sass.png" alt="Sass" />
-          <img src="/img/homepage/tech_logos/Nuxt.png" alt="Nuxt" />
-          <img src="/img/homepage/tech_logos/JS.png" alt="JS" />
-          <img src="/img/homepage/tech_logos/Decap.png" alt="Decap" />
+          <img
+            src="/img/homepage/tech_logos/Html5.png"
+            width="40px"
+            height="40px"
+            alt="Html5"
+          />
+          <img
+            src="/img/homepage/tech_logos/CSS3.png"
+            width="40px"
+            height="40px"
+            alt="CSS3"
+          />
+          <img
+            src="/img/homepage/tech_logos/Sass.png"
+            width="40px"
+            height="40px"
+            alt="Sass"
+          />
+          <img
+            src="/img/homepage/tech_logos/Nuxt.png"
+            width="40px"
+            height="40px"
+            alt="Nuxt"
+          />
+          <img
+            src="/img/homepage/tech_logos/JS.png"
+            width="40px"
+            height="40px"
+            alt="JS"
+          />
+          <img
+            src="/img/homepage/tech_logos/Decap.png"
+            width="40px"
+            height="40px"
+            alt="Decap"
+          />
         </div>
       </div>
 
@@ -167,7 +197,7 @@ h2.sub-text {
   z-index: 0;
   width: 300px;
   aspect-ratio: 738 / 743;
-  background-image: url("/img/homepage/raw_rotate_CROPED.gif");
+  background-image: url("/img/homepage/ed209.gif");
   background-size: cover;
   margin: 0 auto;
   transition: 1s;

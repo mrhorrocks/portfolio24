@@ -29,7 +29,11 @@ export default {
   <nav id="nav">
     <div class="nav-content">
       <SiteLogo />
-      <button @click="toggleMobileMenu" class="hamburger">
+      <button
+        @click="toggleMobileMenu"
+        class="hamburger"
+        aria-label="toggle Navigation"
+      >
         <span v-if="mobileMenuOpen">
           <!-- Close -->
           <svg
