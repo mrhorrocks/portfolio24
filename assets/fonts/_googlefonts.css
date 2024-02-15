@@ -5,5 +5,23 @@ https://fonts.googleapis.com/css?family=Roboto
 @font-face {
   font-family: "Roboto";
   src: local("Roboto"),
-    url("/assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+    url("/assets/fonts/Roboto_condensed/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "RobotoCondensed-Regular";
+  src: local("RobotoCondensed-Regular"),
+    url("/assets/fonts/Roboto_condensed/RobotoCondensed-Regular.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "RobotoCondensed-Bold";
+  src: local("RobotoCondensed-Bold"),
+    url("/assets/fonts/Roboto_condensed/RobotoCondensed-Bold.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "RobotoCondensed-ExtraBold";
+  src: local("RobotoCondensed-ExtraBold"),
+    url("/assets/fonts/Roboto_condensed/RobotoCondensed-ExtraBold.ttf")
+      format("truetype");
 }

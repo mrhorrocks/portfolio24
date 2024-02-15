@@ -31,6 +31,9 @@ export default defineNuxtConfig({
       // title: process.env.SITE_NAME,
       title: 'Title - TBC',
       meta: [{ name: 'description', content: 'TBC' }],
+      // bodyAttrs: {
+      //   class: 'bg-gray-100',
+      // },
     }
   },
   css: [

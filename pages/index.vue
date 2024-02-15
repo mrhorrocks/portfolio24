@@ -5,6 +5,9 @@ useHead({
   //   { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
   // ],
 });
+definePageMeta({
+  layout: "homepage",
+});
 
 // REDIRECT
 if (location.href.indexOf("#invite_token") !== -1) {
@@ -67,8 +70,6 @@ if (location.href.indexOf("#invite_token") !== -1) {
           <div class="thumb">4</div>
           <div class="thumb">5</div>
           <div class="thumb">6</div>
-          <!-- <div class="thumb">7</div>
-          <div class="thumb">8</div> -->
         </div>
       </div>
     </div>
@@ -77,25 +78,6 @@ if (location.href.indexOf("#invite_token") !== -1) {
 
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
-
-html > body {
-  // display: flex;
-  // flex-direction: column;
-  height: calc(100vh + 0px);
-  background-color: #363636;
-  padding-bottom: 100px;
-  main {
-    position: relative;
-    // height: calc(100vh + 10vh);
-    top: 4.5rem;
-    @media (min-width: 400px) {
-      top: 3.5rem;
-    }
-    @media (min-width: 768px) {
-      top: 5.75rem;
-    }
-  }
-}
 
 .social-badges {
   display: none;
@@ -113,14 +95,13 @@ html > body {
   @media (min-width: 1024px) {
     margin: 0.5rem 0;
   }
-  // @media (min-width: 1024px) {
-  //   margin: 2rem 0;
-  // }
 }
 
 h1.site-headline {
+  position: relative;
+  z-index: 1;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: clamp(2.58rem, 11vw, 10rem);
+  font-size: clamp(2.58rem, 10vw, 10rem);
   margin-bottom: 1rem;
   font-weight: normal;
   text-align: center;
@@ -149,15 +130,16 @@ h1.site-headline {
 }
 
 h2.sub-text {
+  position: relative;
+  z-index: 1;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  // font-size: clamp(1.089rem, 2.8vw, 2.1rem);
   font-size: clamp(0.95rem, 2.8vw, 2.1rem);
   font-weight: normal;
-  color: #ffffff;
-  text-shadow: 0px 4px 4px #00000025;
   margin: 0 0 0 0;
   padding: 0;
   line-height: 1.5;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px #00000025;
   span {
     display: flex;
     justify-content: center;
@@ -182,7 +164,7 @@ h2.sub-text {
 
 .hero-image {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   width: 300px;
   aspect-ratio: 738 / 743;
   background-image: url("/img/homepage/raw_rotate_CROPED.gif");
@@ -195,17 +177,17 @@ h2.sub-text {
     right: 0px;
     width: 490px;
   }
-  @media (min-width: 992px) {
-    width: 600px;
-    right: 0;
-  }
+  // @media (min-width: 992px) {
+  //   width: 600px;
+  //   right: 0;
+  // }
   @media (min-width: 1024px) {
     top: 180px;
     width: 505px;
   }
   @media (min-width: 1200px) {
     top: 200px;
-    width: 600px;
+    width: 530px;
   }
   @media (min-width: 1440px) {
     top: 100px;
@@ -215,6 +197,8 @@ h2.sub-text {
 }
 
 .tech-logos {
+  position: relative;
+  z-index: 1;
   text-align: center;
   padding: 1rem 0;
   margin: 0 0 0 0;
@@ -229,6 +213,8 @@ h2.sub-text {
 }
 
 .thumbnail-container {
+  position: relative;
+  z-index: 1;
   display: block;
   float: left;
   width: 100%;
@@ -262,14 +248,12 @@ h2.sub-text {
     transition: 1s;
     @media (min-width: 768px) {
       &:nth-of-type(1) {
-        background-color: red;
         margin-right: 20px;
       }
     }
     @media (min-width: 1024px) {
       width: calc(33% - 2rem);
       &:nth-of-type(1) {
-        background-color: green;
         margin-right: 0.75rem;
       }
     }

@@ -135,7 +135,7 @@ div.navlinks {
     padding: 2rem 1rem;
     overflow: hidden;
     text-decoration: none;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     color: black;
     font-weight: bold;
     transition: padding 0.3s ease;

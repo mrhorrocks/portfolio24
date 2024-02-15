@@ -1,6 +1,6 @@
 .md\:grid {
+  display: grid;
   @media (min-width: 768px) {
-    display: grid;
     &.md\:cols-2 {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -25,8 +25,8 @@
   }
 }
 .lg\:grid {
+  display: grid;
   @media (min-width: 1024px) {
-    display: grid;
     &.lg\:cols-2 {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -52,8 +52,8 @@
 }
 
 .xl\:grid {
+  display: grid;
   @media (min-width: 1024px) {
-    display: grid;
     &.xl\:cols-2 {
       grid-template-columns: repeat(2, 1fr);
     }
