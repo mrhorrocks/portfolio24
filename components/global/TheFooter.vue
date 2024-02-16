@@ -1,6 +1,6 @@
 <template>
   <footer id="footer">
-    <div class="container">
+    <div class="container footer">
       <SocialBadges />
     </div>
   </footer>
@@ -14,9 +14,14 @@ footer#footer {
   width: 100%;
   height: 64px;
   background-color: #b6b600;
-  .social-badges {
-    display: block;
-    text-align: right;
+  .container.footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: -webkit-fill-available;
+    .social-badges {
+      display: block;
+    }
   }
 }
 </style>

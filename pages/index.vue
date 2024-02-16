@@ -20,13 +20,8 @@ if (location.href.indexOf("#invite_token") !== -1) {
   <section>
     <div class="container xl:grid xl:cols-3">
       <div class="col-span-3">
-        <!-- Social logos -->
-        <div class="social-badges">
-          <a href="#">
-            <img src="/img/homepage/linkedin.png" alt="Linked In"
-          /></a>
-          <a href="#"> <img src="/img/homepage/github.png" alt="Github" /></a>
-        </div>
+        <!-- Social badges -->
+        <SocialBadges />
 
         <!-- Headline -->
         <h1 class="site-headline">
@@ -109,23 +104,23 @@ if (location.href.indexOf("#invite_token") !== -1) {
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
 
-.social-badges {
-  display: none;
-  @media (min-width: 400px) {
-    display: block;
-    margin: 1rem 0;
-    text-align: center;
-    a {
-      margin-right: 0.5rem;
-    }
-  }
-  @media (min-width: 768px) {
-    text-align: left;
-  }
-  @media (min-width: 1024px) {
-    margin: 0.5rem 0;
-  }
-}
+// .social-badges {
+//   display: none;
+//   @media (min-width: 400px) {
+//     display: block;
+//     margin: 1rem 0;
+//     text-align: center;
+//     a {
+//       margin-right: 0.5rem;
+//     }
+//   }
+//   @media (min-width: 768px) {
+//     text-align: left;
+//   }
+//   @media (min-width: 1024px) {
+//     margin: 0.5rem 0;
+//   }
+// }
 
 h1.site-headline {
   position: relative;
