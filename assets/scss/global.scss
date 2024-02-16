@@ -1,4 +1,5 @@
 @import "partials/reset";
+@import "/assets/fonts/googlefonts";
 @import "partials/grid";
 @import "partials/flex";
 @import "partials/typography";
@@ -9,26 +10,33 @@
 html {
   scroll-behavior: smooth;
   font-size: 1em;
+  height: 100%;
 }
 ::selection {
   color: #ffffff;
   background: #ff6a67;
 }
 body {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "RobotoCondensed-Regular", Arial, Helvetica, sans-serif;
   background-color: darken($body-bg, 10%);
   main {
     position: relative;
-    top: 4.5rem;
+    padding-top: 4.5rem;
+    &.homepage {
+      background-color: #363636;
+      padding-bottom: 140px;
+    }
+    @media (min-width: 400px) {
+      padding-top: 3.5rem;
+    }
     @media (min-width: 768px) {
-      top: 9rem;
+      padding-top: 5.75rem;
     }
   }
-  /* section {
-  } */
   .container {
+    position: relative;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 }

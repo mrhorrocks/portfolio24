@@ -26,7 +26,7 @@
 }
 .lg\:grid {
   display: grid;
-  @media (min-width: 1028px) {
+  @media (min-width: 1024px) {
     &.lg\:cols-2 {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -50,6 +50,34 @@
     gap: 4rem;
   }
 }
+
+.xl\:grid {
+  display: grid;
+  @media (min-width: 1024px) {
+    &.xl\:cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &.xl\:cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &.xl\:cols-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &.xl\:gap-1 {
+    gap: 1rem;
+  }
+  &.xl\:gap-2 {
+    gap: 2rem;
+  }
+  &.xl\:gap-3 {
+    gap: 3rem;
+  }
+  &.xl\:gap-4 {
+    gap: 4rem;
+  }
+}
+
 .col-span-1 {
   grid-column: span 1 / span 1;
 }

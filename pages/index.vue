@@ -5,6 +5,9 @@ useHead({
   //   { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
   // ],
 });
+definePageMeta({
+  layout: "homepage",
+});
 
 // REDIRECT
 if (location.href.indexOf("#invite_token") !== -1) {
@@ -15,69 +18,84 @@ if (location.href.indexOf("#invite_token") !== -1) {
 
 <template>
   <section>
-    <div class="container md:grid md:cols-3">
-      <!-- Headline -->
+    <div class="container xl:grid xl:cols-3">
+      <div class="col-span-3">
+        <!-- Social badges -->
+        <SocialBadges />
 
-      <div class="col-span-1">
+        <!-- Headline -->
         <h1 class="site-headline">
-          This is my Portfolio.
-          <br />
-          <span>Built with </span><span>Nuxt, Git</span> &
-          <span>Netlify</span>
+          <span>Front-End</span> <span>Developer</span>
         </h1>
+
+        <!-- Subtext -->
+        <h2 class="sub-text">
+          <span>
+            <span class="bullet">&middot;</span>
+            I build websites with Nuxt, Netlifty & Decap CMS</span
+          >
+          <span>
+            <span class="bullet">&middot;</span>Based in North- West
+            England</span
+          >
+        </h2>
+
+        <!-- Hero image-->
+        <div class="hero-image">
+          <!-- Image bg-->
+        </div>
+
+        <!-- Tech logos -->
+        <div class="tech-logos">
+          <img
+            src="/img/homepage/tech_logos/Html5.png"
+            width="40px"
+            height="40px"
+            alt="Html5"
+          />
+          <img
+            src="/img/homepage/tech_logos/CSS3.png"
+            width="40px"
+            height="40px"
+            alt="CSS3"
+          />
+          <img
+            src="/img/homepage/tech_logos/Sass.png"
+            width="40px"
+            height="40px"
+            alt="Sass"
+          />
+          <img
+            src="/img/homepage/tech_logos/Nuxt.png"
+            width="40px"
+            height="40px"
+            alt="Nuxt"
+          />
+          <img
+            src="/img/homepage/tech_logos/JS.png"
+            width="40px"
+            height="40px"
+            alt="JS"
+          />
+          <img
+            src="/img/homepage/tech_logos/Decap.png"
+            width="40px"
+            height="40px"
+            alt="Decap"
+          />
+        </div>
       </div>
-      <!-- Slides -->
-      <div class="slide-wrapper col-span-2">
-        <input type="radio" name="slide" id="c1" checked />
-        <label for="c1" class="card">
-          <div class="row">
-            <div class="icon">1</div>
-            <div class="description">
-              <h4>Big Robot</h4>
-              <p>Blender, Flash, HTML, CSS</p>
-              <NuxtLink to="/blog/2024-01-18-graphics-2008/"
-                >KEEP READING >></NuxtLink
-              >
-            </div>
-          </div>
-        </label>
 
-        <input type="radio" name="slide" id="c2" />
-        <label for="c2" class="card">
-          <div class="row">
-            <div class="icon">2</div>
-            <div class="description">
-              <h4>2024</h4>
-              <p>Nuxt, Git, Netlify & Decap CMS</p>
-              <NuxtLink to="blog/2024-01-09-about-this-portfolio/"
-                >KEEP READING >></NuxtLink
-              >
-            </div>
-          </div>
-        </label>
-        <!-- 
-        <input type="radio" name="slide" id="c3" />
-        <label for="c3" class="card">
-          <div class="row">
-            <div class="icon">3</div>
-            <div class="description">
-              <h4>Globalization</h4>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </div>
-          </div>
-        </label>
-
-        <input type="radio" name="slide" id="c4" />
-        <label for="c4" class="card">
-          <div class="row">
-            <div class="icon">4</div>
-            <div class="description">
-              <h4>New technologies</h4>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </div>
-          </div>
-        </label>
-         -->
+      <!-- Thumbnails -->
+      <div class="col-span-3">
+        <div class="thumbnail-container">
+          <div class="thumb">1</div>
+          <div class="thumb">2</div>
+          <div class="thumb">3</div>
+          <div class="thumb">4</div>
+          <div class="thumb">5</div>
+          <div class="thumb">6</div>
+        </div>
       </div>
     </div>
   </section>
@@ -85,148 +103,188 @@ if (location.href.indexOf("#invite_token") !== -1) {
 
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
+
+// .social-badges {
+//   display: none;
+//   @media (min-width: 400px) {
+//     display: block;
+//     margin: 1rem 0;
+//     text-align: center;
+//     a {
+//       margin-right: 0.5rem;
+//     }
+//   }
+//   @media (min-width: 768px) {
+//     text-align: left;
+//   }
+//   @media (min-width: 1024px) {
+//     margin: 0.5rem 0;
+//   }
+// }
+
 h1.site-headline {
-  font-size: clamp(2rem, 2.5vw, 3rem);
-  line-height: 1;
-  padding: 0 1rem 1rem 0;
-  span {
-    color: #7c8497;
-    font-size: clamp(3rem, 4.7vw, 4.2rem);
-    text-shadow: 1px 1px 0px #000;
-    &:nth-of-type(1) {
-      color: black;
-    }
-  }
-}
-
-.slide-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  height: 200px;
-  @media (min-width: 970px) {
-    justify-content: flex-end;
-    flex-direction: row;
-  }
-}
-
-.card {
-  border-radius: 0.25rem;
-  display: flex;
-  align-items: center;
-  min-width: 91px;
-  width: 91px;
-  padding-right: 0.5rem;
-  overflow: hidden;
-  cursor: pointer;
-  margin: 0rem 0rem 1rem 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #fff;
-  transition: 0.3s cubic-bezier(0.28, -0.03, 0, 0.99);
-  box-shadow: 1px 3px 4px #00000020;
-  @media only screen and (min-width: 970px) {
-    align-items: flex-end;
-    margin: 0rem 1rem 0rem 0rem;
-  }
-}
-
-.card > {
-  .row {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    .icon {
-      display: block;
-      background: #000000;
-      color: white;
-      border-radius: 50%;
-      min-width: 4.5rem;
-      line-height: 4.5rem;
-      margin: 0.6rem;
-      text-align: center;
-      font-weight: bold;
-      font-size: 1.5rem;
-      transition: 0.25s;
-      &:hover {
-        background: #555;
-      }
-    }
-    .description {
-      height: 80px;
-      width: 100%;
-      opacity: 0;
-      text-decoration: none;
-      transform: translateY(0px);
-      transition: all 0.3s ease;
-      transition-delay: 0.3s;
-      h4 {
-        font-size: clamp(1rem, 1vw, 1.17rem);
-        text-transform: uppercase;
-        padding: 0rem 0 0.2rem;
-        padding: 0.25rem;
-        margin-top: 0.5rem;
-        margin-bottom: 0.25rem;
-        background-color: #0000005c;
-        // color: white;
-        color: #fff767;
-
-        backdrop-filter: blur(5px);
-      }
-      p {
-        font-size: 0.8rem;
-        padding: 0 0.25rem;
-        margin-bottom: 0.25rem;
-        background-color: #0000005c;
-        color: white;
-        backdrop-filter: blur(5px);
-      }
-      a {
-        display: inline-block;
-        font-size: 0.8rem;
-        padding: 0.25rem;
-        margin-right: 1rem;
-        background-color: #0000005c;
-        color: white;
-        text-decoration: none;
-        margin-bottom: 0.25rem;
-        transition: 0.25s;
-        backdrop-filter: blur(5px);
-        &:hover {
-          background-color: #000;
-          color: white;
-        }
-      }
-    }
-  }
-}
-
-input[name="slide"] {
-  display: none;
-}
-
-input:checked + label {
-  /* max-width: 600px; */
-  width: 100%;
-}
-
-input:checked + label .description {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-
-.card[for="c1"] {
-  background-image: url("/img/homepage/img1.jpg");
-}
-.card[for="c2"] {
-  background-image: url("/img/homepage/img2.jpg");
+  position: relative;
+  z-index: 1;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(2.58rem, 10vw, 10rem);
+  margin-bottom: 1rem;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 0;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px #00000025;
   @media (min-width: 768px) {
+    text-align: left;
+  }
+
+  span {
+    &:nth-of-type(1) {
+      @media (min-width: 1440px) {
+        display: flex;
+        font-size: clamp(2.58rem, 2.9vw, 4rem);
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+  span {
+    &:nth-of-type(2) {
+      color: #9b9b9b;
+    }
   }
 }
-// .card[for="c3"] {
-//   background-image: url("./img3.jpeg");
-// }
-// .card[for="c4"] {
-//   background-image: url("./img4.jpeg");
-// }
+
+h2.sub-text {
+  position: relative;
+  z-index: 1;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(0.95rem, 2.8vw, 2.1rem);
+  font-weight: normal;
+  margin: 0 0 0 0;
+  padding: 0;
+  line-height: 1.5;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px #00000025;
+  span {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0.25rem 0;
+    @media (min-width: 768px) {
+      justify-content: left;
+    }
+
+    &.bullet {
+      display: none;
+
+      @media (min-width: 768px) {
+        display: block;
+        font-size: clamp(2.2rem, 6vw, 4.4rem);
+        line-height: 0.65;
+        -webkit-text-stroke: 2px white;
+        -webkit-text-fill-color: #323232;
+      }
+    }
+  }
+}
+
+.hero-image {
+  position: relative;
+  z-index: 0;
+  width: 300px;
+  aspect-ratio: 738 / 743;
+  background-image: url("/img/homepage/ed209.gif");
+  background-size: cover;
+  margin: 0 auto;
+  transition: 1s;
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 220px;
+    right: 0px;
+    width: 490px;
+  }
+  // @media (min-width: 992px) {
+  //   width: 600px;
+  //   right: 0;
+  // }
+  @media (min-width: 1024px) {
+    top: 180px;
+    width: 505px;
+  }
+  @media (min-width: 1200px) {
+    top: 200px;
+    width: 530px;
+  }
+  @media (min-width: 1440px) {
+    top: 100px;
+    right: 45px;
+    width: 640px;
+  }
+}
+
+.tech-logos {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 1rem 0;
+  margin: 0 0 0 0;
+  @media (min-width: 768px) {
+    text-align: left;
+    margin: 0 0 0 1rem;
+  }
+  img {
+    margin: 0.25rem;
+    width: 40px;
+  }
+}
+
+.thumbnail-container {
+  position: relative;
+  z-index: 1;
+  display: block;
+  float: left;
+  width: 100%;
+  margin: 0 auto;
+  transition: 0.5s;
+  @media (min-width: 375px) {
+    display: block;
+    float: left;
+  }
+  @media (min-width: 768px) {
+    display: block;
+    float: left;
+    width: 60%;
+  }
+  @media (min-width: 1024px) {
+    width: 64%;
+  }
+
+  .thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: calc(50% - 1.5rem);
+    max-width: 325px;
+    aspect-ratio: 4 / 2.6;
+    padding: 0.5rem;
+    margin: 0.75rem;
+    background-color: #d5d5d5;
+    border-radius: 0.5rem;
+    transition: 1s;
+    @media (min-width: 768px) {
+      &:nth-of-type(1) {
+        margin-right: 20px;
+      }
+    }
+    @media (min-width: 1024px) {
+      width: calc(33% - 2rem);
+      &:nth-of-type(1) {
+        margin-right: 0.75rem;
+      }
+    }
+    @media (min-width: 1440px) {
+      width: calc(50% - 2rem);
+    }
+  }
+}
 </style>

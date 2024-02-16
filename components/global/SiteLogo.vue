@@ -7,7 +7,7 @@ const props = defineProps({
 });
 </script>
 <template>
-  <NuxtLink to="/">
+  <NuxtLink to="/" aria-label="Link to Homepage">
     <svg
       class="looka-1j8o68f"
       width="60"

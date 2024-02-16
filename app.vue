@@ -1,8 +1,9 @@
 <template>
   <TheHeader />
-  <NuxtLayout>
-    <main>
+  <Body class="app-height">
+    <NuxtLayout>
       <NuxtPage />
-    </main>
-  </NuxtLayout>
+    </NuxtLayout>
+    <TheFooter />
+  </Body>
 </template>
