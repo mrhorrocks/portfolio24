@@ -29,3 +29,10 @@ https://fonts.googleapis.com/css?family=Roboto
       format("truetype");
   font-display: swap;
 }
+@font-face {
+  font-family: "RobotoCondensed-Black";
+  src: local("RobotoCondensed-Black"),
+    url("/assets/fonts/Roboto_condensed/RobotoCondensed-Black.ttf")
+      format("truetype");
+  font-display: swap;
+}
