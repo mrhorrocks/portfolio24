@@ -125,7 +125,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
 h1.site-headline {
   position: relative;
   z-index: 1;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: Impact, RobotoCondensed-Black, "Arial Narrow Bold", sans-serif;
   font-size: clamp(2.58rem, 10vw, 10rem);
   margin-bottom: 1rem;
   font-weight: normal;
@@ -143,7 +143,6 @@ h1.site-headline {
       @media (min-width: 1440px) {
         display: flex;
         font-size: clamp(2.58rem, 2.9vw, 4rem);
-        margin-bottom: 1.5rem;
       }
     }
   }
@@ -157,7 +156,7 @@ h1.site-headline {
 h2.sub-text {
   position: relative;
   z-index: 1;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: Impact, RobotoCondensed-Black, "Arial Narrow Bold", sans-serif;
   font-size: clamp(0.95rem, 2.8vw, 2.1rem);
   font-weight: normal;
   margin: 0 0 0 0;
