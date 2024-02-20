@@ -11,16 +11,6 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: true
   },
-  // nitro: {
-  //   prerender: {
-  //     routes: [
-  //       // '/blog'
-  //     ],
-  //     ignore: [
-  //       // '/blog'
-  //     ]
-  //   }
-  // },
   modules: ['@nuxt/content'],
 
   app: {
@@ -31,9 +21,17 @@ export default defineNuxtConfig({
       // title: process.env.SITE_NAME,
       title: 'Title - TBC',
       meta: [{ name: 'description', content: 'TBC' }],
-      // bodyAttrs: {
-      //   class: 'bg-gray-100',
-      // },
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap',
+        }
+      ],
+
     }
   },
   css: [
