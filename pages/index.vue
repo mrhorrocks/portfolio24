@@ -96,7 +96,9 @@ if (location.href.indexOf("#invite_token") !== -1) {
               title="Portfolio 2024"
             ></a>
           </div>
-          <div class="thumb"></div>
+          <div class="thumb">
+            <a href="/cars" class="thumb-link" title="Car Dealer"></a>
+          </div>
           <div class="thumb">3</div>
           <div class="thumb">4</div>
           <div class="thumb">5</div>

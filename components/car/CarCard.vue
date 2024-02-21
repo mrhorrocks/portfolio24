@@ -32,7 +32,7 @@
         <!-- Car Name -->
         <p class="car-name">{{ item.name }}</p>
 
-        <cardealerFavouriteStar class="favorite" />
+        <CarFavouriteStar class="favorite" />
 
         <p class="short-spec">{{ item.derivative }}</p>
 

@@ -2,7 +2,9 @@
 
 <template>
   <header id="cars-header">
-    <div class="container">Cars Header</div>
+    <div class="container header-elements">
+      <CarNavMenu />
+    </div>
   </header>
 </template>
 
@@ -15,7 +17,12 @@
   margin: 0 auto;
   background-color: bisque;
   box-shadow: 0px 7px 5px #0000001c;
-  padding: 1rem;
   box-sizing: border-box;
+  .header-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
 }
 </style>

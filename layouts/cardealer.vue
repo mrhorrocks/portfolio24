@@ -1,5 +1,5 @@
 <template>
-  <CardealerCarsHeader />
+  <CarCarsHeader />
   <Body class="app-height">
     <slot />
   </Body>

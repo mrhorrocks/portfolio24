@@ -6,16 +6,18 @@ definePageMeta({
 
 <template>
   <section>
+    <!-- <div class="container"> -->
     <div class="flexed-cols">
       <!-- FILTERS -->
       <aside class="filters">Filters</aside>
       <!-- MAIN CONTENT -->
       <main class="car-dealer">
         <div class="search-results">
-          <cardealerCarCard />
+          <CarCard />
         </div>
       </main>
     </div>
+    <!-- </div> -->
   </section>
 </template>
 
