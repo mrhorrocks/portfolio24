@@ -231,6 +231,7 @@ div.car-navlinks {
     overflow: hidden;
     text-decoration: none;
     color: black;
+    transition: 0.5s;
     &.router-link-active {
       font-weight: bold;
     }
@@ -239,7 +240,7 @@ div.car-navlinks {
     }
   }
   &.shrink a {
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 0.8vw;
   }
 }
 
