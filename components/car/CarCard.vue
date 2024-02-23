@@ -89,7 +89,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-width: 375px;
+  min-width: 320px;
   margin-top: 0.5rem;
   border-radius: 0rem;
   overflow: hidden;
@@ -120,8 +120,9 @@ export default {
     width: 100%;
     overflow-x: auto;
     white-space: nowrap;
+    margin-left: 0.25rem;
     img {
-      width: 113px;
+      width: 108px;
       border-radius: 1rem;
       margin-right: 0.5rem;
     }
@@ -141,7 +142,7 @@ export default {
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         font-weight: 500;
-        font-size: 1rem;
+        font-size: 0.8rem;
         line-height: 1.25;
       }
     }
@@ -225,6 +226,7 @@ export default {
       position: relative;
       width: max-content;
       width: 100%;
+      margin-left: 0rem;
       img {
         width: 100%;
         border-radius: 0;
@@ -251,6 +253,11 @@ export default {
           &:last-child {
             border: 1px solid #ffffff40;
           }
+        }
+      }
+      p {
+        &.car-name {
+          font-size: 1rem;
         }
       }
       .pricing {

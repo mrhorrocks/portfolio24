@@ -34,10 +34,10 @@ definePageMeta({
   transition: 0.25s;
   aside.filters {
     position: fixed;
-    left: 33%;
+    left: calc(50% - 65px);
     bottom: 20px;
     z-index: 2;
-    width: 33%;
+    width: 130px;
     height: 50px;
     background-color: #db006e;
     color: white;
@@ -77,13 +77,13 @@ definePageMeta({
       position: relative;
       top: 105px;
       left: 0;
-      width: calc(25% - 15px);
+      width: 25%;
       text-align: left;
       margin-top: 12px;
       border-radius: 0rem;
     }
     main {
-      width: calc(75% - 5px);
+      width: 75%;
       margin-top: 0px;
       margin-bottom: 0px;
     }
