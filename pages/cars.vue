@@ -28,8 +28,6 @@ definePageMeta({
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: flex-start;
-  grid-gap: 20px;
-  gap: 20px;
   max-width: 1440px;
   margin: 0 auto;
   background-color: #ffffff;
@@ -38,7 +36,7 @@ definePageMeta({
     position: fixed;
     left: 33%;
     bottom: 20px;
-    z-index: 1;
+    z-index: 2;
     width: 33%;
     height: 50px;
     background-color: #db006e;
