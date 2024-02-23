@@ -6,18 +6,18 @@ definePageMeta({
 
 <template>
   <section>
-    <!-- <div class="container"> -->
-    <div class="flexed-cols">
-      <!-- FILTERS -->
-      <aside class="filters">Filters</aside>
-      <!-- MAIN CONTENT -->
-      <main class="car-dealer">
-        <div class="search-results">
-          <CarCard />
-        </div>
-      </main>
+    <div class="container">
+      <div class="flexed-cols">
+        <!-- FILTERS -->
+        <aside class="filters">Filters</aside>
+        <!-- MAIN CONTENT -->
+        <main class="car-dealer">
+          <div class="search-results">
+            <CarCard />
+          </div>
+        </main>
+      </div>
     </div>
-    <!-- </div> -->
   </section>
 </template>
 
@@ -62,16 +62,9 @@ definePageMeta({
   }
 }
 
-// @media only screen and (min-width: 375px) {
-//   .flexed-cols {
-//     max-width: 375px;
-//     background-color: red;
-//   }
-// }
-
 @media only screen and (min-width: 768px) {
   .flexed-cols {
-    max-width: 768px;
+    // max-width: 768px;
     main {
       width: 100%;
       margin-top: 0px;
@@ -82,7 +75,6 @@ definePageMeta({
 
 @media only screen and (min-width: 1024px) {
   .flexed-cols {
-    max-width: 1024px;
     aside.filters {
       position: relative;
       top: 105px;
@@ -103,6 +95,11 @@ definePageMeta({
 @media only screen and (min-width: 1440px) {
   .flexed-cols {
     max-width: 1440px;
+    main {
+      .search-results {
+        justify-content: flex-end;
+      }
+    }
   }
 }
 </style>

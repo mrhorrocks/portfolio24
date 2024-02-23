@@ -95,17 +95,14 @@ export default {
   overflow: hidden;
   background-color: #ffffff;
   line-height: 1rem;
-
   a {
     text-decoration: none;
     color: initial;
   }
-
   .listing-tag {
     position: absolute;
     top: 90px;
     right: 35px;
-
     span {
       background-color: #3f3a50;
       font-size: 0.8rem;
@@ -117,28 +114,26 @@ export default {
       border-radius: 8px;
     }
   }
-
   .image-container {
     position: relative;
     width: -moz-max-content;
     width: 100%;
     overflow-x: auto;
     white-space: nowrap;
-
     img {
       width: 113px;
       border-radius: 1rem;
       margin-right: 0.5rem;
     }
   }
-
   .car-details {
     position: relative;
     padding: 0.75rem 0.5rem 0.5rem 0.5rem;
 
     p {
-      margin: 0 0 0.25rem 0;
+      margin: 0;
       font-size: 0.75rem;
+      line-height: 1.45;
       &.car-name {
         width: 270px;
         overflow: hidden;
@@ -150,7 +145,6 @@ export default {
         line-height: 1.25;
       }
     }
-
     .favorite {
       position: absolute;
       top: 10px;
@@ -158,36 +152,34 @@ export default {
       height: 20px;
       width: 20px;
     }
-
     span {
       font-size: 1rem;
       font-weight: 600;
     }
-
     .spec-tags {
       margin-top: 1rem;
       width: 50%;
       float: left;
-
       span {
         display: inline-block;
         font-size: 0.75rem;
         font-weight: 400;
         line-height: 13px;
-        padding: 0px 5px 5px 0px;
-        margin: 0 3px 3px 0px;
+        padding: 0px 3px 0px 0px;
+        margin: 0 3px 0px 0px;
         color: #55595d;
         border-radius: 0px;
         border-right: 1px solid rgb(85, 89, 93, 0.25);
+        &:last-child {
+          border: 0;
+        }
       }
     }
-
     .pricing {
       margin-top: 1rem;
       width: 50%;
       float: right;
       text-align: right;
-
       .total-price button {
         background-color: transparent;
         border: none;
@@ -195,7 +187,6 @@ export default {
         color: #7572ff;
         padding: 0;
         cursor: pointer;
-
         &:hover {
           text-decoration: underline;
         }
@@ -203,21 +194,18 @@ export default {
     }
   }
 }
-
 @media only screen and (min-width: 768px) {
   .car-card {
     max-width: 45%;
     border-radius: 1rem;
-    margin: 2.5% 2.5% 0 0;
+    margin: 0 0 1.5% 1.5%;
     min-width: inherit;
     box-shadow: 0px 6px 20px #00000040;
-
     .listing-tag {
       position: absolute;
       top: 13px;
       left: 5px;
       z-index: 1;
-
       span {
         background-color: #3f3a50;
         font-size: 1rem;
@@ -233,18 +221,15 @@ export default {
         text-transform: uppercase;
       }
     }
-
     .image-container {
       position: relative;
       width: max-content;
       width: 100%;
-
       img {
-        width: 347px;
+        width: 100%;
         border-radius: 0;
       }
     }
-
     .car-details {
       .spec-tags {
         position: absolute;
@@ -252,7 +237,6 @@ export default {
         left: 0;
         width: 100%;
         margin: 0;
-
         span {
           display: inline-block;
           background-color: #3f3a50;
@@ -261,19 +245,20 @@ export default {
           line-height: 18px;
           padding: 2px 10px;
           margin: 0 3px 3px 5px;
-          border: 1px solid rgba(255, 255, 255, 0.25);
+          border: 1px solid #ffffff40;
           color: #ffffff;
           border-radius: 8px;
+          &:last-child {
+            border: 1px solid #ffffff40;
+          }
         }
       }
-
       .pricing {
         width: 60%;
         float: left;
         text-align: left;
         margin-top: 1rem;
         margin-bottom: 0.5rem;
-
         .total-price a {
           color: #7572ff;
           margin-left: 5px;
@@ -282,28 +267,19 @@ export default {
     }
   }
 }
-
 @media only screen and (min-width: 1024px) {
   .car-card {
-    max-width: 350px;
-
+    // max-width: 47%;
     .image-container {
       img {
-        width: 350px;
+        width: 100%;
       }
     }
   }
 }
-
 @media only screen and (min-width: 1440px) {
   .car-card {
-    max-width: 330px;
-
-    .image-container {
-      img {
-        width: 330px;
-      }
-    }
+    max-width: 31.5%;
   }
 }
 </style>

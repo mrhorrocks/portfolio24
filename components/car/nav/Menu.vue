@@ -62,12 +62,12 @@ export default {
         </div>
 
         <div class="actions">
-          <CarButton text="Contact" class="car-button call-to-action" />
-          <CarButton text="Email" class="car-button call-to-action" />
+          <CarButton text="Contact" class="car-button contact" />
+          <CarButton text="Email" class="car-button email" />
         </div>
         <!--  -->
         <div class="nav-button">
-          <span>Menu</span>
+          <span @click="toggleMobileMenu">Menu</span>
           <button
             @click="toggleMobileMenu"
             class="car-hamburger"
@@ -169,8 +169,11 @@ nav#car-nav {
         }
       }
       .fav-count {
-        display: flex;
-        margin-left: 2rem;
+        display: none;
+        @media (min-width: 768px) {
+          display: flex;
+          margin-left: 2rem;
+        }
         i {
           margin-right: 0.25rem;
         }
@@ -180,12 +183,29 @@ nav#car-nav {
     .right-nav {
       display: flex;
       align-items: center;
+      .actions {
+        button.email {
+          display: none;
+          @media (min-width: 768px) {
+            display: inline-block;
+          }
+        }
+      }
       .nav-button {
+        display: flex;
+        align-items: center;
         @media (min-width: 1024px) {
           display: none;
         }
-        display: flex;
-        align-items: center;
+        > span {
+          display: block;
+          margin-left: 1rem;
+          font-size: 0.9rem;
+          font-weight: bold;
+          @media (min-width: 1024px) {
+            display: none;
+          }
+        }
         // MOBILE
         // Hamburger
         button.car-hamburger {
