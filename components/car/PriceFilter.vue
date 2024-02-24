@@ -1,14 +1,17 @@
 <template>
-  <div class="price-filter">Lowest price</div>
+  <div class="price-filter">
+    <CarSelectOptions label="Lowest price" id="priceFilter" />
+  </div>
 </template>
 
 <style lang="scss">
 .price-filter {
-  // display: none;
-  padding: 1rem 0.5rem 1rem 0rem;
+  display: flex;
+  align-items: center;
+  width: 140px;
+  padding: 1rem 0;
   @media (min-width: 768px) {
-    display: flex;
-    background-color: chocolate;
+    width: 180px;
   }
 }
 </style>

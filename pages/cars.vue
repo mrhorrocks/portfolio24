@@ -24,15 +24,10 @@ definePageMeta({
 
 <style lang="scss">
 .flexed-cols {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
   display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  max-width: 1440px;
+  justify-content: space-between;
   margin: 0 auto;
   background-color: #ffffff;
-  transition: 0.25s;
   aside.filters {
     position: fixed;
     left: calc(50% - 65px);
@@ -48,11 +43,9 @@ definePageMeta({
     box-sizing: border-box;
     border-radius: 1rem;
   }
-
   main {
     width: 100%;
     padding-top: 5.5rem;
-    background: pink;
     margin-bottom: 80px;
     .search-results {
       display: flex;
@@ -61,10 +54,8 @@ definePageMeta({
     }
   }
 }
-
 @media only screen and (min-width: 768px) {
   .flexed-cols {
-    // max-width: 768px;
     main {
       width: 100%;
       margin-top: 0px;
@@ -73,7 +64,6 @@ definePageMeta({
     }
   }
 }
-
 @media only screen and (min-width: 1024px) {
   .flexed-cols {
     aside.filters {
@@ -82,26 +72,19 @@ definePageMeta({
       left: 0;
       width: 25%;
       text-align: left;
-      margin-top: 12px;
       border-radius: 0rem;
     }
     main {
-      width: 75%;
+      width: calc(75% - 2%);
       margin-top: 0px;
       margin-bottom: 0px;
       padding-top: 5.2rem;
     }
   }
 }
-
 @media only screen and (min-width: 1440px) {
   .flexed-cols {
     max-width: 1440px;
-    main {
-      .search-results {
-        justify-content: flex-end;
-      }
-    }
   }
 }
 </style>

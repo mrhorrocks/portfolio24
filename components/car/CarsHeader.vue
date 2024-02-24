@@ -1,5 +1,3 @@
-<script lang="ts" setup></script>
-
 <template>
   <header id="cars-header">
     <div class="container header-elements">
@@ -20,6 +18,7 @@
   box-sizing: border-box;
   .type-filter {
     background-color: red;
+    height: 40px;
     @media (min-width: 768px) {
       display: none;
     }

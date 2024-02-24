@@ -1,14 +1,22 @@
 <template>
-  <div class="showing-cars">Showing 24 of 339 cars</div>
+  <div class="showing-cars">
+    <span>Showing 24 of</span>&nbsp;<span>339 cars</span>
+  </div>
 </template>
 
 <style lang="scss">
 .showing-cars {
-  // display: none;
-  padding: 1rem 0 1rem 0.5rem;
+  display: flex;
+  align-items: center;
+  min-width: 160px;
+  padding: 1rem 0;
   @media (min-width: 768px) {
-    display: flex;
-    background-color: chocolate;
+    font-weight: bold;
+    font-size: 1rem;
+    // span:nth-of-type(1) {
+    //   // display: none;
+    //   background: red;
+    // }
   }
 }
 </style>

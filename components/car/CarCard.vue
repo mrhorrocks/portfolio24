@@ -90,7 +90,7 @@ export default {
   flex-direction: column;
   width: 100%;
   min-width: 320px;
-  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   border-radius: 0rem;
   overflow: hidden;
   background-color: #ffffff;
@@ -198,7 +198,7 @@ export default {
   .car-card {
     max-width: 45%;
     border-radius: 1rem;
-    margin: 0 0 1.5% 1.5%;
+    margin: 0 1% 1%;
     min-width: inherit;
     box-shadow: 0px 6px 20px #00000040;
     .listing-tag {
@@ -285,7 +285,7 @@ export default {
 }
 @media only screen and (min-width: 1440px) {
   .car-card {
-    max-width: 31.5%;
+    max-width: 31.3%;
   }
 }
 </style>

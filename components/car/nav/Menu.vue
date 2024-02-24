@@ -152,7 +152,6 @@ export default {
 
 nav#car-nav {
   width: 100%;
-  background: pink;
   div.nav-content {
     display: flex;
     justify-content: space-between;
