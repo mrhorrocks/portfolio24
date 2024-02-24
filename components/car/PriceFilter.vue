@@ -9,9 +9,10 @@
   display: flex;
   align-items: center;
   width: 140px;
-  padding: 2rem 0;
+  padding: 1rem 0;
   @media (min-width: 768px) {
     width: 180px;
+    padding: 2rem 0;
   }
 }
 </style>
