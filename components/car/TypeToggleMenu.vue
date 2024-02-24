@@ -22,7 +22,6 @@
     align-items: center;
     a {
       color: black;
-      font-size: 0.875rem;
       text-decoration: none;
       width: 100%;
       height: 100%;

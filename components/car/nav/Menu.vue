@@ -200,7 +200,6 @@ nav#car-nav {
         > span {
           display: block;
           margin-left: 1rem;
-          font-size: 0.9rem;
           font-weight: bold;
           @media (min-width: 1024px) {
             display: none;

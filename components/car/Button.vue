@@ -18,7 +18,6 @@ export default {
 
 <style lang="scss">
 .car-button {
-  font-size: 0.9rem;
   background: #82f7ff;
   border: 0;
   border-radius: 0.7rem;

@@ -105,7 +105,6 @@ export default {
     right: 35px;
     span {
       background-color: #3f3a50;
-      font-size: 0.8rem;
       line-height: 27px;
       padding: 2px 10px;
       margin: 0 5px 0 5px;
@@ -141,9 +140,9 @@ export default {
         display: -webkit-box;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
-        font-weight: 500;
-        font-size: 0.8rem;
+        font-size: 0.875rem;
         line-height: 1.25;
+        font-weight: 500;
       }
     }
     .favorite {
