@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   min-width: 160px;
-  padding: 1rem 0;
+  padding: 2rem 0;
   @media (min-width: 768px) {
     font-weight: bold;
     font-size: 1rem;

@@ -135,7 +135,7 @@ export default {
       font-size: 0.75rem;
       line-height: 1.45;
       &.car-name {
-        width: 270px;
+        width: 210px;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 1;
@@ -198,7 +198,7 @@ export default {
   .car-card {
     max-width: 45%;
     border-radius: 1rem;
-    margin: 0 1% 1%;
+    margin: 0 1% 2%;
     min-width: inherit;
     box-shadow: 0px 6px 20px #00000040;
     .listing-tag {
@@ -245,7 +245,7 @@ export default {
           font-weight: 300;
           line-height: 18px;
           padding: 2px 10px;
-          margin: 0 3px 3px 5px;
+          margin: 0 3px 3px 7px;
           border: 1px solid #ffffff40;
           color: #ffffff;
           border-radius: 8px;
