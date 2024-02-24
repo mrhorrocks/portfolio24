@@ -12,6 +12,7 @@ definePageMeta({
         <aside class="filters">Filters</aside>
         <!-- MAIN CONTENT -->
         <main class="car-dealer">
+          <CarFilterNav />
           <div class="search-results">
             <CarCard />
           </div>
@@ -50,7 +51,8 @@ definePageMeta({
 
   main {
     width: 100%;
-    margin-top: 95px;
+    padding-top: 5.5rem;
+    background: pink;
     margin-bottom: 80px;
     .search-results {
       display: flex;
@@ -67,6 +69,7 @@ definePageMeta({
       width: 100%;
       margin-top: 0px;
       margin-bottom: 0px;
+      padding-top: 3rem;
     }
   }
 }
@@ -86,6 +89,7 @@ definePageMeta({
       width: 75%;
       margin-top: 0px;
       margin-bottom: 0px;
+      padding-top: 5.2rem;
     }
   }
 }
