@@ -263,7 +263,7 @@ export default {
         width: 60%;
         float: left;
         text-align: left;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         .total-price a {
           color: #7572ff;
