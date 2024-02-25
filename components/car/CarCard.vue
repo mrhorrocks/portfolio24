@@ -135,10 +135,10 @@ export default {
       font-size: 0.75rem;
       line-height: 1.45;
       &.car-name {
-        width: 210px;
+        width: 70%;
         overflow: hidden;
         display: -webkit-box;
-        -webkit-line-clamp: 1;
+        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         font-size: 0.875rem;
         line-height: 1.25;
