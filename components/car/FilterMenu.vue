@@ -3,13 +3,16 @@
     <h2>Filters</h2>
     <CarButton text="Reset" class="filter-reset" />
   </header>
+
   <h3>Brand</h3>
+
   <CarDisclosure title="Make" :isOpen="true">
-    <CarCheckbox id="Abarth" label="Abarth" checked="checked" />
-    <CarCheckbox id="Alpha" label="Alpha Romeo" />
-    <CarCheckbox id="Audi" label="Audi" />
-    <CarCheckbox id="BMW" label="BMW" />
-    <CarCheckbox id="Citroën" label="Citroën" />
+    <CarCheckbox
+      v-for="item in makes.data"
+      :key="item.id"
+      :id="item.name"
+      :label="item.name"
+    />
   </CarDisclosure>
   <CarDisclosure title="Model">Add content using a slot too.</CarDisclosure>
   <h3>Budget</h3>
@@ -51,3 +54,26 @@ aside.filters {
   }
 }
 </style>
+
+<script>
+import makes from "~/assets/data/makes.json";
+
+export default {
+  data () {
+    return {
+      makes,
+    };
+  },
+  methods: {
+    calculateFinance () {
+      console.log("Finance button clicked");
+      // e.preventDefault();
+    },
+    loadAlternateImage (e) {
+      // e.target.src = '~/assets/img/alternate-image.jpg';
+      console.log("Component added");
+      return;
+    },
+  },
+};
+</script>
