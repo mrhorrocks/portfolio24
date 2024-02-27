@@ -37,8 +37,8 @@ details {
     display: block;
     list-style: none;
     padding: 0.5rem;
-    background-color: rgb(173, 120, 120);
-    color: white;
+    font-weight: bold;
+    color: black;
     cursor: pointer;
   }
 

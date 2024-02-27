@@ -47,7 +47,7 @@ aside.filters {
   h3 {
     font-size: 0.75rem;
     padding: 0;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1.25rem 0;
     color: #a2a9af;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
