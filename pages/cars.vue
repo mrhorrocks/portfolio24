@@ -9,7 +9,9 @@ definePageMeta({
     <div class="container">
       <div class="flexed-cols">
         <!-- FILTERS -->
-        <aside class="filters">Filters</aside>
+        <aside class="filters">
+          <CarFilterMenu />
+        </aside>
         <!-- MAIN CONTENT -->
         <main class="car-dealer">
           <CarFilterNav />
@@ -30,16 +32,12 @@ definePageMeta({
   background-color: #ffffff;
   aside.filters {
     position: fixed;
-    left: calc(50% - 65px);
-    bottom: 20px;
     z-index: 2;
     width: 130px;
-    height: 50px;
-    background-color: #db006e;
-    color: white;
-    text-align: center;
-    box-shadow: 0px 7px 5px #0000001c;
-    padding: 1rem;
+    left: calc(50% - 65px);
+    bottom: 20px;
+    background-color: #f4f4f4;
+    padding: 0.6rem 1rem;
     box-sizing: border-box;
     border-radius: 1rem;
   }

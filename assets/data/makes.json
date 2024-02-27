@@ -1,0 +1,55 @@
+{
+    "makes": [
+        {
+            "name": "Audi",
+            "models": [
+                "A3",
+                "A4",
+                "A5",
+                "Q3",
+                "Q5",
+                "Q7"
+            ]
+        },
+        {
+            "name": "BMW",
+            "models": [
+                "3 Series",
+                "5 Series",
+                "X3",
+                "X5",
+                "X7"
+            ]
+        },
+        {
+            "name": "Ford",
+            "models": [
+                "Fiesta",
+                "Focus",
+                "Mondeo",
+                "Kuga",
+                "Ranger"
+            ]
+        },
+        {
+            "name": "Toyota",
+            "models": [
+                "Corolla",
+                "Camry",
+                "RAV4",
+                "Highlander",
+                "Tacoma"
+            ]
+        },
+        {
+            "name": "Volkswagen",
+            "models": [
+                "Golf",
+                "Passat",
+                "Tiguan",
+                "Atlas",
+                "Arteon"
+            ]
+        }
+    ]
+}
