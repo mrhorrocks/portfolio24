@@ -29,6 +29,4 @@ export default {
     background: darken(#82f7ff, 20%);
   }
 }
-.call-to-action {
-}
 </style>
