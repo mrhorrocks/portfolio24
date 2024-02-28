@@ -46,7 +46,7 @@ export default {
 
 <style scss scoped>
 .selectbox {
-  width: 100%;
+  width: 80%;
   label {
     display: none;
   }

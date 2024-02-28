@@ -38,7 +38,7 @@ definePageMeta({
     left: calc(50% - 65px);
     bottom: 20px;
     background-color: #f4f4f4;
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 0rem;
     box-sizing: border-box;
     border-radius: 1rem;
   }

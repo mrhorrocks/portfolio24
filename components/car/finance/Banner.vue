@@ -120,7 +120,7 @@ section#finance-banner {
             width: auto;
             height: 27px;
             right: 5px;
-            top: 22px;
+            top: 23px;
             padding-right: 30px;
             display: flex;
             align-items: center;
