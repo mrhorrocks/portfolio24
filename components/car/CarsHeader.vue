@@ -1,6 +1,6 @@
 <template>
   <header id="cars-header">
-    <div class="container header-elements">
+    <div class="container-full">
       <CarNavMenu />
       <CarTypeToggleMenu class="type-filter" />
     </div>
@@ -14,7 +14,6 @@
   width: 100%;
   margin: 0 auto;
   background-color: white;
-  // box-sizing: border-box;
   box-shadow: 0px 7px 5px #0000001c;
   border-bottom: 1px solid #ccc;
   .type-filter {

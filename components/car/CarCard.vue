@@ -95,6 +95,15 @@ export default {
   overflow: hidden;
   background-color: #ffffff;
   line-height: 1rem;
+  @media only screen and (min-width: 768px) {
+    .car-card {
+      max-width: 48%;
+      border-radius: 1rem;
+      margin: 0% 1% 2% 1%;
+      min-width: inherit;
+      box-shadow: 0px 6px 20px #00000040;
+    }
+  }
   a {
     text-decoration: none;
     color: initial;
@@ -129,7 +138,6 @@ export default {
   .car-details {
     position: relative;
     padding: 0.75rem 0.5rem 0.5rem 0.5rem;
-
     p {
       margin: 0;
       font-size: 0.75rem;
@@ -147,7 +155,7 @@ export default {
     }
     .favorite {
       position: absolute;
-      top: 10px;
+      top: 13px;
       right: 10px;
       height: 20px;
       width: 20px;
@@ -196,9 +204,9 @@ export default {
 }
 @media only screen and (min-width: 768px) {
   .car-card {
-    max-width: 45%;
+    max-width: 48%;
     border-radius: 1rem;
-    margin: 0 0% 1% 2%;
+    margin: 0% 1% 2% 1%;
     min-width: inherit;
     box-shadow: 0px 6px 20px #00000040;
     .listing-tag {
@@ -238,6 +246,8 @@ export default {
         left: 0;
         width: 100%;
         margin: 0;
+        display: flex;
+        flex-direction: row;
         span {
           display: inline-block;
           background-color: #3f3a50;
@@ -284,7 +294,8 @@ export default {
 }
 @media only screen and (min-width: 1440px) {
   .car-card {
-    max-width: 31.3%;
+    max-width: 31.2%;
+    margin: 0% 0% 2% 2%;
   }
 }
 </style>

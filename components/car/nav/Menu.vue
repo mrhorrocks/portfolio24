@@ -32,107 +32,115 @@ export default {
 <template>
   <nav id="car-nav">
     <div class="nav-content">
-      <div class="left-nav">
-        <img
-          src="/img/cardealer/cardealer-logo.png"
-          alt="CarDealer"
-          class="car-logo"
-        />
-        <div class="fav-count">
-          <CarFavouriteStar />
-          <i class="fa fa-eye" aria-hidden="true"></i>
+      <div class="main-content">
+        <!-- Start-left-nav -->
+        <div class="left-nav">
+          <img
+            src="/img/cardealer/cardealer-logo.png"
+            alt="CarDealer"
+            class="car-logo"
+          />
+          <div class="fav-count">
+            <CarFavouriteStar />
+            <i class="fa fa-eye" aria-hidden="true"></i>
+          </div>
         </div>
-      </div>
+        <!-- End-left-nav -->
 
-      <div class="right-nav">
-        <div
-          class="car-navlinks"
-          :class="[
-            $route.fullPath === '/' ? 'red' : 'blue',
-            { shrink: isNavShrink },
-          ]"
-        >
-          <NuxtLink to="/" title="Home">Home</NuxtLink>
-          <NuxtLink to="cars" title="Our cars">Our cars</NuxtLink>
-          <NuxtLink to="" title="Sell your car">Sell your car</NuxtLink>
-          <NuxtLink to="" title="Apply for finance">Apply for finance</NuxtLink>
-          <NuxtLink to="" title="About us">About us</NuxtLink>
-          <NuxtLink to="" title="Blog">Blog</NuxtLink>
-          <NuxtLink to="" title="Contact">Contact</NuxtLink>
-        </div>
-
-        <div class="actions">
-          <CarButton text="Contact" class="car-button contact" />
-          <CarButton text="Email" class="car-button email" />
-        </div>
-        <!--  -->
-        <div class="nav-button">
-          <span @click="toggleMobileMenu">Menu</span>
-          <button
-            @click="toggleMobileMenu"
-            class="car-hamburger"
-            aria-label="toggle Navigation"
+        <!-- Start-right-nav -->
+        <div class="right-nav">
+          <div
+            class="car-navlinks"
+            :class="[
+              $route.fullPath === '/' ? 'red' : 'blue',
+              { shrink: isNavShrink },
+            ]"
           >
-            <span v-if="mobileMenuOpen">
-              <!-- MENU IS OPEN -->
-              <svg
-                width="32"
-                height="32"
-                version="1.1"
-                viewBox="0 -960 960 960"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g stroke-width="0">
-                  <circle cx="478.79" cy="-480" r="98.891" />
-                  <rect
-                    transform="matrix(.70711 .70711 .70711 -.70711 0 0)"
-                    x="-442.24"
-                    y="604.78"
-                    width="882"
-                    height="150"
-                    stroke-width="0"
-                  />
-                  <rect
-                    transform="matrix(.70711 -.70711 -.70711 -.70711 0 0)"
-                    x="238.78"
-                    y="-73.761"
-                    width="882"
-                    height="150"
-                    stroke-width="0"
-                  />
-                </g>
-              </svg>
-            </span>
-            <span v-if="!mobileMenuOpen">
-              <!-- MENU IS CLOSED -->
-              <svg
-                width="32"
-                height="32"
-                version="1.1"
-                viewBox="0 -960 960 960"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g stroke-width="0">
-                  <circle cx="478.79" cy="-480" r="98.891" />
-                  <circle cx="478.79" cy="-739.95" r="98.891" />
-                  <circle cx="478.79" cy="-218.84" r="98.891" />
-                  <circle
-                    transform="rotate(90)"
-                    cx="-479.4"
-                    cy="-739.35"
-                    r="98.891"
-                  />
-                  <circle
-                    transform="rotate(90)"
-                    cx="-479.4"
-                    cy="-218.24"
-                    r="98.891"
-                  />
-                </g>
-              </svg>
-            </span>
-          </button>
+            <NuxtLink to="/" title="Home">Home</NuxtLink>
+            <NuxtLink to="cars" title="Our cars">Our cars</NuxtLink>
+            <NuxtLink to="" title="Sell your car">Sell your car</NuxtLink>
+            <NuxtLink to="" title="Apply for finance"
+              >Apply for finance</NuxtLink
+            >
+            <NuxtLink to="" title="About us">About us</NuxtLink>
+            <NuxtLink to="" title="Blog">Blog</NuxtLink>
+            <NuxtLink to="" title="Contact">Contact</NuxtLink>
+          </div>
+
+          <div class="actions">
+            <CarButton text="Contact" class="car-button contact" />
+            <CarButton text="Email" class="car-button email" />
+          </div>
+          <!--  -->
+          <div class="nav-button">
+            <span @click="toggleMobileMenu">Menu</span>
+            <button
+              @click="toggleMobileMenu"
+              class="car-hamburger"
+              aria-label="toggle Navigation"
+            >
+              <span v-if="mobileMenuOpen">
+                <!-- MENU IS OPEN -->
+                <svg
+                  width="32"
+                  height="32"
+                  version="1.1"
+                  viewBox="0 -960 960 960"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g stroke-width="0">
+                    <circle cx="478.79" cy="-480" r="98.891" />
+                    <rect
+                      transform="matrix(.70711 .70711 .70711 -.70711 0 0)"
+                      x="-442.24"
+                      y="604.78"
+                      width="882"
+                      height="150"
+                      stroke-width="0"
+                    />
+                    <rect
+                      transform="matrix(.70711 -.70711 -.70711 -.70711 0 0)"
+                      x="238.78"
+                      y="-73.761"
+                      width="882"
+                      height="150"
+                      stroke-width="0"
+                    />
+                  </g>
+                </svg>
+              </span>
+              <span v-if="!mobileMenuOpen">
+                <!-- MENU IS CLOSED -->
+                <svg
+                  width="32"
+                  height="32"
+                  version="1.1"
+                  viewBox="0 -960 960 960"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g stroke-width="0">
+                    <circle cx="478.79" cy="-480" r="98.891" />
+                    <circle cx="478.79" cy="-739.95" r="98.891" />
+                    <circle cx="478.79" cy="-218.84" r="98.891" />
+                    <circle
+                      transform="rotate(90)"
+                      cx="-479.4"
+                      cy="-739.35"
+                      r="98.891"
+                    />
+                    <circle
+                      transform="rotate(90)"
+                      cx="-479.4"
+                      cy="-218.24"
+                      r="98.891"
+                    />
+                  </g>
+                </svg>
+              </span>
+            </button>
+          </div>
         </div>
+        <!-- End-right-nav -->
       </div>
       <div v-if="mobileMenuOpen" class="car-mobilenavlinks">
         <NuxtLink to="/" title="Home">Home</NuxtLink>
@@ -152,11 +160,17 @@ export default {
 
 nav#car-nav {
   width: 100%;
+  padding: 0 0.5rem;
   div.nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ccc;
+    flex-direction: column;
+    div.main-content {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
     // LEFT-NAV
     .left-nav {
       display: flex;
@@ -247,9 +261,9 @@ div.car-mobilenavlinks {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 70px;
+  top: 48px;
   width: 100%;
-  background-color: greenyellow;
+  background-color: #dddddd;
   @media (min-width: 1024px) {
     display: none;
   }

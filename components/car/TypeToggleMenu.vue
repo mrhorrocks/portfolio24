@@ -40,7 +40,7 @@
       }
     }
     .active {
-      border-bottom: 5px solid #7572ff;
+      border-bottom: 3px solid #7572ff;
       @media (min-width: 768px) {
         background-color: #7572ff;
         border: 0;

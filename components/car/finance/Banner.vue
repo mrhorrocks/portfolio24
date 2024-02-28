@@ -45,8 +45,8 @@ section#finance-banner {
   background-image: radial-gradient(
     circle at top left,
     #534f60 0%,
-    #534f60 32.5%,
-    #282338 32.5%,
+    #534f60 31.5%,
+    #282338 31.5%,
     #282338 100%
   );
   @media (min-width: 768px) {
@@ -99,6 +99,7 @@ section#finance-banner {
           @media (min-width: 1024px) {
             appearance: none;
           }
+          cursor: pointer;
           width: calc(100% - 1rem);
           padding: 0.75rem 0.7rem;
           border: 0;

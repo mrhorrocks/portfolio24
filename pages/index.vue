@@ -116,7 +116,7 @@ h1.site-headline {
   position: relative;
   z-index: 1;
   font-family: Impact, RobotoCondensed-Black, "Arial Narrow Bold", sans-serif;
-  font-size: clamp(2.58rem, 10vw, 10rem);
+  font-size: clamp(2.58rem, 11.1vw, 10rem);
   margin-bottom: 1rem;
   font-weight: normal;
   text-align: center;

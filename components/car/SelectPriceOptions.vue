@@ -55,7 +55,10 @@ export default {
     padding: 0.75rem 0.7rem;
     border: 0;
     border-radius: 0.76rem;
-    background-color: #e8e8e8;
+    background-color: white;
+    @media (min-width: 768px) {
+      background-color: #e8e8e8;
+    }
     option:checked {
       background-color: #dddddd;
     }

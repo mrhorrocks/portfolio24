@@ -10,13 +10,13 @@
 
 <style lang="scss">
 #controls {
-  padding-top: 0rem;
-  margin: 0 auto;
-  @media (min-width: 1024px) {
-    width: 93%;
+  padding: 0 0.25rem;
+  @media (min-width: 768px) {
+    width: 99%;
+    padding: 0rem 0.5rem 0 0;
   }
   @media (min-width: 1440px) {
-    width: 100%;
+    width: 98%;
   }
   .listing-header {
     display: flex;
