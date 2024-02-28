@@ -1,6 +1,6 @@
 <template>
   <div class="price-filter">
-    <CarSelectOptions label="Lowest price" id="priceFilter" />
+    <CarSelectPriceOptions label="Lowest price" id="priceFilter" />
   </div>
 </template>
 

@@ -11,13 +11,12 @@
 <style lang="scss">
 #controls {
   padding-top: 0rem;
-  width: 92%;
   margin: 0 auto;
-  @media (min-width: 1028px) {
+  @media (min-width: 1024px) {
     width: 93%;
   }
   @media (min-width: 1440px) {
-    width: 98%;
+    width: 100%;
   }
   .listing-header {
     display: flex;
@@ -30,7 +29,7 @@
 .car-type-toggle-menu {
   display: none;
   li {
-    min-width: 20%;
+    min-width: 100px;
   }
   @media (min-width: 768px) {
     display: flex;

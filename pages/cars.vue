@@ -5,6 +5,7 @@ definePageMeta({
 </script>
 
 <template>
+  <CarFinanceBanner />
   <section>
     <div class="container">
       <div class="flexed-cols">
@@ -43,7 +44,7 @@ definePageMeta({
   }
   main {
     width: 100%;
-    padding-top: 5.5rem;
+    padding-top: 0rem;
     margin-bottom: 80px;
     .search-results {
       display: flex;
@@ -58,7 +59,7 @@ definePageMeta({
       width: 100%;
       margin-top: 0px;
       margin-bottom: 0px;
-      padding-top: 3rem;
+      padding-top: 0rem;
     }
   }
 }
@@ -66,7 +67,7 @@ definePageMeta({
   .flexed-cols {
     aside.filters {
       position: relative;
-      top: 105px;
+      top: 0;
       left: 0;
       width: 25%;
       text-align: left;
@@ -76,7 +77,7 @@ definePageMeta({
       width: calc(75% - 2%);
       margin-top: 0px;
       margin-bottom: 0px;
-      padding-top: 5.2rem;
+      padding-top: 0rem;
     }
   }
 }

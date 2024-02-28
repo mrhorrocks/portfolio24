@@ -156,6 +156,7 @@ nav#car-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #ccc;
     // LEFT-NAV
     .left-nav {
       display: flex;

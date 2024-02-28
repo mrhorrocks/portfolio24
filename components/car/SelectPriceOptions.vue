@@ -52,7 +52,7 @@ export default {
   }
   select {
     width: 100%;
-    padding: 0.5rem 0.7rem;
+    padding: 0.75rem 0.7rem;
     border: 0;
     border-radius: 0.76rem;
     background-color: #e8e8e8;

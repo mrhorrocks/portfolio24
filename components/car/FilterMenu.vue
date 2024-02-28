@@ -15,7 +15,9 @@
     />
   </CarDisclosure>
   <CarDisclosure title="Model">Add content using a slot too.</CarDisclosure>
+
   <h3>Budget</h3>
+
   <h3>Specification</h3>
 </template>
 
@@ -26,7 +28,7 @@ aside.filters {
     justify-content: space-between;
     align-items: center;
     margin: 0 0 2rem 0;
-    background: blanchedalmond;
+    background: white;
     h2 {
       font-size: 1.125rem;
       padding: 0;
@@ -34,7 +36,7 @@ aside.filters {
     button.filter-reset {
       border: 0;
       color: #f87b7b;
-      background-color: lighten(#f87b7b, 15%);
+      background-color: lighten(#f87b7b, 22%);
       border-radius: 0.76rem;
       padding: 0 1rem;
       height: 2rem;
@@ -57,23 +59,11 @@ aside.filters {
 
 <script>
 import makes from "~/assets/data/makes.json";
-
 export default {
   data () {
     return {
       makes,
     };
-  },
-  methods: {
-    calculateFinance () {
-      console.log("Finance button clicked");
-      // e.preventDefault();
-    },
-    loadAlternateImage (e) {
-      // e.target.src = '~/assets/img/alternate-image.jpg';
-      console.log("Component added");
-      return;
-    },
   },
 };
 </script>

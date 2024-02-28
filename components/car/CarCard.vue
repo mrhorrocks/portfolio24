@@ -198,7 +198,7 @@ export default {
   .car-card {
     max-width: 45%;
     border-radius: 1rem;
-    margin: 0 1% 2%;
+    margin: 0 0% 1% 2%;
     min-width: inherit;
     box-shadow: 0px 6px 20px #00000040;
     .listing-tag {
@@ -275,7 +275,6 @@ export default {
 }
 @media only screen and (min-width: 1024px) {
   .car-card {
-    // max-width: 47%;
     .image-container {
       img {
         width: 100%;
