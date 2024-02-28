@@ -36,15 +36,14 @@ definePageMeta({
     width: 130px;
     left: calc(50% - 65px);
     bottom: 20px;
-    background-color: #f4f4f4;
-    padding: 0.6rem 0rem;
     border-radius: 1rem;
     @media (min-width: 1024px) {
       display: block;
       position: relative;
-      top: 0;
+      top: 38px;
       left: 0;
       width: 21%;
+      padding: 0 0 0 0.5rem;
       text-align: left;
       border-radius: 0rem;
     }
@@ -55,7 +54,7 @@ definePageMeta({
     @media only screen and (min-width: 768px) {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-end;
     }
     @media only screen and (min-width: 1024px) {
       width: 77%;

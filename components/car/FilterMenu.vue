@@ -27,7 +27,7 @@ aside.filters {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1rem 0;
     background: white;
     h2 {
       font-size: 1.125rem;
@@ -48,11 +48,10 @@ aside.filters {
   }
   h3 {
     font-size: 0.75rem;
-    padding: 0;
-    margin: 0 0 1.25rem 0;
     color: #a2a9af;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
+    border-bottom: 1px solid #f4f4f4;
   }
 }
 </style>

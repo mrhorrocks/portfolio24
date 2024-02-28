@@ -242,23 +242,22 @@ export default {
     .car-details {
       .spec-tags {
         position: absolute;
-        top: -40px;
+        top: -36px;
         left: 0;
         width: 100%;
         margin: 0;
         display: flex;
         flex-direction: row;
         span {
-          display: inline-block;
+          display: flex;
           background-color: #3f3a50;
-          font-size: 0.725rem;
+          font-size: 0.7rem;
           font-weight: 300;
-          line-height: 18px;
           padding: 2px 10px;
-          margin: 0 3px 3px 7px;
-          border: 1px solid #ffffff40;
+          margin: 0 0 0 7px;
+          border: 1px solid rgb(255, 255, 255, 0.25);
           color: #ffffff;
-          border-radius: 8px;
+          border-radius: 6px;
           &:last-child {
             border: 1px solid #ffffff40;
           }
@@ -292,7 +291,7 @@ export default {
     }
   }
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1290px) {
   .car-card {
     max-width: 31.2%;
     margin: 0% 0% 2% 2%;

@@ -33,25 +33,28 @@ details {
   margin-bottom: 0.1rem;
 
   summary {
+    position: relative;
     overflow: hidden;
     display: block;
     list-style: none;
-    padding: 0.5rem;
+    padding: 0.75rem 0.5rem;
     font-weight: bold;
     color: black;
+    border-bottom: 1px solid #f4f4f4;
     cursor: pointer;
   }
 
   /* Create a new custom triangle on the right side */
   summary::after {
-    position: relative;
-    top: 2px;
-    left: -12px;
-    float: right;
-    content: ">";
-    transition: 0.1s;
-    line-height: 1;
-    transform: rotate(-90deg) scaleY(2);
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    width: 24px;
+    height: 24px;
+    content: "";
+    background: url("/assets/img/add-expand.png");
+    background-repeat: no-repeat;
+    transition: 0.5s;
   }
 
   .content {
@@ -62,9 +65,7 @@ details {
 }
 
 details[open] > summary::after {
-  transform: rotate(90deg) scaleY(2);
-  top: 3px;
-  left: -4px;
-  transition: 0.1s;
+  background: url("/assets/img/remove-collapse.png");
+  transition: 0.5s;
 }
 </style>

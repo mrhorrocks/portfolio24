@@ -14,10 +14,6 @@
     font-weight: bold;
     font-size: 1rem;
     padding: 2rem 0;
-    // span:nth-of-type(1) {
-    //   // display: none;
-    //   background: red;
-    // }
   }
 }
 </style>

@@ -247,6 +247,10 @@ div.car-navlinks {
     transition: 0.5s;
     &.router-link-active {
       font-weight: bold;
+      background: url("/assets/img/active-bar.png");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: -12px;
     }
     &:hover {
       font-weight: bold;

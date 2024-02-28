@@ -29,7 +29,7 @@
       background-color: white;
       text-decoration: none;
       &:hover {
-        background-color: #d1d6e0;
+        border-width: 2px;
         border-color: darken(#d1d6e0, 10%);
       }
       @media (min-width: 768px) {
