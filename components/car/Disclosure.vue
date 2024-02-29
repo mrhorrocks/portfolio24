@@ -26,7 +26,7 @@ export default {
   </details>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../assets/scss/partials/_colours";
 details {
   background: white;
