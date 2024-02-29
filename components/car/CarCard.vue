@@ -293,8 +293,8 @@ export default {
 }
 @media only screen and (min-width: 1290px) {
   .car-card {
-    max-width: 31.2%;
-    margin: 0% 0% 2% 2%;
+    max-width: 31.33333%;
+    margin: 0 1% 2% 1%;
   }
 }
 </style>

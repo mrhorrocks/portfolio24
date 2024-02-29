@@ -18,6 +18,8 @@ definePageMeta({
           <div class="search-results">
             <CarCard />
           </div>
+
+          <CarFinanceExampleBanner />
         </main>
       </div>
     </div>
