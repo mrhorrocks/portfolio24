@@ -34,9 +34,6 @@ details {
 
   summary {
     position: relative;
-    overflow: hidden;
-    display: block;
-    list-style: none;
     padding: 0.75rem 0.5rem;
     font-weight: bold;
     color: black;

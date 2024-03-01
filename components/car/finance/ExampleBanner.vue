@@ -12,17 +12,49 @@
         <CarDisclosure
           title="Show Breakdown"
           class="finance-breakdown"
-          :isOpen="true"
+          :isOpen="false"
         >
-          <CarTabs
-            title1="Contract Purchase"
-            title2="Hire Purchase"
-            title3="Three"
-          >
-            <!-- Tab 1 -->
-            <template #tab-one> 1 </template>
-            <!-- Tab 2 -->
-            <template #tab-two> 2 </template>
+          <CarTabs title1="Contract Purchaces" title2="Hire Purchaces">
+            <template #tab1>
+              <CarFinanceOptionCard
+                heading="48 monthly payments"
+                calculation="£157.25"
+              />
+              <CarFinanceOptionCard
+                heading="Cash price"
+                calculation="£9,998.00"
+              />
+              <CarFinanceOptionCard
+                heading="Customer deposit"
+                calculation="£250.00"
+              />
+              <CarFinanceOptionCard
+                heading="Amount of credit"
+                calculation="£11,980.75"
+              />
+              <CarFinanceOptionCard heading="Apr" calculation="7.9%" />
+              <CarFinanceOptionCard heading="Term" calculation="48 months" />
+              <CarFinanceOptionCard
+                heading="Total amount payable"
+                calculation="£12,163.72"
+              />
+              <CarFinanceOptionCard
+                heading="Rate of interest (fixed)"
+                calculation="4.08% PA"
+              />
+
+              <CarFinanceOptionCard
+                heading="Annual milage"
+                calculation="8000"
+              />
+              <CarFinanceOptionCard
+                heading="Optional final payment"
+                calculation="£3,888.04"
+              />
+            </template>
+            <template #tab2>
+              <p>More content to follow...</p>
+            </template>
           </CarTabs>
         </CarDisclosure>
       </div>
@@ -44,20 +76,14 @@
       margin: 0;
     }
     details {
-      background: white;
+      background: transparent;
       margin: 1rem 0 0 0;
-      border-radius: 0.5rem;
       summary {
-        position: relative;
-        overflow: hidden;
-        display: block;
-        list-style: none;
-        padding: 0.75rem 0.5rem;
-        font-weight: bold;
-        color: #55595d;
         font-family: "Roboto";
-        border-bottom: 1px solid #f4f4f4;
-        cursor: pointer;
+        color: #55595d;
+        background-color: white;
+        border-radius: 0.5rem;
+        border-bottom: 0px;
       }
       /* Create a new custom triangle on the right side */
       summary::after {
@@ -74,8 +100,7 @@
         transition: 0.5s;
       }
       .content {
-        display: flex;
-        flex-wrap: wrap;
+        padding: 0;
       }
     }
     details[open] > summary::after {

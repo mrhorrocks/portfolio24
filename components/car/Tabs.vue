@@ -3,100 +3,66 @@ export default {
   props: {
     title1: String,
     title2: String,
-    title3: String,
+  },
+
+  data () {
+    return {
+      activeTab: "tab1", // set the default active tab
+    };
   },
 };
 </script>
 
 <template>
   <div class="tabs">
-    <div class="tab">
-      <input type="radio" id="tab-1" name="tab-group-1" checked />
-      <label for="tab-1">{{ title1 }}</label>
-      <div class="content">
-        <p>
-          <slot name="tab-one"> </slot>
-        </p>
+    <div class="tab-controls">
+      <div
+        class="tab"
+        :class="{ active: activeTab === 'tab1' }"
+        @click="activeTab = 'tab1'"
+      >
+        {{ title1 }}
+      </div>
+      <div
+        class="tab"
+        :class="{ active: activeTab === 'tab2' }"
+        @click="activeTab = 'tab2'"
+      >
+        {{ title2 }}
       </div>
     </div>
-    <div class="tab">
-      <input type="radio" id="tab-2" name="tab-group-1" />
-      <label for="tab-2">{{ title2 }}</label>
-      <div class="content">
-        <p>
-          <slot name="tab-two" />
-        </p>
-      </div>
+    <div v-if="activeTab === 'tab1'" class="tab-content">
+      <slot name="tab1"></slot>
+    </div>
+    <div v-if="activeTab === 'tab2'" class="tab-content">
+      <slot name="tab2"></slot>
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
-@import "../../assets/scss/partials/_colours";
+<style scoped>
 .tabs {
-  position: relative;
-  min-height: 200px;
   width: 100%;
-  clear: both;
+  .tab-controls {
+    display: flex;
+  }
 }
 .tab {
-  float: left;
   width: 50%;
-  &:last-child {
-    label {
-      border-right: 2px solid white;
-      left: -0px;
-    }
-  }
-}
-.tab label {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  left: 1px;
-  top: -3px;
-  padding: 0.35rem 0;
-  border-right-width: 1px;
-  margin-left: -1px;
-  width: 98%;
-  font-size: 0.75rem;
+  text-align: center;
+  padding: 10px;
   cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.75rem;
 }
-.tab [type="radio"] {
-  opacity: 0;
-  display: none;
-}
-.content {
-  position: absolute;
-  top: 23px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0.5rem;
-  border: 2px solid white;
-  background: white;
-  overflow: auto;
-  & p {
-    font-size: 1rem;
-  }
-}
-.content > * {
-  transition: all 0.6s ease;
-}
-// Selected Tab
-[type="radio"]:checked ~ label {
-  background: white;
+.tab.active {
   border-bottom: 2px solid #7572ff;
-  z-index: 2;
 }
-// Selected content
-[type="radio"]:checked ~ label ~ .content {
-  z-index: 1;
-  border-top: 1px solid #ccc;
-}
-// All content
-[type="radio"]:checked ~ label ~ .content > * {
-  opacity: 1;
-  transform: translateX(0);
+.tab-content {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* border: 1px solid #ccc; */
 }
 </style>
