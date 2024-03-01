@@ -23,6 +23,7 @@ definePageMeta({
         </main>
       </div>
     </div>
+    <CarFooter />
   </section>
 </template>
 
