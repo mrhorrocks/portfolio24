@@ -87,17 +87,10 @@
       }
       /* Create a new custom triangle on the right side */
       summary::after {
-        position: absolute;
-        top: 8px;
         right: 10px;
-        width: 24px;
-        height: 24px;
-        content: "";
-        background: url("/assets/img/select-chevron.png");
-        background-repeat: no-repeat;
+        background-image: url("/assets/img/select-chevron.png");
         background-size: cover;
         opacity: 0.5;
-        transition: 0.5s;
       }
       .content {
         padding: 0;

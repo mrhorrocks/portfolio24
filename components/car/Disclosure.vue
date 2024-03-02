@@ -29,15 +29,14 @@ export default {
 <style lang="scss">
 @import "../../assets/scss/partials/_colours";
 details {
-  background: white;
-  margin-bottom: 0.1rem;
+  background: transparent;
 
   summary {
     position: relative;
     padding: 0.75rem 0.5rem;
     font-weight: bold;
-    color: black;
     border-bottom: 1px solid #f4f4f4;
+    appearance: auto;
     cursor: pointer;
   }
 
@@ -49,7 +48,7 @@ details {
     width: 24px;
     height: 24px;
     content: "";
-    background: url("/assets/img/add-expand.png");
+    background-image: url("/assets/img/add-expand.png");
     background-repeat: no-repeat;
     transition: 0.5s;
   }
