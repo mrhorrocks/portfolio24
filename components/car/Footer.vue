@@ -1,162 +1,183 @@
 <template>
   <section id="car-footer">
-    <div class="container-full">
-      <footer class="car-footer">
-        <div class="xl:grid xl:cols-7 xl:gap-3">
-          <!-- Col One -->
-          <div class="col-one">
-            <img
-              src="/img/cardealer/cardealer-logo-light.png"
-              alt="CarDealer"
-              class="car-logo"
-            />
-            <div class="action-buttons">
-              <CarButton text="Contact" class="car-button contact" />
-              <CarButton text="Email" class="car-button email" />
-            </div>
-          </div>
-
-          <!-- Branch details -->
-          <CarDisclosure
-            title="Branch details"
-            :isOpen="false"
-            class="col-span-3"
-          >
-            <div class="address">
-              <div style="display: flex; flex-direction: column">
-                <h4>Address</h4>
-                <span>101 Business Street</span>
-                <span>Business Town</span>
-                <span>Business County</span>
-                <span>BU51 N55</span>
-              </div>
-              <div>
-                <h4>Telephone</h4>
-                <span>01234 567890</span>
+    <footer class="car-footer">
+      <!-- TOP FOOTER -->
+      <section>
+        <div class="container-full">
+          <div class="xl:grid xl:cols-7 xl:gap-3 top-footer">
+            <!-- Col One -->
+            <div class="col-one">
+              <img
+                src="/img/cardealer/cardealer-logo-light.png"
+                alt="CarDealer"
+                class="car-logo"
+              />
+              <div class="action-buttons">
+                <CarButton text="Contact" class="car-button contact" />
+                <CarButton text="Email" class="car-button email" />
               </div>
             </div>
 
-            <div class="opening-times">
-              <div>
-                <h4>Opening Times</h4>
-                <div style="display: flex; justify-content: space-between">
-                  <div style="display: flex; flex-direction: column">
-                    <span>Weekdays</span>
-                    <span>Saturday</span>
-                    <span>Sunday</span>
-                  </div>
-                  <div style="display: flex; flex-direction: column">
-                    <span>10:00 - 16:00</span>
-                    <span>09:00 - 18:00</span>
-                    <span>10:00 - 17:00</span>
-                  </div>
+            <!-- Branch details -->
+            <CarDisclosure
+              title="Branch details"
+              :isOpen="false"
+              class="col-span-3"
+            >
+              <div class="address">
+                <div style="display: flex; flex-direction: column">
+                  <h4>Address</h4>
+                  <span>101 Business Street</span>
+                  <span>Business Town</span>
+                  <span>Business County</span>
+                  <span>BU51 N55</span>
+                </div>
+                <div>
+                  <h4>Telephone</h4>
+                  <span>01234 567890</span>
                 </div>
               </div>
-              <div>
-                <h4>Email</h4>
-                <span>enquiries@cardealer.uk</span>
+
+              <div class="opening-times">
+                <div>
+                  <h4>Opening Times</h4>
+                  <div style="display: flex; justify-content: space-between">
+                    <div style="display: flex; flex-direction: column">
+                      <span>Weekdays</span>
+                      <span>Saturday</span>
+                      <span>Sunday</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column">
+                      <span>10:00 - 16:00</span>
+                      <span>09:00 - 18:00</span>
+                      <span>10:00 - 17:00</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h4>Email</h4>
+                  <span>enquiries@cardealer.uk</span>
+                </div>
               </div>
-            </div>
-          </CarDisclosure>
+            </CarDisclosure>
 
-          <!-- Popular brands -->
-          <CarDisclosure
-            title="Popular brands"
-            :isOpen="false"
-            class="col-span-2"
-          >
-            <div class="popular-brands">
-              <div style="display: flex; flex-direction: column">
-                <span>Audi</span>
-                <span>BMW</span>
-                <span>Fiat</span>
-                <span>Land Rover</span>
-                <span>Mercedes-Benz</span>
+            <!-- Popular brands -->
+            <CarDisclosure
+              title="Popular brands"
+              :isOpen="false"
+              class="col-span-2"
+            >
+              <div class="popular-brands">
+                <div style="display: flex; flex-direction: column">
+                  <span>Audi</span>
+                  <span>BMW</span>
+                  <span>Fiat</span>
+                  <span>Land Rover</span>
+                  <span>Mercedes-Benz</span>
+                </div>
+                <div style="display: flex; flex-direction: column">
+                  <span>Mini</span>
+                  <span>Peugeot</span>
+                  <span>SEAT</span>
+                  <span>Vauxhall</span>
+                  <span>Volkswagen</span>
+                </div>
               </div>
-              <div style="display: flex; flex-direction: column">
-                <span>Mini</span>
-                <span>Peugeot</span>
-                <span>SEAT</span>
-                <span>Vauxhall</span>
-                <span>Volkswagen</span>
+            </CarDisclosure>
+
+            <!-- Site map -->
+            <CarDisclosure title="Site map" :isOpen="false">
+              <div class="site-map">
+                <CarNavLinks />
               </div>
-            </div>
-          </CarDisclosure>
-
-          <!-- Site map -->
-          <CarDisclosure title="Site map" :isOpen="false">
-            <div class="site-map">
-              <CarNavLinks />
-            </div>
-          </CarDisclosure>
-        </div>
-        <div class="xl:grid xl:cols-7 bottom-footer">
-          <!-- Company info -->
-          <CarDisclosure
-            title="Company info"
-            :isOpen="false"
-            class="col-span-3 company-info"
-          >
-            <div class="company-info">
-              <span>Registered in England and Wales.</span><br />
-              <span>Registered No: 00000000 | VAT No: 000 0000 00</span><br />
-              <span
-                >Registered Office: 101 Business Street, Business Town, Business
-                County BU51 N55.</span
-              >
-            </div>
-          </CarDisclosure>
-
-          <!-- Financial disclosure -->
-          <CarDisclosure
-            title="Financial disclosure"
-            :isOpen="false"
-            class="col-span-4 financial-disclosure"
-          >
-            <div class="financial-disclosure">
-              CarDealerUK Limited act as a credit broker and not a lender.
-              Finance is Subject to status. We are authorised and regulated by
-              the Financial Conduct Authority under firm reference number
-              000000. We work with a number of carefully selected credit
-              providers who may be able to offer you finance for your purchase.
-              We may receive a commission payment from the finance provider if
-              you decide to enter into an agreement with them. If you would like
-              to know how we handle complaints, please ask for a copy of our
-              complaints procedure. You can also find information about
-              referring a complaint to the Financial Ombudsman Service (FOS).
-            </div>
-          </CarDisclosure>
-          <!-- Footer links -->
-          <div class="footer-links col-span-7">
-            <div class="site-links">
-              <span>
-                <NuxtLink to="" title="Terms and condition">
-                  Terms and conditions
-                </NuxtLink>
-              </span>
-
-              <span>
-                <NuxtLink to="" title="Privicy policy">Privicy policy</NuxtLink>
-              </span>
-
-              <span><NuxtLink to="" title="Site map">Site map</NuxtLink></span>
-
-              <span>
-                <NuxtLink to="" title="Cookies policy">Cookies policy</NuxtLink>
-              </span>
-            </div>
-
-            <span
-              >Powered by
-              <NuxtLink to="" title="About us">
-                &nbsp;Nexus Point Apex</NuxtLink
-              >
-            </span>
+            </CarDisclosure>
           </div>
         </div>
-      </footer>
-    </div>
+      </section>
+
+      <!-- BOTTOM FOOTER -->
+      <section id="bottom-footer">
+        <div class="container-full">
+          <div class="xl:grid xl:cols-7 bottom-footer">
+            <!-- Company info -->
+            <CarDisclosure
+              title="Company info"
+              :isOpen="false"
+              class="col-span-3 company-info"
+            >
+              <div class="company-info">
+                <span>Registered in England and Wales.</span><br />
+                <span>Registered No: 00000000 | VAT No: 000 0000 00</span><br />
+                <span
+                  >Registered Office: 101 Business Street, Business Town,
+                  Business County BU51 N55.</span
+                >
+              </div>
+            </CarDisclosure>
+
+            <!-- Financial disclosure -->
+            <CarDisclosure
+              title="Financial disclosure"
+              :isOpen="false"
+              class="col-span-4 financial-disclosure"
+            >
+              <div class="financial-disclosure">
+                CarDealerUK Limited act as a credit broker and not a lender.
+                Finance is Subject to status. We are authorised and regulated by
+                the Financial Conduct Authority under firm reference number
+                000000. We work with a number of carefully selected credit
+                providers who may be able to offer you finance for your
+                purchase. We may receive a commission payment from the finance
+                provider if you decide to enter into an agreement with them. If
+                you would like to know how we handle complaints, please ask for
+                a copy of our complaints procedure. You can also find
+                information about referring a complaint to the Financial
+                Ombudsman Service (FOS).
+              </div>
+            </CarDisclosure>
+
+            <!-- SITE LINKS -->
+            <div class="footer-links col-span-7">
+              <div class="site-links">
+                <span>
+                  <NuxtLink to="" title="Terms and condition">
+                    Terms and conditions
+                  </NuxtLink>
+                </span>
+
+                <span>
+                  <NuxtLink to="" title="Privicy policy"
+                    >Privicy policy</NuxtLink
+                  >
+                </span>
+
+                <span
+                  ><NuxtLink to="" title="Site map">Site map</NuxtLink></span
+                >
+
+                <span>
+                  <NuxtLink to="" title="Cookies policy"
+                    >Cookies policy</NuxtLink
+                  >
+                </span>
+              </div>
+
+              <span
+                >Powered by
+                <NuxtLink to="" title="About us">
+                  &nbsp;Nexus Point Apex</NuxtLink
+                >
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- END BOTTOM FOOTER -->
+      </section>
+    </footer>
   </section>
+  <!-- <section>
+    <div class="container-full">qwerty</div>
+  </section> -->
 </template>
 
 <style lang="scss">
@@ -275,14 +296,15 @@ section#car-footer {
         }
       }
     }
-    .bottom-footer {
-      // background-color: peru;
-      padding: 1rem 0;
+    section#bottom-footer {
       background-color: #3f3a50;
-      margin: 1rem 0 0 0;
-      @media (min-width: 1200px) {
-        padding: 1rem 2rem 0rem 2rem;
-        margin-top: 3rem;
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      .bottom-footer {
+        // background-color: peru;
+        @media (min-width: 1200px) {
+          padding: 0rem 2rem;
+        }
       }
     }
     .footer-links {
