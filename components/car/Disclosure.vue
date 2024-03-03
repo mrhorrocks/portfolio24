@@ -13,11 +13,29 @@ export default {
       default: false, // Set a default value if needed
     },
   },
+  mounted () {
+    window.addEventListener("resize", this.handleResize);
+    this.handleResize(); // Call it once to set the initial state
+  },
+  beforeUnmount () {
+    window.removeEventListener("resize", this.handleResize);
+  },
+  methods: {
+    handleResize () {
+      const screenWidth = window.innerWidth;
+      const detailsElement = this.$refs.detailsElement;
+      if (screenWidth >= 1200) {
+        detailsElement.setAttribute("open", "");
+      } else {
+        detailsElement.removeAttribute("open");
+      }
+    },
+  },
 };
 </script>
 
 <template>
-  <details :open="isOpen">
+  <details :open="isOpen" ref="detailsElement">
     <summary>{{ title }}</summary>
     <div class="content">
       {{ content }}
