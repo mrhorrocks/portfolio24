@@ -237,7 +237,7 @@ section#car-footer {
     }
     details {
       @media (min-width: 768px) {
-        width: 768px;
+        width: 740px;
         margin: 0 auto;
       }
       @media (min-width: 1024px) {
@@ -278,7 +278,7 @@ section#car-footer {
         }
       }
       summary::after {
-        top: 11px;
+        top: 8px;
         right: 10px;
         @media (min-width: 1200px) {
           display: none;
@@ -376,7 +376,7 @@ section#car-footer {
       flex-direction: row;
       @media (min-width: 768px) {
         flex-wrap: nowrap;
-        width: 768px;
+        width: 740px;
         margin: 0 auto;
       }
       @media (min-width: 1024px) {
