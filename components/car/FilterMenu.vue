@@ -6,7 +6,7 @@
 
   <h3>Brand</h3>
 
-  <CarDisclosure title="Make" :isOpen="true">
+  <CarDisclosure title="Make" :isOpen="false">
     <CarCheckbox
       v-for="item in makes.data"
       :key="item.id"
@@ -14,7 +14,7 @@
       :label="item.name"
     />
   </CarDisclosure>
-  <CarDisclosure title="Model">Add content using a slot too.</CarDisclosure>
+  <CarDisclosure title="Model" :isOpen="false">Add models here</CarDisclosure>
 
   <h3>Budget</h3>
 
