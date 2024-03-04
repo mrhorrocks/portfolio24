@@ -53,16 +53,16 @@ definePageMeta({
   }
   main {
     padding-top: 0rem;
-    margin-bottom: 80px;
+    margin-bottom: 1rem;
     @media only screen and (min-width: 768px) {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      margin-bottom: 2rem;
     }
     @media only screen and (min-width: 1024px) {
       width: 77%;
       margin-top: 0px;
-      margin-bottom: 0px;
       padding-top: 0rem;
     }
     .search-results {

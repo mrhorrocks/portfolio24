@@ -34,7 +34,9 @@
                 </div>
                 <div>
                   <h4>Telephone</h4>
-                  <span>01234 567890</span>
+                  <span>
+                    <a href="tel:01234567890">01234 567890</a>
+                  </span>
                 </div>
               </div>
 
@@ -56,7 +58,11 @@
                 </div>
                 <div>
                   <h4>Email</h4>
-                  <span>enquiries@cardealer.uk</span>
+                  <span
+                    ><a href="mailto:someone@example.com"
+                      >enquiries@cardealer.uk</a
+                    ></span
+                  >
                 </div>
               </div>
             </CarDisclosure>
@@ -69,24 +75,40 @@
             >
               <div class="popular-brands">
                 <div style="display: flex; flex-direction: column">
-                  <span>Audi</span>
-                  <span>BMW</span>
-                  <span>Fiat</span>
-                  <span>Land Rover</span>
-                  <span>Mercedes-Benz</span>
+                  <span><NuxtLink to="" title="Audi">Audi</NuxtLink></span>
+                  <span><NuxtLink to="" title="BMW">BMW</NuxtLink></span>
+                  <span><NuxtLink to="" title="Fiat">Fiat</NuxtLink></span>
+                  <span
+                    ><NuxtLink to="" title="Land Rover"
+                      >Land Rover</NuxtLink
+                    ></span
+                  >
+                  <span
+                    ><NuxtLink to="" title="Mercedes-Benz"
+                      >Mercedes-Benz</NuxtLink
+                    ></span
+                  >
                 </div>
                 <div style="display: flex; flex-direction: column">
-                  <span>Mini</span>
-                  <span>Peugeot</span>
-                  <span>SEAT</span>
-                  <span>Vauxhall</span>
-                  <span>Volkswagen</span>
+                  <span><NuxtLink to="" title="Mini">Mini</NuxtLink></span>
+                  <span
+                    ><NuxtLink to="" title="Peugeot">Peugeot</NuxtLink></span
+                  >
+                  <span><NuxtLink to="" title="SEAT">SEAT</NuxtLink></span>
+                  <span
+                    ><NuxtLink to="" title="Vauxhall">Vauxhall</NuxtLink></span
+                  >
+                  <span
+                    ><NuxtLink to="" title="Volkswagen"
+                      >Volkswagen</NuxtLink
+                    ></span
+                  >
                 </div>
               </div>
             </CarDisclosure>
 
             <!-- Site map -->
-            <CarDisclosure title="Site map" :isOpen="false">
+            <CarDisclosure title="Site map" :isOpen="false" class="site-map">
               <div class="site-map">
                 <CarNavLinks />
               </div>
@@ -164,7 +186,7 @@
 
               <span
                 >Powered by
-                <NuxtLink to="" title="About us">
+                <NuxtLink to="" title="Powered by Nexus Point Apex">
                   &nbsp;Nexus Point Apex</NuxtLink
                 >
               </span>
@@ -175,9 +197,6 @@
       </section>
     </footer>
   </section>
-  <!-- <section>
-    <div class="container-full">qwerty</div>
-  </section> -->
 </template>
 
 <style lang="scss">
@@ -211,6 +230,16 @@ section#car-footer {
       }
     }
     details {
+      @media (min-width: 768px) {
+        width: 768px;
+        margin: 0 auto;
+      }
+      @media (min-width: 1024px) {
+        width: 960px;
+      }
+      @media (min-width: 1200px) {
+        width: 100%;
+      }
       &.company-info,
       &.financial-disclosure {
         @media (min-width: 1200px) {
@@ -227,6 +256,8 @@ section#car-footer {
           // background-color: lightgreen;
           font-size: 0.75rem;
           line-height: 1.5;
+          text-align: justify;
+          margin-top: 1rem;
         }
       }
       summary {
@@ -249,7 +280,12 @@ section#car-footer {
       }
       .content {
         // background-color: lightblue;
-        padding: 0 0.5rem;
+        padding: 0 0.5rem 1rem;
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid #3f3a50;
+        @media (min-width: 1200px) {
+          border-bottom: 0px;
+        }
       }
       h4 {
         font-weight: normal;
@@ -269,43 +305,69 @@ section#car-footer {
           flex-direction: column;
           justify-content: space-between;
           width: 100%;
+          @media (min-width: 768px) {
+            width: 50%;
+          }
           @media (min-width: 1200px) {
             width: 40%;
+          }
+          a {
+            color: #7572ff;
+            text-decoration: underline;
+            &:hover {
+              color: white;
+            }
           }
         }
         &.popular-brands {
           // background-color: grey;
-          width: 100%;
           display: flex;
           flex-direction: row;
+          width: 100%;
+          margin-top: 1rem;
           > div {
             width: 50%;
-            span {
-              // background-color: aqua;
-              padding: 0.55rem 0;
-            }
           }
         }
         &.site-map {
           // background-color: yellow;
+          width: 100%;
           display: flex;
           flex-direction: column;
-          a {
-            padding: 0.55rem 0;
-          }
+          margin-top: 1rem;
+        }
+      }
+      a {
+        // background-color: red;
+        display: inline-block;
+        width: 100%;
+        padding: 0.55rem 0;
+        text-decoration: none;
+        color: #a2a9af;
+        &:hover {
+          color: white;
+        }
+        &.router-link-active {
+          color: white;
+        }
+      }
+      &.site-map {
+        .content {
+          border-bottom: 0;
         }
       }
     }
     section#bottom-footer {
       background-color: #3f3a50;
-      margin-top: 2.5rem;
+      margin-top: 1rem;
       padding-top: 1rem;
-      .bottom-footer {
-        // background-color: peru;
-        @media (min-width: 1200px) {
-          padding: 0rem 2rem;
-        }
-      }
+      // .bottom-footer {
+      //   // background-color: peru;
+      //   // @media (min-width: 1200px) {
+      //   //   margin-top: 0rem;
+      //   //   padding: 0rem 2rem;
+      //   // }
+      // }
     }
     .footer-links {
       // background-color: darkred;
@@ -314,16 +376,27 @@ section#car-footer {
       flex-direction: row;
       @media (min-width: 768px) {
         flex-wrap: nowrap;
+        width: 768px;
+        margin: 0 auto;
       }
       @media (min-width: 1024px) {
         flex-direction: row-reverse;
+        width: 960px;
+      }
+      @media (min-width: 1200px) {
+        width: 100%;
       }
       padding: 0.6rem 0.5rem;
       font-size: 0.75rem;
       span {
         display: flex;
+        justify-content: flex-start;
         width: 50%;
         padding: 0.5rem 0;
+        @media (min-width: 768px) {
+          padding: 0.5rem 1rem 0.5rem 0;
+          width: auto;
+        }
       }
       .site-links {
         // background-color: lightseagreen;
@@ -337,6 +410,7 @@ section#car-footer {
         }
         @media (min-width: 1024px) {
           width: 45%;
+          justify-content: flex-end;
         }
         span {
           @media (min-width: 1024px) {
@@ -350,9 +424,11 @@ section#car-footer {
         width: 100%;
         @media (min-width: 768px) {
           width: 30%;
+          justify-content: flex-end;
         }
         @media (min-width: 1024px) {
           width: 55%;
+          justify-content: flex-start;
         }
       }
     }
