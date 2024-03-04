@@ -30,7 +30,7 @@ const { data } = await useAsyncData(`content/blog`, async () => {
         :sort="{ date: 1 }"
         :limit="articleCountLimit"
       >
-        <div class="md:grid md:cols-2 md:gap-1 col-span-3">
+        <div class="grid md:grid md:cols-2 md:gap-1 col-span-3">
           <BlogList :data="data" />
         </div>
 

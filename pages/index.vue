@@ -18,7 +18,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
 
 <template>
   <section>
-    <div class="container xl:grid xl:cols-3">
+    <div class="container grid xl:grid xl:cols-3">
       <div class="col-span-3">
         <!-- Social badges -->
         <SocialBadges />
