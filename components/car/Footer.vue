@@ -185,9 +185,9 @@
               </div>
 
               <span
-                >Powered by
-                <NuxtLink to="" title="Powered by Nexus Point Apex">
-                  &nbsp;Nexus Point Apex</NuxtLink
+                >Powered by&nbsp;
+                <NuxtLink to="" title="Powered by Nexus Point Apex"
+                  >Nexus Point Apex</NuxtLink
                 >
               </span>
             </div>
@@ -350,6 +350,7 @@ section#car-footer {
         padding: 0.55rem 0;
         text-decoration: none;
         color: #a2a9af;
+        cursor: pointer;
         &:hover {
           color: white;
         }
@@ -367,13 +368,6 @@ section#car-footer {
       background-color: #3f3a50;
       margin-top: 1rem;
       padding-top: 1rem;
-      // .bottom-footer {
-      //   // background-color: peru;
-      //   // @media (min-width: 1200px) {
-      //   //   margin-top: 0rem;
-      //   //   padding: 0rem 2rem;
-      //   // }
-      // }
     }
     .footer-links {
       // background-color: darkred;
@@ -403,6 +397,10 @@ section#car-footer {
           padding: 0.5rem 1rem 0.5rem 0;
           width: auto;
         }
+      }
+      a {
+        cursor: pointer;
+        text-decoration: underline;
       }
       .site-links {
         // background-color: lightseagreen;
