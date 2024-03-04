@@ -1,38 +1,68 @@
 <template>
-  <section id="controls">
-    <div class="listing-header">
-      <CarShowingCars class="car-showing-cars" />
-      <CarTypeToggleMenu class="car-type-toggle-menu" />
-      <CarPriceFilter class="car-price-filter" />
-    </div>
-  </section>
+  <header id="filter">
+    <h2>Filters</h2>
+    <CarButton text="Reset" class="filter-reset" />
+  </header>
+
+  <h3>Brand</h3>
+  <CarDetail title="Make">
+    <CarCheckbox
+      v-for="item in makes.data"
+      :key="item.id"
+      :id="item.name"
+      :label="item.name"
+    />
+  </CarDetail>
+
+  <CarDetail title="Model"> Models go here... </CarDetail>
+
+  <h3>Budget</h3>
+
+  <h3>Specification</h3>
 </template>
 
 <style lang="scss">
-#controls {
-  padding: 0 0.25rem;
-  @media (min-width: 768px) {
-    width: 99%;
-    padding: 0rem 0.5rem 0 0;
-  }
-  @media (min-width: 1440px) {
-    width: 98%;
-  }
-  .listing-header {
+aside.filters {
+  header#filter {
     display: flex;
     justify-content: space-between;
-    @media (min-width: 1024px) {
-      padding-top: 0rem;
+    align-items: center;
+    margin: 0 0 1rem 0;
+    background: white;
+    h2 {
+      font-size: 1.125rem;
+      padding: 0;
+    }
+    button.filter-reset {
+      border: 0;
+      color: #f87b7b;
+      background-color: lighten(#f87b7b, 22%);
+      border-radius: 0.76rem;
+      padding: 0 1rem;
+      height: 2rem;
+      &:hover {
+        background-color: lighten(#f87b7b, 5%);
+        color: white;
+      }
     }
   }
-}
-.car-type-toggle-menu {
-  display: none;
-  li {
-    min-width: 100px;
-  }
-  @media (min-width: 768px) {
-    display: flex;
+  h3 {
+    font-size: 0.75rem;
+    color: #a2a9af;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    border-bottom: 1px solid #f4f4f4;
   }
 }
 </style>
+
+<script>
+import makes from "~/assets/data/makes.json";
+export default {
+  data () {
+    return {
+      makes,
+    };
+  },
+};
+</script>

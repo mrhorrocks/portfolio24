@@ -10,11 +10,11 @@ definePageMeta({
     <div class="container-full">
       <div class="flexed-cols">
         <aside class="filters">
-          <CarFilterMenu />
+          <CarFilterNav />
         </aside>
 
         <main class="car-dealer-main">
-          <CarFilterNav />
+          <CarToggleSearchType />
           <div class="search-results">
             <CarCard />
           </div>
