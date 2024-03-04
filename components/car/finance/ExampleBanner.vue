@@ -9,11 +9,7 @@
           the amount payable would be £273.59 per month, with a total cost of
           credit of £1,843.32 and a total amount payable of £13,633.32.
         </p>
-        <CarDisclosure
-          title="Show Breakdown"
-          class="finance-breakdown"
-          :isOpen="false"
-        >
+        <CarDetail title="Show Breakdown" class="finance-breakdown">
           <CarTabs title1="Contract Purchaces" title2="Hire Purchaces">
             <template #tab1>
               <CarFinanceOptionCard
@@ -56,7 +52,7 @@
               <p>More content to follow...</p>
             </template>
           </CarTabs>
-        </CarDisclosure>
+        </CarDetail>
       </div>
     </div>
   </section>

@@ -19,7 +19,7 @@
             </div>
 
             <!-- Branch details -->
-            <CarDisclosure
+            <CarFooterDetail
               title="Branch details"
               :isOpen="false"
               class="col-span-3"
@@ -65,10 +65,10 @@
                   >
                 </div>
               </div>
-            </CarDisclosure>
+            </CarFooterDetail>
 
             <!-- Popular brands -->
-            <CarDisclosure
+            <CarFooterDetail
               title="Popular brands"
               :isOpen="false"
               class="col-span-2"
@@ -105,14 +105,14 @@
                   >
                 </div>
               </div>
-            </CarDisclosure>
+            </CarFooterDetail>
 
             <!-- Site map -->
-            <CarDisclosure title="Site map" :isOpen="false" class="site-map">
+            <CarFooterDetail title="Site map" :isOpen="false" class="site-map">
               <div class="site-map">
                 <CarNavLinks />
               </div>
-            </CarDisclosure>
+            </CarFooterDetail>
           </div>
         </div>
       </section>
@@ -122,7 +122,7 @@
         <div class="container">
           <div class="xl:grid xl:cols-7 bottom-footer">
             <!-- Company info -->
-            <CarDisclosure
+            <CarFooterDetail
               title="Company info"
               :isOpen="false"
               class="col-span-3 company-info"
@@ -135,10 +135,10 @@
                   Business County BU51 N55.</span
                 >
               </div>
-            </CarDisclosure>
+            </CarFooterDetail>
 
             <!-- Financial disclosure -->
-            <CarDisclosure
+            <CarFooterDetail
               title="Financial disclosure"
               :isOpen="false"
               class="col-span-4 financial-disclosure"
@@ -156,7 +156,7 @@
                 information about referring a complaint to the Financial
                 Ombudsman Service (FOS).
               </div>
-            </CarDisclosure>
+            </CarFooterDetail>
 
             <!-- SITE LINKS -->
             <div class="footer-links col-span-7">

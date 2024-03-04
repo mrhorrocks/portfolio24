@@ -5,16 +5,16 @@
   </header>
 
   <h3>Brand</h3>
-
-  <CarDisclosure title="Make" :isOpen="false">
+  <CarDetail title="Make">
     <CarCheckbox
       v-for="item in makes.data"
       :key="item.id"
       :id="item.name"
       :label="item.name"
     />
-  </CarDisclosure>
-  <CarDisclosure title="Model" :isOpen="false">Add models here</CarDisclosure>
+  </CarDetail>
+
+  <CarDetail title="Model"> Models go here... </CarDetail>
 
   <h3>Budget</h3>
 
