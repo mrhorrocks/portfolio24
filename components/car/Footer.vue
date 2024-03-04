@@ -3,7 +3,7 @@
     <footer class="car-footer">
       <!-- TOP FOOTER -->
       <section>
-        <div class="container-full">
+        <div class="container">
           <div class="xl:grid xl:cols-7 xl:gap-3 top-footer">
             <!-- Col One -->
             <div class="col-one">
@@ -119,7 +119,7 @@
 
       <!-- BOTTOM FOOTER -->
       <section id="bottom-footer">
-        <div class="container-full">
+        <div class="container">
           <div class="xl:grid xl:cols-7 bottom-footer">
             <!-- Company info -->
             <CarDisclosure
@@ -224,6 +224,12 @@ section#car-footer {
         margin-bottom: 1.5rem;
       }
       .action-buttons {
+        .car-button {
+          border: 0;
+          border-radius: 1rem;
+          padding: 0.3rem 1rem;
+          margin: 0rem 0.25rem;
+        }
         @media (min-width: 1200px) {
           display: none;
         }
