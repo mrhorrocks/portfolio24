@@ -12,7 +12,7 @@
   padding: 1rem 0;
   @media (min-width: 768px) {
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 2rem 0;
   }
 }

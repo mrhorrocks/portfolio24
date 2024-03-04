@@ -45,8 +45,8 @@ section#finance-banner {
   background-image: radial-gradient(
     circle at top left,
     #534f60 0%,
-    #534f60 31.5%,
-    #282338 31.5%,
+    #534f60 33%,
+    #282338 33%,
     #282338 100%
   );
   @media (min-width: 768px) {
@@ -69,7 +69,6 @@ section#finance-banner {
       justify-content: center;
       padding-right: 2.5rem;
       h2 {
-        font-family: "Roboto";
         font-size: 0.85rem;
         line-height: 1;
         padding: 0;

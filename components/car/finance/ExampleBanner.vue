@@ -72,14 +72,12 @@
     }
     p {
       font-size: 0.75rem;
-      font-family: roboto;
       margin: 0;
     }
     details {
       background: transparent;
       margin: 1rem 0 0 0;
       summary {
-        font-family: "Roboto";
         color: #55595d;
         background-color: white;
         border-radius: 0.5rem;

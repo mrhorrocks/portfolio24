@@ -267,7 +267,7 @@ section#car-footer {
         }
       }
       summary {
-        font-size: 1.125rem;
+        font-size: 1rem;
         font-weight: normal;
         border-bottom: 0;
         padding: 0.6rem 0.5rem;
@@ -306,11 +306,13 @@ section#car-footer {
         color: white;
         &.address,
         .opening-times {
-          // background-color: red;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           width: 100%;
+          span {
+            line-height: 1.5rem;
+          }
           @media (min-width: 768px) {
             width: 50%;
           }

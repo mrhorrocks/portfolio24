@@ -23,6 +23,7 @@
 
 <style lang="scss">
 aside.filters {
+  font-family: "RobotoCondensed-Regular", Arial, Helvetica, sans-serif;
   header#filter {
     display: flex;
     justify-content: space-between;

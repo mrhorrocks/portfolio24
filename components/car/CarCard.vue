@@ -84,7 +84,6 @@ export default {
 
 <style lang="scss" scoped>
 .car-card {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -115,11 +114,15 @@ export default {
     span {
       background-color: #3f3a50;
       line-height: 27px;
-      padding: 2px 10px;
+      padding: 3px 10px;
       margin: 0 5px 0 5px;
       border: 1px solid rgb(255, 255, 255, 0.25);
       color: #ffffff;
-      border-radius: 8px;
+      border-radius: 0.6rem;
+      text-transform: lowercase;
+    }
+    &::first-letter {
+      text-transform: uppercase;
     }
   }
   .image-container {
@@ -211,23 +214,9 @@ export default {
     box-shadow: 0px 6px 20px #00000040;
     .listing-tag {
       position: absolute;
-      top: 13px;
+      top: 5px;
       left: 5px;
       z-index: 1;
-      span {
-        background-color: #3f3a50;
-        font-size: 1rem;
-        line-height: 27px;
-        padding: 5px 10px;
-        margin: 0 5px 0 5px;
-        border: 1px solid rgb(255, 255, 255, 0.25);
-        color: #ffffff;
-        border-radius: 8px;
-        text-transform: lowercase;
-      }
-      &::first-letter {
-        text-transform: uppercase;
-      }
     }
     .image-container {
       position: relative;
