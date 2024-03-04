@@ -64,12 +64,16 @@
 
 <style lang="scss">
 .finance-example {
-  margin: 0.5rem;
+  margin: 0 0.5rem;
   .finance-example-banner {
     background-color: #f6f7fb;
     border: 1px solid #d1d6e0;
     border-radius: 1rem;
     padding: 1rem;
+    margin: 1rem 0;
+    @media (min-width: 768px) {
+      margin: 2rem 0;
+    }
     p {
       font-size: 0.75rem;
       font-family: roboto;

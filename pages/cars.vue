@@ -58,7 +58,6 @@ definePageMeta({
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      margin-bottom: 2rem;
     }
     @media only screen and (min-width: 1024px) {
       width: 77%;
