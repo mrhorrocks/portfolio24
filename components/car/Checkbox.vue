@@ -76,11 +76,11 @@ export default {
   background-color: lighten(#f87b7b, 15%);
   &:before {
     border: solid black;
-    border-width: 0 4px 2px 0;
+    border-width: 0 2px 2px 0;
   }
   &:after {
     border: solid black;
-    border-width: 0 2px 2px 0;
+    border-width: 0 4px 2px 0;
   }
 }
 /* When the checkbox is checked, add a this background */
@@ -88,12 +88,12 @@ export default {
   background-color: #f87b7b;
   border-color: #f87b7b;
   &:before {
-    border: solid black;
-    border-width: 0 4px 2px 0;
+    border: solid #f87b7b;
+    border-width: 0 2px 2px 0;
   }
   &:after {
     border: solid black;
-    border-width: 0 2px 2px 0;
+    border-width: 0 4px 2px 0;
   }
 }
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -101,12 +101,12 @@ export default {
   content: "";
   position: relative;
   display: block;
-  left: 7px;
-  top: 11px;
-  width: 6px;
-  height: 0px;
-  border: solid #cccccc;
-  border-width: 0 4px 2px 0;
+  left: 11px;
+  top: 7px;
+  width: 0px;
+  height: 8px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
   -webkit-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   transform: rotate(360deg);
@@ -116,26 +116,24 @@ export default {
   content: "";
   position: relative;
   display: block;
-  left: 11px;
-  top: 5px;
-  width: 0px;
-  height: 8px;
-  border: solid #cccccc;
-  border-width: 0 2px 2px 0;
+  left: 7px;
+  top: 1px;
+  width: 6px;
+  height: 0px;
+  border: solid black;
+  border-width: 0 4px 2px 0;
   -webkit-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   transform: rotate(360deg);
+
   // display: none;
 }
 /* Show the checkmark when checked */
-.checkbox input:checked ~ .checkmark:after {
-  display: block;
-  // display: none;
-}
-.checkbox input:checked ~ .checkmark:before {
-  display: block;
-  // display: none;
-}
+// .checkbox input:checked ~ .checkmark:after,
+// .checkbox input:checked ~ .checkmark:before {
+//   display: block;
+//   // display: none;
+// }
 .checkboxLabel {
   margin-right: 0.5rem;
 }
