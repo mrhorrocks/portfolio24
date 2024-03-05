@@ -1,6 +1,10 @@
-.md\:grid {
+/* MEDIUM */
+.grid {
   display: grid;
+}
+.md\:grid {
   @media (min-width: 768px) {
+    display: grid;
     &.md\:cols-2 {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -24,9 +28,10 @@
     gap: 4rem;
   }
 }
+/* LARGE */
 .lg\:grid {
-  display: grid;
   @media (min-width: 1024px) {
+    display: grid;
     &.lg\:cols-2 {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -50,10 +55,10 @@
     gap: 4rem;
   }
 }
-
+/* EXTRA LARGE */
 .xl\:grid {
-  display: grid;
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
+    display: grid;
     &.xl\:cols-2 {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -62,6 +67,9 @@
     }
     &.xl\:cols-4 {
       grid-template-columns: repeat(4, 1fr);
+    }
+    &.xl\:cols-7 {
+      grid-template-columns: repeat(7, 1fr);
     }
   }
   &.xl\:gap-1 {
@@ -76,6 +84,12 @@
   &.xl\:gap-4 {
     gap: 4rem;
   }
+  &.xl\:gap-5 {
+    gap: 5rem;
+  }
+  &.xl\:gap-6 {
+    gap: 6rem;
+  }
 }
 
 .col-span-1 {
@@ -89,4 +103,13 @@
 }
 .col-span-4 {
   grid-column: span 4 / span 4;
+}
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
+.col-span-6 {
+  grid-column: span 6 / span 6;
+}
+.col-span-7 {
+  grid-column: span 7 / span 7;
 }

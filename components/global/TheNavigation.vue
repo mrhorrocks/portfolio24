@@ -97,6 +97,7 @@ export default {
         <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
         <NuxtLink to="/about" title="About">About</NuxtLink>
         <DevOnly>
+          <NuxtLink to="/cars" title="Car Dealer">Cars</NuxtLink>
           <NuxtLink to="/experience" title="Experience">Experience</NuxtLink>
           <NuxtLink to="/contact" title="Contact">Contact</NuxtLink>
         </DevOnly>
@@ -110,6 +111,7 @@ export default {
       <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
       <NuxtLink to="/about" title="About">About</NuxtLink>
       <DevOnly>
+        <NuxtLink to="/cars" title="Car Dealer">Cars</NuxtLink>
         <NuxtLink to="/contact" title="Contact">Contact</NuxtLink>
         <NuxtLink to="/experience" title="Experience">Experience</NuxtLink>
       </DevOnly>

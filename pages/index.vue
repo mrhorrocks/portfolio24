@@ -18,7 +18,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
 
 <template>
   <section>
-    <div class="container xl:grid xl:cols-3">
+    <div class="container grid xl:grid xl:cols-3">
       <div class="col-span-3">
         <!-- Social badges -->
         <SocialBadges />
@@ -89,8 +89,16 @@ if (location.href.indexOf("#invite_token") !== -1) {
       <!-- Thumbnails -->
       <div class="col-span-3">
         <div class="thumbnail-container">
-          <div class="thumb">1</div>
-          <div class="thumb">2</div>
+          <div class="thumb">
+            <a
+              href="/blog/2024-01-09-about-this-portfolio/"
+              class="thumb-link"
+              title="Portfolio 2024"
+            ></a>
+          </div>
+          <div class="thumb">
+            <a href="/cars" class="thumb-link" title="Car Dealer"></a>
+          </div>
           <div class="thumb">3</div>
           <div class="thumb">4</div>
           <div class="thumb">5</div>
@@ -104,29 +112,11 @@ if (location.href.indexOf("#invite_token") !== -1) {
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
 
-// .social-badges {
-//   display: none;
-//   @media (min-width: 400px) {
-//     display: block;
-//     margin: 1rem 0;
-//     text-align: center;
-//     a {
-//       margin-right: 0.5rem;
-//     }
-//   }
-//   @media (min-width: 768px) {
-//     text-align: left;
-//   }
-//   @media (min-width: 1024px) {
-//     margin: 0.5rem 0;
-//   }
-// }
-
 h1.site-headline {
   position: relative;
   z-index: 1;
   font-family: Impact, RobotoCondensed-Black, "Arial Narrow Bold", sans-serif;
-  font-size: clamp(2.58rem, 10vw, 10rem);
+  font-size: clamp(2.58rem, 11.1vw, 10rem);
   margin-bottom: 1rem;
   font-weight: normal;
   text-align: center;
@@ -265,11 +255,28 @@ h2.sub-text {
     width: calc(50% - 1.5rem);
     max-width: 325px;
     aspect-ratio: 4 / 2.6;
-    padding: 0.5rem;
     margin: 0.75rem;
     background-color: #d5d5d5;
     border-radius: 0.5rem;
     transition: 1s;
+    overflow: hidden;
+    background-position: center;
+    background-size: 100%;
+    transition: 0.25s;
+    &:hover {
+      background-size: 110%;
+    }
+    &:nth-of-type(1) {
+      background-image: url("/img/homepage/thumbnails/portfolio2024.png");
+    }
+    &:nth-of-type(2) {
+      background-image: url("/img/homepage/thumbnails/cardealer.png");
+    }
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
     @media (min-width: 768px) {
       &:nth-of-type(1) {
         margin-right: 20px;
