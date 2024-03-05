@@ -15,7 +15,6 @@
   margin: 0 auto;
   background-color: white;
   box-shadow: 0px 7px 5px #0000001c;
-  border-bottom: 1px solid #ccc;
   .type-filter {
     height: 40px;
     @media (min-width: 768px) {

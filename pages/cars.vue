@@ -1,7 +1,22 @@
-<script setup lang="ts">
+<script setup>
 definePageMeta({
   layout: "cardealer",
 });
+</script>
+
+<script>
+export default {
+  data () {
+    return {
+      isAsideVisible: false,
+    };
+  },
+  methods: {
+    toggleAside () {
+      this.isAsideVisible = !this.isAsideVisible;
+    },
+  },
+};
 </script>
 
 <template>
@@ -9,7 +24,9 @@ definePageMeta({
   <section>
     <div class="container-full">
       <div class="flexed-cols">
-        <aside class="filters">
+        <aside :class="['filters', { visable: isAsideVisible }]">
+          <!-- <aside class="filters" v-show="asideVisible"> -->
+          <!-- <aside class="filters"> -->
           <CarFilterNav />
         </aside>
 
@@ -18,11 +35,12 @@ definePageMeta({
           <div class="search-results">
             <CarCard />
           </div>
-
           <CarFinanceExampleBanner />
         </main>
       </div>
     </div>
+    <CarFilterButton @click="toggleAside" />
+    <!-- <CarFilterButton /> -->
     <CarFooter />
   </section>
 </template>
@@ -32,16 +50,29 @@ definePageMeta({
   display: flex;
   justify-content: space-between;
   background-color: #ffffff;
+  // ASIDE.FILTERS
+  // MOBILE
   aside.filters {
     display: none;
     position: fixed;
-    z-index: 2;
-    width: 130px;
-    left: calc(50% - 65px);
-    bottom: 20px;
-    border-radius: 1rem;
-    @media (min-width: 1024px) {
+    top: 5.5rem;
+    left: calc(0% - 0px);
+    z-index: 99;
+    width: calc(100% - 0rem);
+    height: fit-content;
+    padding: 1rem 0.5rem 0;
+    background-color: white;
+    box-shadow: 0px 7px 5px #0000001c;
+    &.visable {
       display: block;
+    }
+    // IPAD PORTRAIT UP
+    @media (min-width: 768px) {
+      top: 3rem;
+    }
+    // IPAD LANDSCAPE UP
+    @media (min-width: 1024px) {
+      display: block; // ALWAYS SHOW AT THIS SIZE
       position: relative;
       top: 38px;
       left: 0;
@@ -49,8 +80,10 @@ definePageMeta({
       padding: 0 0 0 0.5rem;
       text-align: left;
       border-radius: 0rem;
+      box-shadow: none;
     }
   }
+  // ASIDE.FILTERS END
   main {
     padding-top: 0rem;
     margin-bottom: 1rem;

@@ -1,7 +1,12 @@
 <template>
   <header id="filter">
-    <h2>Filters</h2>
-    <CarButton text="Reset" class="filter-reset" />
+    <div>
+      <h2>Filters</h2>
+    </div>
+    <div>
+      <CarButton text="Cancel" class="car-button filter-cancel" />
+      <CarButton text="Reset" class="car-button filter-reset" />
+    </div>
   </header>
 
   <h3>Brand</h3>
@@ -17,7 +22,6 @@
   <CarDetail title="Model"> Models go here... </CarDetail>
 
   <h3>Budget</h3>
-
   <h3>Specification</h3>
 </template>
 
@@ -34,16 +38,30 @@ aside.filters {
       font-size: 1.125rem;
       padding: 0;
     }
-    button.filter-reset {
+    button {
       border: 0;
-      color: #f87b7b;
-      background-color: lighten(#f87b7b, 22%);
       border-radius: 0.76rem;
       padding: 0 1rem;
       height: 2rem;
-      &:hover {
-        background-color: lighten(#f87b7b, 5%);
-        color: white;
+      &.filter-reset {
+        color: #f87b7b;
+        background-color: lighten(#f87b7b, 22%);
+        &:hover {
+          background-color: lighten(#f87b7b, 12%);
+          color: white;
+        }
+      }
+      &.filter-cancel {
+        color: black;
+        background-color: #e0e2ed;
+        margin-right: 0.5rem;
+        &:hover {
+          background-color: darken(#e0e2ed, 5%);
+          color: black;
+        }
+        @media (min-width: 1024px) {
+          display: none;
+        }
       }
     }
   }

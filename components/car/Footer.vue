@@ -376,6 +376,8 @@ section#car-footer {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
+      padding: 0.6rem 0.5rem 5rem;
+      font-size: 0.75rem;
       @media (min-width: 768px) {
         flex-wrap: nowrap;
         width: 740px;
@@ -384,12 +386,11 @@ section#car-footer {
       @media (min-width: 1024px) {
         flex-direction: row-reverse;
         width: 960px;
+        padding-bottom: 0.6rem;
       }
       @media (min-width: 1200px) {
         width: 100%;
       }
-      padding: 0.6rem 0.5rem;
-      font-size: 0.75rem;
       span {
         display: flex;
         justify-content: flex-start;

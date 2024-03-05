@@ -147,6 +147,7 @@ export default {
 nav#car-nav {
   width: 100%;
   padding: 0 0.5rem;
+  // border-bottom: 1px solid #ccc;
   div.nav-content {
     display: flex;
     justify-content: space-between;
