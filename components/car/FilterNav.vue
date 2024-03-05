@@ -18,16 +18,26 @@
       :label="item.name"
     />
   </CarDetail>
-
   <CarDetail title="Model"> Models go here... </CarDetail>
 
   <h3>Budget</h3>
+  <CarDetail title="Min. Price"> Min price </CarDetail>
+  <CarDetail title="Max. Price"> Max price </CarDetail>
+
   <h3>Specification</h3>
+  <CarDetail title="Fuel type">Fuel type</CarDetail>
+  <CarDetail title="Body type">Body type</CarDetail>
+  <CarDetail title="Transmission">Transmission</CarDetail>
+  <CarDetail title="Engine size">Engine size</CarDetail>
+  <CarDetail title="Milage">Milage</CarDetail>
+  <CarDetail title="Colour">Colour</CarDetail>
+  <CarDetail title="Doors">Doors</CarDetail>
+  <CarDetail title="Seats">Seats</CarDetail>
+  <CarDetail title="Fearures">Fearures</CarDetail>
 </template>
 
 <style lang="scss">
 aside.filters {
-  font-family: "RobotoCondensed-Regular", Arial, Helvetica, sans-serif;
   header#filter {
     display: flex;
     justify-content: space-between;

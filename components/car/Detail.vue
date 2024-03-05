@@ -38,19 +38,27 @@ details.filters-menu {
     border-bottom: 1px solid #f4f4f4;
     appearance: auto;
     cursor: pointer;
+    &:hover {
+      background-color: #cfcfcf;
+    }
   }
 
   /* Create a new custom triangle on the right side */
   summary::after {
     position: absolute;
     top: 8px;
-    right: 0px;
+    right: 5px;
     width: 24px;
     height: 24px;
     content: "";
     background-image: url("/assets/img/add-expand.png");
     background-repeat: no-repeat;
     transition: 0.5s;
+    background-color: white;
+    border-radius: 0.5rem;
+    &:hover {
+      background: url("/assets/img/remove-collapse.png");
+    }
   }
 
   .content {

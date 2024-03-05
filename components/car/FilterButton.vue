@@ -8,7 +8,7 @@
 .filter-toggle {
   position: fixed;
   bottom: 0rem;
-  z-index: 10;
+  z-index: 100;
   width: 100%;
   display: flex;
   justify-content: center;

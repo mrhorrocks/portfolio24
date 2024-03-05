@@ -65,8 +65,8 @@ export default {
 }
 // UNCHECKED  /* Create a custom checkbox */
 .checkbox .checkmark {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 20px;
+  width: 20px;
   background-color: #eee;
   border: 0.15rem solid #d1d6e0;
   border-radius: 0.5rem;
@@ -92,7 +92,7 @@ export default {
     border-width: 0 2px 2px 0;
   }
   &:after {
-    border: solid black;
+    border: solid white;
     border-width: 0 4px 2px 0;
   }
 }
@@ -101,11 +101,11 @@ export default {
   content: "";
   position: relative;
   display: block;
-  left: 11px;
-  top: 7px;
+  top: 5px;
+  left: 9px;
   width: 0px;
   height: 8px;
-  border: solid black;
+  border: solid #cccccc;
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
@@ -116,11 +116,11 @@ export default {
   content: "";
   position: relative;
   display: block;
-  left: 7px;
-  top: 1px;
+  top: -1px;
+  left: 5px;
   width: 6px;
   height: 0px;
-  border: solid black;
+  border: solid #cccccc;
   border-width: 0 4px 2px 0;
   -webkit-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
