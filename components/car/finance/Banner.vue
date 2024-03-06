@@ -95,37 +95,37 @@ section#finance-banner {
           display: none;
         }
         select {
-          @media (min-width: 1024px) {
-            appearance: none;
-          }
-          cursor: pointer;
+          // @media (min-width: 1024px) {
+          //   appearance: none;
+          // }
           width: calc(100% - 1rem);
           padding: 0.75rem 0.7rem;
           border: 0;
           border-radius: 0.76rem;
           background-color: #3f3a50;
           color: white;
+          cursor: pointer;
           option:checked {
             background-color: #dddddd;
           }
         }
-        @media (min-width: 1024px) {
-          &:after {
-            content: "Select";
-            background: url("/assets/img/select-chevron.png");
-            background-repeat: no-repeat;
-            background-position-x: right;
-            position: absolute;
-            color: white;
-            width: auto;
-            height: 27px;
-            right: 5px;
-            top: 23px;
-            padding-right: 30px;
-            display: flex;
-            align-items: center;
-          }
-        }
+        // @media (min-width: 1024px) {
+        //   &:after {
+        //     content: "Select";
+        //     background: url("/assets/img/select-chevron.png");
+        //     background-repeat: no-repeat;
+        //     background-position-x: right;
+        //     position: absolute;
+        //     color: white;
+        //     width: auto;
+        //     height: 27px;
+        //     right: 5px;
+        //     top: 23px;
+        //     padding-right: 30px;
+        //     display: flex;
+        //     align-items: center;
+        //   }
+        // }
       }
     }
   }

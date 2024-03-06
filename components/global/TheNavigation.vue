@@ -144,6 +144,9 @@ div.navlinks {
     // text-transform: uppercase;
     color: black;
     font-weight: bold;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+
     transition: padding 0.3s ease;
     &::after {
       content: "";

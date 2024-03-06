@@ -59,9 +59,8 @@ export default {
     left: calc(0% - 0px);
     z-index: 99;
     width: calc(100% - 0rem);
-    // height: fit-content;
-    height: -webkit-fill-available;
-    padding: 1rem 0.5rem 5rem;
+    height: 99vh;
+    padding: 1rem 0.5rem 10rem;
     background-color: white;
     box-shadow: 0px 7px 5px #0000001c;
     overflow-y: scroll;

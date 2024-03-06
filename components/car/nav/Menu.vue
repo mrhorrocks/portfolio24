@@ -195,6 +195,7 @@ nav#car-nav {
       .nav-button {
         display: flex;
         align-items: center;
+        cursor: pointer;
         @media (min-width: 1024px) {
           display: none;
         }
@@ -213,6 +214,7 @@ nav#car-nav {
           height: 48px;
           background-color: transparent;
           border: 0;
+          cursor: pointer;
         }
       }
     }
@@ -263,8 +265,8 @@ div.car-mobilenavlinks {
     text-align: center;
     text-decoration: none;
     color: black;
-    border-top: 1px solid white;
     border-top: 1px solid black;
+    cursor: pointer;
     &:hover {
       background-color: #e6e6e6;
     }
