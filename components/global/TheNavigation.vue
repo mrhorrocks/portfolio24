@@ -140,10 +140,11 @@ div.navlinks {
     float: left;
     padding: 2rem 1rem;
     overflow: hidden;
+    font-weight: bold;
     text-decoration: none;
+    font-family: Roboto;
     // text-transform: uppercase;
     color: black;
-    font-weight: bold;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
 
@@ -204,7 +205,6 @@ div.mobilenavlinks {
     text-align: center;
     text-decoration: none;
     color: black;
-    border-top: 1px solid white;
     border-top: 1px solid black;
     &:hover {
       background-color: #e6e6e6;
