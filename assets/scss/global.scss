@@ -43,7 +43,10 @@ body {
     padding-top: 4.5rem;
     &.homepage {
       background-color: #363636;
-      padding-bottom: 140px;
+      padding-bottom: 10rem;
+    }
+    &.default {
+      padding-bottom: 4rem;
     }
     @media (min-width: 400px) {
       padding-top: 3.5rem;
