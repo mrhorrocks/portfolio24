@@ -3,7 +3,7 @@ headline: Portfolio 2024
 title: Portfolio 2024
 description: Nuxt, Git, Netlify & Decap CMS
 date: 2024-01-09T15:34:17.109Z
-author: MH
+author: ""
 featuredArticle: true
 featuredImage: /images/uploads/ed209-figma.png
 featuredImageAltText: Nuxt, Git, Netlify & Decap CMS
