@@ -54,7 +54,7 @@ details {
     padding: 0.75rem 0.5rem;
     font-weight: bold;
     border-bottom: 1px solid #f4f4f4;
-    appearance: auto;
+    list-style: none;
     cursor: pointer;
   }
 

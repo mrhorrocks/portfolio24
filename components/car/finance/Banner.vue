@@ -95,18 +95,18 @@ section#finance-banner {
           display: none;
         }
         select {
-          @media (min-width: 1024px) {
-            appearance: none;
-          }
-          cursor: pointer;
+          // @media (min-width: 1024px) {
+          //   appearance: none;
+          // }
           width: calc(100% - 1rem);
           padding: 0.75rem 0.7rem;
           border: 0;
           border-radius: 0.76rem;
           background-color: #3f3a50;
           color: white;
-          option:checked {
-            background-color: #dddddd;
+          cursor: pointer;
+          option {
+            font-size: 0.9rem;
           }
         }
         @media (min-width: 1024px) {
@@ -124,6 +124,7 @@ section#finance-banner {
             padding-right: 30px;
             display: flex;
             align-items: center;
+            pointer-events: none;
           }
         }
       }

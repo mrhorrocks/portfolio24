@@ -99,10 +99,18 @@ if (location.href.indexOf("#invite_token") !== -1) {
           <div class="thumb">
             <a href="/cars" class="thumb-link" title="Car Dealer"></a>
           </div>
-          <div class="thumb">3</div>
-          <div class="thumb">4</div>
-          <div class="thumb">5</div>
-          <div class="thumb">6</div>
+          <div class="thumb">
+            <a
+              href="/blog/2024-01-18-graphics/"
+              class="thumb-link"
+              title="Car Dealer"
+            ></a>
+          </div>
+          <!-- <DevOnly>
+            <div class="thumb">4</div>
+            <div class="thumb">5</div>
+            <div class="thumb">6</div>
+          </DevOnly> -->
         </div>
       </div>
     </div>
@@ -271,6 +279,9 @@ h2.sub-text {
     }
     &:nth-of-type(2) {
       background-image: url("/img/homepage/thumbnails/cardealer.png");
+    }
+    &:nth-of-type(3) {
+      background-image: url("/img/homepage/thumbnails/portfolio-old.png");
     }
     a {
       display: block;

@@ -18,7 +18,7 @@ footer#footer {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: -webkit-fill-available;
+    height: fit-content;
     .social-badges {
       display: block;
     }

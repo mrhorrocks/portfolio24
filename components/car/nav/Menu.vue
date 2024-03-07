@@ -195,6 +195,7 @@ nav#car-nav {
       .nav-button {
         display: flex;
         align-items: center;
+        cursor: pointer;
         @media (min-width: 1024px) {
           display: none;
         }
@@ -213,6 +214,7 @@ nav#car-nav {
           height: 48px;
           background-color: transparent;
           border: 0;
+          cursor: pointer;
         }
       }
     }
@@ -227,24 +229,29 @@ div.car-navlinks {
     position: relative;
     display: block;
     float: left;
-    padding: 2rem 0.8vw;
+    padding: 2rem 0.8rem;
     overflow: hidden;
     text-decoration: none;
-    color: black;
+    color: #656565;
+    background: url("/assets/img/active-bar.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -25px;
     transition: 0.5s;
+    cursor: pointer;
+    &:hover {
+      color: black;
+      background-position-y: -15px;
+      transition: 0.2s;
+    }
     &.router-link-active {
       font-weight: bold;
-      background: url("/assets/img/active-bar.png");
-      background-repeat: no-repeat;
-      background-position-x: center;
-      background-position-y: -12px;
-    }
-    &:hover {
-      font-weight: bold;
+      background-position-y: -15px;
+      color: black;
     }
   }
   &.shrink a {
-    padding: 0.75rem 0.8vw;
+    padding: 0.75rem 0.8rem;
   }
 }
 
@@ -263,8 +270,8 @@ div.car-mobilenavlinks {
     text-align: center;
     text-decoration: none;
     color: black;
-    border-top: 1px solid white;
     border-top: 1px solid black;
+    cursor: pointer;
     &:hover {
       background-color: #e6e6e6;
     }

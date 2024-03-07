@@ -95,12 +95,8 @@ export default {
       >
         <NuxtLink to="/" title="Home">Home</NuxtLink>
         <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
-        <NuxtLink to="/about" title="About">About</NuxtLink>
-        <DevOnly>
-          <NuxtLink to="/cars" title="Car Dealer">Cars</NuxtLink>
-          <NuxtLink to="/experience" title="Experience">Experience</NuxtLink>
-          <NuxtLink to="/contact" title="Contact">Contact</NuxtLink>
-        </DevOnly>
+        <NuxtLink to="/cars" title="Car Dealer">CarDealer</NuxtLink>
+        <NuxtLink to="/tools" title="tools">Tools</NuxtLink>
       </div>
     </div>
 
@@ -109,12 +105,8 @@ export default {
     <div v-if="mobileMenuOpen" class="mobilenavlinks">
       <NuxtLink to="/" title="Home">Home</NuxtLink>
       <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
-      <NuxtLink to="/about" title="About">About</NuxtLink>
-      <DevOnly>
-        <NuxtLink to="/cars" title="Car Dealer">Cars</NuxtLink>
-        <NuxtLink to="/contact" title="Contact">Contact</NuxtLink>
-        <NuxtLink to="/experience" title="Experience">Experience</NuxtLink>
-      </DevOnly>
+      <NuxtLink to="/cars" title="Car Dealer">CarDealer</NuxtLink>
+      <NuxtLink to="/tools" title="tools">Tools</NuxtLink>
     </div>
   </nav>
 </template>
@@ -140,10 +132,14 @@ div.navlinks {
     float: left;
     padding: 2rem 1rem;
     overflow: hidden;
+    font-weight: bold;
     text-decoration: none;
+    font-family: Roboto;
     // text-transform: uppercase;
     color: black;
-    font-weight: bold;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+
     transition: padding 0.3s ease;
     &::after {
       content: "";
@@ -201,7 +197,6 @@ div.mobilenavlinks {
     text-align: center;
     text-decoration: none;
     color: black;
-    border-top: 1px solid white;
     border-top: 1px solid black;
     &:hover {
       background-color: #e6e6e6;

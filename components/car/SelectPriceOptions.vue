@@ -56,6 +56,7 @@ export default {
     border: 0;
     border-radius: 0.76rem;
     background-color: white;
+    cursor: pointer;
     @media (min-width: 768px) {
       background-color: #e8e8e8;
     }
