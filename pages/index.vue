@@ -101,7 +101,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
           </div>
           <div class="thumb">
             <a
-              href="/blog/2024-01-18-graphics-2008/"
+              href="/blog/2024-01-18-graphics/"
               class="thumb-link"
               title="Car Dealer"
             ></a>
