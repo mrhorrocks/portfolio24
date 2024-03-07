@@ -2,6 +2,10 @@
 definePageMeta({
   layout: "cardealer",
 });
+
+useHead({
+  titleTemplate: "CarDealer - %s",
+});
 </script>
 
 <script>
