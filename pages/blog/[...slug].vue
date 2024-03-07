@@ -60,7 +60,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
           </header>
 
           <div class="md:grid md:cols-3 md:gap-3">
-            <div class="content">
+            <div class="blog-content">
               <!-- featuredImage -->
               <div v-if="doc.featuredImage" class="featured-image">
                 <img :src="doc.featuredImage" :alt="doc.featuredImageAltText" />
@@ -168,7 +168,7 @@ header.article-header {
   }
 }
 
-div.content {
+div.blog-content {
   background: white;
   padding: 0.5rem;
   box-shadow: 1px 3px 4px #00000020;
