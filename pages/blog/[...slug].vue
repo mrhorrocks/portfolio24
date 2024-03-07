@@ -48,7 +48,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
             <h1>{{ doc.headline }}</h1>
             <p>{{ doc.description }}</p>
 
-            <div class="author">
+            <div v-if="doc.authorUrl" class="author">
               by:
               <a
                 :href="doc.authorUrl"
