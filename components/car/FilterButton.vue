@@ -1,6 +1,6 @@
 <template>
   <div class="filter-toggle">
-    <CarButton text="Filters" class="car-button filter-toggle-button" />
+    <slot> </slot>
   </div>
 </template>
 
@@ -18,6 +18,9 @@
     display: none;
   }
   .filter-toggle-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     position: relative;
     width: 130px;
     height: 50px;

@@ -9,6 +9,7 @@ useHead({
 </script>
 
 <script>
+// Toggle the filter Nav
 export default {
   data () {
     return {
@@ -29,8 +30,6 @@ export default {
     <div class="container-full">
       <div class="flexed-cols">
         <aside :class="['filters', { visable: isAsideVisible }]">
-          <!-- <aside class="filters" v-show="asideVisible"> -->
-          <!-- <aside class="filters"> -->
           <CarFilterNav />
         </aside>
 
@@ -43,8 +42,20 @@ export default {
         </main>
       </div>
     </div>
-    <CarFilterButton @click="toggleAside" />
-    <!-- <CarFilterButton /> -->
+    <CarFilterButton>
+      <CarButton
+        v-if="!isAsideVisible"
+        text="Filters"
+        class="car-button filter-toggle-button"
+        @click="toggleAside"
+      />
+      <CarButton
+        v-if="isAsideVisible"
+        text="Close"
+        class="car-button filter-toggle-button"
+        @click="toggleAside"
+      />
+    </CarFilterButton>
     <CarFooter />
   </section>
 </template>
