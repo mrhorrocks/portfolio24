@@ -103,7 +103,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
             <a
               href="/blog/2024-01-18-graphics/"
               class="thumb-link"
-              title="Car Dealer"
+              title="Graphics"
             ></a>
           </div>
           <!-- <DevOnly>
