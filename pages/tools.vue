@@ -9,7 +9,7 @@ useHead({
     <div class="container">
       <h1>Tools</h1>
 
-      <div class="md:grid md:cols-3 md:gap-1">
+      <div class="md:grid md:cols-3 md:gap-2">
         <div class="col-span-2">
           <h2>Current Stack</h2>
           <div class="tool-card">
