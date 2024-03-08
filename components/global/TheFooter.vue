@@ -12,15 +12,17 @@ footer#footer {
   bottom: 0;
   z-index: 100;
   width: 100%;
-  height: 64px;
+  height: 40px;
   background-color: #b6b600;
   .container.footer {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: fit-content;
+    height: inherit;
     .social-badges {
+      margin: 0;
       display: block;
+      float: left;
     }
   }
 }
