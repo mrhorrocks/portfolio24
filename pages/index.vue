@@ -106,11 +106,6 @@ if (location.href.indexOf("#invite_token") !== -1) {
               title="Graphics"
             ></a>
           </div>
-          <!-- <DevOnly>
-            <div class="thumb">4</div>
-            <div class="thumb">5</div>
-            <div class="thumb">6</div>
-          </DevOnly> -->
         </div>
       </div>
     </div>
@@ -124,7 +119,7 @@ h1.site-headline {
   position: relative;
   z-index: 1;
   font-family: Impact, RobotoCondensed-Black, "Arial Narrow Bold", sans-serif;
-  font-size: clamp(2.58rem, 11.1vw, 10rem);
+  font-size: clamp(2.58rem, 11vw, 10rem);
   margin-bottom: 1rem;
   font-weight: normal;
   text-align: center;
@@ -135,7 +130,6 @@ h1.site-headline {
   @media (min-width: 768px) {
     text-align: left;
   }
-
   span {
     &:nth-of-type(1) {
       @media (min-width: 1440px) {
@@ -150,7 +144,6 @@ h1.site-headline {
     }
   }
 }
-
 h2.sub-text {
   position: relative;
   z-index: 1;
@@ -169,7 +162,6 @@ h2.sub-text {
     @media (min-width: 768px) {
       justify-content: left;
     }
-
     &.bullet {
       display: none;
 
@@ -183,7 +175,6 @@ h2.sub-text {
     }
   }
 }
-
 .hero-image {
   position: relative;
   z-index: 0;
@@ -195,29 +186,29 @@ h2.sub-text {
   transition: 1s;
   @media (min-width: 768px) {
     position: absolute;
-    top: 220px;
+    top: 170px;
     right: 0px;
-    width: 490px;
+    width: 400px;
   }
   // @media (min-width: 992px) {
   //   width: 600px;
   //   right: 0;
   // }
   @media (min-width: 1024px) {
-    top: 180px;
-    width: 505px;
+    top: 190px;
+    width: 400px;
+    right: 40px;
   }
   @media (min-width: 1200px) {
     top: 200px;
     width: 530px;
   }
   @media (min-width: 1440px) {
-    top: 100px;
-    right: 45px;
-    width: 640px;
+    top: 90px;
+    right: 70px;
+    width: 600px;
   }
 }
-
 .tech-logos {
   position: relative;
   z-index: 1;
@@ -233,37 +224,31 @@ h2.sub-text {
     width: 40px;
   }
 }
-
 .thumbnail-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   position: relative;
   z-index: 1;
-  display: block;
-  float: left;
   width: 100%;
-  margin: 0 auto;
   transition: 0.5s;
-  @media (min-width: 375px) {
-    display: block;
-    float: left;
-  }
   @media (min-width: 768px) {
-    display: block;
-    float: left;
-    width: 60%;
+    width: 58%;
+    justify-content: flex-start;
   }
   @media (min-width: 1024px) {
-    width: 64%;
+    width: 63%;
   }
-
   .thumb {
     display: flex;
     align-items: center;
     justify-content: center;
-    float: left;
-    width: calc(50% - 1.5rem);
-    max-width: 325px;
+
+    width: calc(50% - 1rem);
     aspect-ratio: 4 / 2.6;
-    margin: 0.75rem;
+    max-width: 330px;
+    margin: 0.5rem;
     background-color: #d5d5d5;
     border-radius: 0.5rem;
     transition: 1s;
@@ -288,16 +273,8 @@ h2.sub-text {
       width: 100%;
       height: 100%;
     }
-    @media (min-width: 768px) {
-      &:nth-of-type(1) {
-        margin-right: 20px;
-      }
-    }
     @media (min-width: 1024px) {
       width: calc(33% - 2rem);
-      &:nth-of-type(1) {
-        margin-right: 0.75rem;
-      }
     }
     @media (min-width: 1440px) {
       width: calc(50% - 2rem);
