@@ -1,7 +1,34 @@
-/* MEDIUM */
 .grid {
   display: grid;
 }
+/* SMALL */
+.sm\:grid {
+  @media (min-width: 576px) {
+    display: grid;
+    &.sm\:cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &.sm\:cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &.sm\:cols-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &.sm\:gap-1 {
+    gap: 1rem;
+  }
+  &.sm\:gap-2 {
+    gap: 2rem;
+  }
+  &.sm\:gap-3 {
+    gap: 3rem;
+  }
+  &.sm\:gap-4 {
+    gap: 4rem;
+  }
+}
+/* MEDIUM */
 .md\:grid {
   @media (min-width: 768px) {
     display: grid;
