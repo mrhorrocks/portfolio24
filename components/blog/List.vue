@@ -14,7 +14,9 @@ const props = defineProps({
 <template>
   <article v-for="article in data" :key="article._path" class="blog-index-card">
     <!-- Featured image -->
-    <img v-if="article.featuredImage" :src="article.featuredImage" alt="" />
+    <NuxtLink :to="article._path + '/'">
+      <img v-if="article.featuredImage" :src="article.featuredImage" alt="" />
+    </NuxtLink>
 
     <div>
       <div class="blog-index-card-heading">
