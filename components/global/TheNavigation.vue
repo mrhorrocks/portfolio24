@@ -95,8 +95,8 @@ export default {
       >
         <NuxtLink to="/" title="Home">Home</NuxtLink>
         <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
-        <NuxtLink to="/cars" title="Car Dealer">CarDealer</NuxtLink>
-        <NuxtLink to="/tools" title="tools">Tools</NuxtLink>
+        <NuxtLink to="/cars" title="CarDealer">CarDealer</NuxtLink>
+        <NuxtLink to="/tools" title="Tools">Tools</NuxtLink>
       </div>
     </div>
 
@@ -105,8 +105,8 @@ export default {
     <div v-if="mobileMenuOpen" class="mobilenavlinks">
       <NuxtLink to="/" title="Home">Home</NuxtLink>
       <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
-      <NuxtLink to="/cars" title="Car Dealer">CarDealer</NuxtLink>
-      <NuxtLink to="/tools" title="tools">Tools</NuxtLink>
+      <NuxtLink to="/cars" title="CarDealer">CarDealer</NuxtLink>
+      <NuxtLink to="/tools" title="Tools">Tools</NuxtLink>
     </div>
   </nav>
 </template>
@@ -139,8 +139,8 @@ div.navlinks {
     color: black;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
-
     transition: padding 0.3s ease;
+    //  ROLE OUT
     &::after {
       content: "";
       position: absolute;
@@ -153,10 +153,12 @@ div.navlinks {
       transform: translate3d(-100%, 0, 0);
       opacity: 1;
     }
+    // ROLE IN
     &:hover::after {
       transform: translate3d(0, 0, 0);
       background-color: lighten($theme-colour-three, 10%);
     }
+    // ACTIVE PAGE
     &.router-link-active::after {
       content: "";
       position: absolute;
@@ -171,7 +173,7 @@ div.navlinks {
     }
   }
   &.shrink a {
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 1rem 1rem;
   }
 }
 
@@ -189,6 +191,7 @@ button.hamburger {
 div.mobilenavlinks {
   display: flex;
   flex-direction: column;
+  padding-bottom: 8px;
   @media (min-width: 768px) {
     display: none;
   }

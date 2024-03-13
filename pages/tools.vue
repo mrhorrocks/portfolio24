@@ -9,7 +9,7 @@ useHead({
     <div class="container">
       <h1>Tools</h1>
 
-      <div class="md:grid md:cols-3 md:gap-1">
+      <div class="md:grid md:cols-3 md:gap-2">
         <div class="col-span-2">
           <h2>Current Stack</h2>
           <div class="tool-card">
@@ -23,16 +23,9 @@ useHead({
             <NuxtLink
               external
               class="chip"
-              href="https://tailwindcss.com/"
-              title="Tailwind"
-              >Tailwind</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://laravel.com/"
-              title="Laravel"
-              >Laravel</NuxtLink
+              href="https://sass-lang.com/"
+              title="SCSS"
+              >SCSS</NuxtLink
             >
             <NuxtLink
               external
@@ -40,13 +33,6 @@ useHead({
               href="https://www.npmjs.com/"
               title="NPM"
               >NPM</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://sass-lang.com/"
-              title="SCSS"
-              >SCSS</NuxtLink
             >
             <NuxtLink
               external
@@ -65,16 +51,23 @@ useHead({
             <NuxtLink
               external
               class="chip"
-              href="https://www.mysql.com/"
-              title="MySQL"
-              >MySQL</NuxtLink
+              href="https://www.adobe.com/uk/"
+              title="Adobe suite"
+              >Adobe</NuxtLink
             >
             <NuxtLink
               external
               class="chip"
-              href="https://www.chartjs.org/"
-              title="Chartjs"
-              >Chartjs</NuxtLink
+              href="https://tailwindcss.com/"
+              title="Tailwind"
+              >Tailwind</NuxtLink
+            >
+            <NuxtLink
+              external
+              class="chip"
+              href="https://laravel.com/"
+              title="Laravel"
+              >Laravel</NuxtLink
             >
             <NuxtLink
               external
@@ -112,7 +105,7 @@ useHead({
               external
               class="chip"
               href="https://cakephp.org/"
-              title="CakePHP"
+              title="Cake PHP"
               >CakePHP</NuxtLink
             >
             <NuxtLink
@@ -122,6 +115,34 @@ useHead({
               title="Highcharts"
               >Highcharts
             </NuxtLink>
+            <NuxtLink
+              external
+              class="chip"
+              href="https://www.mysql.com/"
+              title="MySQL"
+              >MySQL</NuxtLink
+            >
+            <NuxtLink
+              external
+              class="chip"
+              href="https://jquery.com/"
+              title="JQuery"
+              >JQuery</NuxtLink
+            >
+            <NuxtLink
+              external
+              class="chip"
+              href="https://jqueryui.com/"
+              title="JQuery UI"
+              >JQuery UI</NuxtLink
+            >
+            <NuxtLink
+              external
+              class="chip"
+              href="https://www.chartjs.org/"
+              title="Chartjs"
+              >Chartjs</NuxtLink
+            >
             <NuxtLink
               external
               class="chip"
@@ -140,22 +161,22 @@ useHead({
               external
               class="chip"
               href="https://wordpress.com/"
-              title=""
+              title="Wordpress"
               >Wordpress</NuxtLink
             >
             <NuxtLink
               external
               class="chip"
               href="https://www.joomla.org/"
-              title="Wordpress"
+              title="Joomla"
               >Joomla</NuxtLink
             >
             <NuxtLink
               external
               class="chip"
-              href="https://www.adobe.com/uk/"
-              title="Adobe suite"
-              >Adobe</NuxtLink
+              href="https://www.blender.org/"
+              title="Blender"
+              >Blender</NuxtLink
             >
           </div>
         </div>
