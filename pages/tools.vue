@@ -212,6 +212,13 @@ useHead({
               title="CSV to JSON"
               >CSV to JSON
             </NuxtLink>
+            <NuxtLink
+              external
+              class="chip"
+              href="https://nekocalc.com/px-to-rem-converter"
+              title="PX to REM Converter"
+              >PX to REM Converter
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -239,6 +246,7 @@ useHead({
       border: 0.15rem solid white;
       border-radius: 5px;
       box-shadow: 0px 3px 3px #ccc;
+      text-align: center;
       text-decoration: underline;
       text-decoration-style: dotted;
       transition: 0.5s;

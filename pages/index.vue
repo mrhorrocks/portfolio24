@@ -32,11 +32,13 @@ if (location.href.indexOf("#invite_token") !== -1) {
         <h2 class="sub-text">
           <span>
             <span class="bullet">&middot;</span>
+            <!-- ◯  -->
             I build websites with Nuxt, Netlifty & Decap CMS</span
           >
           <span>
-            <span class="bullet">&middot;</span>Based in North- West
-            England</span
+            <span class="bullet">&middot;</span>
+            <!-- ◯  -->
+            Based in North- West England</span
           >
         </h2>
 
@@ -106,6 +108,13 @@ if (location.href.indexOf("#invite_token") !== -1) {
               title="Graphics"
             ></a>
           </div>
+          <div class="thumb">
+            <a
+              href="https://mhox-good-things.netlify.app/"
+              class="thumb-link"
+              title="Good Things Foundation"
+            ></a>
+          </div>
         </div>
       </div>
     </div>
@@ -118,8 +127,10 @@ if (location.href.indexOf("#invite_token") !== -1) {
 h1.site-headline {
   position: relative;
   z-index: 1;
-  font-family: Impact, RobotoCondensed-Black, "Arial Narrow Bold", sans-serif;
-  font-size: clamp(2.58rem, 11vw, 10rem);
+  font-family: "Impact", RobotoCondensed-Black, "Arial Narrow Bold";
+  // font-family: "Monomaniac", RobotoCondensed-Black, "Arial Narrow Bold";
+  font-size: clamp(2.58rem, 11vw, 10rem); // Impact
+  // font-size: clamp(2.58rem, 10.1vw, 9rem); // Monomaniac
   margin-bottom: 1rem;
   font-weight: normal;
   text-align: center;
@@ -147,8 +158,10 @@ h1.site-headline {
 h2.sub-text {
   position: relative;
   z-index: 1;
-  font-family: Impact, RobotoCondensed-Black, "Arial Narrow Bold", sans-serif;
-  font-size: clamp(0.95rem, 2.8vw, 2.1rem);
+  font-family: "Impact", RobotoCondensed-Black, "Arial Narrow Bold", sans-serif;
+  // font-family: "Monomaniac", Impact, RobotoCondensed-Black, "Arial Narrow Bold";
+  font-size: clamp(0.95rem, 2.8vw, 2.1rem); // Impact
+  // font-size: clamp(0.95rem, 2.8vw, 2.205rem); // Monomaniac
   font-weight: normal;
   margin: 0 0 0 0;
   padding: 0;
@@ -217,7 +230,7 @@ h2.sub-text {
   margin: 0 0 0 0;
   @media (min-width: 768px) {
     text-align: left;
-    margin: 0 0 0 1rem;
+    // margin: 0 0 0 1rem;
   }
   img {
     margin: 0.25rem;
@@ -268,6 +281,10 @@ h2.sub-text {
     &:nth-of-type(3) {
       background-image: url("/img/homepage/thumbnails/portfolio-old.png");
     }
+    &:nth-of-type(4) {
+      background-image: url("/img/homepage/thumbnails/good-things-thumb.png");
+    }
+
     a {
       display: block;
       width: 100%;
