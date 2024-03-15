@@ -36,3 +36,23 @@ https://fonts.googleapis.com/css?family=Roboto
       format("truetype");
   font-display: swap;
 }
+/* 
+Monomaniac_One:
+https://fonts.google.com/specimen/Monomaniac+One
+*/
+@font-face {
+  font-family: "Monomaniac";
+  src: local("Monomaniac"),
+    url("/assets/fonts/Monomaniac_One/MonomaniacOne-Regular.ttf")
+      format("truetype");
+  font-display: swap;
+}
+/* 
+Impact:
+*/
+@font-face {
+  font-family: "Impact";
+  src: local("Impact"),
+    url("/assets/fonts/Impact/impact.ttf") format("truetype");
+  font-display: swap;
+}
