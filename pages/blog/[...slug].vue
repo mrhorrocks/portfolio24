@@ -103,7 +103,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 @import "../../assets/scss/partials/_colours";
 
 header.article-header {
-  margin: 0 0 1.5rem 0;
+  margin: 1rem 0;
   text-align: center;
   @media (min-width: 768px) {
     text-align: left;
