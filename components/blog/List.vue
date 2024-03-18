@@ -37,7 +37,7 @@ const props = defineProps({
   <p v-if="data.length == 0" class="no-articles-available">{{ message }}</p>
 </template>
 
-<style>
+<style lang="scss">
 .blog-index-card {
   display: flex;
   flex-direction: column;
@@ -64,7 +64,6 @@ const props = defineProps({
   }
   .date {
     font-size: 0.8rem;
-    font-style: italic;
     opacity: 0.8;
     margin: 0 0 1rem 0;
   }
