@@ -15,16 +15,6 @@
         <img src="@/assets/img/placeholder.jpg" alt="Car Image" />
         <img src="@/assets/img/placeholder.jpg" alt="Car Image" />
         <img src="@/assets/img/placeholder.jpg" alt="Car Image" />
-        <!-- <img :src="item.media_urls[3].thumb" alt="Car Image" @error="loadAlternateImage" /> -->
-
-        <!-- These images do not consistently load and error handling was unstable -->
-        <!-- 
-                <img :src="item.media_urls[3].thumb" alt="Car Image" />
-                <img :src="item.media_urls[4].thumb" alt="Car Image" />
-                <img :src="item.media_urls[5].thumb" alt="Car Image" />
-                <img :src="item.media_urls[6].thumb" alt="Car Image" />
-                <img :src="item.media_urls[7].thumb" alt="Car Image" />
-            -->
       </div>
 
       <!-- Car Details -->
