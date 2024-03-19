@@ -1,6 +1,6 @@
 # Portfolio 2024
 
-![Alt text](https://github.com/mrhorrocks/portfolio24/blob/main/public/img/homepage/ed209.gif?raw=true "Title")
+![A sceenshot of this repo when sucessfully built](https://github.com/mrhorrocks/mrhorrocks.github.io/blob/main/img/portfolio-2024-screenshot.png?raw=true "mhox.net")
 
 Visit the [Nuxt documentation](https://nuxt.com/) here.
 Visit the [Nuxt Content documentation](https://content.nuxt.com/) here.
