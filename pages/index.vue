@@ -33,7 +33,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
           <span>
             <span class="bullet">&middot;</span>
             <!-- ◯  -->
-            I build websites with Nuxt, Netlifty & Decap CMS</span
+            I build websites with Nuxt, Netlify & Decap CMS</span
           >
           <span>
             <span class="bullet">&middot;</span>
