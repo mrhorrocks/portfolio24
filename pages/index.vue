@@ -160,7 +160,7 @@ h2.sub-text {
   z-index: 1;
   font-family: "Impact", RobotoCondensed-Black, "Arial Narrow Bold", sans-serif;
   // font-family: "Monomaniac", Impact, RobotoCondensed-Black, "Arial Narrow Bold";
-  font-size: clamp(0.95rem, 2.8vw, 2.1rem); // Impact
+  font-size: clamp(0.95rem, 2.8vw, 2.15rem); // Impact
   // font-size: clamp(0.95rem, 2.8vw, 2.205rem); // Monomaniac
   font-weight: normal;
   margin: 0 0 0 0;
