@@ -2,7 +2,6 @@
 useHead({
   titleTemplate: "Tools - %s",
 });
-// import toolsData from "~/assets/data/tools.json";
 const {
   data: toolsData,
   pending,
