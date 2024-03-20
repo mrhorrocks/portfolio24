@@ -1,223 +1,64 @@
-<script setup lang="ts">
+<script setup>
 useHead({
   titleTemplate: "Tools - %s",
 });
+const {
+  data: toolsData,
+  pending,
+  error,
+} = await useFetch("https://mrhorrocks.github.io/data/mhoxTools.json");
 </script>
 
 <template>
   <section>
     <div class="container">
+      <div v-if="pending">Fetching...</div>
+      <div v-else-if="error">{{ error }}</div>
       <h1>Tools</h1>
-
       <div class="md:grid md:cols-3 md:gap-2">
         <div class="col-span-2">
           <h2>Current Stack</h2>
-          <div class="tool-card">
+
+          <div class="tool-group">
             <NuxtLink
+              v-for="item in toolsData.current"
+              :key="item.id"
+              :href="item.url"
+              :title="item.name"
               external
               class="chip"
-              href="https://nuxt.com/"
-              title="Nuxt"
-              >Nuxt</NuxtLink
             >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://sass-lang.com/"
-              title="SCSS"
-              >SCSS</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://www.npmjs.com/"
-              title="NPM"
-              >NPM</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://git-scm.com/"
-              title="GIT"
-              >GIT</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://code.visualstudio.com/"
-              title="VSCode"
-              >VSCode</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://www.adobe.com/uk/"
-              title="Adobe suite"
-              >Adobe</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://tailwindcss.com/"
-              title="Tailwind"
-              >Tailwind</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://laravel.com/"
-              title="Laravel"
-              >Laravel</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://www.artweaver.de/en"
-              title="Artweaver"
-              >Artweaver
+              {{ item.name }}
             </NuxtLink>
-            <NuxtLink
-              external
-              class="chip"
-              href="https://inkscape.org/"
-              title="Inkscape"
-              >Inkscape</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://chat.openai.com/"
-              title="ChatGPT"
-              >ChatGPT</NuxtLink
-            >
           </div>
 
           <h2>Previous Stack</h2>
-          <div class="tool-card">
+          <div class="tool-group">
             <NuxtLink
+              v-for="item in toolsData.previous"
+              :key="item.id"
+              :href="item.url"
+              :title="item.name"
               external
               class="chip"
-              href="https://www.docker.com/"
-              title="Docker"
-              >Docker</NuxtLink
             >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://cakephp.org/"
-              title="Cake PHP"
-              >CakePHP</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://www.highcharts.com/"
-              title="Highcharts"
-              >Highcharts
+              {{ item.name }}
             </NuxtLink>
-            <NuxtLink
-              external
-              class="chip"
-              href="https://www.mysql.com/"
-              title="MySQL"
-              >MySQL</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://jquery.com/"
-              title="JQuery"
-              >JQuery</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://jqueryui.com/"
-              title="JQuery UI"
-              >JQuery UI</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://www.chartjs.org/"
-              title="Chartjs"
-              >Chartjs</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://jquery.com/"
-              title="Jquery"
-              >Jquery</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://subversion.apache.org/"
-              title="SVN"
-              >SVN</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://wordpress.com/"
-              title="Wordpress"
-              >Wordpress</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://www.joomla.org/"
-              title="Joomla"
-              >Joomla</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://www.blender.org/"
-              title="Blender"
-              >Blender</NuxtLink
-            >
           </div>
         </div>
 
         <div class="col-span-1">
           <h2>Resources</h2>
-          <div class="tool-card">
+          <div class="tool-group">
             <NuxtLink
+              v-for="item in toolsData.resources"
+              :key="item.id"
+              :href="item.url"
+              :title="item.name"
               external
               class="chip"
-              href="https://heroicons.com/"
-              title="Hero Icons"
-              >Hero Icons</NuxtLink
             >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://fonts.google.com/icons"
-              title="Material Icons"
-              >Material Icons</NuxtLink
-            >
-            <NuxtLink
-              external
-              class="chip"
-              href="https://css2sass.herokuapp.com/"
-              title="CSS to SASS"
-              >CSS to SASS
-            </NuxtLink>
-            <NuxtLink
-              external
-              class="chip"
-              href="https://csvjson.com/csv2json"
-              title="CSV to JSON"
-              >CSV to JSON
-            </NuxtLink>
-            <NuxtLink
-              external
-              class="chip"
-              href="https://nekocalc.com/px-to-rem-converter"
-              title="PX to REM Converter"
-              >PX to REM Converter
+              {{ item.name }}
             </NuxtLink>
           </div>
         </div>
@@ -227,7 +68,7 @@ useHead({
 </template>
 
 <style lang="scss">
-.tool-card {
+.tool-group {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

@@ -102,6 +102,7 @@ export default {
       top: 38px;
       left: 0;
       width: 21%;
+      height: min-content;
       padding: 0 0 0 0.5rem;
       text-align: left;
       border-radius: 0rem;
