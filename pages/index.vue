@@ -108,6 +108,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
                   url="/blog/2024-01-09-about-this-portfolio/"
                 />
               </div>
+              <MoreInfo />
             </a>
           </div>
           <div class="thumb">
@@ -120,6 +121,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
                 </p>
                 <AppButtonLink text="Visit the site" url="/cars" />
               </div>
+              <MoreInfo />
             </a>
           </div>
           <div class="thumb">
@@ -136,6 +138,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
                   url="http://localhost:3000/blog/2024-01-18-graphics/"
                 />
               </div>
+              <MoreInfo />
             </a>
           </div>
           <div class="thumb">
@@ -152,6 +155,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
                   url="http://localhost:3000/blog/2024-01-18-graphics/"
                 />
               </div>
+              <MoreInfo />
             </a>
           </div>
         </div>
@@ -294,7 +298,7 @@ h2.sub-text {
   }
   .thumb {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     position: relative;
     width: calc(50% - 1rem);
@@ -324,9 +328,13 @@ h2.sub-text {
       background-image: url("/img/homepage/thumbnails/good-things-thumb.png");
     }
     > a {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
       width: 100%;
       height: 100%;
+      text-decoration: none;
       .mask {
         display: flex;
         flex-direction: column;
