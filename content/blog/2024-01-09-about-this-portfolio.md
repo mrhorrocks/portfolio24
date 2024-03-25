@@ -8,37 +8,38 @@ featuredArticle: true
 featuredImage: /images/uploads/ed209-figma.png
 featuredImageAltText: Nuxt, Git, Netlify & Decap CMS
 ---
-## 2024, I use...
+
+## A summary of my current tech, & why I use it.
 
 ### Nuxt 3
 
-* Static Site Generation (SSG)
-* Single-page application (SPA)
-* Project structure
-* Intelligent defaults
-* Scalability
-* Nuxt Content v3
+- Static Site Generation (SSG)
+- Single-page application (SPA)
+- Project structure
+- Intelligent defaults
+- Scalability
+- Nuxt Content v3
 
-- - -
+---
 
 ### Git, Netlify & Continuous Deployment
 
-* Structured development, easy to publish
+- Structured development, easy to publish
 
-- - -
+---
 
 ### Netlify
 
-* Free
-* Easy to configure
-* Serverless
-* Cloud hosted
-* Continuous deployment
-* CMS authentication
+- Free
+- Easy to configure
+- Serverless
+- Cloud hosted
+- Continuous deployment
+- CMS authentication
 
-- - -
+---
 
 ### Decap CMS
 
-* Content is saved the Git repo
-* Easy to configure with Netlify
+- Content is saved the Git repo
+- Easy to configure with Netlify
