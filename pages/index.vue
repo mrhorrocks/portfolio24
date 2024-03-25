@@ -171,9 +171,7 @@ h1.site-headline {
   position: relative;
   z-index: 1;
   font-family: "Impact", RobotoCondensed-Black, "Arial Narrow Bold";
-  // font-family: "Monomaniac", RobotoCondensed-Black, "Arial Narrow Bold";
   font-size: clamp(2.58rem, 11vw, 10rem); // Impact
-  // font-size: clamp(2.58rem, 10.1vw, 9rem); // Monomaniac
   margin-bottom: 1rem;
   font-weight: normal;
   text-align: center;
@@ -202,9 +200,7 @@ h2.sub-text {
   position: relative;
   z-index: 1;
   font-family: "Impact", RobotoCondensed-Black, "Arial Narrow Bold", sans-serif;
-  // font-family: "Monomaniac", Impact, RobotoCondensed-Black, "Arial Narrow Bold";
   font-size: clamp(1rem, 2.8vw, 2.15rem); // Impact
-  // font-size: clamp(0.95rem, 2.8vw, 2.205rem); // Monomaniac
   font-weight: normal;
   margin: 0 0 0 0;
   padding: 0;
@@ -246,10 +242,6 @@ h2.sub-text {
     right: 0px;
     width: 400px;
   }
-  // @media (min-width: 992px) {
-  //   width: 600px;
-  //   right: 0;
-  // }
   @media (min-width: 1024px) {
     top: 190px;
     width: 400px;
@@ -273,7 +265,6 @@ h2.sub-text {
   margin: 0 0 0 0;
   @media (min-width: 768px) {
     text-align: left;
-    // margin: 0 0 0 1rem;
   }
   img {
     margin: 0.25rem;
