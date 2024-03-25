@@ -7,7 +7,7 @@ const props = defineProps({
   },
   text: {
     type: String,
-    default: "Default Content",
+    default: "Button text",
   },
   url: String,
   default: "/",
