@@ -58,44 +58,7 @@ const {
         </div>
 
         <!-- Tech logos -->
-        <div class="tech-logos">
-          <img
-            src="/img/homepage/tech_logos/Html5.png"
-            width="40px"
-            height="40px"
-            alt="Html5"
-          />
-          <img
-            src="/img/homepage/tech_logos/CSS3.png"
-            width="40px"
-            height="40px"
-            alt="CSS3"
-          />
-          <img
-            src="/img/homepage/tech_logos/Sass.png"
-            width="40px"
-            height="40px"
-            alt="Sass"
-          />
-          <img
-            src="/img/homepage/tech_logos/Nuxt.png"
-            width="40px"
-            height="40px"
-            alt="Nuxt"
-          />
-          <img
-            src="/img/homepage/tech_logos/JS.png"
-            width="40px"
-            height="40px"
-            alt="JS"
-          />
-          <img
-            src="/img/homepage/tech_logos/Decap.png"
-            width="40px"
-            height="40px"
-            alt="Decap"
-          />
-        </div>
+        <TechBadges />
       </div>
 
       <!-- Thumbnails -->
@@ -204,21 +167,6 @@ h2.sub-text {
     top: 90px;
     right: 70px;
     width: 600px;
-  }
-}
-.tech-logos {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 1rem 0;
-  margin: 0 0 0 0;
-  @media (min-width: 768px) {
-    text-align: left;
-  }
-  img {
-    margin: 0.25rem;
-    width: 40px;
-    border-radius: 0.5rem;
   }
 }
 .thumbnail-container {
