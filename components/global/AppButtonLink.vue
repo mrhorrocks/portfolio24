@@ -7,7 +7,7 @@ const props = defineProps({
   },
   text: {
     type: String,
-    default: "Default Content",
+    default: "Button text",
   },
   url: String,
   default: "/",
@@ -15,7 +15,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <NuxtLink :to="url" class="app-button">{{ text }} ></NuxtLink>
+  <NuxtLink :to="url" class="app-button">{{ text }} >></NuxtLink>
 </template>
 
 <style lang="scss">

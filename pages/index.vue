@@ -14,6 +14,16 @@ if (location.href.indexOf("#invite_token") !== -1) {
   const urlSplit: string[] = document.URL.split("#");
   window.location.href = `/admin/#${urlSplit[1]}`;
 }
+
+// GET THUMBNAIL DATA
+const {
+  data: homepageData,
+  pending,
+  error,
+} = await useFetch(
+  "https://mrhorrocks.github.io/data/mhox/mhox-thumbnails.json"
+);
+// import homepageData from "https://mrhorrocks.github.io/data/mhox/mhox-thumbnails.json";
 </script>
 
 <template>
@@ -45,6 +55,13 @@ if (location.href.indexOf("#invite_token") !== -1) {
         <!-- Hero image-->
         <div class="hero-image">
           <!-- Image bg-->
+          <video width="738" height="743" muted loop autoplay>
+            <source
+              src="/public/img/homepage/ed209-video.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         <!-- Tech logos -->
@@ -91,69 +108,14 @@ if (location.href.indexOf("#invite_token") !== -1) {
       <!-- Thumbnails -->
       <div class="col-span-3">
         <div class="thumbnail-container">
-          <div class="thumb">
-            <a
-              href="/blog/2024-01-09-about-this-portfolio/"
-              class="thumb-link"
-              title="Portfolio 2024"
-            >
-              <div class="mask">
-                <h3>Portfolio 2024</h3>
-                <p>
-                  A summary of my current tech,<br />
-                  & why I use it.
-                </p>
-                <AppButtonLink
-                  text="Go to the article"
-                  url="/blog/2024-01-09-about-this-portfolio/"
-                />
-              </div>
-            </a>
-          </div>
-          <div class="thumb">
-            <a href="/cars" class="thumb-link" title="CarDealer">
-              <div class="mask">
-                <h3>CarDealer</h3>
-                <p>
-                  Built from a Figma design.<br />
-                  Data from JSON.
-                </p>
-                <AppButtonLink text="Visit the site" url="/cars" />
-              </div>
-            </a>
-          </div>
-          <div class="thumb">
-            <a
-              href="/blog/2024-01-18-graphics/"
-              class="thumb-link"
-              title="Graphics"
-            >
-              <div class="mask">
-                <h3>Graphics</h3>
-                <p>From the archive</p>
-                <AppButtonLink
-                  text="Go to the article"
-                  url="http://localhost:3000/blog/2024-01-18-graphics/"
-                />
-              </div>
-            </a>
-          </div>
-          <div class="thumb">
-            <a
-              href="https://mhox-good-things.netlify.app/"
-              class="thumb-link"
-              title="Good Things Foundation"
-            >
-              <div class="mask">
-                <h3>Get Online Week</h3>
-                <p>Responsive, promotional landing page</p>
-                <AppButtonLink
-                  text="Visit the site"
-                  url="http://localhost:3000/blog/2024-01-18-graphics/"
-                />
-              </div>
-            </a>
-          </div>
+          <HomePageThumb
+            v-for="item in homepageData.thumbnails"
+            :key="item.id"
+            :href="item.href"
+            :title="item.title"
+            :description="item.description"
+            :buttontext="item.buttontext"
+          />
         </div>
       </div>
     </div>
@@ -161,15 +123,11 @@ if (location.href.indexOf("#invite_token") !== -1) {
 </template>
 
 <style lang="scss">
-@import "@/assets/scss/partials/colours";
-
 h1.site-headline {
   position: relative;
   z-index: 1;
   font-family: "Impact", RobotoCondensed-Black, "Arial Narrow Bold";
-  // font-family: "Monomaniac", RobotoCondensed-Black, "Arial Narrow Bold";
   font-size: clamp(2.58rem, 11vw, 10rem); // Impact
-  // font-size: clamp(2.58rem, 10.1vw, 9rem); // Monomaniac
   margin-bottom: 1rem;
   font-weight: normal;
   text-align: center;
@@ -198,9 +156,7 @@ h2.sub-text {
   position: relative;
   z-index: 1;
   font-family: "Impact", RobotoCondensed-Black, "Arial Narrow Bold", sans-serif;
-  // font-family: "Monomaniac", Impact, RobotoCondensed-Black, "Arial Narrow Bold";
   font-size: clamp(1rem, 2.8vw, 2.15rem); // Impact
-  // font-size: clamp(0.95rem, 2.8vw, 2.205rem); // Monomaniac
   font-weight: normal;
   margin: 0 0 0 0;
   padding: 0;
@@ -232,7 +188,7 @@ h2.sub-text {
   z-index: 0;
   width: 300px;
   aspect-ratio: 738 / 743;
-  background-image: url("/img/homepage/ed209.gif");
+  // background-image: url("/img/homepage/ed209.gif");
   background-size: cover;
   margin: 0 auto;
   transition: 1s;
@@ -242,10 +198,6 @@ h2.sub-text {
     right: 0px;
     width: 400px;
   }
-  // @media (min-width: 992px) {
-  //   width: 600px;
-  //   right: 0;
-  // }
   @media (min-width: 1024px) {
     top: 190px;
     width: 400px;
@@ -269,7 +221,6 @@ h2.sub-text {
   margin: 0 0 0 0;
   @media (min-width: 768px) {
     text-align: left;
-    // margin: 0 0 0 1rem;
   }
   img {
     margin: 0.25rem;
@@ -291,93 +242,6 @@ h2.sub-text {
   }
   @media (min-width: 1024px) {
     width: 63%;
-  }
-  .thumb {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: calc(50% - 1rem);
-    aspect-ratio: 4 / 2.6;
-    max-width: 330px;
-    margin: 0.5rem;
-    background-color: #d5d5d5;
-    border-radius: 0.3rem;
-    transition: 1s;
-    overflow: hidden;
-    background-position: center;
-    background-size: 101%;
-    transition: 0.25s;
-    &:hover {
-      background-size: 110%;
-    }
-    &:nth-of-type(1) {
-      background-image: url("/img/homepage/thumbnails/portfolio2024.png");
-    }
-    &:nth-of-type(2) {
-      background-image: url("/img/homepage/thumbnails/cardealer.png");
-    }
-    &:nth-of-type(3) {
-      background-image: url("/img/homepage/thumbnails/portfolio-old.png");
-    }
-    &:nth-of-type(4) {
-      background-image: url("/img/homepage/thumbnails/good-things-thumb.png");
-    }
-    > a {
-      display: block;
-      width: 100%;
-      height: 100%;
-      .mask {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: -100%;
-        width: 100%;
-        height: 100%;
-        color: $light-grey;
-        transition: 0.15s;
-
-        h3 {
-          display: none;
-          @media (min-width: 1200px) {
-            display: block;
-            background-color: #000000;
-            padding: 0.5rem;
-            text-align: center;
-            margin: 0 0 0.5rem 0;
-            font-weight: bold;
-          }
-        }
-
-        p {
-          display: none;
-          @media (min-width: 1200px) {
-            display: block;
-            text-align: center;
-            background-color: #000000;
-            padding: 0.5rem;
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-            line-height: 1.2;
-          }
-        }
-      }
-      &:hover .mask {
-        top: 0%;
-        // filter: blur(100px);
-        background-color: #ffffff95;
-        backdrop-filter: blur(1px);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      width: calc(33% - 2rem);
-    }
-    @media (min-width: 1440px) {
-      width: calc(50% - 2rem);
-    }
   }
 }
 </style>
