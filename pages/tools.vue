@@ -6,7 +6,7 @@ const {
   data: toolsData,
   pending,
   error,
-} = await useFetch("https://mrhorrocks.github.io/data/mhox/mhoxTools.json");
+} = await useFetch("https://mrhorrocks.github.io/data/mhox/mhox-tools.json");
 </script>
 
 <template>
