@@ -1,10 +1,18 @@
 <template>
   <div class="social-badges">
     <a href="https://www.linkedin.com/in/mrmarkhorrocks/" title="Linked In">
-      <img src="/img/homepage/linkedin.png" alt="Linked In"
+      <img
+        src="/img/homepage/linkedin.png"
+        alt="Linked In"
+        width="26px"
+        height="26px"
     /></a>
     <a href="https://github.com/mrhorrocks" title="Github">
-      <img src="/img/homepage/github.png" alt="Github"
+      <img
+        src="/img/homepage/github.png"
+        alt="Github"
+        width="26px"
+        height="26px"
     /></a>
   </div>
 </template>
