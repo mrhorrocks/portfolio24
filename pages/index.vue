@@ -218,6 +218,7 @@ h2.sub-text {
   img {
     margin: 0.25rem;
     width: 40px;
+    border-radius: 0.5rem;
   }
 }
 .thumbnail-container {
