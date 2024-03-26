@@ -14,8 +14,16 @@ if (location.href.indexOf("#invite_token") !== -1) {
   const urlSplit: string[] = document.URL.split("#");
   window.location.href = `/admin/#${urlSplit[1]}`;
 }
-// GET THUMB DATA
-import homepageData from "~/assets/data/mhox-homepage.json";
+
+// GET THUMBNAIL DATA
+const {
+  data: homepageData,
+  pending,
+  error,
+} = await useFetch(
+  "https://mrhorrocks.github.io/data/mhox/mhox-thumbnails.json"
+);
+// import homepageData from "https://mrhorrocks.github.io/data/mhox/mhox-thumbnails.json";
 </script>
 
 <template>
@@ -47,6 +55,13 @@ import homepageData from "~/assets/data/mhox-homepage.json";
         <!-- Hero image-->
         <div class="hero-image">
           <!-- Image bg-->
+          <video width="738" height="743" muted loop autoplay>
+            <source
+              src="/public/img/homepage/ed209-video.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         <!-- Tech logos -->
@@ -173,7 +188,7 @@ h2.sub-text {
   z-index: 0;
   width: 300px;
   aspect-ratio: 738 / 743;
-  background-image: url("/img/homepage/ed209.gif");
+  // background-image: url("/img/homepage/ed209.gif");
   background-size: cover;
   margin: 0 auto;
   transition: 1s;
