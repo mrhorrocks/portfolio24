@@ -1,9 +1,6 @@
-<script setup lang="ts">
+<script setup>
 useHead({
   titleTemplate: "Home - %s",
-  // script: [
-  //   { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
-  // ],
 });
 definePageMeta({
   layout: "homepage",
@@ -11,8 +8,8 @@ definePageMeta({
 
 // REDIRECT
 if (location.href.indexOf("#invite_token") !== -1) {
-  const urlSplit: string[] = document.URL.split("#");
-  window.location.href = `/admin/#${urlSplit[1]}`;
+  var urlSplit = document.URL.split("#");
+  window.location.href = "/admin/#" + urlSplit[1];
 }
 
 // GET THUMBNAIL DATA
@@ -23,7 +20,6 @@ const {
 } = await useFetch(
   "https://mrhorrocks.github.io/data/mhox/mhox-thumbnails.json"
 );
-// import homepageData from "https://mrhorrocks.github.io/data/mhox/mhox-thumbnails.json";
 </script>
 
 <template>
@@ -56,53 +52,13 @@ const {
         <div class="hero-image">
           <!-- Image bg-->
           <video width="738" height="743" muted loop autoplay>
-            <source
-              src="/public/img/homepage/ed209-video.mp4"
-              type="video/mp4"
-            />
+            <source src="/img/homepage/ed209-video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
 
         <!-- Tech logos -->
-        <div class="tech-logos">
-          <img
-            src="/img/homepage/tech_logos/Html5.png"
-            width="40px"
-            height="40px"
-            alt="Html5"
-          />
-          <img
-            src="/img/homepage/tech_logos/CSS3.png"
-            width="40px"
-            height="40px"
-            alt="CSS3"
-          />
-          <img
-            src="/img/homepage/tech_logos/Sass.png"
-            width="40px"
-            height="40px"
-            alt="Sass"
-          />
-          <img
-            src="/img/homepage/tech_logos/Nuxt.png"
-            width="40px"
-            height="40px"
-            alt="Nuxt"
-          />
-          <img
-            src="/img/homepage/tech_logos/JS.png"
-            width="40px"
-            height="40px"
-            alt="JS"
-          />
-          <img
-            src="/img/homepage/tech_logos/Decap.png"
-            width="40px"
-            height="40px"
-            alt="Decap"
-          />
-        </div>
+        <TechBadges />
       </div>
 
       <!-- Thumbnails -->
@@ -166,7 +122,6 @@ h2.sub-text {
   span {
     display: flex;
     justify-content: center;
-    margin: 0 0 0.25rem 0;
     @media (min-width: 768px) {
       justify-content: left;
     }
@@ -211,20 +166,6 @@ h2.sub-text {
     top: 90px;
     right: 70px;
     width: 600px;
-  }
-}
-.tech-logos {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 1rem 0;
-  margin: 0 0 0 0;
-  @media (min-width: 768px) {
-    text-align: left;
-  }
-  img {
-    margin: 0.25rem;
-    width: 40px;
   }
 }
 .thumbnail-container {
