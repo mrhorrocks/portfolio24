@@ -122,7 +122,6 @@ h2.sub-text {
   span {
     display: flex;
     justify-content: center;
-    margin: 0 0 0.25rem 0;
     @media (min-width: 768px) {
       justify-content: left;
     }
