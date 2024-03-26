@@ -1,9 +1,6 @@
-<script setup lang="ts">
+<script setup>
 useHead({
   titleTemplate: "Home - %s",
-  // script: [
-  //   { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
-  // ],
 });
 definePageMeta({
   layout: "homepage",
@@ -11,8 +8,8 @@ definePageMeta({
 
 // REDIRECT
 if (location.href.indexOf("#invite_token") !== -1) {
-  const urlSplit: string[] = document.URL.split("#");
-  window.location.href = `/admin/#${urlSplit[1]}`;
+  var urlSplit = document.URL.split("#");
+  window.location.href = "/admin/#" + urlSplit[1];
 }
 
 // GET THUMBNAIL DATA
@@ -23,7 +20,6 @@ const {
 } = await useFetch(
   "https://mrhorrocks.github.io/data/mhox/mhox-thumbnails.json"
 );
-// import homepageData from "https://mrhorrocks.github.io/data/mhox/mhox-thumbnails.json";
 </script>
 
 <template>
@@ -56,10 +52,7 @@ const {
         <div class="hero-image">
           <!-- Image bg-->
           <video width="738" height="743" muted loop autoplay>
-            <source
-              src="/public/img/homepage/ed209-video.mp4"
-              type="video/mp4"
-            />
+            <source src="/img/homepage/ed209-video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
