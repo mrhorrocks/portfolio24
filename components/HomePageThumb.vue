@@ -25,9 +25,7 @@ const props = defineProps({
     <a :href="href" class="thumb-link" title="Portfolio 2024">
       <div class="mask">
         <h3>{{ title }}</h3>
-        <p>
-          {{ description }}
-        </p>
+        <p v-html="description"></p>
         <AppButtonLink :text="buttontext" :url="href" />
       </div>
       <MoreInfo />
