@@ -9,13 +9,15 @@ const props = defineProps({
     type: String,
     default: "Button text",
   },
-  url: String,
-  default: "/",
+  url: {
+    type: String,
+    default: "/",
+  },
 });
 </script>
 
 <template>
-  <NuxtLink :to="url" class="app-button">{{ text }} >></NuxtLink>
+  <NuxtLink :to="url" class="app-button">&lt;&lt; {{ text }} >></NuxtLink>
 </template>
 
 <style lang="scss">
