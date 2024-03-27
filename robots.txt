@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: 
 Disallow: /admin/
 Disallow: /api/
-Sitemap: sitemap.xml
+Sitemap: https://mhox.net/sitemap.xml

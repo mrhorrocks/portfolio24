@@ -1,5 +1,7 @@
 # Portfolio 2024
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/58ca1081-1cb9-4666-95fb-14f16ccd77fb/deploy-status)](https://app.netlify.com/sites/mhox/deploys)
+
 ![A sceenshot of this repo when sucessfully built](https://github.com/mrhorrocks/mrhorrocks.github.io/blob/main/img/portfolio-2024-screenshot.png?raw=true "mhox.net")
 
 Visit the [Nuxt documentation](https://nuxt.com/) here.
