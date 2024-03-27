@@ -1,32 +1,25 @@
 <script setup>
 // Define props
 const props = defineProps({
-  title: {
-    type: String,
-    default: "Default Title",
-  },
   text: {
     type: String,
     default: "Button text",
-  },
-  url: {
-    type: String,
-    default: "/",
   },
 });
 </script>
 
 <template>
-  <NuxtLink :to="url" class="app-button">&lt;&lt; {{ text }} >></NuxtLink>
+  <button class="app-dummy-button">&lt;&lt; {{ text }} >></button>
 </template>
 
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
 
-.app-button {
+.app-dummy-button {
   display: inline-block;
   padding: 0.5rem;
   font-size: 0.8rem;
+  font-family: RobotoCondensed-Regular;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -34,7 +27,8 @@ const props = defineProps({
   background-color: #000;
   box-shadow: 0px 3px 3px #737373;
   transition: 0.2s;
-  // font-weight: bold;
+  border: 0;
+  cursor: pointer;
   &:hover {
     background-color: #b6b600;
     color: black;
