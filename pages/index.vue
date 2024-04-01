@@ -108,7 +108,7 @@ h2.sub-text {
   position: relative;
   z-index: 1;
   font-family: "Impact", RobotoCondensed-Black, "Arial Narrow Bold", sans-serif;
-  font-size: clamp(1rem, 2.8vw, 2.15rem); // Impact
+  font-size: clamp(1.4rem, 2.8vw, 2.5rem); // Impact
   font-weight: normal;
   margin: 0 0 0 0;
   padding: 0;
@@ -123,11 +123,11 @@ h2.sub-text {
     }
     &.bullet {
       display: none;
-
+      // ◯
       @media (min-width: 768px) {
         display: block;
-        font-size: clamp(2.2rem, 6vw, 4.4rem);
-        line-height: 0.65;
+        font-size: clamp(2.2rem, 6vw, 5rem);
+        line-height: clamp(1.4rem, 3.5vw, 3.2rem);
         -webkit-text-stroke: 2px white;
         -webkit-text-fill-color: #323232;
       }
