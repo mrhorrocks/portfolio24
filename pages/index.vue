@@ -37,15 +37,11 @@ const {
         <!-- Subtext -->
         <h2 class="sub-text">
           <span>
-            <span class="bullet">&middot;</span>
-            <!-- ◯  -->
-            I build websites with Nuxt, Netlify & Decap CMS</span
-          >
+            <span class="bullet">&middot;</span>I build websites with Nuxt
+          </span>
           <span>
-            <span class="bullet">&middot;</span>
-            <!-- ◯  -->
-            Based in North- West England</span
-          >
+            <span class="bullet">&middot;</span>Based in North- West England
+          </span>
         </h2>
 
         <!-- Hero image-->
