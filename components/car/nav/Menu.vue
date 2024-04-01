@@ -40,10 +40,10 @@ export default {
             alt="CarDealer"
             class="car-logo"
           />
-          <div class="fav-count">
+          <!-- <div class="fav-count">
             <CarFavouriteStar />
             <i class="fa fa-eye" aria-hidden="true"></i>
-          </div>
+          </div> -->
         </div>
         <!-- End-left-nav -->
 
@@ -169,16 +169,16 @@ nav#car-nav {
           width: 200px;
         }
       }
-      .fav-count {
-        display: none;
-        @media (min-width: 768px) {
-          display: flex;
-          margin-left: 2rem;
-        }
-        i {
-          margin-right: 0.25rem;
-        }
-      }
+      // .fav-count {
+      //   display: none;
+      //   @media (min-width: 768px) {
+      //     display: flex;
+      //     margin-left: 2rem;
+      //   }
+      //   i {
+      //     margin-right: 0.25rem;
+      //   }
+      // }
     }
     // RIGHT-NAV
     .right-nav {
