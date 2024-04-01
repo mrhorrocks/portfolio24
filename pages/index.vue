@@ -36,16 +36,8 @@ const {
 
         <!-- Subtext -->
         <h2 class="sub-text">
-          <span>
-            <span class="bullet">&middot;</span>
-            <!-- ◯  -->
-            I build websites with Nuxt, Netlify & Decap CMS</span
-          >
-          <span>
-            <span class="bullet">&middot;</span>
-            <!-- ◯  -->
-            Based in North- West England</span
-          >
+          <span>I build websites with Nuxt </span>
+          <span>Based in North- West England </span>
         </h2>
 
         <!-- Hero image-->
@@ -64,14 +56,17 @@ const {
       <!-- Thumbnails -->
       <div class="col-span-3">
         <div class="thumbnail-container">
-          <HomePageThumb
-            v-for="item in homepageData.thumbnails"
-            :key="item.id"
-            :href="item.href"
-            :title="item.title"
-            :description="item.description"
-            :buttontext="item.buttontext"
-          />
+          <h3>Recent stuff...</h3>
+          <div class="thumbnails">
+            <HomePageThumb
+              v-for="item in homepageData.thumbnails"
+              :key="item.id"
+              :href="item.href"
+              :title="item.title"
+              :description="item.description"
+              :buttontext="item.buttontext"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -112,7 +107,7 @@ h2.sub-text {
   position: relative;
   z-index: 1;
   font-family: "Impact", RobotoCondensed-Black, "Arial Narrow Bold", sans-serif;
-  font-size: clamp(1rem, 2.8vw, 2.15rem); // Impact
+  font-size: clamp(1.4rem, 2.8vw, 2.5rem); // Impact
   font-weight: normal;
   margin: 0 0 0 0;
   padding: 0;
@@ -127,11 +122,11 @@ h2.sub-text {
     }
     &.bullet {
       display: none;
-
+      // ◯
       @media (min-width: 768px) {
         display: block;
-        font-size: clamp(2.2rem, 6vw, 4.4rem);
-        line-height: 0.65;
+        font-size: clamp(2.2rem, 6vw, 5rem);
+        line-height: clamp(1.4rem, 3.5vw, 3.2rem);
         -webkit-text-stroke: 2px white;
         -webkit-text-fill-color: #323232;
       }
@@ -170,19 +165,37 @@ h2.sub-text {
 }
 .thumbnail-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  transition: 0.5s;
+  flex-direction: column;
+  > h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+    padding: 0;
+    font-weight: normal;
+    text-align: center;
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+  }
   @media (min-width: 768px) {
     width: 58%;
     justify-content: flex-start;
   }
   @media (min-width: 1024px) {
     width: 63%;
+  }
+  .thumbnails {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    transition: 0.5s;
+
+    @media (min-width: 768px) {
+      justify-content: flex-start;
+    }
   }
 }
 </style>

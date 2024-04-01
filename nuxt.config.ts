@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       strict: false,
     },
   },
-  sourcemap: false,
+  sourcemap: true,
 
   experimental: {
     payloadExtraction: true

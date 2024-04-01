@@ -95,7 +95,6 @@ export default {
       >
         <NuxtLink to="/" title="Home">Home</NuxtLink>
         <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
-        <NuxtLink to="/cars" title="CarDealer">CarDealer</NuxtLink>
         <NuxtLink to="/tools" title="Tools">Tools</NuxtLink>
       </div>
     </div>
@@ -105,7 +104,6 @@ export default {
     <div v-if="mobileMenuOpen" class="mobilenavlinks">
       <NuxtLink to="/" title="Home">Home</NuxtLink>
       <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
-      <NuxtLink to="/cars" title="CarDealer">CarDealer</NuxtLink>
       <NuxtLink to="/tools" title="Tools">Tools</NuxtLink>
     </div>
   </nav>
