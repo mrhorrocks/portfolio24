@@ -68,11 +68,9 @@
   margin: 0;
   @media (min-width: 768px) {
     justify-content: flex-start;
-    margin-left: 1.5vw;
   }
   @media (min-width: 1200px) {
     justify-content: flex-start;
-    margin-left: 1.3rem;
   }
   .badge {
     position: relative;

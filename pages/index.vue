@@ -36,12 +36,8 @@ const {
 
         <!-- Subtext -->
         <h2 class="sub-text">
-          <span>
-            <span class="bullet">&middot;</span>I build websites with Nuxt
-          </span>
-          <span>
-            <span class="bullet">&middot;</span>Based in North- West England
-          </span>
+          <span>I build websites with Nuxt </span>
+          <span>Based in North- West England </span>
         </h2>
 
         <!-- Hero image-->
@@ -60,14 +56,17 @@ const {
       <!-- Thumbnails -->
       <div class="col-span-3">
         <div class="thumbnail-container">
-          <HomePageThumb
-            v-for="item in homepageData.thumbnails"
-            :key="item.id"
-            :href="item.href"
-            :title="item.title"
-            :description="item.description"
-            :buttontext="item.buttontext"
-          />
+          <h3>Recent stuff...</h3>
+          <div class="thumbnails">
+            <HomePageThumb
+              v-for="item in homepageData.thumbnails"
+              :key="item.id"
+              :href="item.href"
+              :title="item.title"
+              :description="item.description"
+              :buttontext="item.buttontext"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -166,19 +165,37 @@ h2.sub-text {
 }
 .thumbnail-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  transition: 0.5s;
+  flex-direction: column;
+  > h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+    padding: 0;
+    font-weight: normal;
+    text-align: center;
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+  }
   @media (min-width: 768px) {
     width: 58%;
     justify-content: flex-start;
   }
   @media (min-width: 1024px) {
     width: 63%;
+  }
+  .thumbnails {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    transition: 0.5s;
+
+    @media (min-width: 768px) {
+      justify-content: flex-start;
+    }
   }
 }
 </style>
