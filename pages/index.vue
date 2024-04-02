@@ -39,7 +39,6 @@ const {
           <span>I build websites with Nuxt </span>
           <span>Based in North- West England </span>
         </h2>
-
         <!-- Hero image-->
         <div class="hero-image">
           <!-- Image bg-->
