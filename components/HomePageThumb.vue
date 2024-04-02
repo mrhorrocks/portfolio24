@@ -43,7 +43,7 @@ const props = defineProps({
   width: calc(50% - 1rem);
   aspect-ratio: 4 / 2.6;
   max-width: 330px;
-  margin: 0 0.5rem;
+  margin: 0.5rem;
   background-color: #d5d5d5;
   border-radius: 0.3rem;
   transition: 1s;
