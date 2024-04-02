@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  titleTemplate: "Home - %s",
+  titleTemplate: "%s",
 });
 definePageMeta({
   layout: "homepage",
