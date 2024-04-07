@@ -1,13 +1,15 @@
 <template>
-  <TheHeader />
-  <Body class="homepage">
-    <main class="homepage">
-      <!-- Scroll to top -->
-      <ScrollToTopButton />
-      <slot />
-    </main>
-    <TheFooter />
-  </Body>
+  <div class="app-height">
+    <TheHeader />
+    <Body class="homepage">
+      <main class="homepage">
+        <!-- Scroll to top -->
+        <ScrollToTopButton />
+        <slot />
+      </main>
+      <TheFooter />
+    </Body>
+  </div>
 </template>
 
 <style>

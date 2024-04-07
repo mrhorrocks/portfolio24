@@ -35,17 +35,25 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.app-height {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 body {
   font-family: "RobotoCondensed-Regular", Arial, Helvetica, sans-serif;
   background-color: darken($body-bg, 10%);
   main {
     position: relative;
     padding-top: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     &.homepage {
-      display: flex;
-      flex-direction: column;
       background-color: #363636;
-      padding-bottom: 5rem;
+      /* padding-bottom: 5rem; */
     }
     &.default {
       padding-bottom: 5rem;
