@@ -23,7 +23,7 @@ featuredImageAltText: Nuxt, Git, Netlify & Decap CMS
 
 ### Netlify
 
-* Easy deployment workflow through continuous deployment
+* Easy deployment workflow using continuous deployment and GitHub
 * Easy to configure
 * Serverless for app speed
 * In the Cloud
