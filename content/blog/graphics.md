@@ -13,4 +13,6 @@ featuredImageAltText: Graphics
 
 ![A screenshot of a previous Flash driven portfolio](/images/uploads/portfolio-2008.jpg "A screenshot of a previous Flash driven portfolio")
 
-![](/images/uploads/ed209-video.mp4)
+### Mojo Bar & Tapas Website
+
+![The Mojo Bar and Tapas website](/images/uploads/bigmojo.png "Mojo Bar and Tapas website")
