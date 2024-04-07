@@ -39,17 +39,19 @@ const {
           <span>I build websites with Nuxt </span>
           <span>Based in North- West England </span>
         </h2>
-        <!-- Hero image-->
-        <div class="hero-image">
-          <!-- Image bg-->
-          <video width="738" height="743" muted loop autoplay>
-            <source src="/img/homepage/ed209-video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
 
         <!-- Tech logos -->
         <TechBadges />
+        <!-- Hero image-->
+
+        <div class="hero-image">
+          <!-- Image bg-->
+          <VideoPlayer
+            src="/img/homepage/ed209-video.mp4"
+            width="738"
+            height="743"
+          />
+        </div>
       </div>
 
       <!-- Thumbnails -->
@@ -134,7 +136,7 @@ h2.sub-text {
 }
 .hero-image {
   position: relative;
-  z-index: 0;
+  z-index: 100;
   width: 300px;
   aspect-ratio: 738 / 743;
   // background-image: url("/img/homepage/ed209.gif");
