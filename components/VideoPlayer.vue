@@ -46,9 +46,9 @@ const props = defineProps({
       <span v-if="!isPlaying">
         <!-- PLAY -->
         <svg
-          width="50"
-          height="50"
-          fill="currentColor"
+          width="30"
+          height="30"
+          fill="#b6b600"
           version="1.1"
           viewBox="0 0 50 50"
           xmlns="http://www.w3.org/2000/svg"
@@ -66,9 +66,9 @@ const props = defineProps({
       <span v-if="isPlaying">
         <!-- PAUSE -->
         <svg
-          width="50"
-          height="50"
-          fill="currentColor"
+          width="30"
+          height="30"
+          fill="#b6b600"
           version="1.1"
           viewBox="0 0 50 50"
           xmlns="http://www.w3.org/2000/svg"
@@ -92,24 +92,23 @@ const props = defineProps({
 <style lang="scss">
 button.video-button {
   position: absolute;
-  right: 0;
+  z-index: 100;
+  right: 1rem;
   top: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 0;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background-color: white;
+  background-color: #000;
   cursor: pointer;
   span {
     display: block;
-    width: 50px;
-    height: 50px;
   }
   &:hover {
-    background-color: #b6b600;
+    background-color: #fff;
   }
 }
 </style>

@@ -87,6 +87,7 @@ h1.site-headline {
   padding: 0 0;
   color: #ffffff;
   text-shadow: 0px 4px 4px #00000025;
+  width: fit-content;
   @media (min-width: 768px) {
     text-align: left;
   }
@@ -110,33 +111,27 @@ h2.sub-text {
   font-family: "Impact", RobotoCondensed-Black, "Arial Narrow Bold", sans-serif;
   font-size: clamp(1.4rem, 2.8vw, 2.5rem); // Impact
   font-weight: normal;
-  margin: 0 0 0 0;
+  margin: 0 auto;
   padding: 0;
   line-height: 1.5;
+  width: fit-content;
   color: #ffffff;
   text-shadow: 0px 4px 4px #00000025;
+  @media (min-width: 768px) {
+    margin: 0;
+  }
   span {
     display: flex;
     justify-content: center;
     @media (min-width: 768px) {
       justify-content: left;
-    }
-    &.bullet {
-      display: none;
-      // ◯
-      @media (min-width: 768px) {
-        display: block;
-        font-size: clamp(2.2rem, 6vw, 5rem);
-        line-height: clamp(1.4rem, 3.5vw, 3.2rem);
-        -webkit-text-stroke: 2px white;
-        -webkit-text-fill-color: #323232;
-      }
+      margin: 0;
     }
   }
 }
 .hero-image {
   position: relative;
-  z-index: 100;
+  z-index: 0;
   width: 300px;
   aspect-ratio: 738 / 743;
   // background-image: url("/img/homepage/ed209.gif");

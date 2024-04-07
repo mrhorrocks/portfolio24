@@ -121,10 +121,6 @@ const props = defineProps({
       backdrop-filter: blur(1px);
     }
   }
-
-  @media (min-width: 1024px) {
-    width: calc(33% - 2rem);
-  }
   @media (min-width: 1440px) {
     width: calc(50% - 2rem);
   }
