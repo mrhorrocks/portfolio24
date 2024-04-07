@@ -65,9 +65,11 @@
   z-index: 1;
   text-align: center;
   padding: 1rem 0;
-  margin: 0;
+  margin: 0 auto;
+  width: fit-content;
   @media (min-width: 768px) {
     justify-content: flex-start;
+    margin: 0;
   }
   @media (min-width: 1200px) {
     justify-content: flex-start;

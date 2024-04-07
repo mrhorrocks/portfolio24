@@ -1,16 +1,19 @@
 <template>
-  <button v-if="isVisible" @click="scrollToTop" class="scrollToTop">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="50"
-      height="50"
-      viewBox="0 0 24 24"
-    >
-      <path
-        fill="#000000"
-        d="M11 16h2v-4.2l1.6 1.6L16 12l-4-4l-4 4l1.4 1.4l1.6-1.6zm1 6q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22"
-      />
-    </svg>
+  <button v-if="isVisible" @click="scrollToTop" class="scroll-to-top">
+    <span>
+      <svg
+        width="50"
+        height="50"
+        version="1.1"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m10.8 16.8h2.4v-5.04l1.92 1.92 1.68-1.68-4.8-4.8-4.8 4.8 1.68 1.68 1.92-1.92zm1.2 7.2q-2.49 0-4.68-0.9456-2.19-0.9456-3.81-2.5644-1.62-1.62-2.5644-3.81-0.9444-2.19-0.9456-4.68 0-2.49 0.9456-4.68 0.9456-2.19 2.5644-3.81 1.62-1.62 3.81-2.5644 2.19-0.9444 4.68-0.9456 2.49 0 4.68 0.9456 2.19 0.9456 3.81 2.5644 1.62 1.62 2.5656 3.81 0.9456 2.19 0.9444 4.68 0 2.49-0.9456 4.68-0.9456 2.19-2.5644 3.81-1.62 1.62-3.81 2.5656-2.19 0.9456-4.68 0.9444"
+          stroke-width="1.2"
+        />
+      </svg>
+    </span>
   </button>
 </template>
 
@@ -43,17 +46,27 @@ export default {
 
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
-button.scrollToTop {
-  // background-color: $theme-colour-three;
-  background-color: white;
-  padding: 0;
+button.scroll-to-top {
   position: fixed;
-  width: 50px;
-  height: 50px;
   bottom: 5rem;
   right: 2rem;
-  border-radius: 50%;
-  border: 0;
   z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  span {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+  &:hover {
+    background-color: #b6b600;
+  }
 }
 </style>

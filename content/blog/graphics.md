@@ -2,7 +2,7 @@
 headline: Graphics
 title: Graphics
 description: From the Archive
-date: 2024-04-07T14:47:00.000Z
+date: 2024-01-09T15:34:17.109Z
 author: ""
 authorurl: https://github.com/mrhorrocks
 featuredArticle: false
@@ -11,6 +11,6 @@ featuredImageAltText: Graphics
 ---
 ### Blender, Flash, ActionScript, HTML, CSS
 
-![Previous Flash driven portfolio](/images/uploads/portfolio-2008.jpg "Previous Flash driven portfolio")
+![A screenshot of a previous Flash driven portfolio](/images/uploads/portfolio-2008.jpg "A screenshot of a previous Flash driven portfolio")
 
-![Mojo Bar and Tapas website](/images/uploads/bigmojo.png "Mojo Bar and Tapas website")
+![](/images/uploads/ed209-video.mp4)
