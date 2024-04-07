@@ -1,45 +1,39 @@
 ---
 headline: Portfolio 2024
 title: Portfolio 2024
-description: Nuxt, Git, Netlify & Decap CMS
+description: Nuxt, Sass, Git, Netlify
 date: 2024-01-09T15:34:17.109Z
 author: ""
 featuredArticle: true
 featuredImage: /images/uploads/ed209-figma.png
 featuredImageAltText: Nuxt, Git, Netlify & Decap CMS
 ---
-
-## A summary of my current tech, & why I use it.
+## Current Tech
 
 ### Nuxt 3
 
-- Static Site Generation (SSG)
-- Single-page application (SPA)
-- Project structure
-- Intelligent defaults
-- Scalability
-- Nuxt Content v3
+* Clean folder structure
+* Intelligent defaults
+* Static Site Generation (SSG)
+* Single-page application (SPA)
+* Easy to scale
+* Native Nuxt Content v3 module
 
----
-
-### Git, Netlify & Continuous Deployment
-
-- Structured development, easy to publish
-
----
+- - -
 
 ### Netlify
 
-- Free
-- Easy to configure
-- Serverless
-- Cloud hosted
-- Continuous deployment
-- CMS authentication
+* Very easy to deploy to. Just push to the main branch of your target repository.
+* Free
+* Easy to configure
+* Serverless for app speed
+* Cloud hosted
+* Continuous deployment made easy
+* CMS authentication
 
----
+- - -
 
 ### Decap CMS
 
-- Content is saved the Git repo
-- Easy to configure with Netlify
+* Content is saved the Git repository
+* Easy to configure using a single .yml file
