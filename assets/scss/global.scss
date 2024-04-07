@@ -53,10 +53,6 @@ body {
     flex-grow: 1;
     &.homepage {
       background-color: #363636;
-      /* padding-bottom: 5rem; */
-    }
-    &.default {
-      padding-bottom: 5rem;
     }
     @media (min-width: 400px) {
       padding-top: 3.5rem;
