@@ -16,7 +16,7 @@ featuredImageAltText: Nuxt, Git, Netlify & Decap CMS
 * Intelligent defaults
 * Static Site Generation (SSG)
 * Single-page application (SPA)
-* Easy to scale
+* Component based design
 * Native Nuxt Content v3 module
 
 - - -
