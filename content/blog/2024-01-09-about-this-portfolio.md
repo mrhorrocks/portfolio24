@@ -23,12 +23,10 @@ featuredImageAltText: Nuxt, Git, Netlify & Decap CMS
 
 ### Netlify
 
-* Very easy to deploy to. Just push to the main branch of your target repository.
-* Free
+* Easy deployment workflow through continuous deployment
 * Easy to configure
 * Serverless for app speed
-* Cloud hosted
-* Continuous deployment made easy
+* In the Cloud
 * CMS authentication
 
 - - -
