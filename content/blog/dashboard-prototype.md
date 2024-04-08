@@ -5,11 +5,11 @@ description: Figma, Nuxt, Chartjs, JSON data
 date: 2024-04-07T22:23:00.000Z
 featuredArticle: false
 ---
+## The Brief
 
-## The Goal
+Recreate the following using modern technologies. The end product must be responsive and cross browser compatible. The data must be sourced from an external JSON file.
 
-Recreate the following using modern technologies. The end product must be
-responsive and cross browser compatible. The data must be sourced from an external JSON file.
+![An old style dashboard](/images/uploads/dashboard-old-visual.png "An old style dashboard")
 
 ## The Wireframe
 
