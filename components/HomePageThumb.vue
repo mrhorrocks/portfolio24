@@ -69,6 +69,9 @@ const props = defineProps({
   &:nth-of-type(4) {
     background-image: url("/img/homepage/thumbnails/good-things-thumb.png");
   }
+  &:nth-of-type(5) {
+    background-image: url("/img/homepage/thumbnails/dashboard-light.png");
+  }
   > a {
     display: flex;
     flex-direction: column;
