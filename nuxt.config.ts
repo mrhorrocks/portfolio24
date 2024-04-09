@@ -19,7 +19,7 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       // title: process.env.SITE_NAME,
-      title: 'Home - MHOX',
+      title: 'MHOX',
       meta: [{ name: 'description', content: 'TBC' }],
       link: [
         {

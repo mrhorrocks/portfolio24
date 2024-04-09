@@ -12,14 +12,16 @@ if (location.href.indexOf("#invite_token") !== -1) {
   window.location.href = "/admin/#" + urlSplit[1];
 }
 
-// GET THUMBNAIL DATA
-const {
-  data: homepageData,
-  pending,
-  error,
-} = await useFetch(
-  "https://mrhorrocks.github.io/data/mhox/mhox-thumbnails.json"
-);
+// GET THUMBNAIL DATA FROM API
+// const {
+//   data: homepageData,
+//   pending,
+//   error,
+// } = await useFetch(
+//   "https://mrhorrocks.github.io/data/mhox/mhox-thumbnails.json"
+// );
+// GET THUMBNAIL DATA FROM DATA FOLDER
+import homepageData from "~/assets/data/mhox-homepage.json";
 </script>
 
 <template>

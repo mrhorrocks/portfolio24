@@ -192,6 +192,9 @@ div.blog-content {
       color: black;
     }
   }
+  .featured-image {
+    margin-bottom: 2rem;
+  }
   article {
     img {
       box-shadow: 5px 10px 15px #aaa;

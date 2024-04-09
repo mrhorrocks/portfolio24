@@ -2,23 +2,23 @@
     "thumbnails": [
         {
             "id": "1",
-            "href": "/blog/2024-01-09-about-this-portfolio/",
-            "title": "Portfolio 2024",
-            "description": "A summary of my current tech",
+            "href": "/blog/dashboard-rebuild/",
+            "title": "Dashboard Rebuild",
+            "description": "Figma wireframe, Chartjs, external JSON data",
             "buttontext": "Go to the article"
         },
         {
             "id": "2",
             "href": "/cars",
             "title": "CarDealer",
-            "description": "Built from a Figma design. Data from JSON.",
+            "description": "Designed in Figma.<br/>JSON data source",
             "buttontext": "Visit the site"
         },
         {
             "id": "3",
-            "href": "/blog/2024-01-18-graphics/",
-            "title": "Graphics",
-            "description": "From the Archive",
+            "href": "/blog/portfolio-2024/",
+            "title": "Portfolio 2024",
+            "description": "Current tech breakdown",
             "buttontext": "Go to the article"
         },
         {
@@ -27,6 +27,13 @@
             "title": "Get Online Week",
             "description": "Responsive, promotional landing page",
             "buttontext": "Visit the site"
+        },
+        {
+            "id": "5",
+            "href": "/blog/graphics/",
+            "title": "Graphics",
+            "description": "From the Archive",
+            "buttontext": "Go to the article"
         }
     ]
 }
