@@ -2,9 +2,9 @@
     "thumbnails": [
         {
             "id": "1",
-            "href": "/blog/portfolio-2024/",
-            "title": "Portfolio 2024",
-            "description": "Current tech breakdown",
+            "href": "/blog/dashboard-rebuild/",
+            "title": "Dashboard Rebuild",
+            "description": "Figma wireframe, Chartjs, external JSON data",
             "buttontext": "Go to the article"
         },
         {
@@ -16,9 +16,9 @@
         },
         {
             "id": "3",
-            "href": "/blog/graphics/",
-            "title": "Graphics",
-            "description": "From the Archive",
+            "href": "/blog/portfolio-2024/",
+            "title": "Portfolio 2024",
+            "description": "Current tech breakdown",
             "buttontext": "Go to the article"
         },
         {
@@ -30,9 +30,9 @@
         },
         {
             "id": "5",
-            "href": "/blog/dashboard-prototype/",
-            "title": "DASHBOARD REBUILD",
-            "description": "Figma Wireframe, Chartjs, external JSON data",
+            "href": "/blog/graphics/",
+            "title": "Graphics",
+            "description": "From the Archive",
             "buttontext": "Go to the article"
         }
     ]
