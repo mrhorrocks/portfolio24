@@ -22,7 +22,7 @@ const props = defineProps({
 
 <template>
   <div class="homepage-thumb">
-    <a :href="href" class="thumb-link" title="Portfolio 2024">
+    <a :href="href" class="thumb-link" :title="title">
       <div class="mask">
         <h3>{{ title }}</h3>
         <p v-html="description"></p>
@@ -58,19 +58,19 @@ const props = defineProps({
     background-size: 110%;
   }
   &:nth-of-type(1) {
-    background-image: url("/img/homepage/thumbnails/portfolio2024.png");
+    background-image: url("/img/homepage/thumbnails/dashboard-light.png");
   }
   &:nth-of-type(2) {
     background-image: url("/img/homepage/thumbnails/cardealer.png");
   }
   &:nth-of-type(3) {
-    background-image: url("/img/homepage/thumbnails/portfolio-old.png");
+    background-image: url("/img/homepage/thumbnails/portfolio2024.png");
   }
   &:nth-of-type(4) {
     background-image: url("/img/homepage/thumbnails/good-things-thumb.png");
   }
   &:nth-of-type(5) {
-    background-image: url("/img/homepage/thumbnails/dashboard-light.png");
+    background-image: url("/img/homepage/thumbnails/portfolio-old.png");
   }
   > a {
     display: flex;
