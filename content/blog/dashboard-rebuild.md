@@ -4,6 +4,7 @@ title: Dashboard Rebuild
 description: Figma, Nuxt, Chartjs, JSON data
 date: 2024-04-07T22:23:00.000Z
 featuredArticle: false
+featuredImage: /images/uploads/dashboard-wireframe-feature.png
 ---
 
 ## The Brief

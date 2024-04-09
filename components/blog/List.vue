@@ -43,7 +43,7 @@ const props = defineProps({
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
-  padding: 1.5rem;
+  padding: 1rem;
   box-sizing: border-box;
   border-radius: 0.5rem;
   border: transparent;

@@ -2,7 +2,7 @@
 headline: Portfolio 2024
 title: Portfolio 2024
 description: Nuxt, Sass, Git, Netlify
-date: 2024-01-09T15:34:17.109Z
+date: 2024-03-09T15:30:00.109Z
 author: ""
 featuredArticle: true
 featuredImage: /images/uploads/ed209-figma.png

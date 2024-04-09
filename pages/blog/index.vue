@@ -27,7 +27,7 @@ const { data } = await useAsyncData(`content/blog`, async () => {
           'featuredImage',
           'image',
         ]"
-        :sort="{ date: 1 }"
+        :sort="{ date: -1 }"
         :limit="articleCountLimit"
       >
         <div class="grid md:grid md:cols-2 md:gap-2">
