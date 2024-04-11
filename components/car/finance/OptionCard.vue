@@ -1,16 +1,14 @@
-<script>
-export default {
-  props: {
-    heading: {
-      type: String,
-      default: "Add a heading",
-    },
-    calculation: {
-      type: String,
-      default: "Calculation",
-    },
+<script setup>
+defineProps({
+  heading: {
+    type: String,
+    default: "Add a heading",
   },
-};
+  calculation: {
+    type: String,
+    default: "Calculation",
+  },
+});
 </script>
 
 <template>

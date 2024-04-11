@@ -1,3 +1,22 @@
+<script setup>
+defineProps({
+  id: {
+    type: String,
+    default: "id-prop-is-required",
+  },
+  label: {
+    type: String,
+    required: false,
+  },
+  modelValue: {
+    type: String,
+    default: "", // Default value for modelValue
+  },
+});
+
+const selectedOption = ref("");
+</script>
+
 <template>
   <div class="selectbox">
     <label v-if="label" :for="id">{{ label }}</label>
@@ -18,25 +37,6 @@
     </select>
   </div>
 </template>
-
-<script setup>
-defineProps({
-  id: {
-    type: String,
-    default: "id-prop-is-required",
-  },
-  label: {
-    type: String,
-    required: false,
-  },
-  modelValue: {
-    type: String,
-    default: "", // Default value for modelValue
-  },
-});
-
-const selectedOption = ref("");
-</script>
 
 <style scss scoped>
 .selectbox {
