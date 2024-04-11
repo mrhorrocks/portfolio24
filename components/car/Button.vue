@@ -1,20 +1,18 @@
+<script setup>
+defineProps({
+  text: {
+    type: String,
+    required: false,
+    default: "Add text prop",
+  },
+});
+</script>
+
 <template>
   <button>
     <slot>{{ text }}</slot>
   </button>
 </template>
-
-<script>
-export default {
-  props: {
-    text: {
-      type: String,
-      required: false,
-      default: "Add text prop",
-    },
-  },
-};
-</script>
 
 <style lang="scss">
 .car-button {

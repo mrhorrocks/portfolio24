@@ -1,6 +1,6 @@
 <script setup>
 // Define props
-const props = defineProps({
+defineProps({
   text: {
     type: String,
     default: "Button text",

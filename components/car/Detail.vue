@@ -1,20 +1,18 @@
 <!--  -->
-<script>
-export default {
-  props: {
-    title: {
-      type: String,
-      default: "Add a title prop",
-    },
-    content: {
-      type: String,
-    },
-    isOpen: {
-      type: Boolean,
-      default: false, // Set a default value if needed
-    },
+<script setup>
+defineProps({
+  title: {
+    type: String,
+    default: "Add a title prop",
   },
-};
+  content: {
+    type: String,
+  },
+  isOpen: {
+    type: Boolean,
+    default: false, // Set a default value if needed
+  },
+});
 </script>
 
 <template>

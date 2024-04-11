@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from "vue";
-const props = defineProps({
+defineProps({
   currentPage: {
     type: Number,
     required: true,

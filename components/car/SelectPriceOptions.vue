@@ -19,29 +19,23 @@
   </div>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      selectedOption: "",
-    };
+<script setup>
+defineProps({
+  id: {
+    type: String,
+    default: "id-prop-is-required",
   },
-  props: {
-    id: {
-      type: String,
-      required: false,
-      default: "id-prop-is-required",
-    },
-    label: {
-      type: String,
-      required: false,
-    },
-    modelValue: {
-      type: String, // Assuming modelValue is a string type
-    },
+  label: {
+    type: String,
+    required: false,
   },
-  emits: ["update:modelValue"],
-};
+  modelValue: {
+    type: String,
+    default: "", // Default value for modelValue
+  },
+});
+
+const selectedOption = ref("");
 </script>
 
 <style scss scoped>
