@@ -1,37 +1,36 @@
-<script>
-export default {
-  props: {
-    title: {
-      type: String,
-      default: "Add a title prop",
-    },
-    content: {
-      type: String,
-    },
-    isOpen: {
-      type: Boolean,
-      default: false, // Set a default value if needed
-    },
+<script setup>
+defineProps({
+  title: {
+    type: String,
+    default: "Add a title prop",
   },
-  mounted () {
-    window.addEventListener("resize", this.handleResize);
-    this.handleResize(); // Call it once to set the initial state
+  content: {
+    type: String,
   },
-  beforeUnmount () {
-    window.removeEventListener("resize", this.handleResize);
+  isOpen: {
+    type: Boolean,
+    default: false,
   },
-  methods: {
-    handleResize () {
-      const screenWidth = window.innerWidth;
-      const detailsElement = this.$refs.detailsElement;
-      if (screenWidth >= 1200) {
-        detailsElement.setAttribute("open", "");
-      } else {
-        detailsElement.removeAttribute("open");
-      }
-    },
-  },
+});
+const detailsElement = ref(null);
+
+const handleResize = () => {
+  const screenWidth = window.innerWidth;
+  if (screenWidth >= 1200) {
+    detailsElement.value.setAttribute("open", "");
+  } else {
+    detailsElement.value.removeAttribute("open");
+  }
 };
+
+onMounted(() => {
+  window.addEventListener("resize", handleResize);
+  handleResize(); // Call it once to set the initial state
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", handleResize);
+});
 </script>
 
 <template>

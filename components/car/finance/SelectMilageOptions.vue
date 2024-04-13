@@ -1,3 +1,22 @@
+<script setup>
+defineProps({
+  id: {
+    type: String,
+    required: false,
+    default: "id-prop-is-required",
+  },
+  label: {
+    type: String,
+    required: false,
+  },
+  modelValue: {
+    type: String, // Assuming modelValue is a string type
+  },
+  emits: ["update:modelValue"],
+});
+const selectedOption = ref("");
+</script>
+
 <template>
   <div class="finance-select">
     <label v-if="label" :for="id">{{ label }}</label>
@@ -23,28 +42,3 @@
     </select>
   </div>
 </template>
-
-<script>
-export default {
-  data () {
-    return {
-      selectedOption: "",
-    };
-  },
-  props: {
-    id: {
-      type: String,
-      required: false,
-      default: "id-prop-is-required",
-    },
-    label: {
-      type: String,
-      required: false,
-    },
-    modelValue: {
-      type: String, // Assuming modelValue is a string type
-    },
-  },
-  emits: ["update:modelValue"],
-};
-</script>
