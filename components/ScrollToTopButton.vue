@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     handleScroll () {
-      this.isVisible = window.scrollY > 60; // Change 200 to your desired scroll position
+      this.isVisible = window.scrollY > 60; // Change # to your desired scroll position
     },
     scrollToTop () {
       window.scrollTo({
