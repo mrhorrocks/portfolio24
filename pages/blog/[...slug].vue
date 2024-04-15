@@ -213,6 +213,7 @@ div.blog-content {
       &:hover {
         background-color: $theme-colour-three;
         color: black;
+        text-decoration: underline;
       }
     }
   }
