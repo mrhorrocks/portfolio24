@@ -1,10 +1,10 @@
 ---
 headline: Car Dealer
 title: Car Dealer
-description: Layout created in Figma with a JSON data source
+description: Build with Nuxt 3 and JSON data
 date: 2024-02-16T19:52:00.000Z
 featuredArticle: false
 featuredImage: /images/uploads/cardealer-feature.png
 ---
 
-Designed in Figma and and build it Nuxt 3. Click [here >>](/cars) to see it.
+Build with Nuxt 3 and JSON data. Click [here >>](/cars) to see it.

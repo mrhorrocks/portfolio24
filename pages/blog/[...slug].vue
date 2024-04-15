@@ -59,7 +59,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
             </div>
           </header>
 
-          <div class="md:grid md:cols-3 md:gap-1">
+          <div class="grid md:cols-3 md:gap-1">
             <div class="blog-content">
               <!-- featuredImage -->
               <div v-if="doc.featuredImage" class="featured-image">

@@ -48,7 +48,7 @@ export default {
 @import "@/assets/scss/partials/colours";
 button.scroll-to-top {
   position: fixed;
-  bottom: 3rem;
+  bottom: 4rem;
   right: 1rem;
   z-index: 999;
   display: flex;
