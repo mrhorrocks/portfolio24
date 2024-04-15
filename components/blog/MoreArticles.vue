@@ -27,7 +27,11 @@ const toggleHeader = () => {
     <ul :class="['prev-next', isVisible ? 'open' : 'closed']">
       <template v-for="(other, index) in surround" :key="index">
         <li v-if="other">
-          <NuxtLink :to="other._path + '/'" :aria-label="other.headline">
+          <NuxtLink
+            :to="other._path + '/'"
+            :aria-label="other.headline"
+            :title="'Go to ' + other.headline"
+          >
             {{ other.headline }}
           </NuxtLink>
         </li>
@@ -39,6 +43,7 @@ const toggleHeader = () => {
 <style lang="scss">
 @import "../../assets/scss/partials/_colours";
 ul.prev-next > li {
+  position: relative;
   border-bottom: 2px dashed black;
   a {
     &:hover::after {
@@ -48,7 +53,8 @@ ul.prev-next > li {
     &::after {
       content: "Next >>";
       position: absolute;
-      right: 0.5rem;
+      top: 5px;
+      right: 0rem;
       background-color: black;
       color: white;
       padding: 0.25rem;

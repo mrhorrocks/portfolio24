@@ -27,10 +27,10 @@
   }
   li {
     a {
-      position: relative;
-      display: block;
-      padding: 0.25rem;
       color: black;
+      display: block;
+      padding: 0.5rem 0;
+      position: relative;
       text-decoration-line: none;
       &:hover {
         background-color: #ccc;

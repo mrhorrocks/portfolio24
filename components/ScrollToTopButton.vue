@@ -48,8 +48,8 @@ export default {
 @import "@/assets/scss/partials/colours";
 button.scroll-to-top {
   position: fixed;
-  bottom: 5rem;
-  right: 2rem;
+  bottom: 3rem;
+  right: 1rem;
   z-index: 999;
   display: flex;
   align-items: center;

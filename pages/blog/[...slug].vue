@@ -205,7 +205,7 @@ div.blog-content {
       margin: 0 0 1rem 0;
       list-style: inside;
     }
-    a {
+    p a {
       text-decoration: none;
       color: white;
       background-color: black;
