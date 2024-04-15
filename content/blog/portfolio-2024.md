@@ -8,7 +8,7 @@ featuredArticle: true
 featuredImage: /images/uploads/ed209-figma.png
 featuredImageAltText: Nuxt, Git, Netlify & Decap CMS
 ---
-This is my portfolio. Built using Nuxt 3.
+This is my portfolio. Built using Nuxt 3, Netlify, and GitHub.
 
 Welcome to mhox.net.
 
