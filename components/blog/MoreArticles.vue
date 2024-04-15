@@ -46,13 +46,15 @@ ul.prev-next > li {
       color: black;
     }
     &::after {
-      content: ">> next ";
+      content: "Next >>";
       position: absolute;
       right: 0.5rem;
       background-color: black;
       color: white;
-      padding: 0.1rem 0.8rem 0.1rem 0.5rem;
+      padding: 0.25rem;
       font-size: 0.8rem;
+      min-width: 52px;
+      text-align: center;
     }
   }
   &:nth-of-type(2) a {
@@ -60,7 +62,7 @@ ul.prev-next > li {
       background-color: $theme-colour-three;
     }
     &::after {
-      content: "<< prev ";
+      content: "<< Prev ";
     }
   }
 }
