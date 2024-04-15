@@ -1,12 +1,13 @@
-$theme-colour: #88b198;
+$theme-colour: #88b198; /*GREEN*/
 $theme-colour-two: pink;
-$theme-colour-three: #b6b600;
+$theme-colour-three: #b6b600; /*YELLOW*/
 
-$first-colour: #1866e2;
-$second-colour: #3b82f6;
-$third-colour: #93c5fd;
-$fourth-colour: #c6e1ff;
-$selection-color: #ff6a67;
+$first-colour: $theme-colour; /*BLUE*/
+$second-colour: lighten($theme-colour, 10%);
+$third-colour: lighten($theme-colour, 20%);
+$fourth-colour: lighten($theme-colour, 30%);
+
+$selection-color: #ff6a67; /**/
 
 $pale-grey: #eeeeee;
 $light-grey: #cccccc;

@@ -7,7 +7,9 @@ export default defineNuxtConfig({
     },
   },
   sourcemap: true,
-
+  css: [
+    "@/assets/scss/global.scss",
+  ],
   experimental: {
     payloadExtraction: true
   },
@@ -15,12 +17,20 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      title: 'MHOX',
       htmlAttrs: { lang: 'en' },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      // title: process.env.SITE_NAME,
-      title: 'MHOX',
-      meta: [{ name: 'description', content: 'TBC' }],
+      meta: [
+        {
+          name: 'description',
+          content: 'FRONT-END DEVELOPER, I build websites with Nuxt'
+        },
+        {
+          name: 'keywords',
+          content: 'HTML, CSS, SASS, NUXT'
+        }
+      ],
       link: [
         {
           rel: 'stylesheet',
@@ -33,15 +43,5 @@ export default defineNuxtConfig({
       ],
 
     }
-  },
-  css: [
-    "@/assets/scss/global.scss",
-  ]
-  // runtimeConfig: {
-  //   public: {
-  //     // Shows in the client
-  //     siteName: process.env.SITE_NAME,
-  //   }
-  // }
-
+  }
 })

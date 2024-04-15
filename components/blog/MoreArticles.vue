@@ -27,7 +27,11 @@ const toggleHeader = () => {
     <ul :class="['prev-next', isVisible ? 'open' : 'closed']">
       <template v-for="(other, index) in surround" :key="index">
         <li v-if="other">
-          <NuxtLink :to="other._path + '/'" :aria-label="other.headline">
+          <NuxtLink
+            :to="other._path + '/'"
+            :aria-label="other.headline"
+            :title="'Go to ' + other.headline"
+          >
             {{ other.headline }}
           </NuxtLink>
         </li>
@@ -39,33 +43,32 @@ const toggleHeader = () => {
 <style lang="scss">
 @import "../../assets/scss/partials/_colours";
 ul.prev-next > li {
+  position: relative;
   border-bottom: 2px dashed black;
-  &:nth-of-type(1) a {
+  a {
     &:hover::after {
-      background-color: $selection-color;
+      background-color: $theme-colour-three;
+      color: black;
     }
     &::after {
-      content: ">> next ";
+      content: "Next >>";
       position: absolute;
-      right: 0.5rem;
-      background-color: darken(limegreen, 10%);
+      top: 5px;
+      right: 0rem;
+      background-color: black;
       color: white;
-      padding: 0.1rem 0.8rem 0.1rem 0.5rem;
+      padding: 0.25rem;
       font-size: 0.8rem;
+      min-width: 52px;
+      text-align: center;
     }
   }
   &:nth-of-type(2) a {
     &:hover::after {
-      background-color: $selection-color;
+      background-color: $theme-colour-three;
     }
     &::after {
-      content: "<< prev ";
-      position: absolute;
-      right: 0.5rem;
-      background-color: darken(skyblue, 20%);
-      color: white;
-      padding: 0.1rem 0.8rem 0.1rem 0.5rem;
-      font-size: 0.8rem;
+      content: "<< Prev ";
     }
   }
 }

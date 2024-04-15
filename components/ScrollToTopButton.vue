@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     handleScroll () {
-      this.isVisible = window.scrollY > 60; // Change 200 to your desired scroll position
+      this.isVisible = window.scrollY > 60; // Change # to your desired scroll position
     },
     scrollToTop () {
       window.scrollTo({
@@ -48,8 +48,8 @@ export default {
 @import "@/assets/scss/partials/colours";
 button.scroll-to-top {
   position: fixed;
-  bottom: 5rem;
-  right: 2rem;
+  bottom: 4rem;
+  right: 1rem;
   z-index: 999;
   display: flex;
   align-items: center;

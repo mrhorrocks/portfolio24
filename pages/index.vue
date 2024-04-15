@@ -38,8 +38,8 @@ import homepageData from "~/assets/data/mhox-homepage.json";
 
         <!-- Subtext -->
         <h2 class="sub-text">
-          <span>I build websites with Nuxt </span>
-          <span>Based in North- West England </span>
+          <span>I build websites with Nuxt, </span>
+          <span>Based in North-West England </span>
         </h2>
 
         <!-- Tech logos -->
@@ -59,7 +59,7 @@ import homepageData from "~/assets/data/mhox-homepage.json";
       <!-- Thumbnails -->
       <div class="col-span-3">
         <div class="thumbnail-container">
-          <h3>Recent stuff...</h3>
+          <h3>Latest stuff...</h3>
           <div class="thumbnails">
             <HomePageThumb
               v-for="item in homepageData.thumbnails"

@@ -16,7 +16,7 @@ const toggleVideo = () => {
   isPlaying.value = !isPlaying.value;
 };
 
-const props = defineProps({
+defineProps({
   width: {
     type: String,
     default: "100px",

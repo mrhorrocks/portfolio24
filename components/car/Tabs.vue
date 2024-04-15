@@ -1,16 +1,9 @@
-<script>
-export default {
-  props: {
-    title1: String,
-    title2: String,
-  },
-
-  data () {
-    return {
-      activeTab: "tab1", // set the default active tab
-    };
-  },
-};
+<script setup>
+defineProps({
+  title1: String,
+  title2: String,
+});
+const activeTab = ref("tab1");
 </script>
 
 <template>

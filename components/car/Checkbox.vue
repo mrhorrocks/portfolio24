@@ -1,3 +1,28 @@
+<script setup>
+defineProps({
+  value: {
+    type: String,
+    default: "false",
+  },
+  id: {
+    type: String,
+  },
+  name: {
+    type: String,
+    default: "name",
+  },
+  label: {
+    type: String,
+  },
+  checked: {
+    type: String,
+  },
+  modelValue: {
+    type: String, // Assuming modelValue is a string type
+  },
+  emits: ["update:modelValue"],
+});
+</script>
 <template>
   <label class="checkbox" :for="id">
     <input
@@ -14,34 +39,6 @@
     <span class="checkmark"></span>
   </label>
 </template>
-
-<script>
-export default {
-  props: {
-    value: {
-      type: String,
-      default: "false",
-    },
-    id: {
-      type: String,
-    },
-    name: {
-      type: String,
-      default: "name",
-    },
-    label: {
-      type: String,
-    },
-    checked: {
-      type: String,
-    },
-    modelValue: {
-      type: String, // Assuming modelValue is a string type
-    },
-    emits: ["update:modelValue"],
-  },
-};
-</script>
 
 <style lang="scss">
 /* Customize the label (the container) */
