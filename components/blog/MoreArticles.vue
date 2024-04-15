@@ -40,15 +40,16 @@ const toggleHeader = () => {
 @import "../../assets/scss/partials/_colours";
 ul.prev-next > li {
   border-bottom: 2px dashed black;
-  &:nth-of-type(1) a {
+  a {
     &:hover::after {
-      background-color: $selection-color;
+      background-color: $theme-colour-three;
+      color: black;
     }
     &::after {
       content: ">> next ";
       position: absolute;
       right: 0.5rem;
-      background-color: darken(limegreen, 10%);
+      background-color: black;
       color: white;
       padding: 0.1rem 0.8rem 0.1rem 0.5rem;
       font-size: 0.8rem;
@@ -56,16 +57,10 @@ ul.prev-next > li {
   }
   &:nth-of-type(2) a {
     &:hover::after {
-      background-color: $selection-color;
+      background-color: $theme-colour-three;
     }
     &::after {
       content: "<< prev ";
-      position: absolute;
-      right: 0.5rem;
-      background-color: darken(skyblue, 20%);
-      color: white;
-      padding: 0.1rem 0.8rem 0.1rem 0.5rem;
-      font-size: 0.8rem;
     }
   }
 }

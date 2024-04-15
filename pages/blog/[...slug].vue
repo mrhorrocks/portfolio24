@@ -59,7 +59,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
             </div>
           </header>
 
-          <div class="md:grid md:cols-3 md:gap-3">
+          <div class="md:grid md:cols-3 md:gap-1">
             <div class="blog-content">
               <!-- featuredImage -->
               <div v-if="doc.featuredImage" class="featured-image">
@@ -173,8 +173,8 @@ div.blog-content {
   padding: 0.5rem;
   box-shadow: 1px 3px 4px #00000020;
   @media (min-width: 768px) {
-    padding: 2rem;
-    margin-bottom: 2rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
     grid-column: span 2 / span 2; // 2 cols
   }
   h1,
@@ -204,6 +204,16 @@ div.blog-content {
       line-height: 1.75;
       margin: 0 0 1rem 0;
       list-style: inside;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: black;
+      padding: 0.25rem;
+      &:hover {
+        background-color: $theme-colour-three;
+        color: black;
+      }
     }
   }
 }
