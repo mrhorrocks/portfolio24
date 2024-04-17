@@ -7,4 +7,4 @@ featuredArticle: false
 featuredImage: /images/uploads/cardealer-feature.png
 ---
 
-Build with Nuxt 3, populated with JSON data. Click [here >>](/cars) to see it.
+Build with Nuxt 3, populated with JSON data. [Click here](/cars) to see it.
