@@ -1,3 +1,8 @@
+$sm-small: 576px;
+$md-medium: 768px;
+$lg-large: 1024px;
+$xl-large: 1440px;
+
 .grid {
   display: grid; /* COLS */
   &.cols-1 {
@@ -84,8 +89,101 @@
   .col-span-12 {
     grid-column: span 12 / span 12;
   }
+
+  /*  SMALL START */
+  @media (min-width: $sm-small) {
+    /* COLS */
+    &.sm\:cols-1 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &.sm\:cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &.sm\:cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &.sm\:cols-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    &.sm\:cols-5 {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    &.sm\:cols-6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    &.sm\:cols-7 {
+      grid-template-columns: repeat(7, 1fr);
+    }
+    &.sm\:cols-8 {
+      grid-template-columns: repeat(8, 1fr);
+    }
+    &.sm\:cols-9 {
+      grid-template-columns: repeat(9, 1fr);
+    }
+    &.sm\:cols-10 {
+      grid-template-columns: repeat(10, 1fr);
+    }
+    &.sm\:cols-11 {
+      grid-template-columns: repeat(11, 1fr);
+    }
+    &.sm\:cols-12 {
+      grid-template-columns: repeat(12, 1fr);
+    }
+    /* COL-GAP */
+    &.sm\:gap-1 {
+      gap: 1rem;
+    }
+    &.sm\:gap-2 {
+      gap: 2rem;
+    }
+    &.sm\:gap-3 {
+      gap: 3rem;
+    }
+    &.sm\:gap-4 {
+      gap: 4rem;
+    }
+    /* COL-SPAN */
+    .sm\:col-span-1 {
+      grid-column: span 1 / span 1;
+    }
+    .sm\:col-span-2 {
+      grid-column: span 2 / span 2;
+    }
+    .sm\:col-span-3 {
+      grid-column: span 3 / span 3;
+    }
+    .sm\:col-span-4 {
+      grid-column: span 4 / span 4;
+    }
+    .sm\:col-span-5 {
+      grid-column: span 5 / span 5;
+    }
+    .sm\:col-span-6 {
+      grid-column: span 6 / span 6;
+    }
+    .sm\:col-span-7 {
+      grid-column: span 7 / span 7;
+    }
+    .sm\:col-span-8 {
+      grid-column: span 8 / span 8;
+    }
+    .sm\:col-span-9 {
+      grid-column: span 9 / span 9;
+    }
+    .sm\:col-span-10 {
+      grid-column: span 10 / span 10;
+    }
+    .sm\:col-span-11 {
+      grid-column: span 11 / span 11;
+    }
+    .sm\:col-span-12 {
+      grid-column: span 12 / span 12;
+    }
+  }
+  /* SMALL END */
+
   /*  MEDIUM START */
-  @media (min-width: 768px) {
+  @media (min-width: $md-medium) {
     /* COLS */
     &.md\:cols-1 {
       grid-template-columns: repeat(1, 1fr);
@@ -136,18 +234,6 @@
     &.md\:gap-4 {
       gap: 4rem;
     }
-    &.lg\:gap-1 {
-      gap: 1rem;
-    }
-    &.lg\:gap-2 {
-      gap: 2rem;
-    }
-    &.lg\:gap-3 {
-      gap: 3rem;
-    }
-    &.lg\:gap-4 {
-      gap: 4rem;
-    }
     /* COL-SPAN */
     .md\:col-span-1 {
       grid-column: span 1 / span 1;
@@ -162,10 +248,10 @@
       grid-column: span 4 / span 4;
     }
     .md\:col-span-5 {
-      grid-column: span 5 / span 4;
+      grid-column: span 5 / span 5;
     }
     .md\:col-span-6 {
-      grid-column: span 6 / span 4;
+      grid-column: span 6 / span 6;
     }
     .md\:col-span-7 {
       grid-column: span 7 / span 7;
@@ -189,7 +275,7 @@
   /* MEDIUM END */
 
   /*  LARGE START */
-  @media (min-width: 1024px) {
+  @media (min-width: $lg-large) {
     /* COLS */
     &.lg\:cols-1 {
       grid-template-columns: repeat(1, 1fr);
@@ -254,10 +340,10 @@
       grid-column: span 4 / span 4;
     }
     .lg\:col-span-5 {
-      grid-column: span 5 / span 4;
+      grid-column: span 5 / span 5;
     }
     .lg\:col-span-6 {
-      grid-column: span 6 / span 4;
+      grid-column: span 6 / span 6;
     }
     .lg\:col-span-7 {
       grid-column: span 7 / span 7;
@@ -281,7 +367,7 @@
   /* LARGE END */
 
   /*  EXTRA LARGE START */
-  @media (min-width: 1440px) {
+  @media (min-width: $xl-large) {
     /* COLS */
     &.xl\:cols-1 {
       grid-template-columns: repeat(1, 1fr);
@@ -346,10 +432,10 @@
       grid-column: span 4 / span 4;
     }
     .xl\:col-span-5 {
-      grid-column: span 5 / span 4;
+      grid-column: span 5 / span 5;
     }
     .xl\:col-span-6 {
-      grid-column: span 6 / span 4;
+      grid-column: span 6 / span 6;
     }
     .xl\:col-span-7 {
       grid-column: span 7 / span 7;
