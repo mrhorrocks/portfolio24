@@ -51,7 +51,7 @@ ul.prev-next > li {
       color: black;
     }
     &::after {
-      content: "Read >>";
+      content: "Read more >>";
       position: absolute;
       top: 5px;
       right: 0rem;
