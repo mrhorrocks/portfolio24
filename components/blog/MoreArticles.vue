@@ -51,7 +51,7 @@ ul.prev-next > li {
       color: black;
     }
     &::after {
-      content: "GO TO ARTICLE >>";
+      content: "Read more >";
       position: absolute;
       top: 5px;
       right: 0rem;
