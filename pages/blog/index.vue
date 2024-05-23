@@ -2,6 +2,7 @@
 useHead({
   titleTemplate: "Blog - %s",
 });
+// Fetching data
 const articleCountLimit = 4;
 const { data } = await useAsyncData(`content/blog`, async () => {
   const _posts = await queryContent("/blog").only("headline").find();
