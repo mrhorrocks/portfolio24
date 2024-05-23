@@ -12,7 +12,9 @@ featuredImageAltText: Email Templates
 
 ## Jacamo
 
+<p align="center">
 ![A screenshot of a previous email templates](/images/uploads/email-templates/jacamo.png "A screenshot of a previous email templates")
+</p>
 
 ## Marisota
 
