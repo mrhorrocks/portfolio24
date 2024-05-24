@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from "vue";
-defineProps({
+const props = defineProps({
   currentPage: {
     type: Number,
     required: true,
@@ -110,22 +110,22 @@ const prevLink = computed(() => {
   color: darken($theme-colour, 20%);
   font-weight: bold;
   background-color: white;
-  border: 0.25rem solid lighten($theme-colour, 10%);
+  border: 0.25rem solid darken($light-grey, 30%);
   text-decoration: none;
   // transition: all 0.2s ease;
 }
 
 .pagination-item.active {
-  background-color: $theme-colour;
-  color: whitesmoke;
+  color: white;
   min-width: 3rem;
   line-height: 3rem;
-  border: 0.25rem solid darken($theme-colour, 20%);
+  background-color: lighten($dark-grey, 40%);
+  border: 0.25rem solid darken($light-grey, 30%);
   cursor: default;
 }
 
 .pagination-item:not(.active):hover {
-  border: 0.25rem solid darken($theme-colour, 20%);
+  border: 0.25rem solid darken($light-grey, 50%);
   // min-width: 2.5rem;
   // line-height: 2.5rem;
 }

@@ -45,13 +45,13 @@ try {
           'featuredImage',
           'image',
         ]"
-        :sort="{ date: 1 }"
+        :sort="{ date: -1 }"
         :skip="articleCountLimit * (getPageNumber() - 1)"
         :limit="articleCountLimit"
       >
         <!-- In case it is found -->
         <template v-slot="{ data }">
-          <div class="md:grid md:cols-2 md:gap-3">
+          <div class="grid gap-2 md:cols-2">
             <BlogList :data="data" />
           </div>
 

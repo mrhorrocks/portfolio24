@@ -51,7 +51,7 @@ ul.prev-next > li {
       color: black;
     }
     &::after {
-      content: "Next >>";
+      content: "Read more >";
       position: absolute;
       top: 5px;
       right: 0rem;
@@ -63,14 +63,14 @@ ul.prev-next > li {
       text-align: center;
     }
   }
-  &:nth-of-type(2) a {
-    &:hover::after {
-      background-color: $theme-colour-three;
-    }
-    &::after {
-      content: "<< Prev ";
-    }
-  }
+  // &:nth-of-type(2) a {
+  //   &:hover::after {
+  //     background-color: $theme-colour-three;
+  //   }
+  //   &::after {
+  //     content: "Next >> ";
+  //   }
+  // }
 }
 
 .closed {

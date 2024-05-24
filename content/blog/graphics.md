@@ -2,7 +2,7 @@
 headline: Graphics
 title: Graphics
 description: From the Archive
-date: 2024-02-09T15:20:00.109Z
+date: 2024-01-09T15:20:00.109Z
 author: ""
 authorurl: https://github.com/mrhorrocks
 featuredArticle: false
