@@ -34,6 +34,13 @@
             "title": "Graphics",
             "description": "From the Archive",
             "buttontext": "Go to the article"
+        },
+        {
+            "id": "6",
+            "href": "/blog/emails/",
+            "title": "Email Templates",
+            "description": "From the Archive",
+            "buttontext": "Go to the article"
         }
     ]
 }
