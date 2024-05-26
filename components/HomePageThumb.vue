@@ -72,6 +72,9 @@ defineProps({
   &:nth-of-type(5) {
     background-image: url("/img/homepage/thumbnails/portfolio-old.png");
   }
+  &:nth-of-type(6) {
+    background-image: url("/img/homepage/thumbnails/emails-thumb.png");
+  }
   > a {
     display: flex;
     flex-direction: column;
