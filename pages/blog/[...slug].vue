@@ -206,13 +206,10 @@ div.blog-content {
       list-style: inside;
     }
     p a {
-      text-decoration: none;
-      color: white;
-      background-color: black;
-      padding: 0.25rem;
+      color: black;
       &:hover {
-        background-color: $theme-colour-three;
-        color: black;
+        background-color: black;
+        color: $theme-colour-three;
         text-decoration: underline;
       }
     }
