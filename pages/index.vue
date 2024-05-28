@@ -26,92 +26,71 @@ import homepageData from "~/assets/data/mhox-homepage.json";
 
 <template>
   <section>
-    <div class="container grid xl:grid xl:cols-3">
-      <div class="col-span-3">
+    <!-- HERO AREA -->
+    <div class="container grid md:grid md:cols-1">
+      <div class="md:col-span-1">
         <!-- Social badges -->
         <SocialBadges />
 
         <!-- Headline -->
         <h1 class="site-headline">
-          <span>Front-End</span> <span>Developer</span>
+          <span>Front End Developer</span>
         </h1>
 
         <!-- Subtext -->
-        <h2 class="sub-text">
-          <span>I build websites with Nuxt, </span>
-          <span>Based in North-West England </span>
-        </h2>
+        <!-- <h2 class="sub-text">
+            <span
+              >I build websites with Nuxt, based in North-West England
+            </span>
+          </h2> -->
 
         <!-- Tech logos -->
         <TechBadges />
         <!-- Hero image-->
-
-        <div class="hero-image">
-          <!-- Image bg-->
-          <VideoPlayer
-            src="/img/homepage/ed209-video.mp4"
-            width="738"
-            height="743"
-          />
-        </div>
       </div>
-
-      <!-- Thumbnails -->
-      <div class="col-span-3">
-        <div class="thumbnail-container">
-          <h3>Latest stuff...</h3>
-          <div class="thumbnails">
-            <HomePageThumb
-              v-for="item in homepageData.thumbnails"
-              :key="item.id"
-              :href="item.href"
-              :title="item.title"
-              :description="item.description"
-              :buttontext="item.buttontext"
-            />
-          </div>
-        </div>
+    </div>
+    <!-- THUMBS -->
+    <div class="container grid md:grid md:cols-1">
+      <div class="thumbnails">
+        <HomePageThumb
+          v-for="item in homepageData.thumbnails"
+          :key="item.id"
+          :href="item.href"
+          :title="item.title"
+          :description="item.description"
+          :buttontext="item.buttontext"
+        />
       </div>
     </div>
   </section>
 </template>
 
 <style lang="scss">
+.thumbnails {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 h1.site-headline {
   position: relative;
   z-index: 1;
   font-family: "Impact", RobotoCondensed-Black, "Arial Narrow Bold";
-  font-size: clamp(2.58rem, 11vw, 10rem); // Impact
-  margin-bottom: 1rem;
+  font-size: clamp(2.18rem, 11vw, 7.25rem);
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
   padding: 0 0;
   color: #ffffff;
   text-shadow: 0px 4px 4px #00000025;
-  width: fit-content;
   @media (min-width: 768px) {
     text-align: left;
-  }
-  span {
-    &:nth-of-type(1) {
-      @media (min-width: 1440px) {
-        display: flex;
-        font-size: clamp(2.58rem, 2.9vw, 4rem);
-      }
-    }
-  }
-  span {
-    &:nth-of-type(2) {
-      color: #9b9b9b;
-    }
   }
 }
 h2.sub-text {
   position: relative;
   z-index: 1;
   font-family: "Impact", RobotoCondensed-Black, "Arial Narrow Bold", sans-serif;
-  font-size: clamp(1.4rem, 2.8vw, 2.5rem); // Impact
+  font-size: clamp(1.4rem, 2.8vw, 2.5rem);
   font-weight: normal;
   margin: 0 auto;
   padding: 0;

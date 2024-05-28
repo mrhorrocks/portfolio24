@@ -40,19 +40,22 @@ defineProps({
   align-items: flex-end;
   justify-content: center;
   position: relative;
-  width: calc(50% - 1rem);
+  width: calc(80% - 1rem);
   aspect-ratio: 4 / 2.6;
-  max-width: 330px;
-  margin: 0.5rem;
+  // max-width: 330px;
+  margin: 0.5rem auto;
   background-color: #d5d5d5;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   transition: 1s;
   overflow: hidden;
   background-position: center;
   background-size: 101%;
   transition: 0.25s;
+  @media (min-width: 400px) {
+    width: calc(50% - 1rem);
+  }
   @media (min-width: 768px) {
-    margin: 0 1rem 1rem 0;
+    width: calc(33% - 1rem);
   }
   &:hover {
     background-size: 110%;
@@ -97,7 +100,7 @@ defineProps({
 
       h3 {
         display: none;
-        @media (min-width: 1200px) {
+        @media (min-width: 640px) {
           display: block;
           background-color: #000000;
           padding: 0.5rem;
@@ -109,7 +112,7 @@ defineProps({
 
       p {
         display: none;
-        @media (min-width: 1200px) {
+        @media (min-width: 640px) {
           display: block;
           text-align: center;
           background-color: #000000;
@@ -122,13 +125,9 @@ defineProps({
     }
     &:hover .mask {
       top: 0%;
-      // filter: blur(100px);
       background-color: #ffffff95;
       backdrop-filter: blur(1px);
     }
-  }
-  @media (min-width: 1440px) {
-    width: calc(50% - 2rem);
   }
 }
 </style>
