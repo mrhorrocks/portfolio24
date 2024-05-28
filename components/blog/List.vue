@@ -45,7 +45,7 @@ defineProps({
   background-color: white;
   padding: 1rem;
   box-sizing: border-box;
-  border-radius: 0.5rem;
+  border-radius: 0rem;
   border: transparent;
   box-shadow: 1px 3px 4px #00000020;
   > a > img {
@@ -66,6 +66,9 @@ defineProps({
     font-size: 0.8rem;
     opacity: 0.8;
     margin: 0 0 1rem 0;
+  }
+  .blog-index-button {
+    float: right;
   }
 }
 </style>
