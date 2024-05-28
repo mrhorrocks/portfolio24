@@ -131,7 +131,9 @@ div.navlinks {
     padding: 2rem 1rem;
     overflow: hidden;
     font-weight: bold;
+    font-size: 0.85rem;
     text-decoration: none;
+    text-transform: uppercase;
     font-family: Roboto;
     // text-transform: uppercase;
     color: black;

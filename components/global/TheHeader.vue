@@ -13,6 +13,6 @@
   z-index: 100;
   width: 100%;
   background-color: white;
-  box-shadow: inset 0px -8px 0px #00000075;
+  box-shadow: inset 0px -7px 0px #00000075;
 }
 </style>
