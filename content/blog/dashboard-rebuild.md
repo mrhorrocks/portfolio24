@@ -1,7 +1,7 @@
 ---
 headline: Dashboard Rebuild
 title: Dashboard Rebuild
-description: Figma, Nuxt, Chartjs, JSON data
+description: Nuxt, Figma, Chartjs, Primevue, JSON data
 date: 2024-04-07T22:23:00.000Z
 featuredArticle: false
 featuredImage: /images/uploads/dashboard-wireframe-feature.png
@@ -18,3 +18,7 @@ Recreate the following dashboard using modern technologies. The end product must
 Prevent scope creep by clearly showing just what I intend to produce.
 
 ![The Wireframe](/images/uploads/dashboard-wireframe.png "The Wireframe")
+
+## Research
+
+I'm probably going to use primevue.org as the component library.

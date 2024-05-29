@@ -1,6 +1,7 @@
 <template>
   <footer id="footer">
     <div class="container footer">
+      <div class="version">v3.1</div>
       <SocialBadges />
     </div>
   </footer>
@@ -15,12 +16,14 @@ footer#footer {
   .container.footer {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     height: inherit;
+    .version {
+      font-size: 0.75rem;
+    }
     .social-badges {
       margin: 0;
       display: block;
-      float: left;
     }
   }
 }

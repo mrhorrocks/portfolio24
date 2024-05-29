@@ -1,7 +1,7 @@
 <template>
   <!-- FINANCE BANNER-->
   <section id="finance-banner">
-    <div class="container">
+    <div class="car-container">
       <div class="finance-text">
         <h2>Finance a new or used car</h2>
         <p>
@@ -58,7 +58,7 @@ section#finance-banner {
     visibility: visible;
     padding-top: 5.1rem;
   }
-  .container {
+  .car-container {
     display: flex;
     .finance-text {
       width: 35%;

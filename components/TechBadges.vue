@@ -79,8 +79,8 @@
     img {
       position: relative;
       margin: 0.2rem;
-      width: 30px;
-      border-radius: 0.5rem;
+      width: 26px;
+      border-radius: 0.4rem;
     }
     .tool-tip-text {
       visibility: hidden;

@@ -3,8 +3,8 @@
     <footer class="car-footer">
       <!-- TOP FOOTER -->
       <section>
-        <div class="container">
-          <div class="xl:grid xl:cols-7 xl:gap-3 top-footer">
+        <div class="car-container">
+          <div class="grid lg:cols-7 top-footer">
             <!-- Col One -->
             <div class="col-one">
               <img
@@ -22,7 +22,7 @@
             <CarFooterDetail
               title="Branch details"
               :isOpen="false"
-              class="col-span-3"
+              class="lg:col-span-3"
             >
               <div class="address">
                 <div style="display: flex; flex-direction: column">
@@ -119,8 +119,8 @@
 
       <!-- BOTTOM FOOTER -->
       <section id="bottom-footer">
-        <div class="container">
-          <div class="xl:grid xl:cols-7 bottom-footer">
+        <div class="car-container">
+          <div class="grid xl:cols-7 bottom-footer">
             <!-- Company info -->
             <CarFooterDetail
               title="Company info"
@@ -166,24 +166,20 @@
                     Terms and conditions
                   </NuxtLink>
                 </span>
-
                 <span>
                   <NuxtLink to="" title="Privicy policy"
                     >Privicy policy</NuxtLink
                   >
                 </span>
-
                 <span
                   ><NuxtLink to="" title="Site map">Site map</NuxtLink></span
                 >
-
                 <span>
                   <NuxtLink to="" title="Cookies policy"
                     >Cookies policy</NuxtLink
                   >
                 </span>
               </div>
-
               <span
                 >Powered by&nbsp;
                 <NuxtLink to="" title="Powered by Nexus Point Apex"
@@ -208,11 +204,16 @@ section#car-footer {
   footer.car-footer {
     display: flex;
     flex-direction: column;
-    @media (min-width: 1200px) {
-      display: grid;
-    }
     padding: 1.5rem 0 0;
     width: 100%;
+    .top-footer {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: 1200px) {
+        display: grid;
+      }
+    }
     .col-one {
       display: flex;
       align-items: center;
@@ -370,6 +371,13 @@ section#car-footer {
       background-color: #3f3a50;
       margin-top: 1rem;
       padding-top: 1rem;
+      div.bottom-footer {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 1200px) {
+          display: grid;
+        }
+      }
     }
     .footer-links {
       // background-color: darkred;

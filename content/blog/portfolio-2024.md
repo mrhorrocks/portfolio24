@@ -9,11 +9,11 @@ featuredImage: /images/uploads/ed209-figma.png
 featuredImageAltText: Nuxt, Git, Netlify & Decap CMS
 ---
 
-Built with Nuxt 3, Netlify, and GitHub. Designed to be used as a wireframe for future projects.
+Built with Nuxt 3, Netlify, Decap CMS, and GitHub.
 
-## Current Tech
+Intended to be used as a wireframe for future projects.
 
-### Nuxt 3
+## Nuxt 3
 
 - Clean folder structure
 - Intelligent defaults
@@ -24,7 +24,7 @@ Built with Nuxt 3, Netlify, and GitHub. Designed to be used as a wireframe for f
 
 ---
 
-### Netlify
+## Netlify
 
 - Easy deployment workflow using continuous deployment and GitHub
 - Easy to configure
@@ -33,7 +33,7 @@ Built with Nuxt 3, Netlify, and GitHub. Designed to be used as a wireframe for f
 
 ---
 
-### Decap CMS
+## Decap CMS
 
 - CMS content is saved the Git repository
 - Easy to configure using a single yaml file

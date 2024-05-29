@@ -3,29 +3,29 @@
         {
             "id": "1",
             "href": "/blog/dashboard-rebuild/",
-            "title": "Dashboard Rebuild",
-            "description": "Figma wireframe, Chartjs, external JSON data",
-            "buttontext": "Go to the article"
+            "title": "Current Project",
+            "description": "Nuxt, Figma, Chartjs, Primevue, JSON data",
+            "buttontext": "Read More"
         },
         {
             "id": "2",
             "href": "/blog/car-dealer-template/",
             "title": "CarDealer",
-            "description": "Designed in Figma.<br/>JSON data source",
-            "buttontext": "Go to the article"
+            "description": "Nuxt, Figma, JSON data",
+            "buttontext": "Read More"
         },
         {
             "id": "3",
             "href": "/blog/portfolio-2024/",
             "title": "Portfolio 2024",
-            "description": "Current tech breakdown",
-            "buttontext": "Go to the article"
+            "description": "Current Tech Breakdown",
+            "buttontext": "Read More"
         },
         {
             "id": "4",
             "href": "https://mhox-good-things.netlify.app/",
             "title": "Get Online Week",
-            "description": "Responsive, promotional landing page",
+            "description": "Nuxt, Microsite Template",
             "buttontext": "Visit the website"
         },
         {
@@ -33,14 +33,14 @@
             "href": "/blog/graphics/",
             "title": "Graphics",
             "description": "From the Archive",
-            "buttontext": "Go to the article"
+            "buttontext": "Read More"
         },
         {
             "id": "6",
             "href": "/blog/emails/",
             "title": "Email Templates",
             "description": "From the Archive",
-            "buttontext": "Go to the article"
+            "buttontext": "Read More"
         }
     ]
 }

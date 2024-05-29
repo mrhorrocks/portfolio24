@@ -10,26 +10,14 @@ featuredImage: /images/uploads/emails-feature.png
 featuredImageAltText: Email Templates
 ---
 
-<span align="center">
+## JD Williams
 
-## Jacamo
-
-</span>
-
-![A screenshot of a previous email templates](/images/uploads/email-templates/jacamo.png "Jacamo email template"){ style="display: block; margin: 0 auto" }
-
-<span align="center">
+![A screenshot of a previous email templates](/images/uploads/email-templates/jd-williams.png "JD Williams email template"){ style="display: block; margin: 0 auto" }
 
 ## Marisota
 
-</span>
-
 ![A screenshot of a previous email templates](/images/uploads/email-templates/marisota.png "Marisota email template"){ style="display: block; margin: 0 auto" }
 
-<span align="center">
+## Jacamo
 
-## JD Williams
-
-</span>
-
-![A screenshot of a previous email templates](/images/uploads/email-templates/jd-williams.png "JD Williams email template"){ style="display: block; margin: 0 auto" }
+![A screenshot of a previous email templates](/images/uploads/email-templates/jacamo.png "Jacamo email template"){ style="display: block; margin: 0 auto" }
