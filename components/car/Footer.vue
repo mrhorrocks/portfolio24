@@ -3,7 +3,7 @@
     <footer class="car-footer">
       <!-- TOP FOOTER -->
       <section>
-        <div class="container">
+        <div class="car-container">
           <div class="grid lg:cols-7 top-footer">
             <!-- Col One -->
             <div class="col-one">
@@ -119,7 +119,7 @@
 
       <!-- BOTTOM FOOTER -->
       <section id="bottom-footer">
-        <div class="container">
+        <div class="car-container">
           <div class="grid xl:cols-7 bottom-footer">
             <!-- Company info -->
             <CarFooterDetail
@@ -166,24 +166,20 @@
                     Terms and conditions
                   </NuxtLink>
                 </span>
-
                 <span>
                   <NuxtLink to="" title="Privicy policy"
                     >Privicy policy</NuxtLink
                   >
                 </span>
-
                 <span
                   ><NuxtLink to="" title="Site map">Site map</NuxtLink></span
                 >
-
                 <span>
                   <NuxtLink to="" title="Cookies policy"
                     >Cookies policy</NuxtLink
                   >
                 </span>
               </div>
-
               <span
                 >Powered by&nbsp;
                 <NuxtLink to="" title="Powered by Nexus Point Apex"
@@ -378,6 +374,9 @@ section#car-footer {
       div.bottom-footer {
         display: flex;
         flex-direction: column;
+        @media (min-width: 1200px) {
+          display: grid;
+        }
       }
     }
     .footer-links {
