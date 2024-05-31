@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: true
   },
-  modules: ['@nuxt/content'],
+  modules: ['@nuxt/content', '@pinia/nuxt'],
 
   app: {
     head: {
