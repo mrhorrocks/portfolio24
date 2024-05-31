@@ -17,6 +17,9 @@ defineProps({
     String,
     default: "buttontext",
   },
+  model: {
+    Boolean,
+  },
 });
 </script>
 
@@ -25,8 +28,9 @@ defineProps({
     <a :href="href" class="thumb-link" :title="title">
       <div class="mask">
         <h3>{{ title }}</h3>
-        <p v-html="description"></p>
+        <p v-if="description" v-html="description"></p>
         <AppButtonLink :text="buttontext" :url="href" />
+        <slot v-if="model"></slot>
       </div>
       <MoreInfo />
     </a>
@@ -42,7 +46,6 @@ defineProps({
   position: relative;
   width: calc(80% - 1rem);
   aspect-ratio: 4 / 2.6;
-  // max-width: 330px;
   margin: 0.5rem auto;
   background-color: #d5d5d5;
   border-radius: 0.2rem;
@@ -53,6 +56,7 @@ defineProps({
   transition: 0.25s;
   @media (min-width: 400px) {
     width: calc(50% - 1rem);
+    margin: 0.5rem auto 0.5rem 0.5rem;
   }
   @media (min-width: 768px) {
     width: calc(33% - 1rem);
@@ -100,27 +104,32 @@ defineProps({
 
       h3 {
         display: none;
+        background-color: #000000;
+        padding: 0.5rem;
+        text-align: center;
+        margin: 0 0 0.5rem 0;
+        font-weight: bold;
+        border-radius: 0.25rem;
         @media (min-width: 640px) {
           display: block;
-          background-color: #000000;
-          padding: 0.5rem;
-          text-align: center;
-          margin: 0 0 0.5rem 0;
-          font-weight: bold;
         }
       }
 
       p {
         display: none;
+        text-align: center;
+        background-color: #000000;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        line-height: 1.2;
+        border-radius: 0.25rem;
         @media (min-width: 640px) {
           display: block;
-          text-align: center;
-          background-color: #000000;
-          padding: 0.5rem;
-          margin-bottom: 0.5rem;
-          font-size: 1rem;
-          line-height: 1.2;
         }
+      }
+      .app-button {
+        border-radius: 0.25rem;
       }
     }
     &:hover .mask {
