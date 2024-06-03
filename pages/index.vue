@@ -30,7 +30,6 @@ import homepageData from "~/assets/data/mhox-homepage.json";
       <div class="md:col-span-1">
         <!-- Social badges -->
         <SocialBadges />
-
         <!-- Headline -->
         <h1 class="site-headline">
           <span>Front-End Developer</span>
@@ -63,6 +62,12 @@ import homepageData from "~/assets/data/mhox-homepage.json";
 </template>
 
 <style lang="scss">
+.nuxt-icon svg {
+  margin-bottom: 0;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+}
 .thumbnails {
   display: flex;
   flex-direction: row;
