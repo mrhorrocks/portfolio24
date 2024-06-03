@@ -20,6 +20,20 @@ const isModalVisible = computed(() => modalStore.isModalVisible);
 const toggleModal = () => {
   modalStore.toggleModal();
 };
+//
+const handleKeyDown = event => {
+  if (event.key === "Escape" && isModalVisible.value) {
+    toggleModal();
+  }
+};
+
+onMounted(() => {
+  document.addEventListener("keydown", handleKeyDown);
+});
+
+onUnmounted(() => {
+  document.removeEventListener("keydown", handleKeyDown);
+});
 </script>
 
 <style lang="scss">
