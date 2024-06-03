@@ -7,42 +7,42 @@ defineProps({
   },
   description: {
     type: String,
-    default: "Default Content",
+    default: "Default Descrition",
   },
   href: {
-    String,
+    type: String,
     default: "/",
   },
   buttontext: {
-    String,
-    default: "buttontext",
+    type: String,
+    default: "Thumb Button Text",
   },
-  model: {
-    Boolean,
+  modal: {
+    type: Boolean,
+    default: false,
   },
 });
 </script>
 
 <template>
-  <div class="homepage-thumb">
-    <a :href="href" class="thumb-link" :title="title">
-      <div class="mask">
+  <div class="homepage-thumb" @click.stop>
+    <NuxtLink :href="href" class="thumb-link" :title="title" @click.stop>
+      <div class="mask" @click.stop="doThis">
         <h3>{{ title }}</h3>
         <p v-if="description" v-html="description"></p>
-        <AppButtonLink :text="buttontext" :url="href" />
-        <slot v-if="model"></slot>
+        <span v-if="buttontext">
+          <AppButtonLink :text="buttontext" :url="href"
+        /></span>
+        <slot v-if="modal"></slot>
       </div>
       <MoreInfo />
-    </a>
+    </NuxtLink>
   </div>
 </template>
 
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
 .homepage-thumb {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
   position: relative;
   width: calc(80% - 1rem);
   aspect-ratio: 4 / 2.6;
@@ -59,7 +59,8 @@ defineProps({
     margin: 0.5rem auto 0.5rem 0.5rem;
   }
   @media (min-width: 768px) {
-    width: calc(33% - 1rem);
+    width: calc(33.33% - 1rem);
+    margin: 0.5rem 0.5rem;
   }
   &:hover {
     background-size: 110%;
@@ -81,6 +82,9 @@ defineProps({
   }
   &:nth-of-type(6) {
     background-image: url("/img/homepage/thumbnails/emails-thumb.png");
+  }
+  &:nth-of-type(7) {
+    background-image: url("/img/homepage/thumbnails/drone-thumb.png");
   }
   > a {
     display: flex;

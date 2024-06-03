@@ -50,7 +50,11 @@ import homepageData from "~/assets/data/mhox-homepage.json";
           :title="item.title"
           :description="item.description"
           :buttontext="item.buttontext"
+          :modal="item.modal"
         >
+          <!-- SLOT -->
+          <ModalButton buttontext="<< Watch the video >>" />
+          <!-- SLOT -->
         </HomePageThumb>
       </div>
     </div>

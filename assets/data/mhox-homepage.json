@@ -6,7 +6,7 @@
             "title": "Current Project",
             "description": "Nuxt, Figma, Chartjs, Primevue, JSON data",
             "buttontext": "Read More",
-            "model": false
+            "modal": false
         },
         {
             "id": "2",
@@ -14,7 +14,7 @@
             "title": "CarDealer",
             "description": "Nuxt, Figma, JSON data",
             "buttontext": "Read More",
-            "model": false
+            "modal": false
         },
         {
             "id": "3",
@@ -22,7 +22,7 @@
             "title": "Portfolio 2024",
             "description": "Current Tech Breakdown",
             "buttontext": "Read More",
-            "model": false
+            "modal": false
         },
         {
             "id": "4",
@@ -30,7 +30,7 @@
             "title": "Get Online Week",
             "description": "Nuxt, Microsite Template",
             "buttontext": "Visit the website",
-            "model": false
+            "modal": false
         },
         {
             "id": "5",
@@ -38,7 +38,7 @@
             "title": "Graphics",
             "description": "From the Archive",
             "buttontext": "Read More",
-            "model": false
+            "modal": false
         },
         {
             "id": "6",
@@ -46,15 +46,15 @@
             "title": "Email Templates",
             "description": "From the Archive",
             "buttontext": "Read More",
-            "model": false
+            "modal": false
         },
         {
             "id": "7",
-            "href": "#",
+            "href": "",
             "title": "Drone Footage",
             "description": "",
-            "buttontext": "Watch the Video",
-            "model": true
+            "buttontext": "",
+            "modal": true
         }
     ]
 }
