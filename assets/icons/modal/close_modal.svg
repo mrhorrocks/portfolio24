@@ -1,0 +1,7 @@
+<svg class="close-modal" width="30" height="30" fill="#b6b600" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <circle transform="scale(1,-1)" cx="12" cy="-12" r="12" fill="#b6b600" stroke="none" style="paint-order:stroke markers fill"/>
+  <rect transform="matrix(.70711 .70711 .70711 -.70711 0 0)" x="15.38" y="-5.7958" width="3.2" height="11.422" fill="#000" stroke-width="0" style="paint-order:normal"/>
+  <rect transform="matrix(.70711 -.70711 -.70711 -.70711 0 0)" x="-1.6849" y="-22.727" width="3.2" height="11.495" fill="#000" stroke-width="0" style="paint-order:normal"/>
+ </g>
+</svg>

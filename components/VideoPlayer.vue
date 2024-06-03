@@ -38,7 +38,8 @@ defineProps({
 
 <template>
   <div>
-    <video ref="videoPlayer" :width="width" :height="height" muted loop>
+    <!-- <video ref="videoPlayer" :width="width" :height="height" muted loop> -->
+    <video ref="videoPlayer" controls :width="width" :height="height">
       <source :src="src" :type="type" />
       Your browser does not support the video tag.
     </video>

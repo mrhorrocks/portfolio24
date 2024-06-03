@@ -7,7 +7,7 @@ defineProps({
   },
   text: {
     type: String,
-    default: "Button text",
+    default: "Button link text",
   },
   url: {
     type: String,
@@ -17,7 +17,7 @@ defineProps({
 </script>
 
 <template>
-  <NuxtLink :to="url" class="app-button">&lt;&lt; {{ text }} >></NuxtLink>
+  <NuxtLink :to="url" class="app-button">&lt;&lt; {{ text }} &gt;&gt;</NuxtLink>
 </template>
 
 <style lang="scss">
@@ -34,12 +34,10 @@ defineProps({
   background-color: #000;
   box-shadow: 0px 3px 3px #737373;
   transition: 0.2s;
-  // font-weight: bold;
   &:hover {
     background-color: #b6b600;
     color: black;
     box-shadow: 2px 2px 2px #737373;
-    font-weight: bold;
   }
 }
 </style>
