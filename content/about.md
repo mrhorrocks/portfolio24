@@ -8,9 +8,9 @@ date: 2023-12-29T21:05:30.191Z
 
 Experienced Front-End Developer. I write well-structured semantic code, ensuring compatibility across various browsers. I can work in any code stack, and I am at my best when writing SASS or CSS to create user interfaces.
 
-I have been focusing on statically generated Nuxt applications and a WordPress theme that will be the perfect starting point for future WordPress projects. I have published a portfolio and a GitHub repository. https://github.com/mrhorrocks.
+Most recently I have been working on statically generated Nuxt applications, and a WordPress theme that will be the ideal starting point for future WordPress projects. These can be found at my GitHub repository. https://github.com/mrhorrocks.
 
-My previous experience includes creating interactive and responsive web applications for pharmaceutical companies,  developing websites in WordPress, and updating multiple websites. Some of the tools I use are HTML, SASS, Vue.js, NUXT, Laravel, WordPress, JavaScript, jQuery, and charting libraries such as  Chartjs or Highcharts with SQL databases. I create wireframe prototypes in Figma. I am accurate, and I pay close attention to the details.
+My previous experience includes creating interactive and responsive web applications for pharmaceutical companies, developing websites in WordPress, and updating multiple websites. Some of the tools I use are HTML, SASS, Vue.js, NUXT, Laravel, WordPress, JavaScript, jQuery, Adobe Suite and MySQL databases. I create wireframe prototypes in Figma. I am accurate, and I pay close attention to the details.
 
 Interpersonal skills include articulating design and technical decisions, having a proactive approach to design challenges, and building rapport with clients and colleagues. Having a can-do approach and being able to multi-task, problem-solve, and work on several projects at the same time.
 
