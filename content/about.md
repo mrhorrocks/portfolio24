@@ -20,4 +20,4 @@ Throughout my career, I have collaborated closely with back-end developers, prod
 
 My attention to detail and eye for design allow me to translate mock-ups and wireframes into pixel-perfect products. Also, my proficiency in version control systems like Git has facilitated smooth collaboration and code management within development teams.
 
-Outside work I'm involved in flying stunt drones, Target shooting, and soon I'll be involved in 3D printing.
+Outside work I'm involved in flying stunt drones, target shooting, and soon I'll be involved in 3D printing.
