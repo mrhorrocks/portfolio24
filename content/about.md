@@ -4,7 +4,7 @@ title: MHOX
 description: The about page description
 date: 2023-12-29T21:05:30.191Z
 ---
-# Experienced Front-End Developer
+# About
 
 Experienced Front-End Developer. I write well-structured semantic code, ensuring compatibility across various browsers. I can work in any code stack, and I am at my best when writing SASS or CSS to create user interfaces.
 
