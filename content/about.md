@@ -6,7 +6,7 @@ date: 2023-12-29T21:05:30.191Z
 ---
 # About
 
-Experienced Front-End Developer. I write well-structured semantic code, ensuring compatibility across various browsers. I can work in any code stack, and I am at my best when writing SASS or CSS to create user interfaces.
+Experienced Front-End Developer. I write well-structured semantic code, ensuring compatibility across various browsers. I am at my best when writing HTML, SASS or CSS to create user interfaces.
 
 Most recently I have been working on statically generated Nuxt applications, and a WordPress theme that will be the ideal starting point for future WordPress projects. These can be found at my GitHub repository. https://github.com/mrhorrocks.
 
