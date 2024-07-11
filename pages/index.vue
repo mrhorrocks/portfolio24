@@ -20,8 +20,13 @@ if (location.href.indexOf("#invite_token") !== -1) {
 // } = await useFetch(
 //   "https://mrhorrocks.github.io/data/mhox/mhox-thumbnails.json"
 // );
+
 // GET THUMBNAIL DATA FROM DATA FOLDER
-import homepageData from "~/assets/data/mhox-homepage.json";
+// import homepageData from "~/assets/data/mhox-homepage.json";
+
+// GET THUMBNAIL DATA FROM A COMPOSABLE
+const { homepageData } = useThumbNailData();
+// GET THUMBNAIL DATA FROM A COMPOSABLE
 </script>
 
 <template>
@@ -49,6 +54,7 @@ import homepageData from "~/assets/data/mhox-homepage.json";
           :title="item.title"
           :description="item.description"
           :buttontext="item.buttontext"
+          :videolink="item.videolink"
           :modal="item.modal"
         >
           <!-- SLOT -->
@@ -57,7 +63,7 @@ import homepageData from "~/assets/data/mhox-homepage.json";
         </HomePageThumb>
       </div>
     </div>
-    <Modal />
+    <Modal videolink="lkjhgfdsa" />
   </section>
 </template>
 
