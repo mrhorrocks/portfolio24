@@ -63,7 +63,7 @@ const { homepageData } = useThumbNailData();
         </HomePageThumb>
       </div>
     </div>
-    <Modal videolink="lkjhgfdsa" />
+    <Modal />
   </section>
 </template>
 
