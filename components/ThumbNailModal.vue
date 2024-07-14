@@ -17,7 +17,7 @@
     <div class="container grid md:grid md:cols-1">
       <div class="thumbnails">
         <div
-          v-for="thumbnail in thumbnails"
+          v-for="thumbnail in homepageData.thumbnails"
           :key="thumbnail.id"
           class="homepage-thumb"
         >
@@ -28,19 +28,34 @@
             @click.stop
           >
             <div class="mask" @click.stop="doThis">
+              <!-- TITLE -->
               <h3>{{ thumbnail.title }}</h3>
+              <!-- TITLE -->
+
+              <!-- DESCRIPTION -->
               <p
                 v-if="thumbnail.description"
                 v-html="thumbnail.description"
               ></p>
-              <!-- BUTTON -->
-              <button
+              <!-- DESCRIPTION -->
+
+              <!-- URI -->
+              <span v-if="thumbnail.buttontext">
+                <AppButtonLink
+                  :text="thumbnail.buttontext"
+                  :url="thumbnail.href"
+              /></span>
+              <!-- URI -->
+
+              <!-- VIDEO MODAL BUTTON -->
+              <ModalButton
+                buttontext="<< Watch the video >>"
                 @click="openModal(thumbnail.videolink)"
                 v-if="thumbnail.videolink"
               >
                 {{ thumbnail.buttontext }}
-              </button>
-              <!-- BUTTON -->
+              </ModalButton>
+              <!-- VIDEO MODAL BUTTON -->
             </div>
             <MoreInfo />
           </NuxtLink>
@@ -61,7 +76,9 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+// GET THUMBNAIL DATA FROM A COMPOSABLE
+const { homepageData } = useThumbNailData();
+// GET THUMBNAIL DATA FROM A COMPOSABLE
 
 // JSON data
 const thumbnails = ref([
@@ -112,7 +129,7 @@ const thumbnails = ref([
     href: "",
     title: "Drone Footage",
     description: "",
-    buttontext: "Watch the Video",
+    buttontext: "",
     videolink: "/img/homepage/mgwb_480.mp4",
   },
   {
@@ -120,7 +137,7 @@ const thumbnails = ref([
     href: "",
     title: "Animation",
     description: "",
-    buttontext: "Watch the Video",
+    buttontext: "",
     videolink: "/img/homepage/ed209-video.mp4",
   },
 ]);
