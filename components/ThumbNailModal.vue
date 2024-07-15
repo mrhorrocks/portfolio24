@@ -1,20 +1,6 @@
 <template>
   <section>
     <div class="container grid md:grid md:cols-1">
-      <div class="md:col-span-1">
-        <!-- Social badges -->
-        <SocialBadges />
-        <!-- Headline -->
-        <h1 class="site-headline">
-          <span>Front-End Developer</span>
-        </h1>
-
-        <!-- Tech logos -->
-        <TechBadges />
-      </div>
-    </div>
-    <!--  -->
-    <div class="container grid md:grid md:cols-1">
       <div class="thumbnails">
         <div
           v-for="thumbnail in homepageData.thumbnails"
@@ -64,83 +50,78 @@
     </div>
   </section>
 
-  <div v-if="isModalOpen" class="modal">
+  <!-- THE VIDEO MODAL -->
+
+  <div v-if="isModalOpen" class="modal" @click="closeModal()">
     <div class="modal-content">
-      <span class="close" @click="closeModal">&times;</span>
-      <video v-if="currentVideo" controls>
+      <button class="close-modal">
+        <nuxt-icon
+          name="modal/close_modal"
+          filled
+          @click.stop.prevent="closeModal()"
+        />
+      </button>
+      <!-- VIDEO -->
+      <video v-if="currentVideo" controls ref="videoPlayer" @click.stop.prevent>
         <source :src="currentVideo" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <!-- PLAY VIDEO BUTTON -->
+      <button @click.stop.prevent="toggleVideo" class="video-button">
+        <span v-if="!isPlaying">
+          <!-- PLAY -->
+          <svg
+            width="30"
+            height="30"
+            fill="#b6b600"
+            version="1.1"
+            viewBox="0 0 50 50"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m0 25c0-13.808 11.192-25 25-25s25 11.192 25 25-11.192 25-25 25-25-11.192-25-25zm35.959-2.5205a2.8846 2.8846 0 0 1 0 5.041l-14.367 7.9821a2.8846 2.8846 0 0 1-4.2846-2.5205v-15.964c0-2.1974 2.3615-3.5897 4.2846-2.5205z"
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              stroke-width="2.5641"
+            />
+          </svg>
+
+          <!-- PLAY -->
+        </span>
+        <span v-if="isPlaying">
+          <!-- PAUSE -->
+          <svg
+            width="30"
+            height="30"
+            fill="#b6b600"
+            version="1.1"
+            viewBox="0 0 50 50"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g transform="translate(-73.009 -106.87)">
+              <path
+                d="m73.009 131.87c0-13.808 11.192-25 25-25 13.808 0 25 11.192 25 25 0 13.808-11.192 25-25 25-13.808 0-25-11.192-25-25zm17.308-9.6154a1.9231 1.9231 0 0 0-1.9231 1.9231v15.385c0 1.0615 0.86154 1.923 1.9231 1.923h1.9231a1.9231 1.9231 0 0 0 1.9231-1.923v-15.385a1.9231 1.9231 0 0 0-1.9231-1.9231zm13.462 0a1.9231 1.9231 0 0 0-1.923 1.9231v15.385c0 1.0615 0.86154 1.923 1.923 1.923h1.9231a1.9231 1.9231 0 0 0 1.9231-1.923v-15.385a1.9231 1.9231 0 0 0-1.9231-1.9231z"
+                clip-rule="evenodd"
+                fill-rule="evenodd"
+                stroke-width="2.5641"
+              />
+            </g>
+          </svg>
+          <!-- PAUSE -->
+        </span>
+        <!-- {{ isPlaying.value ? "Pause" : "Play" }} -->
+      </button>
+      <!-- PLAY VIDEO BUTTON -->
+      <!-- VIDEO -->
     </div>
   </div>
+  <!-- THE VIDEO MODAL -->
 </template>
 
 <script setup>
 // GET THUMBNAIL DATA FROM A COMPOSABLE
 const { homepageData } = useThumbNailData();
 // GET THUMBNAIL DATA FROM A COMPOSABLE
-
-// JSON data
-const thumbnails = ref([
-  {
-    id: "1",
-    href: "/blog/dashboard-rebuild/",
-    title: "Current Project",
-    description: "Nuxt, Figma, Chartjs, Primevue, JSON data",
-    buttontext: "Read More",
-  },
-  {
-    id: "2",
-    href: "/blog/car-dealer-template/",
-    title: "CarDealer",
-    description: "Nuxt, Figma, JSON data",
-    buttontext: "Read More",
-  },
-  {
-    id: "3",
-    href: "/blog/portfolio-2024/",
-    title: "Portfolio 2024",
-    description: "Current Tech Breakdown",
-    buttontext: "Read More",
-  },
-  {
-    id: "4",
-    href: "https://mhox-good-things.netlify.app/",
-    title: "Get Online Week",
-    description: "Nuxt, Microsite Template",
-    buttontext: "Visit the website",
-  },
-  {
-    id: "5",
-    href: "/blog/graphics/",
-    title: "Graphics",
-    description: "From the Archive",
-    buttontext: "Read More",
-  },
-  {
-    id: "6",
-    href: "/blog/emails/",
-    title: "Email Templates",
-    description: "From the Archive",
-    buttontext: "Read More",
-  },
-  {
-    id: "7",
-    href: "",
-    title: "Drone Footage",
-    description: "",
-    buttontext: "",
-    videolink: "/img/homepage/mgwb_480.mp4",
-  },
-  {
-    id: "8",
-    href: "",
-    title: "Animation",
-    description: "",
-    buttontext: "",
-    videolink: "/img/homepage/ed209-video.mp4",
-  },
-]);
 
 // Modal states
 const isModalOpen = ref(false);
@@ -157,6 +138,33 @@ const closeModal = () => {
   currentVideo.value = null;
   isModalOpen.value = false;
 };
+const handleKeyDown = event => {
+  if (event.key === "Escape" && isModalOpen.value) {
+    closeModal();
+  }
+};
+onMounted(() => {
+  document.addEventListener("keydown", handleKeyDown);
+});
+onUnmounted(() => {
+  document.removeEventListener("keydown", handleKeyDown);
+});
+// Close modal function
+
+const isPlaying = ref(false);
+const videoPlayer = ref(null);
+
+const toggleVideo = () => {
+  const video = videoPlayer.value;
+
+  if (isPlaying.value) {
+    video.pause();
+  } else {
+    video.play();
+  }
+
+  isPlaying.value = !isPlaying.value;
+};
 </script>
 
 <style lang="scss">
@@ -166,139 +174,41 @@ const closeModal = () => {
 }
 
 .modal {
+  /* modal styles */
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
+  z-index: 2000;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-  background-color: #fefefe;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 600px;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.homepage-thumb {
-  position: relative;
-  width: calc(80% - 1rem);
-  aspect-ratio: 4 / 2.6;
-  margin: 0.5rem auto;
-  background-color: #d5d5d5;
-  border-radius: 0.2rem;
-  transition: 1s;
-  overflow: hidden;
-  background-position: center;
-  background-size: 101%;
-  transition: 0.25s;
-  @media (min-width: 400px) {
-    width: calc(50% - 1rem);
-    margin: 0.5rem auto 0.5rem 0.5rem;
-  }
-  @media (min-width: 768px) {
-    width: calc(33.33% - 1rem);
-    margin: 0.5rem 0.5rem;
-  }
-  &:hover {
-    background-size: 110%;
-  }
-  &:nth-of-type(1) {
-    background-image: url("/img/homepage/thumbnails/dashboard-light.png");
-  }
-  &:nth-of-type(2) {
-    background-image: url("/img/homepage/thumbnails/cardealer.png");
-  }
-  &:nth-of-type(3) {
-    background-image: url("/img/homepage/thumbnails/portfolio2024.png");
-  }
-  &:nth-of-type(4) {
-    background-image: url("/img/homepage/thumbnails/good-things-thumb.png");
-  }
-  &:nth-of-type(5) {
-    background-image: url("/img/homepage/thumbnails/portfolio-old.png");
-  }
-  &:nth-of-type(6) {
-    background-image: url("/img/homepage/thumbnails/emails-thumb.png");
-  }
-  &:nth-of-type(7) {
-    background-image: url("/img/homepage/thumbnails/drone-thumb.png");
-  }
-  > a {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    .mask {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  background-color: #000000ab;
+  backdrop-filter: blur(2px);
+  .modal-content {
+    position: absolute;
+    z-index: 2001;
+    max-width: 738px;
+    width: calc(90% - 1rem);
+    aspect-ratio: 16 / 8;
+    padding: 0rem;
+    background-color: transparent;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    transition-duration: 1000ms;
+    border-radius: 0rem;
+    button.close-modal {
       position: absolute;
-      top: -100%;
-      width: 100%;
-      height: 100%;
-      color: $light-grey;
-      transition: 0.15s;
-
-      h3 {
-        display: none;
-        background-color: #000000;
-        padding: 0.5rem;
-        text-align: center;
-        margin: 0 0 0.5rem 0;
-        font-weight: bold;
-        border-radius: 0.25rem;
-        @media (min-width: 640px) {
-          display: block;
-        }
-      }
-
-      p {
-        display: none;
-        text-align: center;
-        background-color: #000000;
-        padding: 0.5rem;
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
-        line-height: 1.2;
-        border-radius: 0.25rem;
-        @media (min-width: 640px) {
-          display: block;
-        }
-      }
-      .app-button {
-        border-radius: 0.25rem;
-      }
-    }
-    &:hover .mask {
-      top: 0%;
-      background-color: #ffffff95;
-      backdrop-filter: blur(1px);
+      z-index: 2001;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      background-color: transparent;
+      float: right;
+      cursor: pointer;
     }
   }
 }
