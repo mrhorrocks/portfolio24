@@ -3,52 +3,42 @@
         {
             "id": "1",
             "href": "/blog/dashboard-rebuild/",
-            "title": "Current Project",
+            "title": "In Progress",
             "description": "Nuxt, Figma, Chartjs, Primevue, JSON data",
-            "buttontext": "Read More"
+            "buttontext": "Read More",
+            "style": "background-image: url('/img/homepage/thumbnails/dashboard-light.png')"
         },
         {
             "id": "2",
             "href": "/blog/car-dealer-template/",
             "title": "CarDealer",
             "description": "Nuxt, Figma, JSON data",
-            "buttontext": "Read More"
-        },
-        {
-            "id": "3",
-            "href": "/blog/portfolio-2024/",
-            "title": "Portfolio 2024",
-            "description": "Current Tech Breakdown",
-            "buttontext": "Read More"
+            "buttontext": "Read More",
+            "style": "background-image: url('/img/homepage/thumbnails/cardealer.png')"
         },
         {
             "id": "4",
             "href": "https://mhox-good-things.netlify.app/",
             "title": "Get Online Week",
             "description": "Nuxt, Microsite Template",
-            "buttontext": "Visit the website"
+            "buttontext": "Visit the website",
+            "style": "background-image: url('/img/homepage/thumbnails/good-things-thumb.png')"
+        },
+        {
+            "id": "3",
+            "href": "/blog/portfolio-2024/",
+            "title": "Portfolio 2024",
+            "description": "Current Tech Breakdown",
+            "buttontext": "Read More",
+            "style": "background-image: url('/img/homepage/thumbnails/portfolio2024.png')"
         },
         {
             "id": "5",
             "href": "/blog/graphics/",
             "title": "Graphics",
             "description": "From the Archive",
-            "buttontext": "Read More"
-        },
-        {
-            "id": "6",
-            "href": "/blog/emails/",
-            "title": "Email Templates",
-            "description": "From the Archive",
-            "buttontext": "Read More"
-        },
-        {
-            "id": "7",
-            "href": "",
-            "title": "Drone Footage",
-            "description": "",
-            "buttontext": "",
-            "videolink": "/img/homepage/mgwb_480.mp4"
+            "buttontext": "Read More",
+            "style": "background-image: url('/img/homepage/thumbnails/portfolio-old.png')"
         },
         {
             "id": "8",
@@ -56,7 +46,25 @@
             "title": "3D Animation",
             "description": "Blender, ImageReady",
             "buttontext": "",
-            "videolink": "/img/homepage/ed209-video.mp4"
+            "videolink": "/img/homepage/ed209-video.mp4",
+            "style": "background-image: url('/img/homepage/thumbnails/ed-animation.png')"
+        },
+        {
+            "id": "6",
+            "href": "/blog/emails/",
+            "title": "Email Templates",
+            "description": "From the Archive",
+            "buttontext": "Read More",
+            "style": "background-image: url('/img/homepage/thumbnails/emails-thumb.png')"
+        },
+        {
+            "id": "7",
+            "href": "",
+            "title": "Drone Footage",
+            "description": "",
+            "buttontext": "",
+            "videolink": "/img/homepage/mgwb_480.mp4",
+            "style": "background-image: url('/img/homepage/thumbnails/drone-thumb.png')"
         }
     ]
 }

@@ -6,6 +6,7 @@
           v-for="thumbnail in homepageData.thumbnails"
           :key="thumbnail.id"
           class="homepage-thumb"
+          :style="thumbnail.style ? thumbnail.style : ''"
         >
           <NuxtLink
             :href="thumbnail.href"

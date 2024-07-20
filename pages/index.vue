@@ -70,30 +70,6 @@ h1.site-headline {
   &:hover {
     background-size: 110%;
   }
-  &:nth-of-type(1) {
-    background-image: url("/img/homepage/thumbnails/dashboard-light.png");
-  }
-  &:nth-of-type(2) {
-    background-image: url("/img/homepage/thumbnails/cardealer.png");
-  }
-  &:nth-of-type(3) {
-    background-image: url("/img/homepage/thumbnails/portfolio2024.png");
-  }
-  &:nth-of-type(4) {
-    background-image: url("/img/homepage/thumbnails/good-things-thumb.png");
-  }
-  &:nth-of-type(5) {
-    background-image: url("/img/homepage/thumbnails/portfolio-old.png");
-  }
-  &:nth-of-type(6) {
-    background-image: url("/img/homepage/thumbnails/emails-thumb.png");
-  }
-  &:nth-of-type(7) {
-    background-image: url("/img/homepage/thumbnails/drone-thumb.png");
-  }
-  &:nth-of-type(8) {
-    background-image: url("/img/homepage/thumbnails/ed-animation.png");
-  }
   > a {
     display: flex;
     flex-direction: column;
