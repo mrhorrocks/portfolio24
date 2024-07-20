@@ -97,7 +97,6 @@ export default {
         <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
         <NuxtLink to="/about" title="About">About</NuxtLink>
         <NuxtLink to="/tools" title="Tools">Tools</NuxtLink>
-        <NuxtLink to="/test" title="test">TEST</NuxtLink>
       </div>
     </div>
 
@@ -108,7 +107,6 @@ export default {
       <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
       <NuxtLink to="/about" title="About">About</NuxtLink>
       <NuxtLink to="/tools" title="Tools">Tools</NuxtLink>
-      <NuxtLink to="/test" title="test">TEST</NuxtLink>
     </div>
   </nav>
 </template>
