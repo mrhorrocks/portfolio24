@@ -36,7 +36,7 @@
 
               <!-- VIDEO MODAL BUTTON -->
               <ModalButton
-                buttontext="<< Watch the video >>"
+                buttontext="<< Play >>"
                 @click="openModal(thumbnail.videolink)"
                 v-if="thumbnail.videolink"
               >
@@ -63,7 +63,13 @@
         />
       </button>
       <!-- VIDEO -->
-      <video v-if="currentVideo" controls ref="videoPlayer" @click.stop.prevent>
+      <video
+        autoplay
+        v-if="currentVideo"
+        controls
+        ref="videoPlayer"
+        @click.stop.prevent
+      >
         <source :src="currentVideo" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
