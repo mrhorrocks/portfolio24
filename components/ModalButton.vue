@@ -15,9 +15,10 @@ defineProps({
 </script>
 
 <template>
-  <Button @click.stop.prevent="toggleModal" class="modal-button">{{
-    buttontext
-  }}</Button>
+  <!-- <Button @click.stop.prevent="toggleModal" class="modal-button"> -->
+  <Button class="modal-button">
+    {{ buttontext }}
+  </Button>
 </template>
 
 <style lang="scss">
@@ -33,6 +34,7 @@ defineProps({
     background-color: #b6b600;
     color: black;
     box-shadow: 2px 2px 2px #737373;
+    cursor: pointer;
   }
 }
 </style>

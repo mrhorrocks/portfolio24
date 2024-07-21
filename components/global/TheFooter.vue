@@ -1,7 +1,7 @@
 <template>
   <footer id="footer">
     <div class="container footer">
-      <div class="version">v3.2</div>
+      <div class="version">v3.3</div>
       <SocialBadges />
     </div>
   </footer>

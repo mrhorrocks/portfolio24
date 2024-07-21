@@ -42,9 +42,14 @@ html {
   min-height: 100vh;
 }
 
+a {
+  color: blue;
+}
+
 body {
   font-family: "RobotoCondensed-Regular", Arial, Helvetica, sans-serif;
   background-color: darken($body-bg, 10%);
+  color: black;
   main {
     position: relative;
     padding-top: 4.5rem;

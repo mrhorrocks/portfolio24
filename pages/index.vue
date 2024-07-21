@@ -11,68 +11,29 @@ if (location.href.indexOf("#invite_token") !== -1) {
   var urlSplit = document.URL.split("#");
   window.location.href = "/admin/#" + urlSplit[1];
 }
-
-// GET THUMBNAIL DATA FROM API
-// const {
-//   data: homepageData,
-//   pending,
-//   error,
-// } = await useFetch(
-//   "https://mrhorrocks.github.io/data/mhox/mhox-thumbnails.json"
-// );
-// GET THUMBNAIL DATA FROM DATA FOLDER
-import homepageData from "~/assets/data/mhox-homepage.json";
 </script>
 
 <template>
-  <section>
-    <div class="container grid md:grid md:cols-1">
-      <div class="md:col-span-1">
-        <!-- Social badges -->
-        <SocialBadges />
-        <!-- Headline -->
-        <h1 class="site-headline">
-          <span>Front-End Developer</span>
-        </h1>
+  <div class="container grid md:grid md:cols-1">
+    <div class="md:col-span-1">
+      <!-- Social badges -->
+      <SocialBadges />
+      <!-- Headline -->
+      <h1 class="site-headline">
+        <span>Front-End Developer</span>
+      </h1>
 
-        <!-- Tech logos -->
-        <TechBadges />
-      </div>
+      <!-- Tech logos -->
+      <TechBadges />
     </div>
-    <!-- THUMBS -->
-    <div class="container grid md:grid md:cols-1">
-      <div class="thumbnails">
-        <HomePageThumb
-          v-for="item in homepageData.thumbnails"
-          :key="item.id"
-          :href="item.href"
-          :title="item.title"
-          :description="item.description"
-          :buttontext="item.buttontext"
-          :modal="item.modal"
-        >
-          <!-- SLOT -->
-          <ModalButton buttontext="<< Watch the video >>" />
-          <!-- SLOT -->
-        </HomePageThumb>
-      </div>
-    </div>
-    <Modal />
-  </section>
+  </div>
+
+  <ThumbNails />
 </template>
 
 <style lang="scss">
-.nuxt-icon svg {
-  margin-bottom: 0;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-}
-.thumbnails {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+@import "@/assets/scss/partials/colours";
+
 h1.site-headline {
   position: relative;
   z-index: 1;
@@ -84,5 +45,86 @@ h1.site-headline {
   padding: 0 0;
   color: #ffffff;
   text-shadow: 0px 4px 4px #00000025;
+}
+
+.homepage-thumb {
+  position: relative;
+  width: calc(80% - 1rem);
+  aspect-ratio: 4 / 2.6;
+  margin: 0.5rem auto;
+  background-color: #d5d5d5;
+  border-radius: 0.2rem;
+  transition: 1s;
+  overflow: hidden;
+  background-position: center;
+  background-size: 101%;
+  transition: 0.25s;
+  @media (min-width: 400px) {
+    width: calc(50% - 1rem);
+    margin: 0.5rem auto 0.5rem 0.5rem;
+  }
+  @media (min-width: 768px) {
+    width: calc(33.33% - 1rem);
+    margin: 0.5rem 0.5rem;
+  }
+  &:hover {
+    background-size: 110%;
+  }
+  > a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    .mask {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: -100%;
+      width: 100%;
+      height: 100%;
+      color: $light-grey;
+      transition: 0.15s;
+
+      h3 {
+        display: none;
+        background-color: #000000;
+        padding: 0.5rem;
+        text-align: center;
+        margin: 0 0 0.5rem 0;
+        font-weight: bold;
+        border-radius: 0.25rem;
+        @media (min-width: 640px) {
+          display: block;
+        }
+      }
+
+      p {
+        display: none;
+        text-align: center;
+        background-color: #000000;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        line-height: 1.2;
+        border-radius: 0.25rem;
+        @media (min-width: 640px) {
+          display: block;
+        }
+      }
+      .app-button {
+        border-radius: 0.25rem;
+      }
+    }
+    &:hover .mask {
+      top: 0%;
+      background-color: #ffffff95;
+      backdrop-filter: blur(1px);
+    }
+  }
 }
 </style>
