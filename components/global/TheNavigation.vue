@@ -93,20 +93,32 @@ export default {
           { shrink: isNavShrink },
         ]"
       >
-        <NuxtLink to="/" title="Home">Home</NuxtLink>
-        <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
-        <NuxtLink to="/about" title="About">About</NuxtLink>
-        <NuxtLink to="/tools" title="Tools">Tools</NuxtLink>
+        <ul>
+          <li><NuxtLink to="/" title="Home">Home</NuxtLink></li>
+          <li><NuxtLink to="/blog" title="Blog">Blog</NuxtLink></li>
+          <li><NuxtLink to="/about" title="About">About</NuxtLink></li>
+          <li><NuxtLink to="/tools" title="Tools">Tools</NuxtLink></li>
+        </ul>
       </div>
     </div>
 
     <!-- MOBILE MENU -->
     <!-- Show below 1024px -->
     <div v-if="mobileMenuOpen" class="mobilenavlinks">
-      <NuxtLink to="/" title="Home">Home</NuxtLink>
-      <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
-      <NuxtLink to="/about" title="About">About</NuxtLink>
-      <NuxtLink to="/tools" title="Tools">Tools</NuxtLink>
+      <ul>
+        <li>
+          <NuxtLink to="/" title="Home">Home</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/about" title="About">About</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/tools" title="Tools">Tools</NuxtLink>
+        </li>
+      </ul>
     </div>
   </nav>
 </template>
@@ -125,6 +137,9 @@ div.navlinks {
   display: none;
   @media (min-width: 768px) {
     display: block;
+  }
+  ul {
+    display: flex;
   }
   a {
     position: relative;
@@ -197,14 +212,20 @@ div.mobilenavlinks {
   @media (min-width: 768px) {
     display: none;
   }
-  a {
-    padding: 1rem 0.5rem;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    border-top: 1px solid black;
-    &:hover {
-      background-color: #e6e6e6;
+  ul {
+    li {
+      a {
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        border-top: 1px solid black;
+        &:hover {
+          background-color: #e6e6e6;
+        }
+      }
     }
   }
 }
