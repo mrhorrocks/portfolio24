@@ -42,7 +42,7 @@ h1.site-headline {
   text-transform: uppercase;
   padding: 0 0;
   color: #ffffff;
-  text-shadow: 5px 5px #0000005e;
+  // text-shadow: 5px 5px #0000005e;
 }
 
 .homepage-thumb {
