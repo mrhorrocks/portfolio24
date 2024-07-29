@@ -65,6 +65,25 @@
             "buttontext": "",
             "videolink": "/img/homepage/mgwb_480.mp4",
             "style": "background-image: url('/img/homepage/thumbnails/drone-thumb.png')"
+        },
+        {
+            "id": "9",
+            "href": "",
+            "title": "Drone Crash",
+            "description": "",
+            "buttontext": "",
+            "videolink": "/img/homepage/drone_crash_720.mp4",
+            "style": "background-image: url('/img/homepage/thumbnails/drone-crash-thumb.png')"
+        }
+    ],
+    "dev": [
+        {
+            "id": "100",
+            "href": "/blog/wordpress/",
+            "title": "Wordpress Theme",
+            "description": "Custom Built",
+            "buttontext": "Read More",
+            "style": "background-image: url('/img/homepage/thumbnails/wordpress-thumb.png')"
         }
     ]
 }
