@@ -19,9 +19,7 @@ if (location.href.indexOf("#invite_token") !== -1) {
       <!-- Social badges -->
       <SocialBadges />
       <!-- Headline -->
-      <h1 class="site-headline">
-        <span>Front-End Developer</span>
-      </h1>
+      <h1 class="site-headline">Front-End Web Developer</h1>
 
       <!-- Tech logos -->
       <TechBadges />
@@ -38,13 +36,13 @@ h1.site-headline {
   position: relative;
   z-index: 1;
   font-family: "Impact", RobotoCondensed-Black, "Arial Narrow Bold";
-  font-size: clamp(2.18rem, 11vw, 7.25rem);
+  font-size: clamp(2.1rem, 9vw, 5.85rem);
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
   padding: 0 0;
   color: #ffffff;
-  text-shadow: 8px 8px #0000005e;
+  text-shadow: 5px 5px #0000005e;
 }
 
 .homepage-thumb {
