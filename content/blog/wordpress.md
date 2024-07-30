@@ -37,3 +37,7 @@ I'm building a custom WordPress theme that will be the ideal starting point for 
 ### Mobile First Responsive Layout
 
 - Compiled by executing '**npm run sass**' from within the theme folder.
+
+### Nested Navigation Menu
+
+- Nested pages added to navigation.
