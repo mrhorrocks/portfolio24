@@ -1,7 +1,8 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="more-info">More info >></div>
+  <!-- <div class="more-info">More info >></div> -->
+  <div class="more-info">&gt;</div>
 </template>
 
 <style lang="scss">
