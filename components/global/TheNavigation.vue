@@ -27,15 +27,15 @@ export default {
 </script>
 <template>
   <nav id="nav">
+    <SiteLogo />
     <div class="nav-content">
-      <SiteLogo />
       <button
         @click="toggleMobileMenu"
         class="hamburger"
         aria-label="toggle Navigation"
       >
         <span v-if="mobileMenuOpen">
-          <!-- Close -->
+          <!-- Close icon -->
           <svg
             width="32"
             height="32"
@@ -61,7 +61,9 @@ export default {
             />
           </svg>
         </span>
+
         <span v-if="!mobileMenuOpen">
+          <!-- Open icon -->
           <svg
             width="32"
             height="32"
@@ -96,8 +98,19 @@ export default {
         <ul>
           <li><NuxtLink to="/" title="Home">Home</NuxtLink></li>
           <li><NuxtLink to="/blog" title="Blog">Blog</NuxtLink></li>
-          <li><NuxtLink to="/about" title="About">About</NuxtLink></li>
-          <li><NuxtLink to="/tools" title="Tools">Tools</NuxtLink></li>
+
+          <li>
+            <NuxtLink to="/about" title="About">
+              About
+              <nuxt-icon name="arrow_drop_down" />
+            </NuxtLink>
+            <ul class="sub-menu">
+              <li><NuxtLink to="/about" title="About">About</NuxtLink></li>
+              <li><NuxtLink to="/tools" title="Tools">Tools</NuxtLink></li>
+            </ul>
+          </li>
+
+          <!-- <li><NuxtLink to="/tools" title="Tools">Tools</NuxtLink></li> -->
         </ul>
       </div>
     </div>
@@ -106,18 +119,10 @@ export default {
     <!-- Show below 1024px -->
     <div v-if="mobileMenuOpen" class="mobilenavlinks">
       <ul>
-        <li>
-          <NuxtLink to="/" title="Home">Home</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/blog" title="Blog">Blog</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/about" title="About">About</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/tools" title="Tools">Tools</NuxtLink>
-        </li>
+        <li><NuxtLink to="/" title="Home">Home</NuxtLink></li>
+        <li><NuxtLink to="/blog" title="Blog">Blog</NuxtLink></li>
+        <li><NuxtLink to="/about" title="About">About</NuxtLink></li>
+        <li><NuxtLink to="/tools" title="Tools">Tools</NuxtLink></li>
       </ul>
     </div>
   </nav>
@@ -127,19 +132,51 @@ export default {
 @import "@/assets/scss/partials/colours";
 
 nav#nav {
+  display: flex;
+  justify-content: space-between;
   div.nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
+
 div.navlinks {
-  display: none;
+  position: relative;
+  // display: none;
   @media (min-width: 768px) {
     display: block;
   }
   ul {
+    position: relative;
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    li {
+      width: 100%;
+      background-color: pink;
+      display: flex;
+      flex-direction: column;
+    }
+    li:hover ul.sub-menu {
+      display: flex;
+    }
+    li:has(> ul.sub-menu a) {
+      background-color: green;
+      // &::after {
+      // position: absolute;
+      // top: 39%;
+      // right: 0.25rem;
+      // content: ">";
+      // }
+    }
+    ul.sub-menu {
+      display: none;
+      flex-direction: column;
+      // position: absolute;
+      // top: 80px;
+      background-color: red;
+    }
   }
   a {
     position: relative;
@@ -151,6 +188,8 @@ div.navlinks {
     font-size: 0.85rem;
     text-decoration: none;
     text-transform: uppercase;
+    text-wrap: nowrap;
+    width: 100%;
     font-family: Roboto;
     // text-transform: uppercase;
     color: black;
@@ -205,6 +244,7 @@ button.hamburger {
     display: none;
   }
 }
+
 div.mobilenavlinks {
   display: flex;
   flex-direction: column;

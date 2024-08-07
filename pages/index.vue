@@ -32,6 +32,13 @@ if (location.href.indexOf("#invite_token") !== -1) {
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
 
+.nuxt-icon svg {
+  margin-bottom: 0;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+}
+
 h1.site-headline {
   position: relative;
   z-index: 1;
