@@ -1,6 +1,6 @@
 ---
-headline: Custom WordPress Theme
-title: Custom WordPress Theme
+headline: WordPress Theme
+title: WordPress Theme
 description: Custom Build
 date: 2024-01-09T15:20:00.109Z
 author: ""
