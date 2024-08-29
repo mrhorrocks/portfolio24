@@ -52,7 +52,6 @@
   </section>
 
   <!-- THE VIDEO MODAL -->
-
   <div v-if="isModalOpen" class="modal" @click="closeModal()">
     <div class="modal-content">
       <button class="close-modal">
@@ -62,6 +61,7 @@
           @click.stop.prevent="closeModal()"
         />
       </button>
+
       <!-- VIDEO -->
       <video
         autoplay
@@ -73,6 +73,8 @@
         <source :src="currentVideo" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <!-- VIDEO -->
+
       <!-- PLAY VIDEO BUTTON -->
       <button @click.stop.prevent="toggleVideo" class="video-button">
         <span v-if="!isPlaying">
@@ -176,6 +178,11 @@ const toggleVideo = () => {
 
 <style lang="scss">
 @import "@/assets/scss/partials/colours";
+
+video {
+  width: 100%;
+}
+
 .thumbnail {
   margin-bottom: 20px;
 }
