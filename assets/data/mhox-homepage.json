@@ -3,7 +3,7 @@
         {
             "id": "1",
             "href": "/blog/dashboard-rebuild/",
-            "title": "In Progress",
+            "title": "Wireframe",
             "description": "Nuxt, Figma, Chartjs, Primevue, JSON data",
             "buttontext": "Read More",
             "style": "background-image: url('/img/homepage/thumbnails/dashboard-light.png')"
