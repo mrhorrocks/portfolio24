@@ -17,12 +17,12 @@ if (location.href.indexOf("#invite_token") !== -1) {
   <div class="container grid md:grid md:cols-1">
     <div class="md:col-span-1">
       <!-- Social badges -->
-      <SocialBadges />
+      <!-- <SocialBadges /> -->
       <!-- Headline -->
-      <h1 class="site-headline">Front-End Web Developer</h1>
+      <h1 class="site-headline">Front-End Developer</h1>
 
       <!-- Tech logos -->
-      <TechBadges />
+      <!-- <TechBadges /> -->
     </div>
   </div>
 
@@ -36,12 +36,13 @@ h1.site-headline {
   position: relative;
   z-index: 1;
   font-family: "Impact", RobotoCondensed-Black, "Arial Narrow Bold";
-  font-size: clamp(2.1rem, 9vw, 5.85rem);
+  font-size: clamp(2.1rem, 11vw, 7.25rem);
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
   padding: 0 0;
-  color: #ffffff;
+  margin: 1rem 0;
+  color: #b1b1b1;
   // text-shadow: 5px 5px #0000005e;
 }
 

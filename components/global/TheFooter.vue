@@ -1,7 +1,9 @@
 <template>
   <footer id="footer">
     <div class="container footer">
-      <div class="version">v3.3</div>
+      <div class="version">v3.4.1</div>
+      <!-- Tech logos -->
+      <!-- <TechBadges /> -->
       <SocialBadges />
     </div>
   </footer>
@@ -21,10 +23,10 @@ footer#footer {
     .version {
       font-size: 0.75rem;
     }
-    .social-badges {
-      margin: 0;
-      display: block;
-    }
+    // .social-badges {
+    //   margin: 0;
+    //   display: block;
+    // }
   }
 }
 </style>
